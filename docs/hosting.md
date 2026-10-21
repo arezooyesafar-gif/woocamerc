@@ -45,6 +45,16 @@ opcache.save_comments = 1
 4. تنظیمات → Redis → Enable Object Cache. در تب مانیتورینگ افزونه ما «Object Cache: فعال» دیده می‌شود.
 5. افزونه tarh99-performance خودکار کش ایجکس را به‌جای فایل در Redis نگه می‌دارد.
 
+### اگر Redis/Memcached در دسترس نیست
+افزونه tarh99-performance بدون Object Cache هم کامل کار می‌کند (کش ایجکس را در فایل نگه می‌دارد). جایگزین‌ها به ترتیب:
+1. **Memcached یا LSMCD:** از پشتیبانی بپرسید؛ بعضی پلن‌هایی که Redis ندارند این‌ها را دارند. اگر وب‌سرور LiteSpeed است، LSMCD معمولاً در دسترس است.
+2. **Docket Cache** (افزونه رایگان مخزن وردپرس): Object Cache پایدار روی فایل که از OPcache استفاده می‌کند و به سرویس جداگانه نیاز ندارد. پیش‌نیاز آن OPcache فعال است (بند ۲).
+   - نصب در ساعت کم‌ترافیک ← Docket Cache → Overview → **Enable Object Cache**.
+   - گزینه‌های «Advanced Post Caching» و «Object Cache Precaching» را روشن و «Optimize WP Query / Admin» را خاموش بگذارید تا رفتار سایت تغییر نکند.
+   - تست: سبد، پرداخت، حالت لاگین و پیشخوان. اگر خطایی بود، Disable Object Cache بزنید؛ با حذف فایل `wp-content/object-cache.php` هم به حالت قبل برمی‌گردد.
+   - روی هاست با دیسک کند یا سهمیه inode کم، اثرش کمتر است؛ بعد از یک روز در cPanel → Resource Usage بررسی کنید.
+3. **بدون Object Cache:** پاکسازی منظم autoload، ترنزینت‌ها و سشن‌ها (ماژول `cleanup` و فایل `db-cleanup.sql`) مهم‌تر می‌شود، چون هر درخواست غیرکش این داده‌ها را مستقیم از دیتابیس می‌خواند.
+
 ## ۴. حافظه و زمان اجرا
 ```
 memory_limit = 512M
