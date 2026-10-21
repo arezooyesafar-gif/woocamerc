@@ -1,0 +1,4089 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#: widgets/categoty-slider-widget.php:390
+#: widgets/categoty-slider-widget.php:416
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: BUG-EMAIL-ADDR <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: yyyy-mm-dd hh:mm+0000\n"
+"PO-Revision-Date: 2025-10-23 19:50+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Eazy Po 1.0.0.0\n"
+
+#: wooslider-bymdez.php:47
+msgid "Settings"
+msgstr ""
+
+#: admin/charged-pros-meta.php:65
+msgid "Meta information has been successfully set on all products!"
+msgstr ""
+
+#: admin/charged-pros-meta.php:66
+msgid "\\nWooslider: We sincerely thank you for your cooperation"
+msgstr ""
+
+#: admin/class-adminconfs.php:248
+msgid ""
+"Do you want to KEEP all of the data of this plugin\\ninside your database?"
+"\\nPlease remind that, all of the plugins options get stored inside"
+"\\nWP_OPTIONS table inside your database and having too much extra data on "
+"this table\\nwill cause your web-site to load slowly\\nif this is a "
+"TEMPORARY de-activation\\nclick on the OK button otherwise click Cancel"
+msgstr ""
+
+#: admin/class-adminconfs.php:276 widgets/woosbymdz-widget.php:47
+msgid "Woo Modern Slider"
+msgstr ""
+
+#: admin/class-adminconfs.php:290 admin/class-adminconfs.php:291
+msgid "Short-Code"
+msgstr ""
+
+#: admin/class-adminconfs.php:299 admin/class-adminconfs.php:300
+msgid "Saved Short-Codes"
+msgstr ""
+
+#: admin/class-adminconfs.php:310 admin/class-adminconfs.php:311
+msgid "Free plugins"
+msgstr ""
+
+#: admin/class-adminconfs.php:320 admin/class-adminconfs.php:321
+msgid "Other plugins"
+msgstr ""
+
+#: admin/class-adminconfs.php:447
+msgid "is Charged?"
+msgstr ""
+
+#: admin/settingspage.php:1172
+msgid "Not done yet"
+msgstr ""
+
+#: admin/settingspage.php:1173
+msgid "Done!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:42
+msgid "Thank you for using this Plugin"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:49
+msgid "Thank you for using this Plugin from the Wphoolu.com"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:96
+msgid "help"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:97
+msgid "Settings related to slider products"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:98
+msgid "Settings related to Products Main-Cat Source Mode"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:99
+msgid "After changing products inside slider"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:100
+msgid ""
+"Settings related to the charged mode controller button on the product page"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:127
+msgid "Classic"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:134
+#: widgets/controls/wooslider-controls.php:426
+msgid "Modern"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:163
+msgid "Not Active"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:165 widgets/categoty-slider-widget.php:114
+#: widgets/categoty-slider-widget.php:128
+#: widgets/categoty-slider-widget.php:152
+#: widgets/categoty-slider-widget.php:192
+#: widgets/categoty-slider-widget.php:466
+#: widgets/categoty-slider-widget.php:528
+#: widgets/categoty-slider-widget.php:655
+#: widgets/categoty-slider-widget.php:680
+#: widgets/categoty-slider-widget.php:693
+#: widgets/categoty-slider-widget.php:706
+#: widgets/categoty-slider-widget.php:719
+#: widgets/categoty-slider-widget.php:746
+#: widgets/categoty-slider-widget.php:760
+#: widgets/categoty-slider-widget.php:774
+#: widgets/categoty-slider-widget.php:845
+#: widgets/categoty-slider-widget.php:1009
+#: widgets/categoty-slider-widget.php:1022
+#: widgets/categoty-slider-widget.php:1035
+#: widgets/categoty-slider-widget.php:1048
+#: widgets/categoty-slider-widget.php:1319 widgets/woosbymdz-widget.php:612
+#: widgets/woosbymdz-widget.php:697 widgets/woosbymdz-widget.php:732
+#: widgets/woosbymdz-widget.php:840 widgets/controls/wooslider-controls.php:87
+#: widgets/controls/wooslider-controls.php:100
+#: widgets/controls/wooslider-controls.php:114
+#: widgets/controls/wooslider-controls.php:127
+#: widgets/controls/wooslider-controls.php:142
+#: widgets/controls/wooslider-controls.php:183
+#: widgets/controls/wooslider-controls.php:196
+#: widgets/controls/wooslider-controls.php:209
+#: widgets/controls/wooslider-controls.php:268
+#: widgets/controls/wooslider-controls.php:351
+#: widgets/controls/wooslider-controls.php:378
+#: widgets/controls/wooslider-controls.php:391
+#: widgets/controls/wooslider-controls.php:473
+#: widgets/controls/wooslider-controls.php:485
+#: widgets/controls/wooslider-controls.php:511
+#: widgets/controls/wooslider-controls.php:524
+#: widgets/controls/wooslider-controls.php:649
+#: widgets/controls/wooslider-controls.php:662
+#: widgets/controls/wooslider-controls.php:675
+#: widgets/controls/wooslider-controls.php:760
+#: widgets/controls/wooslider-controls.php:778
+#: widgets/controls/wooslider-controls.php:980
+#: widgets/controls/wooslider-controls.php:1160
+#: widgets/controls/wooslider-controls.php:1275
+#: widgets/controls/wooslider-controls.php:1321
+#: widgets/controls/wooslider-controls.php:1381
+#: widgets/controls/wooslider-controls.php:1395
+#: widgets/controls/wooslider-controls.php:1564
+#: widgets/controls/wooslider-controls.php:1654
+#: widgets/controls/wooslider-controls.php:1753
+#: widgets/controls/wooslider-controls.php:1851
+#: widgets/controls/wooslider-controls.php:1995
+msgid "Active"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:184
+msgid ""
+"It seems that you are not using the Elementor plugin, in this case, you can "
+"use the Wooslider widgets in any page-builder by using a short code. Just "
+"visit the `short code [ ]` section!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:195
+msgid ""
+"It seems that you are not using the Elementor Pro plugin, in this case you "
+"cannot use the Loop-Builder widget of the Wooslider plugin without Elementor "
+"Pro."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:196 admin/html/settings-pagehtml.php:997
+msgid "Buy Elementor-Pro"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:215
+msgid "Welcome"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:225
+msgid "change theme"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:226
+msgid "Theme: "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:243
+msgid "Version: "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:254 admin/html/settings-pagehtml.php:397
+msgid "Theme"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:259 admin/html/settings-pagehtml.php:479
+msgid "Product-Widget General Settings"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:264 admin/html/settings-pagehtml.php:614
+msgid "Extra Breakpoints"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:268 admin/html/settings-pagehtml.php:640
+msgid "Extra CSS"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:272 admin/html/settings-pagehtml.php:668
+msgid "Extra JS"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:276 admin/html/settings-pagehtml.php:710
+#: widgets/controls/wooslider-controls.php:1370
+msgid "Advanced"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:280 admin/html/settings-pagehtml.php:901
+msgid "[   ] Short-Codes"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:285 admin/html/settings-pagehtml.php:951
+msgid "Extra Widgets"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:291 admin/html/settings-pagehtml.php:1026
+msgid "Charged products"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:297 admin/html/settings-pagehtml.php:1131
+msgid "Elementor"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:302 admin/html/settings-pagehtml.php:1153
+#: admin/html/settings-pagehtml.php:1155
+msgid "Save Settings"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:313
+#, php-format
+msgid "New features added in version: %s"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:319
+msgid ""
+"Adding exclusive dynamic tags of WooSlider to Elementor Pro (Visit "
+"`Elementor` Section)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:323
+msgid ""
+"Added new `Loop Builder Slider` Elementor-Widget (requires Elementor-pro "
+"plugin) (Visit `Extra Widgets` Section)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:327
+msgid ""
+"Added new `Short-Code Generator System` (requires WooProducts-ShortCode-"
+"Generator plugin) (Visit `[   ] Short-Codes` Section)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:331
+msgid "Added new `Charged-Products` System (Visit `Charged products` section)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:342
+msgid "Notifications"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:344 admin/html/settings-pagehtml.php:399
+#: admin/html/settings-pagehtml.php:481 admin/html/settings-pagehtml.php:616
+#: admin/html/settings-pagehtml.php:642 admin/html/settings-pagehtml.php:670
+#: admin/html/settings-pagehtml.php:712 admin/html/settings-pagehtml.php:903
+#: admin/html/settings-pagehtml.php:953 admin/html/settings-pagehtml.php:1028
+#: admin/html/settings-pagehtml.php:1133
+msgid "Click to open"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:404
+msgid "Your active theme"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:406
+msgid "We Support your Theme!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:406
+msgid "Oops! Your theme is not supported"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:409
+msgid "Contact plugin developer to add your current theme ASAP"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:416
+msgid "Disable Main widget"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:418
+msgid ""
+"Do Not activate this if you want to use the main products slider elementor "
+"widget"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:421
+msgid ""
+"This option will be usefull for non-woocomerce web sites who want to use "
+"other widgets of this plugin"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:428
+msgid "In which part are Elementor widgets located? "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:431
+msgid ""
+"Elementor widgets of this plugin are located in the WooCommerce section and "
+"you can separate it from the WooCommerce section using the option below."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:435 admin/html/settings-pagehtml.php:451
+#: admin/html/settings-pagehtml.php:965 admin/html/settings-pagehtml.php:983
+msgid "Help image"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:445
+msgid "Add new widgets-category"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:447
+msgid ""
+"Use this option if you have issues with finding this plugin Elementor "
+"widgets inside the own-woocomerece widgets-category"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:463
+msgid "Custom templates for Product-Cards"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:465
+msgid "If you dont use this option or dont know what it does, dont activate it"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:469
+msgid ""
+"Activating this option adds additional codes to the main CSS file of the "
+"plugin, which is used to display product-cards in different templates."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:472
+msgid "Plugin Tutorials"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:486
+msgid "Sliders first time load duration"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:488
+msgid "1000 mili-seconds is equal to 1 second"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:494
+msgid "Loading Effects"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:496
+#: widgets/controls/wooslider-controls.php:249
+#: widgets/controls/wooslider-controls.php:1410
+msgid "Default"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:497
+msgid "Retro-Violet"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:498
+msgid "Retro-Green"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:499
+msgid "Fairy"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:500
+msgid "Heavy"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:501
+msgid "Instagram"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:502
+msgid "Fast"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:503
+msgid "Wooslider"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:504
+msgid "Rotating"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:505
+msgid "Pulser"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:506
+msgid "Pink"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:507
+msgid "Cubes"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:508
+msgid "Speed-Bump"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:509
+msgid "Music"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:510
+msgid "Your-loading"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:524
+msgid "Custom Image Url: "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:529
+msgid "Image Width: "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:530
+msgid "default: 200px"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:534
+msgid "Image Height: "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:535
+msgid "default: 150px"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:539
+msgid "Background Color(hex-code): "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:540
+msgid "default: #f1f2f3"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:543
+msgid ""
+"Enter an image URL here to use that as a loadign logo/image or animation, "
+"has no live preview"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:545
+msgid ""
+"Suggestion: try to use an SVG animation file or download one from the "
+"https://loading.io/"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:547
+msgid "Download Example Image"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:552
+msgid "--Products--"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:556
+msgid "Fade products background"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:556
+msgid ""
+"Activate this to have all products within all sliders to have transparent "
+"background"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:559
+msgid "Options inside this section is globally effected"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:566
+msgid "Disable Swiper-Slider in elementor-editor"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:566
+msgid ""
+"If you use a lot of sliders on your Elementor page and you feel excessive "
+"lag and slowness in the Elementor editor, enable this option."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:569
+msgid ""
+"Actually, this option disables the slider object immediately after it is "
+"created"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:576
+msgid "Use Important for all elementor css styles"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:576 admin/html/settings-pagehtml.php:583
+msgid ""
+"This option applies all the CSS codes in the style tab of the products-"
+"widget with the !important property of the CSS language"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:579
+msgid ""
+"If some of your styles are not applied in the Elementor editor, use this "
+"option"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:583
+msgid "Use Important for products-section css styles"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:586
+msgid ""
+"If you dont want all parts of the widget style tab to use the !important "
+"attribute and you only need this attribute for the products part, use this "
+"option and disable the top option"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:588
+msgid ""
+"Note: In order to optimize the page design, the less !important is used in "
+"CSS, the better the result will be."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:595
+msgid "Restrict product titles"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:595
+msgid ""
+"If your product titles are long and longer, use this option to make them "
+"uniform in height."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:600
+msgid "Maximum number of lines: "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:602
+msgid "Default: 2 (2 lines)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:606
+msgid ""
+"Note: Using this option is very useful in making the product block the same "
+"height inside the slider"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:621
+msgid "Very slim mobiles breakpoint"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:623
+msgid "Like Galaxy-Fold device (below 300px)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:629
+msgid "Wide monitors breakpoint"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:634
+msgid ""
+"Other breakpoints like desktop,tablet and etc no need to re-config, this "
+"plugin will use elementor self breakpoints"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:647 admin/html/settings-pagehtml.php:675
+#: admin/html/settings-pagehtml.php:692
+msgid "Activate"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:647
+msgid "Activate this to use your css codes Globally"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:654 admin/html/settings-pagehtml.php:682
+#: admin/html/settings-pagehtml.php:701
+msgid ""
+"To see all of your changes use CTRL+F5 to ensure your browser local cache is "
+"empty"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:655 admin/html/settings-pagehtml.php:683
+#: admin/html/settings-pagehtml.php:702
+msgid ""
+"If you use any cache plugins, please purge all the cached files via your "
+"cache plugin setting page to see your changes"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:656
+msgid ""
+"To change the apearance of the products inside the Sliders, USE these CSS "
+"selectors below"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:675
+msgid "Activate this to use your custom JS codes inside plugin js-file"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:688
+msgid "--JS Code after Ajax--"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:692
+msgid ""
+"Activate this to execute your custom JS codes after changing products inside "
+"the slider"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:699
+msgid ""
+"When user change the products inside the Main-Widget slider by slider header "
+"buttons (after Ajax call) above JS codes will trigger"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:717
+msgid "Assets Global Import"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:719
+msgid ""
+"Adds all the CSS and JS files of the plugin to all the front pages of your "
+"site"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:723
+msgid ""
+"Note: If you have used the widget of this plugin in a global element such as "
+"site header or footer, activate this option"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:729
+msgid "Import jQuery?"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:731
+msgid ""
+"Usefull when your theme have not imported the jQuery Library into the front-"
+"side preview of your site"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:739
+msgid "Dont add Swiper-js Library"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:741
+msgid ""
+"Usefull when your theme or other plugins have imported Swiper js CSS & JS "
+"files globally to your site"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:749
+msgid "Old themes dubuger"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:751
+msgid "Do Not activate this if you have no problem while using the plugin"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:755
+msgid ""
+"Useful when your current theme have imported the jQuery library at the end "
+"of \"BODY\" tag"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:757
+msgid ""
+"Beware: this item will disable this widget live-preview on the elementor "
+"editor"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:764
+msgid "set recently viewd products"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:766
+msgid ""
+"when activated sets a session type cookie to users browser to track last "
+"recently seen products"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:770
+msgid "Session type cookies will perish upon closing the browser"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:774
+msgid "Wp-Cache Compatibility for Cookies"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:776
+msgid ""
+"If you use any wordpress cache plugins like Wp-Rocket, Activate this to set "
+"the user last seen products via JS instead of PHP"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:780
+msgid ""
+"when activated sets recently viewed cookies by javascript instead PHP "
+"therefore helps to avoid any conflicts with wordpress cache plugins like Wp-"
+"Rocket"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:782
+msgid ""
+"To use this Advanced feature, you must also activate `set recently viewd "
+"products` (the above option)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:784
+msgid ""
+"Enabling this option will add a single JS file to the front-end of your web-"
+"site with `woosbymdz-cookies-js` ID"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:792
+msgid "Prevent css & js files from user browser caching"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:794
+msgid ""
+"when activated, prevent the front css and js files from being cached in all "
+"users browser"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:798
+msgid "This option will decrease the load time of your web-site"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:806
+msgid "Disable Ajax-Refferer Checker"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:808
+msgid ""
+"Not recommended, but you can enable this option if the plugins front-end "
+"Ajax requests interfere with some cache and optimization plugins"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:816
+msgid "Re-Construct sliders with ajax reload compatibility"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:818
+msgid ""
+"Activate only if you use wooslider shortcode inside ajax shop page like "
+"Woodmart ajax-shop page"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:822
+msgid "Warning: This option is under Developing, use with caution..."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:824
+msgid ""
+"Do Not Enable this option if you have no errors and bugs while using this "
+"plugin. This option will re-construct sliders when an ajax request reloads "
+"the entire page or reload a section that contains the woo-slider and slider "
+"will not show the products any more"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:826 admin/html/settings-pagehtml.php:894
+msgid "More Help!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:834
+msgid "--Related Products--"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:838
+msgid "Add Slider to Products-Page (Globally)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:840
+msgid ""
+"Adds an Normal Slider at the end of products page with the Yoast main-"
+"category config"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:844
+msgid ""
+"Note: To use this option you must activate main-slider shortcode at the [ ]"
+"Shortcodes section in this page"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:846
+msgid ""
+"Note: If you dont want to show products from yoast-main category or you dont "
+"have the yoast-seo plugin, you should use your custom short-code"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:848
+msgid ""
+"Note: You can customize slider with the customized shortcode button at the "
+"below"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:853
+msgid "Slider Title: "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:857
+msgid "HTML tags are accepted"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:858
+msgid "Note: To change field direction, use Ctrl+Shift"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:862
+msgid "Use Customized Shortcode: "
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:862
+msgid "Activate this to use your own customized shortcode"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:867
+msgid "How to use Shortcode ?"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:874
+msgid "Product permalinks:"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:876
+msgid "screen-shot"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:879
+msgid "If you use Custom product permalink, please set this option"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:881
+msgid ""
+"The products permalink will be used to detect front product pages and its "
+"default value is equal to `product`"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:883
+msgid ""
+"Note: with this option You are able to use Product Main-Cat product source "
+"type in the Elementor editor panel or via Shortcode and it will use the "
+"Yoast plugin Primary-Category feature to fetch and show related products in "
+"the product pages, please see below screen-shots"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:886
+msgid "screen-shot 1"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:887
+msgid "screen-shot 2"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:888
+msgid "screen-shot 3"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:891
+msgid ""
+"Note: To use this Advanced feature you must have Yoast-Seo Plugin (Yoast-"
+"Premium is not needed)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:908
+msgid "Download Short-Code Generator Plugin"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:911
+msgid ""
+"What is short-code generator? With the help of the auxiliary short-code "
+"generator plugin, you can easily and quickly generate the short-code you "
+"need and use WooSlider plugin in any page builder!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:916
+msgid "Modern slider short code"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:918
+msgid "Do Not activate this if you do not use the short-code of this widget"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:923 admin/html/settings-pagehtml.php:940
+msgid "Useful if you dont use Elementor page builder"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:924
+msgid "Base short-code: [woo_modern_slider]"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:925
+msgid "How to use main short-code? (documents)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:927 admin/html/settings-pagehtml.php:944
+msgid "Copy"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:934
+msgid "Cats Slider Shortcode"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:936
+msgid ""
+"Do Not activate this if you do not use the short-code of the category "
+"sliders widget"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:941
+msgid "Base short-code: [woo_cats_slider]"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:942
+msgid "How to use cat-slider short-code? (documents)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:958
+msgid "Category slider"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:960
+msgid ""
+"Do Not activate this if you do not use the category widget of this plugin"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:968
+msgid ""
+"Tip: With the help of this extremely useful widget, you can design all kinds "
+"of banner, brand, logo and category sliders in a normal and graded way!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:976
+msgid "Loop Builder Slider (new)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:978
+msgid ""
+"Do Not activate this if you do not use the category widget of this plugin, "
+"this widget does-not support short-code and only works with Elementor"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:988
+msgid "Loop Widget Status:"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:993
+msgid "Note: The activation of this option requires the Elementor Pro plugin"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1000
+msgid ""
+"Important note: To activate and use this option, the Wooslider plugin "
+"automatically has to edit one of the internal PHP files of the Elementor Pro "
+"plugin in order to add its own Loop Builder widget."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1003
+#, php-format
+msgid ""
+"This option has been tested with Elementor Pro version %s, and if your "
+"Elementor Pro plugin version is older or newer, please use this option with "
+"more caution (we recommend taking a full backup through the host)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1006
+#, php-format
+msgid "Your Elementor-Pro Version: %s"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1010
+msgid "Restore the file"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1013
+msgid ""
+"If you want the content of the edited file to return to its initial and "
+"default state, use the button above"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1033
+msgid "Charged Products System"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1035
+msgid ""
+"Activate to use this new & advanced system, PLEASE read the below Help-Tips "
+"before activating this"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1039
+msgid ""
+"Note: by activating this option, the system of charged products will be "
+"activated for all the products in your store, and whenever the inventory of "
+"your out-of-stock products is added, this system will automatically charge "
+"the product, and you can show these types of products inside the sliders of "
+"this plugin."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1042
+msgid ""
+"Note: This system works professionally on simple and variable products and "
+"is even compatible with accounting programs in the form of API."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1044
+msgid ""
+"Note: The meta information added on the products will be completely removed "
+"from all the products on your site if you remove this plugin, so dont worry "
+"about anything!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1047
+msgid ""
+"Note: In order to avoid any possible bugs with the activation of the charged "
+"products system, the product metabox (product admin pages) will be "
+"completely disabled"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1051
+msgid "What is products meta-box?"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1056
+msgid "Products Meta Status:"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1063
+msgid "Reset to Default"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1067
+msgid ""
+"To perform the meta-setting operation, just activate the charged products "
+"option and press the save settings button"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1074
+msgid "Canceling the product discount after charging"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1076
+msgid ""
+"Whenever a product is charged, if it is discounted, it will be removed from "
+"the discount"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1082
+msgid "Add product-category after charging"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1084
+msgid ""
+"You can specify a product category that will be added to the products after "
+"they are charged"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1089
+msgid "Product-Category ID:"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1090
+msgid "Enter a single number"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1092
+msgid "Where is ID?"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1095
+msgid "Note: In fact, WooCommerce category ID is a simple number"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1099
+msgid "--Chrage Controller Button--"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1103
+msgid "Do not Show the Button"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1105
+msgid ""
+"By means of this button, you can manually change the charged state of the "
+"products on the products page, so do not activate this option!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1111
+msgid "Position of the button on the product page"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1113
+msgid "Top-Page (recommended)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1114
+msgid "Middle"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1115
+msgid "Bottom"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1120
+msgid ""
+"Note: The functionallity of the controller button of the charged state of "
+"the products is in the form of an Ajax, and after changing it, you do not "
+"need to save the product."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1138
+msgid "Disable Wooslider DynamicTags"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1140
+msgid ""
+"WooSlider Dynamic tags added to Elementor Pro will be disabled on your site."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1144
+msgid "What is Dynamic Tags? (helper image)"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1146
+msgid ""
+"Note: You can use dynamic tags to more easily and better design your own "
+"product cards for WooCommerce sliders."
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1167
+msgid ""
+"Done!\\nif you have unsaved settings on this page, click the cancel button "
+"and then click the save settings button\\notherwise the page will reload"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1168
+msgid ""
+"Theme changed\\nif you have unsaved settings on this page, click the cancel "
+"button and then click the save settings button\\notherwise the page will "
+"reload"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1169
+msgid "Copied Successfully!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1170
+msgid "Something went wrong!\\nplease try agian"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1172
+msgid "Ajax request Sent, but not worked for some security reasons!"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1173
+msgid "PHP-file restored to its orginal contents successfully"
+msgstr ""
+
+#: admin/html/settings-pagehtml.php:1174
+msgid "Error: PHP-file not been restored to its orginal contents!!"
+msgstr ""
+
+#: front/class-frontconfs.php:96
+msgid "Related Products"
+msgstr ""
+
+#: front/class-mainconfs.php:100
+msgid "WooSlider"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:38
+msgid "Woo cats slider"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:90
+#: widgets/controls/wooslider-controls.php:62
+msgid "General"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:98 widgets/woosbymdz-widget.php:463
+#: widgets/controls/wooslider-controls.php:70
+#: widgets/controls/wooslider-controls.php:232
+#: widgets/controls/wooslider-controls.php:730
+#: widgets/controls/wooslider-controls.php:1240
+msgid "Update Frame"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:99
+msgid ""
+"If you are not able to see the live-view of this widget just toggle this"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:101
+#: widgets/categoty-slider-widget.php:102 widgets/woosbymdz-widget.php:274
+#: widgets/woosbymdz-widget.php:275 widgets/woosbymdz-widget.php:466
+#: widgets/woosbymdz-widget.php:467 widgets/controls/wooslider-controls.php:73
+#: widgets/controls/wooslider-controls.php:74
+#: widgets/controls/wooslider-controls.php:235
+#: widgets/controls/wooslider-controls.php:236
+#: widgets/controls/wooslider-controls.php:733
+#: widgets/controls/wooslider-controls.php:734
+#: widgets/controls/wooslider-controls.php:1243
+#: widgets/controls/wooslider-controls.php:1244
+msgid "refresh"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:111
+#: widgets/controls/wooslider-controls.php:84
+msgid "Do not Render (on editor)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:112
+#: widgets/controls/wooslider-controls.php:85
+msgid ""
+"This option stops the rendering of this slider when you are in the Elementor "
+"editor and does not show you any preview, using this option is useful for "
+"pages that have a lot of sliders and the design in them is slow and laggy."
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:115
+#: widgets/categoty-slider-widget.php:129
+#: widgets/categoty-slider-widget.php:153
+#: widgets/categoty-slider-widget.php:193
+#: widgets/categoty-slider-widget.php:467
+#: widgets/categoty-slider-widget.php:529
+#: widgets/categoty-slider-widget.php:656
+#: widgets/categoty-slider-widget.php:681
+#: widgets/categoty-slider-widget.php:694
+#: widgets/categoty-slider-widget.php:707
+#: widgets/categoty-slider-widget.php:720
+#: widgets/categoty-slider-widget.php:747
+#: widgets/categoty-slider-widget.php:761
+#: widgets/categoty-slider-widget.php:775
+#: widgets/categoty-slider-widget.php:846
+#: widgets/categoty-slider-widget.php:1010
+#: widgets/categoty-slider-widget.php:1023
+#: widgets/categoty-slider-widget.php:1036
+#: widgets/categoty-slider-widget.php:1049
+#: widgets/categoty-slider-widget.php:1320 widgets/woosbymdz-widget.php:613
+#: widgets/woosbymdz-widget.php:698 widgets/woosbymdz-widget.php:733
+#: widgets/woosbymdz-widget.php:841 widgets/controls/wooslider-controls.php:88
+#: widgets/controls/wooslider-controls.php:101
+#: widgets/controls/wooslider-controls.php:115
+#: widgets/controls/wooslider-controls.php:128
+#: widgets/controls/wooslider-controls.php:143
+#: widgets/controls/wooslider-controls.php:184
+#: widgets/controls/wooslider-controls.php:197
+#: widgets/controls/wooslider-controls.php:210
+#: widgets/controls/wooslider-controls.php:269
+#: widgets/controls/wooslider-controls.php:352
+#: widgets/controls/wooslider-controls.php:379
+#: widgets/controls/wooslider-controls.php:392
+#: widgets/controls/wooslider-controls.php:474
+#: widgets/controls/wooslider-controls.php:486
+#: widgets/controls/wooslider-controls.php:512
+#: widgets/controls/wooslider-controls.php:525
+#: widgets/controls/wooslider-controls.php:650
+#: widgets/controls/wooslider-controls.php:663
+#: widgets/controls/wooslider-controls.php:676
+#: widgets/controls/wooslider-controls.php:761
+#: widgets/controls/wooslider-controls.php:779
+#: widgets/controls/wooslider-controls.php:981
+#: widgets/controls/wooslider-controls.php:1161
+#: widgets/controls/wooslider-controls.php:1276
+#: widgets/controls/wooslider-controls.php:1322
+#: widgets/controls/wooslider-controls.php:1382
+#: widgets/controls/wooslider-controls.php:1396
+#: widgets/controls/wooslider-controls.php:1565
+#: widgets/controls/wooslider-controls.php:1655
+#: widgets/controls/wooslider-controls.php:1754
+#: widgets/controls/wooslider-controls.php:1852
+#: widgets/controls/wooslider-controls.php:1996
+msgid "Inactive"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:125
+msgid "Exclude form Lazy-Load (images)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:126
+msgid ""
+"By enabling this option slider will add no-lazy CSS class to all the images "
+"inside it"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:137
+msgid "No-Lazy CSS Class"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:139
+msgid ""
+"For the best configuration with your optimization plugins, you are able to "
+"set the KEY CSS class to exclude all images inside the slider from Lazy-Load"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:140
+msgid "no-lazy"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:149
+msgid "Auto-Height Slides"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:150
+msgid ""
+"By activating this option, the height of all your slides will be the same "
+"and coordinated.Note: this option has no effect if the grid-slider is actived"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:165
+#: widgets/categoty-slider-widget.php:561
+msgid "Slides"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:175
+msgid "Icon or image?"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:178
+msgid "Media image"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:179
+#: widgets/controls/wooslider-controls.php:879
+msgid "Elementor icons"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:180
+#: widgets/controls/wooslider-controls.php:880
+msgid "Your icon"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:189
+msgid "Responsive Images"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:190
+msgid ""
+"By activating this option, you can show other images for other devices in "
+"the category slider, this does not work on icons."
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:204
+msgid "Choose your image or icon"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:205
+#: widgets/categoty-slider-widget.php:232
+#: widgets/categoty-slider-widget.php:259
+#: widgets/categoty-slider-widget.php:286
+#: widgets/categoty-slider-widget.php:313
+#: widgets/controls/wooslider-controls.php:914
+msgid "prefered formats: svg & webp"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:231
+msgid "Choose your image for wide devices"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:258
+msgid "Choose your image for tablet devices"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:285
+msgid "Choose your image for mobile devices"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:312
+msgid "Choose your image for small-mobile devices"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:338
+msgid "Custom icon width"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:340
+msgid "In pixels (PX)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:362
+msgid "Image Alt"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:364
+msgid ""
+"For better SEO rating always define alt attribute for your images inside "
+"your web-site"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:365
+msgid "image alt"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:387
+msgid "Image Width (Attribute)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:389
+msgid ""
+"For better SEO rating always define width attribute for your images inside "
+"your web-site"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:391
+msgid "Enter number like: 300"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:413
+msgid "Image Height (Attribute)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:415
+msgid ""
+"For better SEO rating always define height attribute for your images inside "
+"your web-site"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:417
+msgid "Enter number like: 100"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:440
+#: widgets/controls/wooslider-controls.php:889
+#: widgets/controls/wooslider-controls.php:1477
+msgid "Choose icon"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:453
+#: widgets/controls/wooslider-controls.php:902
+msgid "icon color"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:463
+msgid "Use title"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:464
+msgid "Adds title to your slides"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:475 widgets/woosbymdz-widget.php:741
+#: widgets/controls/wooslider-controls.php:806
+msgid "Title"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:478
+msgid "cat or brand"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:486 widgets/woosbymdz-widget.php:752
+#: widgets/controls/wooslider-controls.php:999
+msgid "Title color"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:496
+msgid "slide template"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:499
+msgid "Image top"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:500
+msgid "Image below"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:501
+msgid "Image right"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:502
+msgid "Image left"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:503
+msgid "Image hover"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:504
+msgid "Title hover"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:505
+msgid "Image dance"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:506
+msgid "Metro"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:516 widgets/woosbymdz-widget.php:826
+#: widgets/controls/wooslider-controls.php:1073
+msgid "URL"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:518 widgets/woosbymdz-widget.php:829
+#: widgets/controls/wooslider-controls.php:1076
+msgid "https://your-site.com/category/test"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:525
+msgid "Extra HTML after block"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:526
+msgid ""
+"By using this option you can add your own extra html code, after this block"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:538
+msgid "Enter your HTML Code"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:540
+msgid "Type here..."
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:541
+#: widgets/controls/wooslider-controls.php:1266
+msgid "write here!"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:548
+msgid "Extra CSS classes"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:550
+msgid ""
+"Seperate classes by |. Adds extra css classes to the swiper-slide of this "
+"slider block"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:551
+msgid "class1|class2"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:566
+#: widgets/controls/wooslider-controls.php:1112
+msgid "Category-1"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:574
+msgid "Car kits"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:582
+msgid "Brand-1"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:590
+msgid "Samsung"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:598
+msgid "Kiss Beauty"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:606
+msgid "پارس خزر"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:614
+msgid "نوکیا"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:622
+msgid "لوازم پزشکی"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:630
+msgid "آرایشی/بهداشتی"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:638
+msgid "لوازم خانگی"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:652
+msgid "Load images Lazy"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:653
+msgid "If you dont use Lazy Load plugins for your images, can be useful"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:669
+msgid "Slider options"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:677
+msgid "Use navs"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:678
+msgid "Shows or hide the slider navigation"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:690
+msgid "Use Arrows"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:691
+msgid "Shows or hide the slider Arrows"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:703
+msgid "Use Grids"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:704
+msgid "Shows slider in the grids style"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:716
+msgid "Centered Slider?"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:717
+msgid ""
+"This option creates a central slider, but it may interfere with some "
+"features such as the 3D cube slider or grid-slider."
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:729
+#: widgets/controls/wooslider-controls.php:278
+msgid "Grid rows number"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:731
+#: widgets/controls/wooslider-controls.php:280
+#: widgets/controls/wooslider-controls.php:294
+msgid "max = 4 rows"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:743
+#: widgets/controls/wooslider-controls.php:253
+msgid "Loop"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:744
+msgid "Activate the loop mode, Cant be used with grid at the same time"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:757
+msgid "Auto Height"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:758
+msgid "Use this option if you have slides with different heights"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:771
+msgid "Autoplay"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:772
+msgid ""
+"Turns on the autoplay for the slider => Note: In order to further optimize "
+"resources and prevent lag, autoplay is not displayed and applied in "
+"Elementor editor mode."
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:784
+#: widgets/controls/wooslider-controls.php:496
+msgid "Play speed"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:786
+#: widgets/controls/wooslider-controls.php:498
+msgid "in milli-seconds"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:796
+msgid "Move effect"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:799
+#: widgets/categoty-slider-widget.php:820 widgets/class-loop-woosbymdz.php:672
+#: widgets/woosbymdz-widget.php:368 widgets/woosbymdz-widget.php:403
+#: widgets/controls/wooslider-controls.php:322
+#: widgets/controls/wooslider-controls.php:941
+msgid "default"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:800
+#: widgets/controls/wooslider-controls.php:323
+msgid "ease"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:801
+#: widgets/controls/wooslider-controls.php:324
+msgid "normal"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:802
+#: widgets/controls/wooslider-controls.php:325
+msgid "no move"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:803
+#: widgets/controls/wooslider-controls.php:326
+msgid "fast move"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:804
+#: widgets/controls/wooslider-controls.php:327
+msgid "funky"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:805
+#: widgets/controls/wooslider-controls.php:328
+msgid "hammer"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:806
+#: widgets/controls/wooslider-controls.php:329
+msgid "steps"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:807
+#: widgets/controls/wooslider-controls.php:330
+msgid "light speed"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:816
+msgid "Rotation effect"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:817
+msgid ""
+"Cube, fade, cards, overflow, rotate, creative1 to creative5 modes just have "
+"functionallity when you just show a single slide(desk,tablet,mob)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:821
+msgid "fade"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:822
+msgid "css mode"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:823
+msgid "coverflow"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:824
+msgid "cards"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:825
+msgid "cube(3D)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:826
+msgid "rotate"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:827
+msgid "rewind"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:828
+msgid "overflow"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:829
+msgid "creative-1"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:830
+msgid "creative-2"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:831
+msgid "creative-3"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:832
+msgid "creative-4"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:833
+msgid "creative-5"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:842
+msgid "Disable 3D shadow?"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:843
+msgid "By activating this option, it disables the 3D shadow for this slider"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:855
+msgid "Active slide effect"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:857
+msgid ""
+"Some effects like \"blur\" only will be affected on the images not icons"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:859
+#: widgets/categoty-slider-widget.php:1560
+#: widgets/controls/wooslider-controls.php:797
+msgid "none"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:860
+#: widgets/controls/wooslider-controls.php:423
+msgid "Grow"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:861
+#: widgets/controls/wooslider-controls.php:424
+#: widgets/controls/wooslider-controls.php:2732
+msgid "Shrink"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:862
+msgid "Grow-Flip"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:863
+msgid "Shrink-Flip"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:864
+msgid "Rotate"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:865
+msgid "3D"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:866
+msgid "Ghost"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:867
+msgid "Blur"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:868
+msgid "X-ray"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:869
+msgid "Fantasy"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:879
+#: widgets/controls/wooslider-controls.php:534
+#: widgets/controls/wooslider-controls.php:1664
+msgid "Slides in wide monitors"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:881
+#: widgets/controls/wooslider-controls.php:536
+#: widgets/controls/wooslider-controls.php:1666
+msgid "you can change wide break-point in plugin settings page"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:891
+#: widgets/controls/wooslider-controls.php:546
+msgid "Space in wide monitors"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:902
+#: widgets/controls/wooslider-controls.php:557
+#: widgets/controls/wooslider-controls.php:1677
+msgid "Slides in desktop"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:913
+#: widgets/controls/wooslider-controls.php:568
+msgid "Space in desktop"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:924
+#: widgets/controls/wooslider-controls.php:579
+#: widgets/controls/wooslider-controls.php:1689
+msgid "Slides in tablet"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:935
+#: widgets/controls/wooslider-controls.php:590
+msgid "Space in tablet"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:946
+#: widgets/controls/wooslider-controls.php:601
+#: widgets/controls/wooslider-controls.php:1701
+msgid "Slides in mobile"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:957
+#: widgets/controls/wooslider-controls.php:612
+msgid "Space in mobile"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:968
+#: widgets/controls/wooslider-controls.php:623
+#: widgets/controls/wooslider-controls.php:1713
+msgid "Slides in mobile-2 (below 300px width)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:970
+#: widgets/controls/wooslider-controls.php:625
+#: widgets/controls/wooslider-controls.php:1715
+msgid "you can change mobile-2 break-point in plugin settings page"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:980
+#: widgets/controls/wooslider-controls.php:635
+msgid "Space in mobile-2"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:998
+msgid "General Styles"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1006
+msgid "Rounded images"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1007
+msgid "Adds border radius to all images within this slider"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1019
+msgid "Circle Frame images"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1020
+msgid "Shifts all the images inside the slider into a full circle frame"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1032
+msgid "Auto width images"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1033
+msgid ""
+"Forces all the images (not icons) inside the slider to fit the maximum width "
+"inside their cells"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1045
+msgid "100% width images"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1046
+msgid ""
+"Forces ALL the images (include icons) inside the slider to fit the maximum "
+"width inside their cells (100%) if the above option not worked turn it off & "
+"use this option"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1058
+msgid "All icons color"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1060
+msgid "color change will be affected along all the icons"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1071
+msgid "All title color"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1073
+msgid "color change will be affected along all the titles"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1085
+msgid "Elementor Icons Typography"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1095
+msgid "Titles Typography"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1106
+#: widgets/controls/wooslider-controls.php:1830
+msgid "Main Container"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1115
+#: widgets/categoty-slider-widget.php:1280
+#: widgets/categoty-slider-widget.php:1451
+#: widgets/controls/wooslider-controls.php:1839
+#: widgets/controls/wooslider-controls.php:2020
+#: widgets/controls/wooslider-controls.php:2256
+msgid "Background"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1125
+#: widgets/controls/wooslider-controls.php:1861
+msgid "Width (Max-width)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1156
+#: widgets/categoty-slider-widget.php:1240
+#: widgets/categoty-slider-widget.php:1330
+#: widgets/categoty-slider-widget.php:1460
+#: widgets/controls/wooslider-controls.php:1919
+#: widgets/controls/wooslider-controls.php:2093
+#: widgets/controls/wooslider-controls.php:2219
+#: widgets/controls/wooslider-controls.php:2265
+msgid "Padding"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1167
+#: widgets/categoty-slider-widget.php:1251
+#: widgets/categoty-slider-widget.php:1341
+#: widgets/categoty-slider-widget.php:1471
+#: widgets/controls/wooslider-controls.php:1930
+#: widgets/controls/wooslider-controls.php:2104
+#: widgets/controls/wooslider-controls.php:2230
+#: widgets/controls/wooslider-controls.php:2876
+msgid "Margin"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1185
+#: widgets/controls/wooslider-controls.php:1948
+msgid "Horizontal position"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1191
+#: widgets/controls/wooslider-controls.php:748
+#: widgets/controls/wooslider-controls.php:1535
+#: widgets/controls/wooslider-controls.php:1954
+msgid "Left"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1195
+#: widgets/class-loop-woosbymdz.php:675 widgets/woosbymdz-widget.php:371
+#: widgets/woosbymdz-widget.php:407
+#: widgets/controls/wooslider-controls.php:746
+#: widgets/controls/wooslider-controls.php:1958
+msgid "Center"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1199
+#: widgets/controls/wooslider-controls.php:747
+#: widgets/controls/wooslider-controls.php:1536
+#: widgets/controls/wooslider-controls.php:1962
+msgid "Right"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1209
+#: widgets/categoty-slider-widget.php:1360
+#: widgets/categoty-slider-widget.php:1489
+#: widgets/controls/wooslider-controls.php:1972
+#: widgets/controls/wooslider-controls.php:2073
+#: widgets/controls/wooslider-controls.php:3968
+#: widgets/controls/wooslider-controls.php:4022
+msgid "Border"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1217
+#: widgets/categoty-slider-widget.php:1368
+#: widgets/categoty-slider-widget.php:1497
+#: widgets/controls/wooslider-controls.php:1980
+#: widgets/controls/wooslider-controls.php:2081
+#: widgets/controls/wooslider-controls.php:3976
+#: widgets/controls/wooslider-controls.php:4030
+msgid "Border-Radius"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1219
+#: widgets/categoty-slider-widget.php:1370
+msgid "Pick a back-ground color/image to see the border-radius effect"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1232
+msgid "Blocks Container Style"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1271
+msgid "Block Style"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1289
+msgid "Blocks Height (Min-Height)"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1291
+msgid "Usefull for grid-style"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1316
+msgid "Full width Blocks?"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1317
+msgid ""
+"By activating this option, the slider blocks occupy the largest possible "
+"width, this is mostly used for grid type sliders."
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1382
+msgid "Box-Shadow"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1390
+msgid "Title Width"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1392
+msgid "Usefull for Synchronization all-blocks titles width with each other"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1419
+msgid "Arrows style"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1428
+msgid "Arrows color"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1430
+msgid "color change will be affected along both the arrows"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1442
+msgid "Arrows Typography"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1499
+msgid "Pick a back-ground color to see the border-radius effect"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1512
+msgid "Navigation style"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1521
+msgid "Navs color"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1523
+msgid "color change will be affected along all the navigation dots"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1534
+msgid "Navs active color"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1536
+msgid "Selected color will just affect the active dot"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1547
+msgid "Navs top margin"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1549
+msgid "In pixels (PX), negative values also accepted"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1557
+msgid "Active dot effect"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1561
+msgid "zoom out"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1562
+msgid "zoom in"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1563
+msgid "sharp"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1564
+msgid "modern"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1565
+msgid "up"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1566
+msgid "down"
+msgstr ""
+
+#: widgets/categoty-slider-widget.php:1567
+#: widgets/controls/wooslider-controls.php:429
+msgid "alone"
+msgstr ""
+
+#: widgets/class-getandshowprods.php:388 widgets/class-loop-woosbymdz.php:485
+msgid "+ Show More"
+msgstr ""
+
+#: widgets/class-getandshowprods.php:951
+msgid "Number of sales:"
+msgstr ""
+
+#: widgets/class-getandshowprods.php:967
+#: widgets/class-getandshowprods.php:1098
+msgid "View Product"
+msgstr ""
+
+#: widgets/class-getandshowprods.php:974
+#, php-format
+msgid "In %d different types"
+msgstr ""
+
+#: widgets/class-getandshowprods.php:1051
+msgid "Categories:"
+msgstr ""
+
+#: widgets/class-getandshowprods.php:1079
+msgid "Variations:"
+msgstr ""
+
+#: widgets/class-getandshowprods.php:1094
+msgid "View Main Product"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:30
+msgid "Loop Wooslider"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:210
+msgid "Layout"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:218
+msgid "Gap between slides"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:484
+msgid "No more Posts Found!"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:647
+msgid "Extra Settings"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:655
+#: widgets/controls/wooslider-controls.php:2283
+msgid "Same Height Slides?"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:656
+#: widgets/controls/wooslider-controls.php:2284
+msgid ""
+"Quickly and fully automatically, it matches the height of all the slides "
+"inside this slider"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:658
+#: widgets/controls/wooslider-controls.php:171
+#: widgets/controls/wooslider-controls.php:1086
+#: widgets/controls/wooslider-controls.php:2118
+#: widgets/controls/wooslider-controls.php:2286
+#: widgets/controls/wooslider-controls.php:2855
+#: widgets/controls/wooslider-controls.php:2930
+#: widgets/controls/wooslider-controls.php:2943
+#: widgets/controls/wooslider-controls.php:3090
+#: widgets/controls/wooslider-controls.php:3216
+#: widgets/controls/wooslider-controls.php:3383
+#: widgets/controls/wooslider-controls.php:3396
+#: widgets/controls/wooslider-controls.php:3689
+msgid "Yes"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:659
+#: widgets/controls/wooslider-controls.php:1087
+#: widgets/controls/wooslider-controls.php:2119
+#: widgets/controls/wooslider-controls.php:2287
+#: widgets/controls/wooslider-controls.php:2856
+#: widgets/controls/wooslider-controls.php:2931
+#: widgets/controls/wooslider-controls.php:2944
+#: widgets/controls/wooslider-controls.php:3091
+#: widgets/controls/wooslider-controls.php:3217
+#: widgets/controls/wooslider-controls.php:3384
+#: widgets/controls/wooslider-controls.php:3397
+#: widgets/controls/wooslider-controls.php:3690
+msgid "No"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:668
+msgid "Items Vertical-Align"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:670
+msgid ""
+"For this option to take effect, enable the Same Height Slides option in this "
+"section"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:673 widgets/woosbymdz-widget.php:369
+#: widgets/woosbymdz-widget.php:404
+msgid "Start"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:674 widgets/woosbymdz-widget.php:370
+#: widgets/woosbymdz-widget.php:405
+msgid "End"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:676 widgets/woosbymdz-widget.php:372
+msgid "Around"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:677 widgets/woosbymdz-widget.php:373
+msgid "Evenly"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:678 widgets/woosbymdz-widget.php:374
+msgid "Between"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:700
+msgid "Number of slides"
+msgstr ""
+
+#: widgets/class-loop-woosbymdz.php:752
+msgid "Edit Handle Selector"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:246
+msgid "Template"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:254
+msgid "Products Template-Type"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:256
+msgid ""
+"Note: To use other custom templates for product cards, on the plugin "
+"settings page, enable the option to `custom templates for product cards` and "
+"save the settings to add additional CSS codes for this to the main file. "
+"Using this option, you can display the card-products inside the slider in "
+"different modes!"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:258
+msgid "Based on your Active-Theme"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:259
+msgid "Template-1"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:260
+msgid "Template-2"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:261
+msgid "Template-3"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:262
+msgid "Exclusive Template Design"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:271
+msgid "Need Exclusive Design?"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:272
+msgid ""
+"If you need to design your sites product card professionally and very "
+"accurately, we can do it for you, please contact WooSlider plugin support."
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:296
+msgid "Translate Prices-Currency"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:297
+msgid ""
+"Translates the product price unit text based on your sites current language."
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:299 widgets/woosbymdz-widget.php:333
+#: widgets/woosbymdz-widget.php:430
+#: widgets/dynamic-tags/comments-avg-rank.php:47
+#: widgets/dynamic-tags/procuts-advanced-prices.php:46
+#: widgets/dynamic-tags/procuts-advanced-prices.php:81
+#: widgets/dynamic-tags/products-sale-perc.php:44
+#: widgets/dynamic-tags/products-sale-perc.php:56
+#: widgets/dynamic-tags/products-sale-perc.php:69
+msgid "on"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:300 widgets/woosbymdz-widget.php:334
+#: widgets/woosbymdz-widget.php:431
+#: widgets/dynamic-tags/comments-avg-rank.php:48
+#: widgets/dynamic-tags/procuts-advanced-prices.php:47
+#: widgets/dynamic-tags/procuts-advanced-prices.php:82
+#: widgets/dynamic-tags/products-sale-perc.php:45
+#: widgets/dynamic-tags/products-sale-perc.php:57
+#: widgets/dynamic-tags/products-sale-perc.php:70
+msgid "off"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:330
+msgid "Open product-links in new tab?"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:331
+msgid ""
+"Makes product-cards links (a-tags) open in new window (taget=\"_blank\")"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:364 widgets/woosbymdz-widget.php:399
+msgid "Custom-Card Vertical-Align"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:366 widgets/woosbymdz-widget.php:401
+msgid ""
+"For this option to take effect, enable the Equalize Slides option in the "
+"Style tab of the Products section."
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:406
+msgid "Baseline"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:408
+msgid "Normal"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:427
+msgid "Remove main-product name from the variation-names"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:428
+msgid ""
+"If the product inside the slider is variable, in the Variable Products "
+"section under the main product category, it removes the main product name "
+"from the variable names."
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:455
+#: widgets/controls/wooslider-controls.php:2247
+msgid "Products"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:464 widgets/controls/wooslider-controls.php:71
+#: widgets/controls/wooslider-controls.php:233
+#: widgets/controls/wooslider-controls.php:731
+#: widgets/controls/wooslider-controls.php:1241
+msgid "no effects on the functionality, just re-fresh the live view"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:478
+#: widgets/controls/wooslider-controls.php:838
+msgid "Source"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:480
+msgid ""
+"Up-sells, Cross-sells and Related just have functionality in the single "
+"products-page, Before using Charged-Products source, go to plugin-settings "
+"page and activate charged-products system"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:482
+#: widgets/controls/wooslider-controls.php:843
+msgid "News"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:483
+#: widgets/controls/wooslider-controls.php:844
+msgid "Olds"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:484
+#: widgets/controls/wooslider-controls.php:845
+msgid "Featured"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:485
+#: widgets/controls/wooslider-controls.php:846
+msgid "Sale"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:486
+msgid "Last seen (by user)"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:487
+#: widgets/controls/wooslider-controls.php:847
+msgid "Most sales"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:488
+#: widgets/controls/wooslider-controls.php:848
+msgid "Lowest sales"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:489
+msgid "Last modified (by admins)"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:490
+#: widgets/controls/wooslider-controls.php:850
+msgid "random"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:491
+msgid "Up-sells"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:492
+msgid "Cross-sells"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:493
+msgid "Related"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:494
+#: widgets/controls/wooslider-controls.php:851
+msgid "Charged-Products"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:503
+#: widgets/controls/wooslider-controls.php:860
+msgid "Stock"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:506
+msgid "dont matter"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:507
+#: widgets/controls/wooslider-controls.php:865
+msgid "only in-stocks"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:508
+#: widgets/controls/wooslider-controls.php:866
+msgid "only outof-stocks"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:517
+#: widgets/controls/wooslider-controls.php:828
+msgid "Number"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:519
+msgid "to show all the products, leave this blank"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:528
+msgid "Fetch from ?"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:531
+msgid "Product Categories"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:532 widgets/woosbymdz-widget.php:579
+msgid "Product Tags"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:533
+msgid "Custom Taxonomy"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:551
+#: widgets/controls/wooslider-controls.php:816
+msgid "Categories"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:553 widgets/woosbymdz-widget.php:581
+msgid "Choose and Search"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:609
+msgid "Products Attributes"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:610
+msgid "Lets you to filter products by their custom global attributes"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:633 widgets/woosbymdz-widget.php:666
+msgid "Query Operator"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:636 widgets/woosbymdz-widget.php:669
+msgid "AND"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:637 widgets/woosbymdz-widget.php:670
+msgid "OR"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:694
+msgid "Yoast Main-Cat"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:695
+msgid ""
+"Note: The Product Main-Cat mode only works if you have Yoast-Seo Plugin "
+"installed and only works on the Product Pages, for more info about this "
+"Advanced option please visit plugin settings-page (Advanced) section"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:707
+msgid "Show these products too"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:709
+msgid "Example: 123,45"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:710
+msgid ""
+"adds entered products to the slider (enter product id and seperate with ,)"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:718
+msgid "Exclude these products"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:720
+msgid "Example: 7,123,12"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:721
+msgid ""
+"Removes entered products from the slider (enter product id and seperate "
+"with ,)"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:729
+msgid "See all button"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:730
+msgid ""
+"adds an extra block to the end of the slider, use this to create a link to "
+"the whole category page"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:744
+#: widgets/controls/wooslider-controls.php:992
+msgid "see all"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:762
+#: widgets/controls/wooslider-controls.php:1009
+msgid "Background type"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:766
+#: widgets/controls/wooslider-controls.php:1013
+msgid "color"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:767
+#: widgets/controls/wooslider-controls.php:1014
+msgid "picture"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:776
+#: widgets/controls/wooslider-controls.php:1023
+msgid "Background color"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:801
+#: widgets/controls/wooslider-controls.php:1048
+msgid "Choose a pic"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:836
+msgid "Link to the Yoast-main Category?"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:837
+msgid ""
+"Use this option only inside the single-products page and if you have Yoast-"
+"Seo plugin"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:4417
+#: widgets/controls/wooslider-controls.php:1255
+msgid "We are so sorry!"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:4516
+msgid "Choose and Search Terms"
+msgstr ""
+
+#: widgets/woosbymdz-widget.php:4577
+msgid ""
+"Choose and Search Terms, Avoid using and selecting Custom-Taxonomies that "
+"are not related to woocomerce products"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:98
+msgid "Primary Loading"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:112
+#: widgets/controls/wooslider-controls.php:125
+msgid "Show Header"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:129
+msgid ""
+"In the Loop-Widget header only shows when your slider query is product "
+"(Woocommerce Products post-type)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:140
+msgid "Just show to members"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:152
+msgid "Just show header to members"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:154
+msgid "upon activation, only show header to logged-in users"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:170
+msgid "NO"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:180
+msgid "Dont load on mobiles"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:182
+msgid ""
+"if you want to show something else instead of this elem/widget in mobile "
+"devices"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:193
+msgid "Disable swiper on mobile"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:195
+msgid ""
+"This option will disable swiper on mobile devices, therefore user can use "
+"the slider very freely without any lags"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:206
+msgid "Disable swiper (General)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:208
+msgid ""
+"Using this option, you can display your products in a grid (non-slider) "
+"format, but it may require CSS code."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:224
+msgid "Slider"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:245
+msgid "Slider type"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:247
+msgid ""
+"To use the cube display mode, set the distance of all slides to zero and "
+"display only one slide per device."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:250
+msgid "Centered"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:251
+msgid "Free-hand"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:252
+msgid "Coverflow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:254
+msgid "Skipper"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:255
+msgid "Re-wind"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:256
+msgid "Cube(3D)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:265
+msgid "Grid Slider"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:266
+msgid "This option will change your slider type to grid and grid slides"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:292
+msgid "Mobile grid rows number"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:307
+msgid "Coverflow Rotate Degree"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:309
+msgid ""
+"Adjusts the degree of rotation of slides in cover flow mode, default value "
+"is 50"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:319
+msgid "Sliding Effect"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:348
+msgid "Auto-Height"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:349
+msgid "after moving each slide, set its height automatically"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:376
+msgid "Highlight centered slide"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:389
+msgid "rotate centered slide"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:402
+msgid "Navigation"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:405
+#: widgets/controls/wooslider-controls.php:422
+#: widgets/controls/wooslider-controls.php:2511
+#: widgets/controls/wooslider-controls.php:2619
+#: widgets/controls/wooslider-controls.php:2728
+msgid "None"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:406
+msgid "Dots"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:407
+msgid "Numbers"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:408
+msgid "Progress bar"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:409
+msgid "Bullets"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:418
+msgid "Navigation Active Style"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:420
+msgid "Just usable on dots and bullets mode"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:425
+msgid "Sharp"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:427
+msgid "Go up"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:428
+msgid "Go down"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:453
+msgid "Showing arrows"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:456
+msgid "Never"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:457
+msgid "Always"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:458
+msgid "While using"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:459
+msgid "Only on desktop"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:460
+msgid "Only on mobile"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:461
+msgid "Only on mobile & tablets"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:470
+msgid "Auto-play"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:472
+msgid ""
+"Note: In order to further optimize resources and prevent lag, autoplay is "
+"not displayed and applied in Elementor editor mode."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:483
+msgid "Stop on hover"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:508
+msgid "Control by Mousewheel"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:510
+#: widgets/controls/wooslider-controls.php:523
+msgid "no effects on touch devices"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:521
+msgid "Grab Cursor"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:646
+msgid "Auto Mover"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:648
+msgid ""
+"Automatically moves to the next slide after construction slider or after "
+"ajax calls"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:659
+msgid "Control by Keyboard"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:661
+msgid "This option does not have any effects on touch devices"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:672
+msgid "Forced Loop"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:673
+msgid ""
+"Forces slider slides to loop infinitely but may interfere with some slider "
+"effects and modes"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:694
+#: widgets/controls/wooslider-controls.php:703
+#: widgets/controls/wooslider-controls.php:2010
+msgid "Header"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:743
+msgid "Header elements alignment"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:757
+msgid "Back to first-slide after Ajax"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:758
+msgid "after changing the category, jumps to the first-slide"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:775
+msgid "Turn to Title"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:776
+msgid ""
+"When activated turns this button to an static title, and it will not have "
+"functionality anymore"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:788
+msgid "Title Theme"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:791
+msgid "Theme-1"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:792
+msgid "Theme-2"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:793
+msgid "Theme-3"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:794
+msgid "Theme-4"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:795
+msgid "Theme-5"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:796
+msgid "Theme-6"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:808
+msgid "cat-name"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:818
+msgid "Pick one cat"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:840
+msgid ""
+"Before using Charged-Products source, please go to the plugin settings page "
+"and activate charged-products system"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:849
+msgid "Last modified"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:864
+msgid "no matter"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:875
+msgid "showing buttons"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:878
+msgid "No icon"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:913
+msgid "Choose your icon"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:925
+msgid "width"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:927
+#: widgets/controls/wooslider-controls.php:1216
+msgid "in pixels (px)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:937
+msgid "text & icon position"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:942
+msgid "icon left-text right"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:943
+msgid "icon up-text down"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:944
+msgid "icon down-text up"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:968
+msgid "text color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:977
+msgid "Show see all slide?"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:978
+msgid "adds and extra slide to the end of slider"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:989
+msgid "Title (see all)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1083
+msgid "Header bg-color change?"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1084
+msgid "After Ajax, change the back-color of the header based on your design"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1096
+msgid "Choose a color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1107
+#: widgets/controls/wooslider-controls.php:2132
+msgid "Header Buttons"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1120
+msgid "star-cat"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1129
+msgid "your-cat"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1149
+msgid "Not Found Message"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1157
+msgid "Show not found message ?"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1158
+msgid ""
+"Shows a nothing found message when the slider could not find any products to "
+"show"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1169
+msgid "Message Body"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1172
+msgid "Nothing found to show!"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1179
+msgid "Button text"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1182
+msgid "Go Shop"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1190
+msgid "Button Link"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1192
+msgid ""
+"Link this button to your shop page if you dont want to loose the customer"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1194
+msgid "https://your-site.com/shop/"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1201
+msgid "Css clases (button)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1203
+#: widgets/controls/wooslider-controls.php:1308
+#: widgets/controls/wooslider-controls.php:1354
+msgid "woodmart-btn wd-primary-btn"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1204
+#: widgets/controls/wooslider-controls.php:1309
+msgid "use your theme buttons css clases (seperate with *space*)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1214
+msgid "Space from the top"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1231
+#: widgets/controls/wooslider-controls.php:2893
+msgid "404"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1252
+msgid "Title (404)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1254
+msgid "All contents of this section will be shown to users who not logged-in"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1263
+msgid "Description"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1265
+msgid ""
+"You are not able to see these products at the moment, please log-in or "
+"register"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1273
+msgid "Login button"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1285
+msgid "Login text"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1287
+msgid "Login"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1296
+msgid "URL (login)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1299
+#: widgets/controls/wooslider-controls.php:1345
+msgid "https://your-site.com/login"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1306
+msgid "Css clases (login)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1319
+msgid "Register button"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1331
+msgid "Register text"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1333
+msgid "Register"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1342
+msgid "URL (register)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1352
+msgid "Css clases (register)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1355
+msgid "use your theme buttons css clases (seperate with *space*"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1378
+msgid "Cache Header Ajax Requests"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1379
+msgid ""
+"Header Slider caches each product load request locally, minimizing your "
+"server usage for future repeat requests."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1392
+msgid "Reset Products Button"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1393
+msgid ""
+"Displaying this button gives the user the ability to reset the products "
+"inside the slider to the initial products ​​at any time."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1406
+#: widgets/controls/wooslider-controls.php:1439
+msgid "Button Position"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1408
+msgid "Changes the position of the product reset button"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1411
+msgid "Top-Right"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1412
+msgid "Top-Left"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1413
+msgid "Bottom-Right"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1413
+msgid "Bottom-Left"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1414
+msgid "Bottom-Middle"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1415
+msgid "Manual"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1441
+msgid ""
+"To see and set button position manually, click-on one of the header buttons"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1478
+msgid "Choose a suitable icon for the reset button"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1505
+msgid "Tooltip Text"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1506
+msgid "Help text for product reset button"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1508
+msgid "Reset Products"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1531
+msgid "Tooltip Position"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1533
+msgid "Changes the position of the product reset button tooltip text"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1561
+msgid "Infinite Slider (Experimental)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1562
+msgid ""
+"By activating this option, the slider products will be loaded by Ajax, and "
+"in fact the slider will have no end!.---Note: Only works when you want to "
+"show more products form some product-categories CAN-NOT load more products "
+"from Yoast-Main cat/upsells/crossells/related/recently_viewed products."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1574
+msgid "Methode"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1576
+msgid ""
+"Determine how the infinity slider works.Note: If you use slide show mode or "
+"both mode, to adjust the text and view of the last slide (load-more-"
+"products) in the products section, activate the `See all button` and change "
+"the settings there."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1578
+msgid "Only on Next Arrow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1579
+msgid "Only Extra Slide"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1580
+msgid "Next Arrow & Extra Slide"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1590
+msgid "Products Number"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1592
+msgid "Select the number of products to reload and add to the slider"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1602
+msgid "Not Found message-text"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1603
+msgid "When there are no products to display, it informs the user by a message"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1605
+msgid "No More Products Found!"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1620
+msgid "Posts Number"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1628
+msgid "Slides Number to Show"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1630
+msgid "Select the number of posts that you want to show inside the slider"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1643
+msgid "Grid Layout"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1651
+msgid "Use grid layout?"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1652
+msgid ""
+"In the grid slider mode, it will display the products in a grid layout and "
+"will disable the slider attributes."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1726
+msgid "Slides up space (px)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1738
+msgid "Slides down space (px)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1750
+msgid "Use Grid-Masonry layout?"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1751
+msgid ""
+"Activating this option is useful when you have different slide heights or "
+"product images are not cut in the same way."
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1763
+msgid "Column Gap"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1765
+msgid "It sets the empty space between the columns in grid-masonry mode"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1848
+msgid "No BG"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1849
+msgid "Fades the background"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1892
+msgid "Height (Min-Height)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1992
+msgid "Overflow Visible"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:1994
+msgid "Makes Main-Container overflow property visible"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2029
+msgid "Height (px)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2050
+msgid "Scroll-bar height (%)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2051
+msgid ""
+"shows the scroll bar if header elements width are more than the maximum "
+"width of the device"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2115
+msgid "Fade Header on hover"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2116
+msgid "if you choose no, the header never fades on hover"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2142
+msgid "Header elements typography"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2150
+msgid "Elements text color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2161
+msgid "On hover BG"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2172
+msgid "On hover shadow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2183
+msgid "Active BG"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2194
+msgid "Active shadow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2211
+msgid "Products container"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2296
+msgid "Products Height (Min-Height)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2298
+msgid "Usefull for Synchronization product-blocks height with each other"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2324
+msgid "Products Border"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2332
+msgid "border-radius"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2344
+msgid "Image Background"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2353
+msgid "Image border-radius"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2364
+msgid "Image Padding"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2377
+msgid "Products Box-Shadow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2410
+#: widgets/controls/wooslider-controls.php:3831
+msgid "Arrows"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2448
+#: widgets/controls/wooslider-controls.php:3869
+msgid "Left arrow color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2461
+msgid "Left arrow shine"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2470
+msgid "Left arrow typo"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2478
+#: widgets/controls/wooslider-controls.php:3913
+msgid "Right arrow color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2491
+msgid "Right arrow shine"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2500
+msgid "Right arrow typo"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2508
+msgid "Left arrow BG-type"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2512
+#: widgets/controls/wooslider-controls.php:2620
+msgid "Sharped"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2513
+#: widgets/controls/wooslider-controls.php:2621
+msgid "ease-sharped"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2514
+#: widgets/controls/wooslider-controls.php:2622
+msgid "Round"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2515
+#: widgets/controls/wooslider-controls.php:2623
+msgid "Leaves-1"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2516
+#: widgets/controls/wooslider-controls.php:2624
+msgid "Leaves-2"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2525
+#: widgets/controls/wooslider-controls.php:2634
+#: widgets/controls/wooslider-controls.php:3958
+msgid "Left arrow bg-color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2564
+#: widgets/controls/wooslider-controls.php:3988
+msgid "Padding Left-Arrow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2605
+#: widgets/controls/wooslider-controls.php:3999
+msgid "Margin Left Arrow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2616
+msgid "Right arrow BG-type"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2673
+#: widgets/controls/wooslider-controls.php:4042
+msgid "Padding Right-Arrow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2714
+#: widgets/controls/wooslider-controls.php:4053
+msgid "Margin Right Arrow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2725
+msgid "Arrows hover effect"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2729
+msgid "Out-mover"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2730
+msgid "In-mover"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2731
+msgid "Approaching"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2733
+msgid "High-Light"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2747
+msgid "Pagination"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2780
+msgid "Dots color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2807
+msgid "Numbers color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2821
+msgid "Numbers shine"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2831
+msgid "Numbers typo"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2840
+msgid "Progress bar color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2853
+msgid "Change direction"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2867
+msgid "Background "
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2878
+msgid "negative values do the up-margin & positive values do the down-margin"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2903
+msgid "Choose a proper picture"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2904
+msgid "Best picture ratio: 1024:355"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2919
+msgid "Products Titles"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2927
+msgid "Hide Products Title"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2928
+msgid ""
+"Upon activation it will hide the product title, if this does not work you "
+"may hide them with CSS code"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2940
+msgid "Centeralaized Title (Horizontally)"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2941
+msgid "Makes The title of the products inside the slider horizontally centered"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2953
+msgid "Products Title Color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2976
+msgid "Products Title Background"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:2996
+msgid "Products Title typography"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3014
+msgid "Products Title shadow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3031
+msgid "Products Title Padding"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3051
+msgid "Products Title Border-Radius"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3079
+msgid "Products Categories"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3087
+msgid "Hide Products Categories"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3088
+msgid ""
+"Upon activation it will hide the product categories, if this does not work "
+"you may hide them with CSS code"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3100
+msgid "Products Cats Color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3123
+msgid "Products Cats Background"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3143
+msgid "Products Cats typography"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3161
+msgid "Products Cats shadow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3178
+msgid "Products Cats Border-Radius"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3205
+msgid "Products Prices"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3213
+msgid "Hide Products Price"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3214
+msgid ""
+"Upon activation it will hide the product Price, if this does not work you "
+"may hide them with CSS code"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3226
+msgid "Price Normal Color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3247
+msgid "Price Offer Color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3269
+msgid "Products Price Background"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3288
+msgid "Products Price Border-Radius"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3310
+msgid "Products Price typography"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3327
+msgid "Products Price Padding"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3347
+msgid "Products Price Margin"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3372
+msgid "Products Labels"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3380
+msgid "Hide Products labels"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3381
+msgid ""
+"Upon activation it will hide the product Labels, if this does not work you "
+"may hide them with CSS code"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3393
+msgid "Products Label Position Absolute"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3394
+msgid ""
+"When activated change products label wrapper position to Absolute, therefore "
+"you can change its position freely"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3418
+msgid "Products Label Border-Radius"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3439
+msgid "Products Label Color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3461
+msgid "Products Label typography"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3479
+msgid "Products Label Box-Shadow"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3496
+msgid "Products-Label Top-Position"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3497
+msgid "Do not Enter here the bottom position and if you enter it will not work"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3530
+msgid "Products-Label Bottom-Position"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3531
+msgid "Do not Enter here the top position and if you enter it will not work"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3564
+msgid "Products-Label Right-Position"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3565
+msgid "Do not Enter here the left position and if you enter it will not work"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3598
+msgid "Products-Label Left-Position"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3599
+msgid "Do not Enter here the right position and if you enter it will not work"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3633
+msgid "Products Label Background"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3652
+msgid "Products Label Padding"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3678
+msgid "Products Add-Cart Button"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3686
+msgid "Hide Products Add btn"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3687
+msgid ""
+"Upon activation it will hide the product add-to-cart button, if this does "
+"not work you may hide them with CSS code"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3699
+msgid "Products Add Button Color"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3721
+msgid "Products Add Button Background"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3741
+msgid "Products Add button typography"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3758
+msgid "Products Add button Border-Radius"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3779
+msgid "Products Add button padding"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3799
+msgid "Products Add button Margin"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:3882
+#: widgets/controls/wooslider-controls.php:3926
+msgid "Width"
+msgstr ""
+
+#: widgets/controls/wooslider-controls.php:4012
+msgid "Right arrow bg-color"
+msgstr ""
+
+#: widgets/dynamic-tags/comments-avg-rank.php:25
+msgid "Comments Average Rate (WooSlider)"
+msgstr ""
+
+#: widgets/dynamic-tags/comments-avg-rank.php:44
+msgid "Calculate Unverified Comments?"
+msgstr ""
+
+#: widgets/dynamic-tags/comments-avg-rank.php:45
+msgid ""
+"Use this option if you want to also calculate the score of unapproved "
+"comments."
+msgstr ""
+
+#: widgets/dynamic-tags/comments-avg-rank.php:57
+msgid "Comments MetaKey"
+msgstr ""
+
+#: widgets/dynamic-tags/comments-avg-rank.php:58
+msgid "Default: rating"
+msgstr ""
+
+#: widgets/dynamic-tags/comments-avg-rank.php:68
+msgid "Custom Post Meta"
+msgstr ""
+
+#: widgets/dynamic-tags/comments-avg-rank.php:69
+msgid "Directly fetches the post avg-rating from entered meta key."
+msgstr ""
+
+#: widgets/dynamic-tags/comments-avg-rank.php:70
+msgid "No default-value"
+msgstr ""
+
+#: widgets/dynamic-tags/posts-url-every-where.php:23
+msgid "Post Url (WooSlider)"
+msgstr ""
+
+#: widgets/dynamic-tags/procuts-advanced-prices.php:25
+msgid "Advanced Product Prices (WooSlider)"
+msgstr ""
+
+#: widgets/dynamic-tags/procuts-advanced-prices.php:43
+msgid "Do not show Sale-Price"
+msgstr ""
+
+#: widgets/dynamic-tags/procuts-advanced-prices.php:44
+msgid ""
+"If the products are on sale, the original price of the product (the crossed-"
+"out price) will not be displayed."
+msgstr ""
+
+#: widgets/dynamic-tags/procuts-advanced-prices.php:56
+msgid "Price & Currency Separator"
+msgstr ""
+
+#: widgets/dynamic-tags/procuts-advanced-prices.php:57
+#: widgets/dynamic-tags/procuts-advanced-prices.php:68
+msgid "Default: empty"
+msgstr ""
+
+#: widgets/dynamic-tags/procuts-advanced-prices.php:67
+msgid "Sale Prices Separator"
+msgstr ""
+
+#: widgets/dynamic-tags/procuts-advanced-prices.php:78
+msgid "Do not Format Prices"
+msgstr ""
+
+#: widgets/dynamic-tags/procuts-advanced-prices.php:79
+msgid "Displays price numbers in raw, unformatted form."
+msgstr ""
+
+#: widgets/dynamic-tags/products-sale-perc.php:23
+msgid "Products Sale Percent (WooSlider)"
+msgstr ""
+
+#: widgets/dynamic-tags/products-sale-perc.php:42
+msgid "Do not show Percent-Sign"
+msgstr ""
+
+#: widgets/dynamic-tags/products-sale-perc.php:54
+msgid "Do not show Negative-Sign"
+msgstr ""
+
+#: widgets/dynamic-tags/products-sale-perc.php:66
+msgid "Switch Positions"
+msgstr ""
+
+#: widgets/dynamic-tags/products-sale-perc.php:67
+msgid ""
+"The layout type changes the negative sign and percentage to the discount "
+"number."
+msgstr ""
+
+#: widgets/helpers/main.php:43
+msgid "Choose"
+msgstr ""

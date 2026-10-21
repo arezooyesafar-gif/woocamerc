@@ -1,0 +1,46 @@
+.eshterakyar-content-paywall {
+    margin: 2em 0;
+    padding: 0;
+    clear: both;
+}
+
+.eshterakyar-content-paywall-inner {
+    padding: 1.75em 1.5em;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    text-align: center;
+}
+
+.eshterakyar-content-paywall-title {
+    margin: 0 0 0.5em;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.eshterakyar-content-paywall-message {
+    margin: 0 0 1.25em;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.eshterakyar-content-paywall-actions .eshterakyar-buy-subscription-button {
+    display: inline-block;
+}
+
+.single .eshterakyar-paywall-marker,
+.page .eshterakyar-paywall-marker {
+    display: none !important;
+}
+
+.eshterakyar-paywall-marker {
+    display: block;
+    margin: 1.5em 0;
+    padding: 0.75em 1em;
+    border: 2px dashed #94a3b8;
+    border-radius: 6px;
+    background: #f8fafc;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9em;
+}

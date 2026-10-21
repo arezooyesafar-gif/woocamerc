@@ -1,0 +1,124 @@
+<div ng-controller="dashboard">
+  <div class="route-content dashboard">
+    <div class="row">
+      <div class="col-12 col-md-12 sm-px-0">
+
+        <div class="header d-d-none">
+          <a href="settings" type="button">
+            <img src="{{plugin_path}}upanel/assets/img/cog.svg" alt="" />
+          </a>
+          <a  
+          href="notifications" type="button">
+          <svg width="24" height="24" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3.667 13.886A2.001 2.001 0 005 12V9a7 7 0 0114 0v3c0 .854.54 1.606 1.333 1.886a1 1 0 01.667.943V19a1 1 0 01-1 1H4a1 1 0 01-1-1v-4.17a1 1 0 01.667-.944zM19 18v-2.535A4 4 0 0117 12V9A5 5 0 007 9v3a4 4 0 01-2 3.465V18h14zm-7 5c-1.385 0-2.563-.835-3-2h6c-.437 1.165-1.615 2-3 2z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+
+        </div>
+
+        <div class="user-info d-d-none" ng-class="{'sm-d-none': (route != '/' && route != '/dashboard')}">
+        
+          <div class="user">
+            <p class="name-number">
+              <span ng-if="user['first_name'] != '' || user['last_name'] != ''">{{user['first_name']}}
+                {{user['last_name']}}</span>
+              <span ng-if="user.mobile">{{user.mobile}}</span>
+              <span
+                ng-if="user['first_name'] == '' && user['last_name'] == '' && user['nickname'] != ''">{{user['nickname']}}</span>
+              <span
+                ng-if="user['first_name'] == '' && user['last_name'] == '' && user['nickname'] == ''">{{user['user_email']}}</span>
+            </p>
+            <a href="settings" type="button">
+              <svg width="20" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M15.293 3.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-12 12A1 1 0 018 21H4a1 1 0 01-1-1v-4a1 1 0 01.293-.707l12-12zM5 16.414V19h2.586l11-11L16 5.414l-11 11zM21 21H10l2-2h9v2z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="my-orders digi-card">
+          <div class="header">
+            <p class="title">سفارش‌های من</p>
+            <a href="orders"> مشاهده همه </a>
+          </div>
+          <div class="order-sections">
+            <div class="section">
+              <img src="{{plugin_path}}upanel/assets/img/status-processing.svg" alt="" />
+              <div>
+                <span class="count-mobile">{{number_fa(dashboard_data.user_orders.pending.length+
+                  dashboard_data.user_orders.processing.length) }}</span>
+                <p class="count ">{{number_fa(dashboard_data.user_orders.pending.length+
+                  dashboard_data.user_orders.processing.length) }} سفارش</p>
+                <p class="status">جاری</p>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+              <img src="{{plugin_path}}upanel/assets/img/status-delivered.svg" alt="" />
+              <div>
+                <span class="count-mobile">{{number_fa( dashboard_data.user_orders.completed.length) }}</span>
+                <p class="count">{{number_fa( dashboard_data.user_orders.completed.length) }} سفارش</p>
+                <p class="status">تحویل شده</p>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+              <img src="{{plugin_path}}upanel/assets/img/status-returned.svg" alt="" />
+              <div>
+                <span class="count-mobile">{{number_fa( dashboard_data.user_orders.refunded.length) }}</span>
+                <p class="count">{{number_fa( dashboard_data.user_orders.refunded.length) }} سفارش</p>
+                <p class="status">مرجوع شده</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="allProducts.length > 0" class="route-content dashboard top-orders">
+    <div class="row">
+      <div class="col-12 col-md-12 sm-px-0">
+        <div class="my-orders digi-card">
+          <div class="header">
+            <p class="title">خریدهای پرتکرار شما</p>
+            <a href="orders"> مشاهده همه </a>
+          </div>
+
+          <section ng-if="allProducts != ''" class="splide orders-list" aria-label="Splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li ng-repeat="product in allProducts" class="splide__slide">
+                  <a href="{{product.link}}" target="_blank" rel="noopener noreferrer">
+
+                    <div class="product">
+                      <img ng-if="product.img.length > 0" src="{{product.img[0]}}" alt="" />
+                      <p class="title">{{product.name}}</p>
+                      <p class="price">
+                        <span>{{formatNumber(get_price(product.price))}}</span>
+                        <span ng-if="get_price(product.price)[1] == 'تومان'" ng-bind-html="toman"></span>
+                        <span ng-if="get_price(product.price)[1] != 'تومان'">{{get_price(product.price)[1]}}</span>
+                      </p>
+                      <!-- <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path fill-rule="evenodd"
+                            d="M20 4h2V2h-3a1 1 0 00-1 1v1H3a1 1 0 00-.995 1.1l1 10A1 1 0 004 16h15a1 1 0 001-1V4zm-2 17a2 2 0 110-4 2 2 0 010 4zM5 21a2 2 0 110-4 2 2 0 010 4zm13-7V6H4.105l.8 8H18z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                        اضافه به سبد
+                      </button> -->
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

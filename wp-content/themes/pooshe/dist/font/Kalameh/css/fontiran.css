@@ -1,0 +1,128 @@
+/**
+*
+*	Name:			IRANYekan Font
+*	Version:			3.3
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		Sep 17, 2020
+*	Updated on:		Sep 17, 2020
+*	Website:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+???? ????? ???? ?? ??? ????? ??????? ????? ?? ???. ??? ????? ?? ?????? ??????? ?? ??? ???? ?? ???? ?? ?? ???? (???? ????? ??? ???) ?????? ??????
+--------------------------------------------------------------------------------------
+IRANYekan fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+--------------------------------------------------------------------------------------
+*	
+**/
+@font-face {
+	font-family: Kalameh;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../fonts/eot/KalamehWeb_Black.eot');
+	src: url('../fonts/eot/KalamehWeb_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff/KalamehWeb_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/woff2/KalamehWeb_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/ttf/KalamehWeb_Black.ttf') format('truetype');
+
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Kalameh;
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/eot/KalamehWeb_thin.eot');
+	src: url('../fonts/eot/KalamehWeb_thin.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff/KalamehWeb_thin.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/woff2/KalamehWeb_thin.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/ttf/KalamehWeb_thin.ttf') format('truetype');
+
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Kalameh;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/eot/KalamehWeb_Regular.eot');
+	src: url('../fonts/eot/KalamehWeb_Regular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff/KalamehWeb_Regular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/woff2/KalamehWeb_Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/ttf/KalamehWeb_Regular.ttf') format('truetype');
+
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Kalameh;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/eot/KalamehWeb_Regular.eot');
+	src: url('../fonts/eot/KalamehWeb_Regular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff/KalamehWeb_Regular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/woff2/KalamehWeb_Regular.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/ttf/KalamehWeb_Regular.ttf') format('truetype');
+
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Kalameh;
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/eot/KalamehWeb_Regular.eot');
+	src: url('../fonts/eot/KalamehWeb_Regular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff/KalamehWeb_Regular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/woff2/KalamehWeb_Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/ttf/KalamehWeb_Regular.ttf') format('truetype');
+
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Kalameh;
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/eot/KalamehWeb_Bold.eot');
+	src: url('../fonts/eot/KalamehWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff/KalamehWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/woff2/KalamehWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/ttf/KalamehWeb_Bold.ttf') format('truetype');
+
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Kalameh;
+	font-style: normal;
+	font-weight: 850;
+	src: url('../fonts/eot/KalamehWeb_Bold.eot');
+	src: url('../fonts/eot/KalamehWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff/KalamehWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/woff2/KalamehWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/ttf/KalamehWeb_Bold.ttf') format('truetype');
+
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Kalameh;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/eot/KalamehWeb_Bold.eot');
+	src: url('../fonts/eot/KalamehWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff/KalamehWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/woff2/KalamehWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/ttf/KalamehWeb_Bold.ttf') format('truetype');
+
+	font-display: swap;
+}
+
+body , html , h1 ,h2 , h3 , h4,h5,h6,p,span,div,input {
+	font-family: Kalameh,sans-serif;
+	font-weight: normal;
+
+	font-display: swap;
+}

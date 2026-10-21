@@ -1,0 +1,318 @@
+#rcp_registration_form {
+  #rcp_subscription_levels {
+    display: flex;
+    flex-wrap: wrap;
+
+    .rcp_subscription_level {
+      width: 25%;
+      display: inline-block;
+      text-align: center;
+      @media (max-width: 1342px) {
+        margin: 0 10px 0 0;
+        width: 24%;
+      }
+      @media (max-width: 1199px) {
+        margin: 0;
+        width: 49%;
+        label {
+          min-width: 70%;
+        }
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+        label {
+          min-width: 100%;
+        }
+      }
+
+      input.rcp_level {
+        display: none;
+
+        &:checked + label {
+        }
+
+        & + label {
+          &:hover {
+            transform: translateY(-5px);
+            @extend %transition;
+            background: #999999;
+          }
+
+          padding: 5px;
+          text-align: center;
+          color: #FFF;
+          background: #aaa;
+          @extend %radius, %transition;
+          font-size: 16px;
+          line-height: 2;
+          min-width: 90%;
+
+          .rcp_subscription_level_name {
+            width: 100%;
+            display: block;
+            padding: 15px 0;
+          }
+
+          .rcp_separator {
+            display: none;
+          }
+
+          .rcp_level_description {
+            border-left: none;
+          }
+
+          .rcp_price {
+            display: block;
+            padding: 15px 0 0 0;
+            width: 100%;
+            background: #FFF;
+            color: #999999;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            @extend %radius;
+          }
+
+          .rcp_level_duration {
+            display: block;
+            padding: 15px 0;
+            background: #FFF;
+            @extend %radius;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            color: $color-text-gray-3;
+            margin-top: -1px;
+          }
+
+          .rcp_level_description {
+            padding: 15px 20px;
+            display: block;
+            font-size: 16px;
+            line-height: 2;
+          }
+        }
+      }
+    }
+  }
+
+  .rcp_registration_total {
+    background: #f5f5f5;
+    padding: 15px;
+    @extend %radius;
+
+    table {
+      width: 100%;
+
+      td, tr {
+        padding: 15px 0;
+      }
+    }
+  }
+
+  .blockUI.blockOverlay {
+    background: transparent !important;
+  }
+}
+
+.rcp-title {
+  text-align: center;
+  color: #aaa;
+  position: relative;
+  margin: 15px 0;
+
+  &:after {
+    content: "";
+    border-bottom: 1px dashed #aaa;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+
+  h3 {
+    background-color: #fff;
+    display: inline-block;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 15px;
+  }
+}
+
+.rcp-button {
+  border: none;
+  padding: 0 15px;
+  height: 45px;
+  line-height: 45px;
+  background-color: #bbb;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 15px;
+  @extend %radius, %transition;
+
+  &:hover {
+    background-color: #aaa;
+    color: #fff;
+    @extend %transition;
+    border-color: transparent !important;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+
+.rcp-input {
+  border: #eee 3px solid;
+  background-color: #fff;
+  @extend %radius;
+  height: 45px;
+  @extend %transition;
+  font-weight: normal;
+  color: #888;
+  font-size: 14px;
+  padding: 0 0.8rem;
+  width: 100%;
+
+  &:hover {
+    border-color: #dddddd;
+    @extend %transition;
+  }
+}
+
+#rcp_profile_editor_form, #rcp_registration_form {
+  fieldset {
+    margin: 15px 0;
+    legend {
+      text-align: center;
+      color: #aaa;
+      position: relative;
+      margin: 15px 0;
+
+      &:before {
+        content: "";
+        border-bottom: 1px dashed #aaa;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+      }
+
+      h3 {
+
+        background-color: #fff;
+        display: inline-block;
+        margin: 0;
+        z-index: 1;
+        position: relative;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .rcp_subscription_message{
+    margin-bottom: 15px;
+  }
+
+  p {
+    @media (max-width: 1342px) {
+      width: 100%;
+    }
+    width: 48%;
+    display: inline-block;
+    margin: 0 10px;
+
+    input[type="text"], input[type="password"] {
+      border: #eee 3px solid;
+      background-color: #fff;
+      @extend %radius;
+      height: 45px;
+      @extend %transition;
+      font-weight: normal;
+      color: #888;
+      font-size: 14px;
+      padding: 0 0.8rem;
+      width: 100%;
+
+      &:hover {
+        border-color: #dddddd;
+        @extend %transition;
+      }
+    }
+
+    &#rcp_profile_display_name_wrap {
+      display: none !important;
+    }
+  }
+}
+
+#rcp-payment-history {
+  margin-top: 15px;
+}
+
+#rcp-account-overview, #rcp-payment-history {
+  width: 100%;
+  background: #f5f5f5;
+  @extend %radius;
+
+  thead {
+    tr {
+      th {
+        background: #e2e2e2;
+        padding: 15px;
+
+        &:first-child {
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+
+        &:last-child {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:not(:last-child) {
+        @media (min-width: 481px) {
+          border-bottom: 1px dashed #bbb;
+        }
+      }
+
+      td {
+        padding: 15px;
+        @media (max-width: 480px) {
+          &:before {
+            width: auto !important;
+            margin-left: 0 !important;
+          }
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .rcp_registration_total_details {
+    tr {
+      td {
+        &:before {
+          display: none !important;
+        }
+
+        text-align: center !important;
+        border-radius: 10px;
+      }
+    }
+  }
+}

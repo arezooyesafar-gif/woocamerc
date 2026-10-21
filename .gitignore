@@ -1,0 +1,17 @@
+wp-config.php
+bv_connector_*.php
+error_log
+*.log
+.htaccess-old
+wp-admin/
+wp-includes/
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/wp-rocket-config/
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+*.sql
+*.zip
+*.gz
+wp-content/wflogs/

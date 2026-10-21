@@ -1,0 +1,35 @@
+{
+  "name": "pooshe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/init.js",
+  "scripts": {
+    "watch": "npx mix watch",
+    "build": "npx mix --production"
+  },
+  "author": "wpsea",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "babel-loader": "^8.2.2",
+    "bootstrap": "^5.3.3",
+    "css-loader": "^6.2.0",
+    "jquery": "^3.6.0",
+    "jquery-countdown": "^2.2.0",
+    "laravel-mix": "^6.0.27",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "mini-css-extract-plugin": "^2.1.0",
+    "purgecss": "^8.0.0",
+    "sass-loader": "^12.1.0",
+    "select2": "^4.1.0-rc.0",
+    "skills": "^1.5.11",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^8.0.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.37.2",
+    "showdown": "^2.1.0",
+    "webpack-cli": "^4.7.2"
+  }
+}

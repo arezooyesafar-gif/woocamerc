@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/*
+Theme Name: قالب پوشـــه
+Theme URI: https://www.rtl-theme.com/pooshe-woocommerce-wordpress-theme/
+Author: تیم مون تم
+Author URI: https://www.rtl-theme.com/author/moontheme/
+Description: حرفه ای ترین قالب فروشگاه فایل و دوره کاملا ایرانی
+Version: 6
+Text Domain: pooshe
+Tags: ووکامرس ، اشتراک اختصاصی ، فروش فایل , سایت آموزشی
+*/
+@media (max-width:768px){
+    .pooshe-elementor-shop-carousel{
+        overflow:hidden;
+    }
+    .pooshe-app{
+        overflow:hidden;
+    }
+}

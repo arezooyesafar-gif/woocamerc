@@ -1,0 +1,1 @@
+icon-font-generator svg/*.svg -o dist --prefix pooshe-icons- --name poosheicons

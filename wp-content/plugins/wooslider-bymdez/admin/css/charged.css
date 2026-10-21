@@ -1,0 +1,67 @@
+.woosbymdz-in-load {
+    pointer-events: none !important;
+    opacity: .5;
+    filter: invert(1);
+}
+.woosbymdz-charged-btn-wrapper {
+    margin: 25px 0px;
+}
+.woosbymdz-charged-btn-wrapper .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.woosbymdz-charged-btn-wrapper .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.woosbymdz-charged-btn-wrapper .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.woosbymdz-charged-btn-wrapper .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.woosbymdz-charged-btn-wrapper input:checked+.slider {
+    background-color: #6045dd;
+}
+
+.woosbymdz-charged-btn-wrapper input:focus+.slider {
+    box-shadow: 0 0 1px #6045dd;
+}
+
+.woosbymdz-charged-btn-wrapper input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.woosbymdz-charged-btn-wrapper .slider.round {
+    border-radius: 34px;
+}
+
+.woosbymdz-charged-btn-wrapper .slider.round:before {
+    border-radius: 50%;
+}

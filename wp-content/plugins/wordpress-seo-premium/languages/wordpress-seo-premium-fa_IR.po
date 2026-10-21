@@ -1,0 +1,1537 @@
+# Translation of Yoast - Yoast SEO Premium (for WordPress) in Persian
+# This file is distributed under the same license as the Yoast - Yoast SEO Premium (for WordPress) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-01-25 08:46+0330\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2\n"
+"Language: fa\n"
+"Project-Id-Version: Yoast - Yoast SEO Premium (for WordPress)\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: classes/premium-metabox.php:145
+msgid "Needs improvement"
+msgstr "به بهبود نیاز دارد"
+
+#: classes/premium-metabox.php:138
+#: assets/js/src/frontend-inspector/components/frontend-inspector.js:138
+#: assets/js/src/frontend-inspector/components/frontend-inspector.js:143
+msgid "Not available"
+msgstr "در دسترس نیست"
+
+#: classes/premium-metabox.php:159
+#: assets/js/src/frontend-inspector/components/frontend-inspector.js:63
+msgid "Good"
+msgstr "خوب"
+
+#: src/integrations/frontend-inspector.php:71
+#: assets/js/src/frontend-inspector/components/frontend-inspector.js:28
+msgid "Front-end SEO inspector"
+msgstr "بازرس سئوی ظاهر"
+
+#. Translators: %1$s expands to an opening anchor tag for a link leading to the
+#. Yoast SEO page of the Permalink Cleanup features, %2$s expands to a closing
+#. anchor tag.
+#: src/integrations/admin/crawl-settings-integration.php:216
+msgid "These are expert features, so make sure you know what you're doing before removing the parameters. %1$sRead more about how your site can be affected%2$s."
+msgstr "اینها ویژگی های تخصصی هستند، بنابراین قبل از حذف پارامترها مطمئن شوید که چه کاری انجام می دهید. %1$sدرباره نحوه تأثیرگذاری بر سایت شما %2$s بیشتر بخوانید."
+
+#: src/integrations/admin/crawl-settings-integration.php:328
+msgid "This feature is disabled when your site is not using pretty permalinks."
+msgstr "زمانی که سایت شما از پیوندهای دائمی زیبا استفاده نمی کند، این ویژگی غیرفعال می شود."
+
+#. translators: 1: Link start tag to the Permalinks settings page, 2: Link
+#. closing tag.
+#: src/integrations/admin/crawl-settings-integration.php:322
+msgid "This feature is disabled when your site is not using %1$spretty permalinks%2$s."
+msgstr "زمانی که سایت شما از %1$sprety پیوند ثابت%2$s استفاده نمی‌کند، این ویژگی غیرفعال می‌شود."
+
+#: src/integrations/admin/crawl-settings-integration.php:231
+msgid "Please use a comma to separate multiple URL parameters."
+msgstr "لطفاً از یک کاما برای جدا کردن چندین پارامتر URL استفاده کنید."
+
+#: src/integrations/admin/crawl-settings-integration.php:229
+msgid "Additional URL parameters to allow"
+msgstr "پارامترهای URL اضافی برای اجازه دادن"
+
+#: src/integrations/admin/crawl-settings-integration.php:225
+msgid "Remove unwanted URL parameters from your URLs."
+msgstr "پارامترهای URL ناخواسته را از URL های خود حذف کنید."
+
+#: src/integrations/admin/crawl-settings-integration.php:225
+msgid "Permalink cleanup settings"
+msgstr "تنظیمات پاکسازی پیوند دائمی"
+
+#: src/integrations/admin/crawl-settings-integration.php:203
+msgid "Max number of characters to allow in searches"
+msgstr "حداکثر تعداد کاراکترهای مجاز در جستجوها"
+
+#: src/integrations/admin/crawl-settings-integration.php:197
+msgid "Clean up and filter searches to prevent search spam."
+msgstr "برای جلوگیری از هرزنامه جستجو، جستجوها را پاک و فیلتر کنید."
+
+#: src/integrations/admin/crawl-settings-integration.php:197
+msgid "Search cleanup settings"
+msgstr "تنظیمات پاکسازی را جستجو کنید"
+
+#: src/integrations/admin/crawl-settings-integration.php:193
+msgid "Disabled"
+msgstr "غیر فعال"
+
+#: src/integrations/admin/crawl-settings-integration.php:147
+msgid "Filter searches with common spam patterns"
+msgstr "جستجوها را با الگوهای رایج هرزنامه فیلتر کنید"
+
+#: src/integrations/admin/crawl-settings-integration.php:146
+msgid "Filter searches with emojis and other special characters"
+msgstr "جستجوها را با ایموجی ها و سایر کاراکترهای خاص فیلتر کنید"
+
+#: src/integrations/admin/crawl-settings-integration.php:145
+msgid "Filter search terms"
+msgstr "عبارات جستجو را فیلتر کنید"
+
+#: src/integrations/admin/crawl-settings-integration.php:141
+msgid "Unregistered URL parameters"
+msgstr "پارامترهای URL ثبت نشده"
+
+#: src/integrations/admin/crawl-settings-integration.php:140
+msgid "Campaign tracking URL parameters"
+msgstr "پارامترهای URL ردیابی کمپین"
+
+#. translators: %1$s: Yoast SEO Premium
+#: src/initializers/crawl-cleanup-permalinks.php:274
+msgid "%1$s: unregistered URL parameter removed"
+msgstr "%1$s: پارامتر URL ثبت نشده حذف شد"
+
+#. translators: %1$s: Yoast SEO Premium
+#: src/initializers/crawl-cleanup-permalinks.php:132
+msgid "%1$s: redirect utm variables to #"
+msgstr "%1$s: تغییر مسیر متغیرهای utm به #"
+
+#: src/integrations/admin/crawl-settings-integration.php:314
+msgid "By removing Global comments feed, Post comments feeds will be removed too."
+msgstr "با حذف فید نظرات گلوبال، فید نظرات پست نیز حذف خواهد شد."
+
+#: src/integrations/admin/crawl-settings-integration.php:187
+msgid "Remove feed links added by WordPress that aren't needed for this site."
+msgstr "پیوندهای فید اضافه شده توسط وردپرس که برای این سایت مورد نیاز نیستند را حذف کنید."
+
+#: src/integrations/admin/crawl-settings-integration.php:187
+msgid "Feed crawl settings"
+msgstr "تنظیمات خزیدن فید"
+
+#: src/integrations/admin/crawl-settings-integration.php:185
+msgid "Remove links added by WordPress to the header and &lt;head&gt;."
+msgstr "پیوندهای اضافه شده توسط وردپرس به سربرگ و &lt;head&gt; را حذف کنید."
+
+#: src/integrations/admin/crawl-settings-integration.php:185
+msgid "Basic crawl settings"
+msgstr "تنظیمات اولیه خزیدن"
+
+#: src/integrations/admin/crawl-settings-integration.php:136
+msgid "Powered by HTTP header"
+msgstr "پشتیبانی شده توسط هدر HTTP"
+
+#: src/integrations/admin/crawl-settings-integration.php:135
+msgid "Pingback HTTP header"
+msgstr "پینگ بک سربرگ HTTP"
+
+#: src/integrations/admin/crawl-settings-integration.php:153
+msgid "Emoji scripts"
+msgstr "اسکریپت های ایموجی"
+
+#: src/integrations/admin/crawl-settings-integration.php:134
+msgid "Generator tag"
+msgstr "تولید کننده برچسب"
+
+#: src/integrations/admin/crawl-settings-integration.php:133
+msgid "oEmbed links"
+msgstr "جاسازی لینک ها"
+
+#: src/integrations/admin/crawl-settings-integration.php:132
+msgid "RSD / WLW links"
+msgstr "پیوندهای RSD / WLW"
+
+#: src/integrations/admin/crawl-settings-integration.php:131
+msgid "REST API links"
+msgstr "ریست پیوندهای API"
+
+#: src/integrations/admin/crawl-settings-integration.php:130
+msgid "Shortlinks"
+msgstr "پیوندهای کوتاه"
+
+#: src/integrations/admin/crawl-settings-integration.php:126
+msgid "Atom/RDF feeds"
+msgstr "خوراک اتم/RDF"
+
+#: src/integrations/admin/crawl-settings-integration.php:125
+msgid "Search results feeds"
+msgstr "فیدهای نتایج جستجو"
+
+#: src/integrations/admin/crawl-settings-integration.php:124
+msgid "Custom taxonomy feeds"
+msgstr "فیدهای طبقه بندی سفارشی"
+
+#: src/integrations/admin/crawl-settings-integration.php:123
+msgid "Tag feeds"
+msgstr "تگ فیدها"
+
+#: src/integrations/admin/crawl-settings-integration.php:122
+msgid "Category feeds"
+msgstr "فیدهای دسته"
+
+#: src/integrations/admin/crawl-settings-integration.php:121
+msgid "Post type feeds"
+msgstr "فیدهای نوع پست"
+
+#: src/integrations/admin/crawl-settings-integration.php:120
+msgid "Post authors feeds"
+msgstr "فیدهای نویسندگان پست"
+
+#: src/integrations/admin/crawl-settings-integration.php:118
+msgid "Global comment feeds"
+msgstr "فید نظرات گلوبال"
+
+#: src/integrations/admin/crawl-settings-integration.php:117
+msgid "Global feed"
+msgstr "خوراک جهانی"
+
+#: src/integrations/admin/crawl-settings-integration.php:119
+msgid "Post comments feeds"
+msgstr "فید نظرات را پست کنید"
+
+#: src/integrations/admin/crawl-settings-integration.php:269
+msgid "Keep"
+msgstr "نگه داشتن"
+
+#: classes/redirect/views/redirects-tab-settings.php:84
+msgid "Read more about why web server redirect methods have been disabled on a multisite."
+msgstr "در مورد اینکه چرا روش های تغییر مسیر سرور وب در چند سایت غیرفعال شده است، بیشتر بخوانید."
+
+#: classes/redirect/views/redirects-tab-settings.php:82
+msgid "Since this site is a multisite, web server redirect methods have been disabled to prevent issues."
+msgstr "از آنجایی که این سایت چند سایتی است، روش های تغییر مسیر سرور وب برای جلوگیری از مشکلات غیرفعال شده است."
+
+#: src/schema-templates/job-salary.block.php:12
+msgid "Job base salary"
+msgstr "حقوق پایه شغلی"
+
+#: src/schema-templates/job-requirements.block.php:12
+msgid "Job requirements"
+msgstr "نیازمندی های شغلی"
+
+#: src/schema-templates/job-location.block.php:12
+msgid "Job location"
+msgstr "محل کار"
+
+#: src/schema-templates/job-location-region.block.php:12
+msgid "Job state/province/region"
+msgstr "ایالت/استان/منطقه شغلی"
+
+#: src/schema-templates/job-location-postal-code.block.php:12
+msgid "Job postal code"
+msgstr "کد پستی شغل"
+
+#: src/schema-templates/job-location-country.block.php:12
+msgid "Job country"
+msgstr "کشور شغل"
+
+#: src/schema-templates/job-location-city.block.php:12
+msgid "Job city"
+msgstr "شهر کار"
+
+#: src/schema-templates/job-location-address.block.php:12
+msgid "Job address"
+msgstr "آدرس شغل"
+
+#: src/schema-templates/job-employment-type.block.php:32
+msgid "Job employment type"
+msgstr "نوع اشتغال شغلی"
+
+#: src/schema-templates/job-benefits.block.php:12
+msgid "Job benefits"
+msgstr "مزایای شغلی"
+
+#: src/schema-templates/job-apply-button.block.php:12
+msgid "Job apply button"
+msgstr "دکمه درخواست کار"
+
+#: src/schema-templates/job-application-closing-date.block.php:14
+msgid "Apply before"
+msgstr "قبل درخواست کنید"
+
+#: src/schema-templates/job-application-closing-date.block.php:12
+msgid "Job application closing date"
+msgstr "تاریخ پایان درخواست کار"
+
+#: src/integrations/admin/thank-you-page-integration.php:80
+msgid "Installation Successful"
+msgstr "نصب با موفقیت انجام شد"
+
+#: classes/views/thank-you.php:104
+msgid "Browse our courses"
+msgstr "دوره های ما را مرور کنید"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: <strong>, %3$s: Yoast SEO, %4$s:
+#. </strong>
+#: classes/views/thank-you.php:91
+msgid "%1$s grants you direct access to %2$sall premium %3$s academy courses%4$s. Learn all the ins and outs of holistic SEO from industry experts."
+msgstr "%1$s به شما امکان دسترسی مستقیم به %2$sهمه %3$s دوره های آکادمی%4$s پریمیوم را می دهد. تمام نکات سئوی جامع را از کارشناسان ما بیاموزید."
+
+#: classes/views/thank-you.php:84
+msgid "Master vital SEO skills with our online courses"
+msgstr "با دوره های آنلاین ما بر مهارت های حیاتی سئو مسلط شوید"
+
+#: classes/views/thank-you.php:79
+msgid "Check out the Redirect Manager"
+msgstr "مدیریت تغییر مسیر را بررسی کنید"
+
+#. translators: %1$s: Yoast SEO, %2$s: <strong>, %3$s: </strong>
+#: classes/views/thank-you.php:68
+msgid "The %1$s %2$sRedirect Manager%3$s automatically prevents visitors from reaching a dead end whenever you move or delete content. It also makes managing your existing redirects easy."
+msgstr "%1$s %2$sمدیریت تغییر مسیرها%3$s به‌طور خودکار هر زمان که محتوا را جابه‌جا می‌کنید یا حذف می‌کنید، بازدیدکنندگان را از بن‌بست جلوگیری می‌کند. همچنین مدیریت تغییر مسیرهای موجود شما را آسان می کند."
+
+#: classes/views/thank-you.php:61
+msgid "Keep your site well-organised so people won't get lost"
+msgstr "سایت خود را به خوبی سازماندهی کنید تا مردم گم نشوند"
+
+#: classes/views/thank-you.php:56
+msgid "Score some more green bullets"
+msgstr "گلوله های سبز بیشتری را روشن کنید"
+
+#. translators: %1$s: <strong>, %2$s: </strong>
+#: classes/views/thank-you.php:46
+msgid "Different people search with different search terms. With our %1$spremium analysis%2$s, you are free to use variations and synonyms of your keywords in your content, which will make your writing style far more natural."
+msgstr "افراد مختلف با عبارات جستجوی مختلف جستجو می کنند. با تجزیه و تحلیل %1$sپریمیوم%2$s ما، می‌توانید از تغییرات و مترادف‌های کلمات کلیدی خود در محتوای خود استفاده کنید، که سبک نوشتاری شما را بسیار طبیعی‌تر می‌کند."
+
+#: classes/views/thank-you.php:39
+msgid "Optimize your content further with our smart analysis"
+msgstr "با تجزیه و تحلیل هوشمند ما، محتوای خود را بیشتر بهینه کنید"
+
+#: classes/views/thank-you.php:34
+msgid "Do the cornerstone workout!"
+msgstr "تمرین سنگ بنا را انجام دهید!"
+
+#. translators: %1$s: <strong>, %2$s: </strong>
+#: classes/views/thank-you.php:24
+msgid "%1$sCornerstone content%2$s is the content on your site that’s most important. You want to rank highest in Google with these articles. Make sure your internal linking structure reflects what pages are most important. Want to know how?"
+msgstr "محتوای %1$sسنگ بنا%2$s محتوای سایت شما است که از همه مهمتر است. شما می خواهید با این مقالات بالاترین رتبه را در گوگل کسب کنید. اطمینان حاصل کنید که ساختار پیوند داخلی شما منعکس کننده صفحاتی است که از همه مهمتر هستند. می خواهید بدانید چگونه؟"
+
+#: classes/views/thank-you.php:17
+#: assets/js/src/workouts/components/CornerstoneWorkout.js:106
+msgid "Rank with articles you want to rank with"
+msgstr "رتبه با مقالاتی که می خواهید با آنها رتبه بندی کنید"
+
+#: classes/views/thank-you.php:12
+msgid "So, what's next?"
+msgstr "خب، حالا چیکار کنم؟"
+
+#: classes/views/thank-you.php:10
+msgid "Installation successful!"
+msgstr "نصب با موفقیت انجام شد!"
+
+#: src/schema-templates/job-location-city.block.php:12
+msgid "The city in which the street address is, and which is in the region. For example, Los Angeles."
+msgstr "شهری که آدرس خیابان در آن است و در منطقه است. مثلا لس آنجلس."
+
+#: src/schema-templates/job-location-region.block.php:14
+msgid "Enter state/province/region"
+msgstr "ایالت/استان/منطقه را وارد کنید"
+
+#: src/schema-templates/job-location-region.block.php:12
+msgid "The state, province or region in which the city is, and which is in the country. For example, California."
+msgstr "ایالت، استان یا منطقه ای که شهر در آن قرار دارد و در آن کشور است. به عنوان مثال، کالیفرنیا."
+
+#: src/schema-templates/job-location-country.block.php:12
+msgid "The country. For example, USA."
+msgstr "کشور. به عنوان مثال، ایالات متحده آمریکا."
+
+#: src/schema-templates/job-location-address.block.php:12
+msgid "The street address. For example, 111 South Grand Avenue."
+msgstr "آدرس خیابان به عنوان مثال، خیابان بزرگ جنوبی 111."
+
+#: src/schema-templates/job-location-postal-code.block.php:12
+msgid "The postal code. For example, 90012."
+msgstr "کد پستی. برای مثال 90012."
+
+#: src/schema-templates/job-office-location.block.php:30
+msgid "Add additional information to your location details..."
+msgstr "اطلاعات اضافی را به جزئیات موقعیت مکانی خود اضافه کنید..."
+
+#: src/integrations/blocks/block-patterns.php:71
+msgid "Yoast Job Posting"
+msgstr "ارسال شغل به یواست"
+
+#: src/schema-templates/job-salary-range.block.php:36
+msgid "The salary range of the job, depending on a variety of factors (e.g. education level or level of experience)."
+msgstr "محدوده دستمزد شغل، بسته به عوامل مختلفی (به عنوان مثال سطح تحصیلات یا سطح تجربه)."
+
+#: src/schema-templates/job-apply-button.block.php:14
+msgid "Apply button (add a link)"
+msgstr "دکمه اعمال (افزودن لینک)"
+
+#: src/schema-templates/job-apply-button.block.php:12
+msgid "A button through which visitors can apply for the job. (Make sure to add a link.)"
+msgstr "دکمه ای که از طریق آن بازدیدکنندگان می توانند برای کار درخواست دهند. (حتما یک لینک اضافه کنید.)"
+
+#: src/integrations/admin/user-profile-integration.php:144
+msgid "The info you add below is added to the data Yoast SEO outputs in its schema.org output, for instance when you're the author of a page. Please only add the info you feel good sharing publicly."
+msgstr "اطلاعاتی که در زیر اضافه می‌کنید به داده‌های Yoast SEO در خروجی schema.org اضافه می‌شود، برای مثال زمانی که شما نویسنده یک صفحه هستید. لطفاً فقط اطلاعاتی را اضافه کنید که احساس خوبی برای اشتراک‌گذاری عمومی دارید."
+
+#: src/integrations/admin/user-profile-integration.php:143
+msgid "Yoast SEO Schema enhancements"
+msgstr "پیشرفت های یواست سئو اسکیما"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:127
+msgid "E.g. %1$sAcme inc%2$s"
+msgstr "به عنوان مثال. %1$sAcme شرکت%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:125
+msgid "Employer name"
+msgstr "نام کارفرما"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:121
+msgid "E.g. %1$ssoftware engineer%2$s"
+msgstr "به عنوان مثال. %1$sمهندس نرم افزار%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:115
+msgid "Employer information"
+msgstr "اطلاعات کارفرما"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:111
+msgid "Comma separated, e.g. %1$sEnglish, French, Dutch%2$s"
+msgstr "با کاما جدا شده است، به عنوان مثال.%1$sانگلیسی، فرانسوی، هلندی%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:109
+msgid "Language(s) spoken"
+msgstr "زبان هایی که صحبت می شود"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:105
+msgid "Comma separated, e.g. %1$sPHP, JavaScript, 90's rock music%2$s"
+msgstr "با کاما جدا شده است، به عنوان مثال. %1$sPHP، جاوا اسکریپت، موسیقی راک دهه 90%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:103
+msgid "Expertise in"
+msgstr "تخصص در"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:99
+msgid "Comma separated, e.g. %1$sMost likely to succeed - 1991, Smartest in class - 1990%2$s"
+msgstr "با کاما جدا شده است، به عنوان مثال. %1$sاحتمال موفقیت - 1991، باهوشترین در کلاس - 1990%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:97
+msgid "Awards"
+msgstr "جوایز"
+
+#: src/integrations/admin/user-profile-integration.php:93
+msgid "Extra information"
+msgstr "اطلاعات اضافی"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:89
+msgid "E.g. %1$sfemale%2$s, %1$smale%2$s, %1$snon-binary%2$s"
+msgstr "به عنوان مثال. %1$sfemale%2$s، %1$smale%2$s، %1$snon-binary%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:87
+msgid "Gender"
+msgstr "جنسیت"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:83
+msgid "Use format: %1$sYYYY-MM-DD%2$s"
+msgstr "استفاده از قالب: %1$sYYYY-MM-DD%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:81
+msgid "Birth date"
+msgstr "تاریخ تولد"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:77
+msgid "E.g. %1$sMD%2$s, %1$sPhD%2$s"
+msgstr "به عنوان مثال. %1$sMD%2$s، %1$sPhD%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:75
+msgid "Honorific suffix"
+msgstr "پسوند افتخاری"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:71
+msgid "E.g. %1$sDr%2$s, %1$sMs%2$s, %1$sMr%2$s"
+msgstr "به عنوان مثال. %1$sDr%2$s، %1$sMs%2$s، %1$sMr%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:69
+msgid "Honorific prefix"
+msgstr "پیشوند افتخاری"
+
+#: src/integrations/admin/user-profile-integration.php:65
+msgid "Basic information"
+msgstr "اطلاعات اولیه"
+
+#: premium.php:337
+msgid "Custom fields to include in page analysis"
+msgstr "زمینه های سفارشی که باید در تجزیه و تحلیل صفحات گنجانده شوند"
+
+#: premium.php:330
+msgid "Learn more about including custom fields in the page analysis"
+msgstr "درباره گنجاندن فیلدهای سفارشی در تجزیه و تحلیل صفحه بیشتر بیاموزید"
+
+#: src/schema-templates/job-benefits.block.php:12
+msgid "The description of benefits associated with the job."
+msgstr "شرح مزایای مرتبط با شغل."
+
+#: src/schema-templates/job-description.block.php:12
+msgid "The description of the job."
+msgstr "شرح شغل."
+
+#: src/schema-templates/job-employment-type.block.php:32
+msgid "The type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship)."
+msgstr "نوع استخدام (به عنوان مثال تمام وقت، پاره وقت، قراردادی، موقت، فصلی، کارآموزی)."
+
+#: src/schema-templates/job-application-closing-date.block.php:12
+msgid "The date after which the job posting is not valid anymore."
+msgstr "تاریخی که پس از آن آگهی استخدام دیگر معتبر نیست."
+
+#: src/schema-templates/job-location.block.php:12
+msgid "The (typically single) geographic location associated with the job."
+msgstr "موقعیت جغرافیایی (معمولاً مجرد) مرتبط با شغل."
+
+#: src/schema-templates/job-location-address.block.php:12
+#: src/schema-templates/job-office-location.block.php:28
+msgid "The address where the office is located."
+msgstr "آدرسی که دفتر در آن قرار دارد."
+
+#: src/schema-templates/job-requirements.block.php:12
+msgid "The description of skills and experience needed for the position."
+msgstr "شرح مهارت ها و تجربیات مورد نیاز برای موقعیت."
+
+#: src/schema-templates/job-base-salary.block.php:17
+#: src/schema-templates/job-salary-range.block.php:17
+msgid "day"
+msgstr "روز"
+
+#: src/schema-templates/job-base-salary.block.php:13
+#: src/schema-templates/job-salary-range.block.php:13
+msgid "hour"
+msgstr "ساعت"
+
+#: src/schema-templates/job-base-salary.block.php:21
+#: src/schema-templates/job-salary-range.block.php:21
+msgid "week"
+msgstr "هفته"
+
+#: src/schema-templates/job-base-salary.block.php:25
+#: src/schema-templates/job-salary-range.block.php:25
+msgid "month"
+msgstr "ماه"
+
+#: src/schema-templates/job-base-salary.block.php:29
+#: src/schema-templates/job-salary-range.block.php:29
+msgid "year"
+msgstr "سال"
+
+#: src/schema-templates/job-base-salary.block.php:36
+#: src/schema-templates/job-salary.block.php:14
+msgid "Base salary"
+msgstr "حقوق پایه"
+
+#: src/schema-templates/job-base-salary.block.php:39
+#: src/schema-templates/job-salary-range.block.php:39
+msgid "Currency"
+msgstr "واحد پول"
+
+#: src/schema-templates/job-base-salary.block.php:40
+#: src/schema-templates/job-salary-range.block.php:40
+#: src/schema-templates/job-salary-range.block.php:42
+msgid "Enter amount"
+msgstr "مقدار را وارد کنید"
+
+#: src/schema-templates/job-base-salary.block.php:40
+msgid "Value"
+msgstr "مقدار"
+
+#: src/schema-templates/job-base-salary.block.php:41
+#: src/schema-templates/job-salary-range.block.php:44
+msgid "Unit"
+msgstr "واحد"
+
+#: src/schema-templates/job-benefits.block.php:13
+msgid "Benefits"
+msgstr "فواید"
+
+#: src/schema-templates/job-benefits.block.php:15
+msgid "Enter benefit"
+msgstr "سود را وارد کنید"
+
+#: src/schema-templates/job-description.block.php:12
+msgid "Job description"
+msgstr "شرح شغل"
+
+#: src/schema-templates/job-description.block.php:14
+msgid "Enter a job description..."
+msgstr "شرح شغل را وارد کنید..."
+
+#: src/schema-templates/job-employment-type.block.php:13
+msgid "Full time"
+msgstr "تمام وقت"
+
+#: src/schema-templates/job-employment-type.block.php:17
+msgid "Part time"
+msgstr "پاره وقت"
+
+#: src/schema-templates/job-employment-type.block.php:21
+msgid "Contractor"
+msgstr "پیمانکار"
+
+#: src/schema-templates/job-employment-type.block.php:25
+msgid "Temporary"
+msgstr "موقت"
+
+#: src/schema-templates/job-employment-type.block.php:35
+msgid "Employment"
+msgstr "استخدام"
+
+#: src/schema-templates/job-employment-type.block.php:36
+msgid "This is an internship"
+msgstr "این یک دوره کارآموزی است"
+
+#: src/schema-templates/job-employment-type.block.php:36
+msgid "this is an internship"
+msgstr "این یک دوره کارآموزی است"
+
+#: src/schema-templates/job-employment-type.block.php:37
+msgid "This is a volunteer role"
+msgstr "این یک نقش داوطلبانه است"
+
+#: src/schema-templates/job-employment-type.block.php:37
+msgid "this is a volunteer role"
+msgstr "این یک نقش داوطلبانه است"
+
+#: src/schema-templates/job-location.block.php:14
+#: src/schema-templates/job-office-location.block.php:28
+msgid "Office location"
+msgstr "مکان دفتر"
+
+#: src/schema-templates/job-location.block.php:14
+msgid "Address where the office is located"
+msgstr "آدرس محل دفتر"
+
+#: src/schema-templates/job-location.block.php:14
+msgid "Address"
+msgstr "نشانی"
+
+#: src/schema-templates/job-location.block.php:14
+msgid "Postal code"
+msgstr "کد پستی"
+
+#: src/schema-templates/job-location.block.php:14
+msgid "City"
+msgstr "شهر"
+
+#: src/schema-templates/job-location.block.php:14
+msgid "Region"
+msgstr "منطقه"
+
+#: src/schema-templates/job-location.block.php:14
+msgid "Country"
+msgstr "کشور"
+
+#: src/schema-templates/job-location.block.php:15
+#: src/schema-templates/job-remote-location.block.php:12
+msgid "Remote job"
+msgstr "کار از راه دور"
+
+#: src/schema-templates/job-location.block.php:15
+msgid "This job is 100% remote"
+msgstr "این کار 100% از راه دور است"
+
+#: src/schema-templates/job-location-address.block.php:14
+msgid "Enter street address"
+msgstr "آدرس خیابان را وارد کنید"
+
+#: src/schema-templates/job-location-postal-code.block.php:14
+msgid "Enter postal code"
+msgstr "کد پستی را وارد کنید"
+
+#: src/schema-templates/job-location-city.block.php:14
+msgid "Enter city"
+msgstr "شهر را وارد کنید"
+
+#: src/schema-templates/job-location-country.block.php:14
+msgid "Enter country"
+msgstr "کشور را وارد کنید"
+
+#: src/schema-templates/job-remote-location.block.php:12
+#: src/schema-templates/job-remote-location.block.php:14
+msgid "This job is 100% remote."
+msgstr "این کار 100% از راه دور است."
+
+#: src/schema-templates/job-requirements.block.php:13
+msgid "Requirements"
+msgstr "مورد نیاز"
+
+#: src/schema-templates/job-requirements.block.php:15
+msgid "Enter requirement"
+msgstr "شرط لازم را وارد کنید"
+
+#: src/schema-templates/job-salary-range.block.php:36
+#: src/schema-templates/job-salary.block.php:15
+msgid "Salary range"
+msgstr "محدوده حقوق"
+
+#: src/schema-templates/job-salary-range.block.php:40
+msgid "Min value"
+msgstr "حداقل مقدار"
+
+#: src/schema-templates/job-salary-range.block.php:42
+msgid "Max value"
+msgstr "حداکثر مقدار"
+
+#: src/schema-templates/job-base-salary.block.php:36
+#: src/schema-templates/job-salary.block.php:12
+#: src/schema-templates/job-salary.block.php:14
+msgid "The base salary of the job."
+msgstr "حقوق پایه کار."
+
+#: src/schema-templates/job-salary.block.php:15
+msgid "The salary range of the job, depending on a variety of factors (e.g. a candidate's education level or level of experience)."
+msgstr "محدوده دستمزد شغل، بسته به عوامل مختلفی (به عنوان مثال سطح تحصیلات یا سطح تجربه یک نامزد)."
+
+#: src/integrations/admin/user-profile-integration.php:119
+msgid "Job title"
+msgstr "عنوان شغلی"
+
+#. translators: %1$s: Yoast SEO, %2$s: Link start tag, %3$s: Link end tag.
+#: src/addon-installer.php:163
+msgid "%2$sActivate %1$s now%3$s"
+msgstr "%2$s %1$s اکنون %3$s را فعال کنید"
+
+#. translators: %1$s: Yoast SEO, %2$s: Link start tag, %3$s: Link end tag.
+#: src/addon-installer.php:170
+msgid "%2$sUpgrade %1$s now%3$s"
+msgstr "%2$s %1$s اکنون %3$s را ارتقا دهید"
+
+#. translators: %1$s: Yoast SEO, %2$s: Link start tag, %3$s: Link end tag.
+#: src/addon-installer.php:175
+msgid "%2$sInstall %1$s now%3$s"
+msgstr "%2$s اکنون %1$s را نصب کنید%3$s"
+
+#. translators: %1$s: Yoast SEO, %2$s: The minimum Yoast SEO version required,
+#. %3$s: Yoast SEO Premium.
+#: src/addon-installer.php:114
+msgid "%1$s %2$s must be installed and activated in order to use %3$s."
+msgstr "%1$s %2$s باید نصب و فعال شود تا از %3$s استفاده شود."
+
+#. translators: %1$s: Yoast SEO, %2$s: Link start tag, %3$s: Link end tag.
+#: src/addon-installer.php:158
+msgid "%2$sNetwork Activate %1$s now%3$s"
+msgstr "%2$sشبکه %1$s اکنون %3$s را فعال کنید"
+
+#. translators: %1$s: Yoast SEO, %2$s: The minimum Yoast SEO version required.
+#: src/addon-installer.php:188
+msgid "Please contact a network administrator to install %1$s %2$s."
+msgstr "لطفاً برای نصب %1$s %2$s با یک سرپرست شبکه تماس بگیرید."
+
+#. translators: %1$s: Yoast SEO, %2$s: The minimum Yoast SEO version required.
+#: src/addon-installer.php:192
+msgid "Please contact an administrator to install %1$s %2$s."
+msgstr "لطفاً برای نصب %1$s %2$s با یک سرپرست تماس بگیرید."
+
+#: src/integrations/blocks/job-posting-block.php:68
+msgid "Required Job Posting Blocks"
+msgstr "بلوک های مورد نیاز ارسال شغل"
+
+#: src/integrations/blocks/job-posting-block.php:73
+msgid "Recommended Job Posting Blocks"
+msgstr "بلوک های پیشنهادی برای ارسال شغل"
+
+#: src/integrations/blocks/estimated-reading-time-block.php:57
+#: assets/js/src/blocks/estimated-reading-time/block.js:179
+msgid "Estimated reading time:"
+msgstr "زمان تخمینی مطالعه:"
+
+#: src/integrations/blocks/estimated-reading-time-block.php:84
+#: assets/js/src/blocks/estimated-reading-time/block.js:64
+#: assets/js/src/blocks/estimated-reading-time/legacy/15.6.js:58
+#: assets/js/src/blocks/estimated-reading-time/legacy/15.6.non-admin.js:28
+#: assets/js/src/blocks/estimated-reading-time/legacy/15.8.js:22
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "دقیقه"
+
+#: classes/redirect/presenters/redirect-page-presenter.php:69
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: classes/redirect/redirect-table.php:100
+msgid "Filter"
+msgstr "فیلتر"
+
+#: classes/premium-javascript-strings.php:61
+#: classes/redirect/redirect-table.php:411
+msgid "Edit"
+msgstr "ویرایش"
+
+#: classes/premium-javascript-strings.php:53 classes/premium-metabox.php:152
+#: assets/js/src/components/RedirectNotification.js:123
+#: assets/js/src/elementor/components/RedirectNotification.js:127
+#: assets/js/src/frontend-inspector/components/frontend-inspector.js:61
+msgid "OK"
+msgstr "قابل قبول"
+
+#: classes/export/export-keywords-csv.php:67
+msgid "title"
+msgstr "عنوان"
+
+#: classes/export/export-keywords-csv.php:73
+msgid "meta description"
+msgstr "توضیحات متا"
+
+#: premium.php:297
+msgid "Create Redirect"
+msgstr "تغییر مسیر را ایجاد کنید"
+
+#: classes/redirect/redirect-formats.php:23 premium.php:361
+msgid "Redirects"
+msgstr "تغییر مسیر"
+
+#: classes/redirect/views/redirects-form.php:59
+msgid "URL"
+msgstr "پیوند"
+
+#: classes/premium-import-manager.php:241
+msgid "Redirect import failed: the Redirection plugin is not installed or activated."
+msgstr "وارد کردن تغییر مسیر انجام نشد: افزونه تغییر مسیر نصب یا فعال نشده است."
+
+#: classes/premium-import-manager.php:317
+msgid "Redirect import failed: no redirects found."
+msgstr "وارد کردن تغییر مسیر انجام نشد: هیچ تغییر مسیری یافت نشد."
+
+#: classes/premium-javascript-strings.php:31
+msgid "You have unsaved redirects, are you sure you want to leave?"
+msgstr "شما تغییر مسیرهای ذخیره نشده ای دارید، آیا مطمئن هستید که می خواهید خارج شوید؟"
+
+#: classes/redirect/redirect-table.php:115
+msgid "New URL"
+msgstr "پیوند جدید"
+
+#: classes/premium-javascript-strings.php:62
+#: classes/redirect/redirect-table.php:308
+#: classes/redirect/redirect-table.php:412
+msgid "Delete"
+msgstr "حذف"
+
+#: classes/redirect/views/redirects-tab-plain.php:61
+#: classes/redirect/views/redirects-tab-regex.php:72
+msgid "Search"
+msgstr "جستجو کردن"
+
+#: classes/redirect/views/redirects-tab-settings.php:122
+msgid "Save Changes"
+msgstr "ذخیره تنظیمات"
+
+#: classes/redirect/redirect-formats.php:24
+msgid "Regex Redirects"
+msgstr "تغییر مسیر منظم"
+
+#: classes/redirect/presenters/redirect-table-presenter.php:68
+msgid "Old URL"
+msgstr "پیوند قدیمی"
+
+#: classes/redirect/views/redirects-tab-plain.php:41
+#: classes/redirect/views/redirects-tab-regex.php:52
+msgid "Add Redirect"
+msgstr "اضافه کردن تغییر مسیر"
+
+#: classes/redirect/views/redirects-tab-settings.php:50
+msgid "As you're on Nginx, you should add the following include to the Nginx config file:"
+msgstr "همانطور که در Nginx هستید، باید موارد زیر را به فایل پیکربندی Nginx اضافه کنید:"
+
+#: classes/redirect/views/redirects-tab-settings.php:24
+msgid "As you're on Apache, you should add the following include to the website httpd config file:"
+msgstr "همانطور که در آپاچی هستید، باید موارد زیر را به فایل پیکربندی httpd وب سایت اضافه کنید:"
+
+#. Description of the plugin
+msgid "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more."
+msgstr "اولین راه حل واقعی همه در یک سئو برای وردپرس، از جمله تجزیه و تحلیل محتوای روی صفحه، نقشه های سایت XML و موارد دیگر."
+
+#: classes/redirect/exporters/redirect-csv-exporter.php:76
+#: assets/js/src/workouts/components/CornerstoneWorkout/MostLinked.js:98
+msgid "Type"
+msgstr "نوع"
+
+#. translators: %s: '.htaccess' file name.
+#: classes/redirect/views/redirects-tab-settings.php:37
+msgid "We're unable to save the redirects to your %s file. Please make the file writable."
+msgstr "ما نمی‌توانیم هدایت‌ها را در فایل %s شما ذخیره کنیم. لطفا فایل را قابل نوشتن کنید."
+
+#: classes/redirect/views/redirects-tab-settings.php:111
+msgid "Generate a separate redirect file"
+msgstr "یک فایل تغییر مسیر جداگانه ایجاد کنید"
+
+#: classes/redirect/redirect-page.php:140
+msgid "Redirects per page"
+msgstr "تغییر مسیر در هر صفحه"
+
+#: classes/views/import-redirects.php:74
+msgid "Import .htaccess"
+msgstr "htaccess را وارد کنید"
+
+#: classes/premium-javascript-strings.php:26
+msgid "The old URL field can't be empty."
+msgstr "فیلد پیوند قدیمی نمی تواند خالی باشد."
+
+#: classes/premium-javascript-strings.php:28
+msgid "The new URL field can't be empty."
+msgstr "فیلد پیوند جدید نمی تواند خالی باشد."
+
+#: classes/premium-javascript-strings.php:29
+msgid "Error while saving this redirect"
+msgstr "خطا هنگام ذخیره این تغییر مسیر"
+
+#: classes/premium-javascript-strings.php:30
+msgid "New type can't be empty."
+msgstr "نوع جدید نمی تواند خالی باشد."
+
+#. Author of the plugin
+msgid "Team Yoast"
+msgstr "تیم یوست"
+
+#: classes/premium-javascript-strings.php:25
+msgid "You can't redirect a URL to itself."
+msgstr "شما نمی توانید پیوند را به خودش هدایت کنید."
+
+#. translators: %s: '.htaccess' file name
+#: classes/redirect/views/redirects-tab-settings.php:114
+msgid "By default we write the redirects to your %s file, check this if you want the redirects written to a separate file. Only check this option if you know what you are doing!"
+msgstr "به طور پیش فرض ما تغییر مسیرها را در فایل %s می نویسیم، اگر می خواهید ریدایرکت ها در یک فایل جداگانه نوشته شوند، این مورد را فعال کنید. فقط اگر می دانید چه کاری انجام می دهید این گزینه را علامت بزنید!"
+
+#: classes/redirect/presenters/redirect-table-presenter.php:65
+msgid "Regular Expression"
+msgstr "عبارت منظم"
+
+#. translators: 1: '.htaccess' file name
+#: classes/redirect/views/redirects-tab-settings.php:109
+msgid "Write redirects to the %1$s file. Make sure the %1$s file is writable."
+msgstr "ارسال مسیرها به فایل %1$s مطمئن شوید که پرونده %1$s قابل نوشتن است."
+
+#. translators: %s: '.htaccess' file name
+#: classes/views/import-redirects.php:12
+msgid "Import redirects from %s"
+msgstr "تغییر مسیرها را از %s وارد کنید"
+
+#: classes/premium-javascript-strings.php:27
+msgid "The Regular Expression field can't be empty."
+msgstr "فیلد عبارت منظم نمی تواند خالی باشد."
+
+#. translators: %s is replaced with the URL that will be deleted.
+#: classes/premium-javascript-strings.php:34
+msgid "Please enter the new URL for %s"
+msgstr "لطفاً پیوند جدید را برای %s وارد کنید"
+
+#. translators: variables will be replaced with from and to URLs.
+#: classes/premium-javascript-strings.php:36
+msgid "Redirect created from %1$s to %2$s!"
+msgstr "تغییر مسیر از %1$s به %2$s ایجاد شد!"
+
+#: classes/redirect/redirect-table.php:113
+#: classes/redirect/views/redirects-form.php:22
+msgctxt "noun"
+msgid "Type"
+msgstr "نوع"
+
+#. translators: %1$s: '.htaccess' file name, %2$s: plugin name
+#: classes/views/import-redirects.php:18
+msgid "You can copy the contents of any %1$s file in here, and it will import the redirects into %2$s."
+msgstr "می‌توانید محتویات هر فایل %1$s را در اینجا کپی کنید و تغییرمسیرها را به %2$s وارد می‌کند."
+
+#: classes/premium-javascript-strings.php:41
+msgid "Redirect added."
+msgstr "تغییر مسیر اضافه شد."
+
+#: classes/premium-javascript-strings.php:42
+msgid "The redirect was added successfully."
+msgstr "تغییر مسیر با موفقیت اضافه شد."
+
+#: classes/premium-javascript-strings.php:45
+msgid "Redirect updated."
+msgstr "تغییر مسیر به روز شد."
+
+#: classes/premium-javascript-strings.php:46
+msgid "The redirect was updated successfully."
+msgstr "تغییر مسیر با موفقیت به روز شد."
+
+#: classes/premium-javascript-strings.php:49
+#: classes/premium-redirect-service.php:51
+#: classes/redirect-undo-endpoint.php:94
+msgid "Redirect deleted."
+msgstr "تغییر مسیر حذف شد."
+
+#: classes/premium-javascript-strings.php:50
+#: classes/premium-redirect-service.php:52
+#: classes/redirect-undo-endpoint.php:95
+msgid "The redirect was deleted successfully."
+msgstr "تغییر مسیر با موفقیت حذف شد."
+
+#: classes/premium-javascript-strings.php:54
+#: classes/redirect/views/redirects-quick-edit.php:43
+msgid "Cancel"
+msgstr "لغو"
+
+#: classes/premium-javascript-strings.php:55
+msgid "Save"
+msgstr "ذخیره"
+
+#: classes/premium-javascript-strings.php:56
+msgid "Save anyway"
+msgstr "به هر حال ذخیره شود"
+
+#: classes/premium-javascript-strings.php:58
+#: classes/redirect/views/redirects-quick-edit.php:22
+msgid "Edit redirect"
+msgstr "ویرایش تغییر مسیر"
+
+#: classes/premium-javascript-strings.php:59
+msgid "You are already editing a redirect, please finish this one first"
+msgstr "شما در حال ویرایش یک تغییر مسیر هستید، لطفاً ابتدا این یکی را تمام کنید"
+
+#: classes/redirect/validation/redirect-accessible-validation.php:29
+msgid "The URL you entered could not be resolved."
+msgstr "آدرس اینترنتی که وارد کردید حل نشد."
+
+#. translators: %1$s expands to the returned http code
+#: classes/redirect/validation/redirect-accessible-validation.php:40
+msgid "The URL you are redirecting to seems to return a %1$s status. You might want to check if the target can be reached manually before saving."
+msgstr "نشانی اینترنتی که به آن هدایت می‌کنید به نظر می‌رسد وضعیت %1$s را برمی‌گرداند. ممکن است بخواهید قبل از ذخیره بررسی کنید که آیا می توان به هدف دستی رسید یا خیر."
+
+#: classes/redirect/validation/redirect-accessible-validation.php:49
+msgid "You're redirecting to a target that returns a 301 HTTP code (permanently moved). Make sure the target you specify is directly reachable."
+msgstr "شما به هدفی هدایت می‌شوید که کد HTTP 301 را برمی‌گرداند (به‌طور دائم منتقل شده است). اطمینان حاصل کنید که هدفی که مشخص کرده اید مستقیماً قابل دسترسی است."
+
+#. translators: %1$s expands to the returned http code
+#: classes/redirect/validation/redirect-accessible-validation.php:57
+msgid "The URL you entered returned a HTTP code different than 200(OK). The received HTTP code is %1$s."
+msgstr "نشانی اینترنتی که وارد کردید کد HTTP متفاوت از 200 را برگرداند (OK). کد HTTP دریافتی %1$s است."
+
+#: classes/redirect/redirect-ajax.php:65
+msgid "Unknown error. Failed to create redirect."
+msgstr "خطای نامشخص. تغییر مسیر ایجاد نشد."
+
+#: classes/redirect/redirect-ajax.php:99
+msgid "Unknown error. Failed to update redirect."
+msgstr "خطای نامشخص. تغییر مسیر به روز رسانی نشد."
+
+#: classes/redirect/validation/redirect-endpoint-validation.php:40
+msgid "The redirect you are trying to save will create a redirect loop. This means there probably already exists a redirect that points to the origin of the redirect you are trying to save"
+msgstr "تغییر مسیری که می‌خواهید ذخیره کنید، یک حلقه تغییر مسیر ایجاد می‌کند. این بدان معنی است که احتمالاً قبلاً یک تغییر مسیر وجود دارد که به مبدأ تغییر مسیری که می‌خواهید ذخیره کنید اشاره می‌کند"
+
+#. translators: %1$s: will be the target, %2$s: will be the found endpoint.
+#: classes/redirect/validation/redirect-endpoint-validation.php:48
+msgid "%1$s will be redirected to %2$s. Maybe it's worth considering to create a direct redirect to %2$s."
+msgstr "%1$s به %2$s هدایت خواهد شد. شاید ارزش آن را داشته باشد که یک تغییر مسیر مستقیم به %2$s ایجاد کنید."
+
+#. translators: %s expands to the file path that we tried to write to
+#: classes/redirect/redirect-file-util.php:86
+msgid "We're unable to write data to the file %s"
+msgstr "ما نمی توانیم داده ها را در فایل %s بنویسیم"
+
+#: classes/redirect/redirect-types.php:26
+msgid "301 Moved Permanently"
+msgstr "301 انتقال دائم"
+
+#: classes/redirect/redirect-types.php:27
+msgid "302 Found"
+msgstr "302 پیدا شده"
+
+#: classes/redirect/redirect-types.php:28
+msgid "307 Temporary Redirect"
+msgstr "307 تغییر مسیر موقت"
+
+#: classes/redirect/redirect-types.php:29
+msgid "410 Content Deleted"
+msgstr "410 محتوا حذف شده"
+
+#: classes/redirect/redirect-types.php:30
+msgid "451 Unavailable For Legal Reasons"
+msgstr "451 به دلایل قانونی در دسترس نیست"
+
+#: classes/redirect/validation/redirect-presence-validation.php:34
+msgid "Not all the required fields are filled."
+msgstr "همه فیلدهای مورد نیاز پر نمی شوند."
+
+#: classes/redirect/validation/redirect-uniqueness-validation.php:32
+msgid "The old URL already exists as a redirect."
+msgstr "URL قدیمی از قبل به عنوان یک تغییر مسیر وجود دارد."
+
+#: classes/redirect/views/redirects-quick-edit.php:42
+msgid "Update Redirect"
+msgstr "به روزرسانی تغییر مسیر"
+
+#. translators: %s expands to the folder location where the redirects fill will
+#. be saved.
+#: classes/redirect/views/redirects-tab-settings.php:63
+msgid "We're unable to save the redirect file to %s"
+msgstr "ما نمی‌توانیم فایل تغییر مسیر را در %s ذخیره کنیم"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: List with actions, %3$s: <a
+#. href=''>, %4$s: </a>, %5$s: Slug to post
+#: classes/post-watcher.php:268
+msgid "%1$s detected that you moved a post (%5$s) to the trash. You can either: %2$s Don't know what to do? %3$sRead this post%4$s."
+msgstr "%1$s تشخیص داد که یک پست (%5$s) را به سطل زباله منتقل کرده‌اید. شما می توانید: %2$s نمی دانید چه کاری انجام دهید؟ %3$sاین پست را بخوانید%4$s."
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: List with actions, %3$s: <a
+#. href='{post_with_explaination.}'>, %4$s: </a>, %5%s: The removed url.
+#: classes/post-watcher.php:484
+msgid "%1$s detected that you deleted a post (%5$s). You can either: %2$s Don't know what to do? %3$sRead this post %4$s."
+msgstr "%1$s تشخیص داد که شما یک پست را حذف کرده‌اید (%5$s). شما می توانید: %2$s نمی دانید چه کاری انجام دهید؟ %3$s این پست %4$s را بخوانید."
+
+#. translators: %1$s will be replaced with the from URL.
+#: classes/premium-javascript-strings.php:38
+msgid "410 Redirect created from %1$s!"
+msgstr "410 تغییر مسیر از %1$s ایجاد شد!"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: List with actions, %3$s: <a
+#. href='{post_with_explaination.}'>, %4$s: </a>, %5%s: The removed url.
+#: classes/term-watcher.php:288
+msgid "%1$s detected that you deleted a term (%5$s). You can either: %2$s Don't know what to do? %3$sRead this post %4$s."
+msgstr "%1$s تشخیص داد که یک عبارت (%5$s) را حذف کرده‌اید. شما می توانید: %2$s نمی دانید چه کاری انجام دهید؟ %3$s این پست %4$s را بخوانید."
+
+#: classes/watcher.php:282
+msgid "Redirect it to another URL"
+msgstr "آن را به URL دیگری هدایت کنید"
+
+#: classes/watcher.php:283
+msgid "Make it serve a 410 Content Deleted header"
+msgstr "آن را به عنوان یک هدر 410 Content Deleted ارائه دهید"
+
+#: classes/redirect/views/redirects-tab-settings.php:101
+msgid "Web server"
+msgstr "وب سرور"
+
+#: classes/redirect/views/redirects-tab-settings.php:103
+msgid "Redirect method"
+msgstr "روش تغییر مسیر"
+
+#. translators: %s: 'Yoast SEO Premium'
+#: classes/redirect/views/redirects-tab-settings.php:118
+msgid "%s can generate redirect files that can be included in your website web server configuration. If you choose this option the PHP redirects will be disabled. Only check this option if you know what you are doing!"
+msgstr "%s می تواند فایل های تغییر مسیر را ایجاد کند که می تواند در پیکربندی وب سرور وب سایت شما گنجانده شود. اگر این گزینه را انتخاب کنید، تغییر مسیرهای PHP غیرفعال خواهد شد. فقط در صورتی این گزینه را علامت بزنید که می دانید در حال انجام چه کاری هستید!"
+
+#. translators: %s expands to the file path that we tried to write to
+#: classes/redirect/redirect-file-util.php:44
+msgid "We're unable to create the directory %s"
+msgstr "ما قادر به ایجاد دایرکتوری %s نیستیم"
+
+#: classes/redirect/validation/redirect-self-redirect-validation.php:25
+msgid "You are attempting to redirect to the same URL as the origin. Please choose a different URL to redirect to."
+msgstr "شما در حال تلاش برای تغییر مسیر به همان URL با مبدا هستید. لطفاً یک URL دیگر را برای تغییر مسیر انتخاب کنید."
+
+#. translators: 1: opens a link to a related help center article. 2: closes the
+#. link.
+#: classes/redirect/views/redirects-form.php:42
+msgid "The redirect type is the HTTP response code sent to the browser telling the browser what type of redirect is served. %1$sLearn more about redirect types%2$s."
+msgstr "نوع تغییر مسیر کد پاسخ HTTP است که به مرورگر ارسال می شود و به مرورگر می گوید چه نوع تغییر مسیر ارائه می شود. %1$sدرباره تغییر مسیرها بیشتر بدانید%2$s."
+
+#. translators: 1: opens a link to a related help center article. 2: closes the
+#. link.
+#: classes/redirect/views/redirects-tab-regex.php:30
+msgid "Regular Expression (regex) Redirects are extremely powerful redirects. You should only use them if you know what you are doing. %1$sRead more about regex redirects on our help center%2$s."
+msgstr "عبارت منظم (regex) تغییر مسیر هدایت مجدد بسیار قدرتمندی هستند. فقط درصورتی که بدانید چه کاری انجام می دهید باید از آنها استفاده کنید. %1$sدر مورد راهنمای regex در مرکز راهنمایی ما بیشتر بخوانید%2$s."
+
+#: premium.php:397 src/integrations/admin/crawl-settings-integration.php:194
+msgid "Enabled"
+msgstr "فعال شد"
+
+#: classes/views/import-redirects.php:72
+msgid "Enter redirects to import"
+msgstr "تغییر مسیرها را برای وارد کردن وارد کنید"
+
+#. translators: %1$s expands to the subdirectory WordPress is installed.
+#: classes/redirect/validation/redirect-subdirectory-validation.php:37
+msgid "Your redirect is missing the subdirectory where WordPress is installed in. This will result in a redirect that won't work. Make sure the redirect starts with %1$s"
+msgstr "تغییر مسیر شما دایرکتوری فرعی که وردپرس در آن نصب شده است را ندارد. این منجر به تغییر مسیری می شود که کار نمی کند. مطمئن شوید که تغییر مسیر با %1$s شروع می‌شود"
+
+#: classes/redirect/redirect-table.php:249
+msgid "Select this redirect"
+msgstr "این تغییر مسیر را انتخاب کنید"
+
+#. translators: %s expands to Yoast
+#: classes/metabox-link-suggestions.php:101
+msgid "%s internal linking"
+msgstr "%s پیوند داخلی"
+
+#. translators: %s: '.htaccess' file name
+#: classes/premium-import-manager.php:67 classes/views/import-redirects.php:45
+msgid "Import redirects"
+msgstr "تغییر مسیرها را وارد کنید"
+
+#: classes/views/import-redirects.php:25
+msgid "Redirection"
+msgstr "تغییر مسیر"
+
+#: classes/views/import-redirects.php:26
+msgid "Safe Redirect Manager"
+msgstr "مدیر تغییر مسیر ایمن"
+
+#: classes/views/import-redirects.php:27
+msgid "Simple 301 Redirects"
+msgstr "تغییر مسیرهای ساده 301"
+
+#: classes/views/import-redirects.php:38
+msgid "Import from other redirect plugins"
+msgstr "واردات از سایر پلاگین های تغییر مسیر"
+
+#: classes/views/import-redirects.php:42
+msgid "Import from:"
+msgstr "واردات از:"
+
+#: classes/watcher.php:253
+msgid "New URL:"
+msgstr "پیوند جدید:"
+
+#: classes/watcher.php:251
+msgid "Old URL:"
+msgstr "پیوند قدیمی:"
+
+#: classes/premium-redirect-export-manager.php:31
+#: classes/views/export-redirects.php:15
+msgid "Export redirects"
+msgstr "صادرات تغییر مسیرها"
+
+#: classes/redirect/exporters/redirect-csv-exporter.php:74
+msgid "Origin"
+msgstr "منشاء"
+
+#: classes/redirect/exporters/redirect-csv-exporter.php:75
+msgid "Target"
+msgstr "هدف"
+
+#: classes/redirect/exporters/redirect-csv-exporter.php:77
+msgid "Format"
+msgstr "قالب"
+
+#: classes/views/export-redirects.php:10
+msgid "Export redirects to a CSV file"
+msgstr "تغییر مسیرها را به یک فایل CSV صادر کنید"
+
+#: classes/views/export-redirects.php:11
+msgid "If you need to have a list of all redirects, you can generate a CSV file using the button below."
+msgstr "اگر می‌خواهید فهرستی از همه تغییر مسیرها داشته باشید، می‌توانید با استفاده از دکمه زیر یک فایل CSV ایجاد کنید."
+
+#: classes/views/export-redirects.php:12
+msgid "Please note that the first row in this file is a header. This row should be ignored when parsing or importing the data from the export."
+msgstr "لطفا توجه داشته باشید که ردیف اول در این فایل یک هدر است. این ردیف باید هنگام تجزیه یا وارد کردن داده ها از صادرات نادیده گرفته شود."
+
+#: classes/premium-import-manager.php:275
+msgid "CSV import failed: the provided file could not be parsed using a CSV parser."
+msgstr "وارد کردن CSV انجام نشد: فایل ارائه شده با استفاده از تجزیه کننده CSV قابل تجزیه نیست."
+
+#: classes/views/import-redirects.php:52
+msgid "Import from a CSV file"
+msgstr "وارد کردن از یک فایل CSV"
+
+#: classes/views/import-redirects.php:59
+msgid "Import CSV file"
+msgstr "فایل CSV را وارد کنید"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: <a href='{undo_redirect_url}'>,
+#. %3$s: </a>, %4$s: Slug to post
+#: classes/post-watcher.php:295
+msgid "%1$s detected that you restored a post (%4$s) from the trash, for which a redirect was created. %2$sClick here to remove the redirect%3$s"
+msgstr "%1$s تشخیص داد که شما یک پست (%4$s) را از سطل زباله بازیابی کرده اید، که برای آن تغییر مسیر ایجاد شده است. %2$sبرای حذف تغییر مسیر%3$s اینجا را کلیک کنید"
+
+#. translators: %1$s expands to the link to an article to read more about
+#. orphaned content, %2$s expands to </a>
+#: classes/premium-orphaned-post-filter.php:54
+msgid "%1$sLearn more about orphaned content%2$s."
+msgstr "%1$sدرباره محتوای یتیم بیشتر بیاموزید%2$s."
+
+#. translators: %1$s: plural form of the current post type, %2$s: a Learn more
+#. about link
+#: classes/premium-orphaned-post-filter.php:62
+msgid "Ask your SEO Manager or Site Administrator to count links in all texts, so we can identify orphaned %1$s. %2$s"
+msgstr "از مدیر سئو یا مدیر سایت خود بخواهید پیوندها را در همه متون شمارش کند تا بتوانیم %1$s بدون والد را شناسایی کنیم. %2$s"
+
+#. translators: %1$s expands to link to the recalculation option, %2$s: anchor
+#. closing, %3$s: plural form of the current post type, %4$s: a Learn more
+#. about link
+#: classes/premium-orphaned-post-filter.php:71
+msgid "%1$sClick here%2$s to index your links, so we can identify orphaned %3$s. %4$s"
+msgstr "%1$sبرای فهرست کردن پیوندهای خود %2$s اینجا را کلیک کنید تا بتوانیم %3$s بدون والد را شناسایی کنیم. %4$s"
+
+#. translators: %1$s: plural form of the current post type, %2$s: a Learn more
+#. about link
+#: classes/premium-orphaned-post-filter.php:81
+msgid "'Orphaned content' refers to %1$s that have no inbound links, consider adding links towards these %1$s. %2$s"
+msgstr "'محتوای یتیم' اشاره دارد به %1$s که هیچ پیوند ورودی ندارند، افزودن پیوندهایی به این موارد را در نظر بگیرید %1$s. %2$s"
+
+#: classes/premium-orphaned-post-filter.php:140
+#: assets/js/src/workouts/components/OrphanedWorkout.js:88
+msgid "Orphaned content"
+msgstr "محتوای یتیم"
+
+#: classes/export/export-keywords-csv.php:68
+msgid "url"
+msgstr "پیوند"
+
+#: classes/export/export-keywords-csv.php:69
+msgid "readability score"
+msgstr "امتیاز خوانایی"
+
+#: classes/export/export-keywords-csv.php:76
+msgid "ID"
+msgstr "شناسه"
+
+#: classes/redirect/redirect-table.php:84
+msgid "Filter by redirect type"
+msgstr "فیلتر بر اساس نوع تغییر مسیر"
+
+#: classes/redirect/redirect-table.php:86
+msgid "All redirect types"
+msgstr "همه انواع تغییر مسیرها"
+
+#. translators: %s resolves to the button label translation.
+#: classes/views/export-keywords.php:12
+msgid "If you need a list of all public posts, terms and related keyphrases, you can generate a CSV file using the %s button below."
+msgstr "اگر به فهرستی از همه پست‌های عمومی، اصطلاحات و عبارات کلیدی مرتبط نیاز دارید، می‌توانید با استفاده از دکمه %s زیر یک فایل CSV ایجاد کنید."
+
+#: classes/views/export-keywords.php:21
+msgid "Export keyphrases to a CSV file"
+msgstr "عبارات کلیدی را به یک فایل CSV صادر کنید"
+
+#: classes/views/export-keywords.php:23
+msgid "You can add or remove columns to be included in the export using the checkboxes below."
+msgstr "می‌توانید با استفاده از کادرهای تأیید زیر، ستون‌هایی را اضافه یا حذف کنید تا در صادرات لحاظ شوند."
+
+#: classes/views/export-keywords.php:31
+msgid "Export URL"
+msgstr "صادرات URL"
+
+#: classes/views/export-keywords.php:32
+msgid "Export title"
+msgstr "عنوان صادرات"
+
+#: classes/views/export-keywords.php:35
+msgid "Export readability score"
+msgstr "امتیاز خوانایی صادرات"
+
+#: classes/views/export-keywords.php:49
+msgid "Please note:"
+msgstr "لطفا توجه داشته باشید:"
+
+#: classes/views/export-keywords.php:51
+msgid "The first row in this file is the header row. This row should be ignored when parsing or importing the data from the export."
+msgstr "ردیف اول این فایل ردیف سرصفحه است. این ردیف باید هنگام تجزیه یا وارد کردن داده ها از صادرات نادیده گرفته شود."
+
+#: classes/views/export-keywords.php:52
+msgid "Exporting data can take a long time when there are many posts, pages, public custom post types or terms."
+msgstr "زمانی که پست‌ها، صفحات، انواع پست سفارشی عمومی یا اصطلاحات زیادی وجود دارد، صادرات داده‌ها می‌تواند زمان زیادی طول بکشد."
+
+#: classes/redirect/views/redirects-tab-plain.php:25
+msgid "Plain redirects"
+msgstr "تغییر مسیر ساده"
+
+#: classes/redirect/views/redirects-tab-regex.php:25
+msgid "Regular Expression redirects"
+msgstr "تغییر مسیر با عبارت منظم"
+
+#: classes/redirect/views/redirects-tab-settings.php:76
+msgid "Redirects settings"
+msgstr "تنظیمات تغییر مسیر"
+
+#: classes/export/export-keywords-csv.php:77
+msgctxt "post_type of a post or the taxonomy of a term"
+msgid "type"
+msgstr "نوع"
+
+#: classes/export/export-keywords-csv.php:72
+msgid "seo title"
+msgstr "عنوان سئو"
+
+#: classes/views/export-keywords.php:33
+msgid "Export SEO title"
+msgstr "عنوان صادرات سئو"
+
+#: classes/views/export-keywords.php:34
+msgid "Export meta description"
+msgstr "صادرات توضیحات متا"
+
+#: classes/export/export-keywords-csv.php:70
+msgid "keyphrase"
+msgstr "عبارت کلیدی"
+
+#: classes/export/export-keywords-csv.php:71
+msgid "keyphrase score"
+msgstr "امتیاز عبارت کلیدی"
+
+#: classes/premium-keyword-export-manager.php:40
+#: classes/views/export-keywords.php:8
+msgid "Export keyphrases"
+msgstr "عبارات کلیدی را صادر کنید"
+
+#: classes/views/export-keywords.php:30
+msgid "Export keyphrase scores"
+msgstr "نمرات عبارت کلیدی را صادر کنید"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://yoa.st/2jc"
+msgstr "https://yoa.st/2jc"
+
+#. Plugin Name of the plugin
+msgid "Yoast SEO Premium"
+msgstr "یواست سئو پریمیوم"
+
+#. translators: 1: link to redirects overview, 2: closing link tag
+#: classes/premium-import-manager.php:192
+msgid "All redirects have been imported successfully. Go to the %1$sredirects overview%2$s to see the imported redirects."
+msgstr "همه تغییر مسیرها با موفقیت وارد شدند. برای مشاهده تغییر مسیرهای وارد شده، به نمای کلی %1$sتغییر مسیرها%2$s بروید."
+
+#. translators: 1: link to redirects overview, 2: closing link tag
+#: classes/premium-import-manager.php:201
+msgid "No redirects have been imported. Probably they already exist as a redirect. Go to the %1$sredirects overview%2$s to see the existing redirects."
+msgstr "هیچ تغییر مسیری وارد نشده است. احتمالاً آنها قبلاً به عنوان یک تغییر مسیر وجود دارند. برای مشاهده تغییر مسیرهای موجود، به نمای کلی %1$sتغییر مسیرها%2$s بروید."
+
+#. translators: 1: amount of imported redirects, 2: total amount of redirects,
+#. 3: link to redirects overview, 4: closing link tag
+#: classes/premium-import-manager.php:209
+msgid "Imported %1$s/%2$s redirects successfully. Go to the %3$sredirects overview%4$s to see the imported redirect."
+msgid_plural "Imported %1$s/%2$s redirects successfully. Go to the %3$sredirects overview%4$s to see the imported redirects."
+msgstr[0] "تغییر مسیرهای %1$s/%2$s با موفقیت وارد شد. برای مشاهده تغییر مسیر وارد شده، به نمای کلی %3$sتغییر مسیرها%4$s بروید."
+
+#: classes/premium-import-manager.php:251
+msgid "Redirect import failed: the selected redirect plugin is not installed or activated."
+msgstr "وارد کردن تغییر مسیر انجام نشد: افزونه تغییر مسیر انتخابی نصب یا فعال نشده است."
+
+#: classes/premium-import-manager.php:269
+msgid "CSV import failed: No file selected."
+msgstr "وارد کردن CSV انجام نشد: هیچ فایلی انتخاب نشد."
+
+#. translators: 1: The maximum file size
+#: classes/premium-import-manager.php:283
+msgid "CSV import failed: the provided file is larger than %1$s."
+msgstr "وارد کردن CSV انجام نشد: فایل ارائه شده بزرگتر از %1$s است."
+
+#: classes/premium-import-manager.php:290
+msgid "CSV import failed: the provided file is not a CSV file."
+msgstr "وارد کردن CSV انجام نشد: فایل ارائه شده یک فایل CSV نیست."
+
+#: classes/premium-import-manager.php:309
+msgid "Redirect import failed: we can't recognize this type of import."
+msgstr "تغییر مسیر واردات ناموفق بود: ما نمی توانیم این نوع واردات را تشخیص دهیم."
+
+#: classes/premium-stale-cornerstone-content-filter.php:51
+msgid "Stale cornerstone content"
+msgstr "سنگ های بنای قدیمی"
+
+#. translators: %s expands to the posttype label, %2$s expands anchor to blog
+#. post about cornerstone content, %3$s expands to </a>
+#: classes/premium-stale-cornerstone-content-filter.php:68
+msgid "Stale cornerstone content refers to cornerstone content that hasn’t been updated in the last 6 months. Make sure to keep these %1$s up-to-date. %2$sLearn more about cornerstone content%3$s."
+msgstr "محتوای سنگ بنای قدیمی به محتوای سنگ بنای اصلی گفته می شود که در ۶ ماه گذشته به روز نشده است. حتما این %1$s را به روز نگه دارید. %2$sدرباره محتوای سنگ بنا بیشتر بیاموزید%3$s."
+
+#: classes/views/import-redirects.php:56
+msgid "Choose a CSV file from your computer:"
+msgstr "یک فایل CSV از رایانه خود انتخاب کنید:"
+
+#: classes/watcher.php:264 assets/js/src/components/RedirectNotification.js:133
+#: assets/js/src/elementor/components/RedirectNotification.js:133
+msgid "Undo"
+msgstr "بازگشت"
+
+#: classes/premium-redirect-service.php:60
+#: classes/redirect-undo-endpoint.php:83 classes/redirect-undo-endpoint.php:103
+msgid "Redirect not deleted."
+msgstr "تغییر مسیر حذف نشد."
+
+#: classes/premium-redirect-service.php:61
+#: classes/redirect-undo-endpoint.php:84 classes/redirect-undo-endpoint.php:104
+msgid "Something went wrong when deleting this redirect."
+msgstr "هنگام حذف این تغییر مسیر مشکلی پیش آمد."
+
+#: classes/redirect/validation/redirect-relative-origin-validation.php:27
+msgid "The old URL for your redirect is not relative. Only the new URL is allowed to be absolute. Make sure to provide a relative old URL."
+msgstr "URL قدیمی برای تغییر مسیر شما نسبی نیست. فقط URL جدید مجاز است مطلق باشد. اطمینان حاصل کنید که یک URL نسبتا قدیمی ارائه کرده اید."
+
+#. translators: %1$s: Yoast SEO Premium, %2$s and %3$s expand to a link to the
+#. admin page.
+#: classes/post-watcher.php:471
+msgid "%1$s created a %2$sredirect%3$s from the old post URL to the new post URL."
+msgstr "%1$s یک %2$sتغییر مسیر%3$s از نشانی اینترنتی پست قدیمی به نشانی اینترنتی پست جدید ایجاد کرد."
+
+#. translators: %1$s: Yoast SEO Premium, %2$s and %3$s expand to a link to the
+#. admin page.
+#: classes/term-watcher.php:275
+msgid "%1$s created a %2$sredirect%3$s from the old term URL to the new term URL."
+msgstr "%1$s یک %2$sredirect%3$s از URL عبارت قدیمی به URL عبارت جدید ایجاد کرد."
+
+#: classes/watcher.php:258
+msgid "Ok"
+msgstr "باشه"
+
+#: src/integrations/admin/crawl-settings-integration.php:270
+#: assets/js/src/components/semrush/SEMrushRemoveRelatedKeyphraseLink.js:19
+#: assets/js/src/workouts/components/OrphanedWorkout/RedirectModal.js:87
+msgid "Remove"
+msgstr "پاک کردن"
+
+#. translators: %s: Zapier.
+#: src/integrations/third-party/zapier.php:128
+msgid "Go to your %s Dashboard"
+msgstr "به داشبورد %s خود بروید"
+
+#. translators: 1: Zapier, 2: The Zapier API Key.
+#: src/integrations/third-party/zapier.php:133
+msgid "%1$s uses this API Key: %2$s"
+msgstr "%1$s از این کلید API استفاده می‌کند: %2$s"
+
+#: src/integrations/third-party/zapier.php:137
+msgid "Reset API Key"
+msgstr "کلید API را بازنشانی کنید"
+
+#. translators: %s: Zapier.
+#: src/integrations/third-party/zapier.php:176
+msgid "%s will ask for an API key. Use this one:"
+msgstr "%s یک کلید API می خواهد. از این یکی استفاده کن:"
+
+#: src/integrations/third-party/zapier.php:182
+msgid "Copy to clipboard"
+msgstr "کپی به کلیپ بورد"
+
+#. translators: 1: Link start tag, 2: Yoast SEO, 3: Zapier, 4: Link closing
+#. tag.
+#: src/integrations/third-party/zapier-classic-editor.php:83
+#: assets/js/src/components/ZapierPostPublishContent.js:23
+msgid "%1$sConnect %2$s with %3$s%4$s to instantly share your published posts with 2000+ destinations such as Twitter, Facebook and more."
+msgstr "%1$s%2$s را با %3$s%4$s وصل کنید تا فوراً پست‌های منتشر شده خود را با بیش از 2000 مقصد مانند Twitter، Facebook و غیره به اشتراک بگذارید."
+
+#. translators: 1: Yoast SEO, 2: Zapier.
+#: src/integrations/third-party/zapier.php:117
+msgid "%1$s is successfully connected to %2$s!"
+msgstr "%1$s با موفقیت به %2$s متصل شد!"
+
+#. translators: 1: Yoast SEO, 2: Zapier, 3: Emphasis open tag, 4: Emphasis
+#. close tag.
+#: src/integrations/third-party/zapier.php:151
+msgid "%1$s is not connected to %2$s. To set up a connection, make sure you click %3$sSave changes%4$s first, then copy the given API key below and use it to %3$screate%4$s and %3$sturn on%4$s a Zap within your %2$s account."
+msgstr "%1$s به %2$s متصل نیست. برای راه‌اندازی اتصال، ابتدا روی %3$sذخیره تغییرات%4$s کلیک کنید، سپس کلید API داده شده را در زیر کپی کنید و از آن برای %3$sساخت%4$s و %3$sروشن کردن%4$s استفاده کنید. در حساب %2$s خود Zap کنید."
+
+#. translators: 1: Yoast SEO.
+#: src/integrations/third-party/zapier.php:161
+msgid "Please note that you can only create 1 Zap with a trigger event from %1$s. Within this Zap you can choose one or more actions."
+msgstr "لطفاً توجه داشته باشید که فقط می‌توانید 1 Zap با یک رویداد راه‌اندازی از %1$s ایجاد کنید. در این Zap می توانید یک یا چند عمل را انتخاب کنید."
+
+#. translators: %s: Zapier.
+#. translators: 1: Zapier
+#: src/integrations/third-party/zapier.php:187
+#: assets/js/src/components/ZapierModal.js:217
+msgid "Create a Zap in %s"
+msgstr "یک Zap در %s ایجاد کنید"

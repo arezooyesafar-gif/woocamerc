@@ -1,0 +1,105 @@
+<div ng-controller="notifications" class="row">
+  <div class="col-12 mobile-header d-d-none sm-px-0">
+    <div class="header">
+        <a href="dashboard">
+            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12.707 19.707l-1.414-1.414L16.586 13H4v-2h12.586l-5.293-5.293 1.414-1.414 7 7a1 1 0 010 1.414l-7 7z" clip-rule="evenodd"></path>
+                </svg>
+        </a>
+        <p class="title">اعلان ها</p>
+    </div>
+</div>
+  <div class="col-12 sm-px-0">
+    <div ng-if="notifications.length == 0" class="no-orders route-content">
+      <img src="{{plugin_path}}upanel/assets/img/no-orders.svg" />
+      <p>هیچ اعلانی ثبت نشده است</p>
+    </div>
+
+    <div ng-if="notifications.length > 0" class="route-content">
+      <table  class="desktop notifications">
+        <thead>
+          <tr>
+            <th>عنوان</th>
+            <th>تاریخ</th>
+            <th>وضعیت</th>
+            <th>مشاهده</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="notification in notifications" ng-class="notifications_readed.includes(notification.id)?'read':'unread'">
+            <td>
+              <img ng-if="notification.image.length > 0" src="{{notification.image}}" />
+
+              <p class="title">{{notification.title}}</p>
+            </td>
+            <td>{{notification.created_at}}</td>
+            <td ng-class="notifications_readed.includes(notification.id)?'read':'unread'">{{notifications_readed.includes(notification.id)?'خوانده شده':'خوانده نشده'}}</td>
+            <td><button ng-click="data.notification_popup = notification;notification_popup_function(notification.id)" type="button">مشاهده</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div ng-if="notifications.length > 0" class="notifications mobile">
+        <div ng-repeat="notification in notifications" class="notification" ng-class="notifications_readed.includes(notification.id)?'read':'unread'">
+          <img ng-if="notification.image.length > 0" src="{{notification.image}}" />
+
+          <p class="title">{{notification.title}}</p>
+
+          <div class="row">
+            <div class="col-6 right">
+              <p class="label">{{notification.created_at}}</p>
+              <p ng-class="notifications_readed.includes(notification.id)?'read':'unread'" class="read">{{notifications_readed.includes(notification.id)?'خوانده شده':'خوانده نشده'}}</p>
+            </div>
+            <div class="col-6 left">
+              <button ng-click="data.notification_popup = notification;notification_popup_function(notification.id)" type="button">مشاهده</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-class="{'active' :  data.notification_popup != '' }" class="notification-popup">
+    <img ng-if="data.notification_popup.image.length > 0" src="{{data.notification_popup.image}}" />
+    <img ng-if="data.notification_popup.image.length == 0" src="{{plugin_path}}upanel/assets/img/back.jpg" />
+
+    <p class="title">{{data.notification_popup.title}}</p>
+    <p class="date">{{data.notification_popup.created_at}}</p>
+
+    <div ng-if="notification_popup_loading" class="notification_popup_loading">
+      <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58">
+        <g fill="none" fill-rule="evenodd">
+          <g transform="translate(2 1)" stroke="#FFF" stroke-width="1.5">
+            <circle cx="42.601" cy="11.462" r="5" fill-opacity="1" fill="#fff">
+              <animate attributeName="fill-opacity" begin="0s" dur="1.3s" values="1;0;0;0;0;0;0;0" calcMode="linear" repeatCount="indefinite" />
+            </circle>
+            <circle cx="49.063" cy="27.063" r="5" fill-opacity="0" fill="#fff">
+              <animate attributeName="fill-opacity" begin="0s" dur="1.3s" values="0;1;0;0;0;0;0;0" calcMode="linear" repeatCount="indefinite" />
+            </circle>
+            <circle cx="42.601" cy="42.663" r="5" fill-opacity="0" fill="#fff">
+              <animate attributeName="fill-opacity" begin="0s" dur="1.3s" values="0;0;1;0;0;0;0;0" calcMode="linear" repeatCount="indefinite" />
+            </circle>
+            <circle cx="27" cy="49.125" r="5" fill-opacity="0" fill="#fff">
+              <animate attributeName="fill-opacity" begin="0s" dur="1.3s" values="0;0;0;1;0;0;0;0" calcMode="linear" repeatCount="indefinite" />
+            </circle>
+            <circle cx="11.399" cy="42.663" r="5" fill-opacity="0" fill="#fff">
+              <animate attributeName="fill-opacity" begin="0s" dur="1.3s" values="0;0;0;0;1;0;0;0" calcMode="linear" repeatCount="indefinite" />
+            </circle>
+            <circle cx="4.938" cy="27.063" r="5" fill-opacity="0" fill="#fff">
+              <animate attributeName="fill-opacity" begin="0s" dur="1.3s" values="0;0;0;0;0;1;0;0" calcMode="linear" repeatCount="indefinite" />
+            </circle>
+            <circle cx="11.399" cy="11.462" r="5" fill-opacity="0" fill="#fff">
+              <animate attributeName="fill-opacity" begin="0s" dur="1.3s" values="0;0;0;0;0;0;1;0" calcMode="linear" repeatCount="indefinite" />
+            </circle>
+            <circle cx="27" cy="5" r="5" fill-opacity="0" fill="#fff">
+              <animate attributeName="fill-opacity" begin="0s" dur="1.3s" values="0;0;0;0;0;0;0;1" calcMode="linear" repeatCount="indefinite" />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div ng-bind-html="notification_content" class="content"></div>
+    <button ng-click="close_back_drop();data.notification_popup = '';" class="close" type="button">بستن</button>
+  </div>
+</div>

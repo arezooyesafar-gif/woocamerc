@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "poosheicons";
+    src: url("./poosheicons.eot?eef519a390d0a4935ca4da98be1d1c57?#iefix") format("embedded-opentype"),
+url("./poosheicons.woff2?eef519a390d0a4935ca4da98be1d1c57") format("woff2"),
+url("./poosheicons.woff?eef519a390d0a4935ca4da98be1d1c57") format("woff"),
+url("./poosheicons.ttf?eef519a390d0a4935ca4da98be1d1c57") format("truetype"),
+url("./poosheicons.svg?eef519a390d0a4935ca4da98be1d1c57#poosheicons") format("svg");
+}
+
+i[class^="pooshe-icons--"]:before, i[class*=" pooshe-icons--"]:before {
+    font-family: poosheicons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pooshe-icons--achievement:before {
+    content: "\f101";
+}
+.pooshe-icons--attach:before {
+    content: "\f102";
+}
+.pooshe-icons--bar:before {
+    content: "\f103";
+}
+.pooshe-icons--calendar:before {
+    content: "\f104";
+}
+.pooshe-icons--card:before {
+    content: "\f105";
+}
+.pooshe-icons--cart-2:before {
+    content: "\f106";
+}
+.pooshe-icons--cart:before {
+    content: "\f107";
+}
+.pooshe-icons--chat:before {
+    content: "\f108";
+}
+.pooshe-icons--check-circle:before {
+    content: "\f109";
+}
+.pooshe-icons--clothes:before {
+    content: "\f10a";
+}
+.pooshe-icons--comment:before {
+    content: "\f10b";
+}
+.pooshe-icons--copy:before {
+    content: "\f10c";
+}
+.pooshe-icons--credit-card:before {
+    content: "\f10d";
+}
+.pooshe-icons--cup:before {
+    content: "\f10e";
+}
+.pooshe-icons--document:before {
+    content: "\f10f";
+}
+.pooshe-icons--eco:before {
+    content: "\f110";
+}
+.pooshe-icons--eye:before {
+    content: "\f111";
+}
+.pooshe-icons--gear:before {
+    content: "\f112";
+}
+.pooshe-icons--heart-o:before {
+    content: "\f113";
+}
+.pooshe-icons--heart:before {
+    content: "\f114";
+}
+.pooshe-icons--meh:before {
+    content: "\f115";
+}
+.pooshe-icons--pie-chart:before {
+    content: "\f116";
+}
+.pooshe-icons--play-button:before {
+    content: "\f117";
+}
+.pooshe-icons--prize:before {
+    content: "\f118";
+}
+.pooshe-icons--question:before {
+    content: "\f119";
+}
+.pooshe-icons--reply:before {
+    content: "\f11a";
+}
+.pooshe-icons--share:before {
+    content: "\f11b";
+}
+.pooshe-icons--smile-2:before {
+    content: "\f11c";
+}
+.pooshe-icons--smile:before {
+    content: "\f11d";
+}
+.pooshe-icons--sort:before {
+    content: "\f11e";
+}
+.pooshe-icons--th:before {
+    content: "\f11f";
+}
+.pooshe-icons--user-tick:before {
+    content: "\f120";
+}
+.pooshe-icons--user:before {
+    content: "\f121";
+}
+.pooshe-icons--web:before {
+    content: "\f122";
+}

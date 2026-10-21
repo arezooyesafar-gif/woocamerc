@@ -1,0 +1,53 @@
+/**
+*
+*	Name:			Yekan Bakh Fonts
+*	Version:			1.0
+*	Author:			Reza Bakhtiarifard (rbakhtiarifard.ir)
+*	Created on:		May 2022
+*	Updated on:		May 2022
+*	Vendor:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+???? ????? ?? ??? ????? ??????? ????? ?? ???. ??? ????? ?? ?????? ??????? ?? ??? ???? ?? ???? ?? ?? ???? (???? ????? ??? ???) ?????? ??????
+--------------------------------------------------------------------------------------
+Yekan Bakh fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+------------------------------------------------------------------------------------- fonts/-
+*	
+**/
+
+
+
+
+
+@font-face {
+    font-family: "Yekan Bakh";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/woff2/YekanBakh-Regular.woff2') format('woff2'),
+         url('../fonts/woff/YekanBakh-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Yekan Bakh";
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/woff2/YekanBakh-SemiBold.woff2') format('woff2'),
+         url('../fonts/woff/YekanBakh-SemiBold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Yekan Bakh";
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/woff2/YekanBakh-Bold.woff2') format('woff2'),
+         url('../fonts/woff/YekanBakh-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+body, h1, h2, h3, h4, h5, h6, input, textarea, button {
+    font-family: "Yekan Bakh", sans-serif;
+}

@@ -1,0 +1,296 @@
+{
+  "translation-revision-date": "2026-01-21 11:50:13+0000",
+  "generator": "GlotPress/4.0.3",
+  "domain": "wordpress-seo-premium",
+  "locale_data": {
+    "messages": {
+      "": {
+        "domain": "wordpress-seo-premium",
+        "plural-forms": "nplurals=1; plural=0;",
+        "lang": "fa"
+      },
+      "Optimize pages for multiple keywords with guidance": [
+        "صفحات را با راهنمایی برای چندین کلمه کلیدی بهینه کنید."
+      ],
+      "Manage redirects with ease and without extra plugins": [
+        "ریدایرکت‌ها را به‌راحتی و بدون افزونه اضافی مدیریت کنید."
+      ],
+      "Apply AI suggestions to improve content in 1 click": [
+        "با یک کلیک، پیشنهادهای هوش مصنوعی را برای بهبود محتوا اعمال کنید."
+      ],
+      "Create optimized SEO titles & meta descriptions in seconds": [
+        "در چند ثانیه عنوان‌های سئو و توضیحات متای بهینه بسازید."
+      ],
+      "Receive clear SEO and readability guidance to optimize your products": [
+        "راهنمایی‌های شفاف سئو و خوانایی برای بهینه‌سازی محصولات خود دریافت کنید."
+      ],
+      "Create optimized SEO titles & meta descriptions with AI": [
+        "با هوش مصنوعی، عنوان‌های سئو و توضیحات متای بهینه ایجاد کنید."
+      ],
+      "Make sure search engines show the right version of your product page": [
+        "مطمئن شوید موتورهای جستجو نسخه درست صفحه محصول شما را نمایش می‌دهند."
+      ],
+      "Add product details to help your listings stand out": [
+        "جزئیات محصول را اضافه کنید تا فهرست‌های شما متمایز شوند."
+      ],
+      "Deleted or moved a page? Broken links send visitors to dead ends and cost you valuable traffic. %1$s Redirect Manager automatically sends them to the right page": [
+        "صفحه‌ای را حذف یا جابه‌جا کرده‌اید؟ لینک‌های شکسته کاربران را به بن‌بست می‌فرستند و باعث از دست رفتن ترافیک ارزشمند می‌شوند. %1$sمدیر ریدایرکت‌ها%2$s به‌صورت خودکار آن‌ها را به صفحه درست هدایت می‌کند."
+      ],
+      "Fix broken links before they hurt your SEO": [
+        "لینک‌های شکسته را قبل از اینکه به سئوی شما آسیب بزنند، اصلاح کنید."
+      ],
+      "Make your articles visible, be seen in Google News": [
+        "مقاله‌های خود را قابل مشاهده کنید و در Google News دیده شوید."
+      ],
+      "Generate SEO optimized metadata in seconds with AI": [
+        "در چند ثانیه با هوش مصنوعی، متادیتای بهینه‌شده برای سئو تولید کنید."
+      ],
+      "Internal links and redirect management, easy": [
+        "مدیریت لینک‌های داخلی و ریدایرکت‌ها، به‌سادگی."
+      ],
+      "Easy Local SEO. Show up in Google Maps results": [
+        "سئوی محلی آسان؛ در نتایج Google Maps دیده شوید."
+      ],
+      "Built to get found by search, AI, and real users": [
+        "طراحی شده تا توسط جستجو، هوش مصنوعی و کاربران واقعی پیدا شوید."
+      ],
+      "Access to friendly help when you need it, day or night": [
+        "دسترسی به پشتیبانی دوستانه هر زمان که نیاز دارید، شبانه‌روز."
+      ],
+      "Redirect method": [
+        "روش ریدایرکت"
+      ],
+      "Select all": [
+        "انتخاب همه"
+      ],
+      "Redirect Type": [
+        "نوع ریدایرکت"
+      ],
+      "Redirects navigation": [
+        "ناوبری ریدایرکت‌ها"
+      ],
+      "Plain redirects automatically send visitors from one URL to another. Use them to fix broken links and improve your site's user experience.": [
+        "ریدایرکت‌های ساده به‌صورت خودکار کاربران را از یک نشانی به نشانی دیگر هدایت می‌کنند. از آن‌ها برای رفع لینک‌های شکسته و بهبود تجربه کاربری سایت خود استفاده کنید."
+      ],
+      "Open redirects navigation": [
+        "باز کردن ناوبری ریدایرکت‌ها"
+      ],
+      "Manage and monitor your redirects with ease. Create and edit plain redirects to ensure visitors and search engines reach the right pages. %1$sLearn more about redirects%2$s.": [
+        "ریدایرکت‌های خود را به‌راحتی مدیریت و پایش کنید. ریدایرکت‌های ساده بسازید و ویرایش کنید تا کاربران و موتورهای جستجو به صفحات درست هدایت شوند. %1$sدرباره ریدایرکت‌ها بیشتر بدانید%2$s."
+      ],
+      "Filter Redirect type": [
+        "فیلتر نوع ریدایرکت"
+      ],
+      "Close redirects navigation": [
+        "بستن ناوبری ریدایرکت‌ها"
+      ],
+      "All": [
+        "همه"
+      ],
+      "Undefined error message.": [
+        "پیام خطای تعریف‌نشده."
+      ],
+      "Edit": [
+        "ویرایش"
+      ],
+      "Allow": [
+        "اجازه دادن"
+      ],
+      "Deny": [
+        "رد کردن"
+      ],
+      "To see this video, you need to allow %1$s to load embedded videos from %2$s.": [
+        "برای دیدن این ویدیو، باید به %1$s اجازه دهید تا ویدیوهای جاسازی‌شده از %2$s بارگذاری شوند."
+      ],
+      "Unlock with %1$s": [
+        "باز کردن قفل با %1$s"
+      ],
+      "Refresh this page": [
+        "تازه‌سازی این صفحه"
+      ],
+      "Something went wrong. An unexpected error occurred.": [
+        "مشکلی پیش آمد. یک خطای غیرمنتظره رخ داد."
+      ],
+      "Unfortunately, this means that any unsaved changes in this section will be lost. You can try and refresh this page to resolve the problem. If this error still occurs, please get in touch with our support team, and we'll get you all the help you need!": [
+        "متأسفانه این به این معناست که هر تغییری که در این بخش ذخیره نشده باشد از بین خواهد رفت. می‌توانید برای رفع مشکل این صفحه را تازه‌سازی کنید. اگر این خطا همچنان رخ داد، لطفاً با تیم پشتیبانی ما تماس بگیرید تا تمام کمک‌های لازم را دریافت کنید."
+      ],
+      "Contact support": [
+        "تماس با پشتیبانی"
+      ],
+      "We're very sorry, but it seems like the following error has interrupted our application:": [
+        "بسیار متأسفیم، اما به نظر می‌رسد خطای زیر برنامه را متوقف کرده است:"
+      ],
+      "No items found": [
+        "موردی یافت نشد."
+      ],
+      "Old URL": [
+        "نشانی قدیمی"
+      ],
+      "Type": [
+        "نوع"
+      ],
+      "Plain redirects": [
+        "ریدایرکت‌های ساده"
+      ],
+      "The redirect type is the HTTP response code sent to the browser telling the browser what type of redirect is served. %1$sLearn more about redirect types%2$s.": [
+        "نوع ریدایرکت کد پاسخ HTTP است که به مرورگر ارسال می‌شود و به آن می‌گوید چه نوع ریدایرکتی ارائه شده است. %1$sدرباره انواع ریدایرکت بیشتر بدانید%2$s."
+      ],
+      "Add redirect": [
+        "افزودن ریدایرکت"
+      ],
+      "Regex redirects": [
+        "ریدایرکت‌های Regex"
+      ],
+      "301 Moved Permanently": [
+        "301 منتقل‌شده به‌صورت دائمی"
+      ],
+      "(Opens in a new browser tab)": [
+        "(در یک تب جدید مرورگر باز می‌شود)"
+      ],
+      "Redirects": [
+        "ریدایرکت‌ها"
+      ],
+      "New URL": [
+        "نشانی جدید"
+      ],
+      "Redirect multiple URLs at once by using regular expressions (regex). Match similar URLs with one rule to fix broken links, move content, or manage changes to your site’s structure. %1$sLearn more about regex redirects%2$s.": [
+        "با استفاده از عبارات منظم (Regex)، چندین نشانی را به‌صورت هم‌زمان ریدایرکت کنید. با یک قانون، نشانی‌های مشابه را تطبیق دهید تا لینک‌های شکسته را رفع کنید، محتوا را جابه‌جا کنید یا تغییرات ساختار سایت خود را مدیریت کنید. %1$sدرباره ریدایرکت‌های Regex بیشتر بدانید%2$s."
+      ],
+      "Only use regex redirects if you know how to apply them correctly. Incorrect settings may break your site or cause unexpected issues.": [
+        "فقط در صورتی از ریدایرکت‌های Regex استفاده کنید که روش صحیح به‌کارگیری آن‌ها را می‌دانید. تنظیمات نادرست ممکن است سایت شما را دچار مشکل کند یا باعث بروز ایرادهای غیرمنتظره شود."
+      ],
+      "Note:": [
+        "نکته:"
+      ],
+      "Set up regex redirects": [
+        "راه‌اندازی ریدایرکت‌های Regex"
+      ],
+      "Define redirect rules using regular expressions to match multiple URLs with a single expression. Ideal for complex URL structures or major content updates. See real-world %1$sregex redirect examples%2$s.": [
+        "قوانین ریدایرکت را با استفاده از عبارات منظم تعریف کنید تا چندین نشانی با یک عبارت تطبیق داده شوند. این روش برای ساختارهای پیچیده نشانی‌ها یا به‌روزرسانی‌های بزرگ محتوا ایده‌آل است. نمونه‌های واقعی %1$sریدایرکت Regex%2$s را ببینید."
+      ],
+      "Regular Expression": [
+        "عبارت منظم (Regex)"
+      ],
+      "URL": [
+        "نشانی (URL)"
+      ],
+      "Choose how you want to handle redirects for your site. %1$sLearn more about redirect settings%2$s.": [
+        "انتخاب کنید که می‌خواهید ریدایرکت‌ها در سایت شما چگونه مدیریت شوند. %1$sدرباره تنظیمات ریدایرکت بیشتر بدانید%2$s."
+      ],
+      "By default, Yoast SEO Premium uses PHP-based redirects. Alternatively, you can write redirects to the %1$s file. Make sure the %1$s file is writable.": [
+        "به‌صورت پیش‌فرض، Yoast SEO Premium از ریدایرکت‌های مبتنی بر PHP استفاده می‌کند. همچنین می‌توانید ریدایرکت‌ها را در فایل %1$s بنویسید. مطمئن شوید فایل %1$s قابل نوشتن است."
+      ],
+      "Generate a separate redirect file": [
+        "ایجاد فایل جداگانه برای ریدایرکت‌ها"
+      ],
+      "By default, we write the redirects to your %1$s file. Enable this if you want the redirects to be written to a separate file. %2$sOnly enable this option if you know what you are doing.%3$s": [
+        "به‌صورت پیش‌فرض، ریدایرکت‌ها در فایل %1$s شما نوشته می‌شوند. اگر می‌خواهید ریدایرکت‌ها در یک فایل جداگانه نوشته شوند، این گزینه را فعال کنید. %2$sفقط در صورتی این گزینه را فعال کنید که دقیقاً بدانید چه کاری انجام می‌دهید.%3$s"
+      ],
+      "Enabled": [
+        "فعال"
+      ],
+      "Disabled": [
+        "غیرفعال"
+      ],
+      "Save changes": [
+        "ذخیره تغییرات"
+      ],
+      "Discard changes": [
+        "لغو تغییرات"
+      ],
+      "Please enter the new URL.": [
+        "لطفاً نشانی (URL) جدید را وارد کنید."
+      ],
+      "Error while saving this redirect": [
+        "هنگام ذخیره این ریدایرکت خطایی رخ داد."
+      ],
+      "Save anyway": [
+        "به‌هرحال ذخیره کن"
+      ],
+      "Cancel": [
+        "انصراف"
+      ],
+      "302 Found": [
+        "302 یافت شد (Found)"
+      ],
+      "307 Temporary Redirect": [
+        "307 ریدایرکت موقت"
+      ],
+      "410 Content Deleted": [
+        "410 محتوای حذف‌شده"
+      ],
+      "451 Unavailable For Legal Reasons": [
+        "451 در دسترس نبودن به دلایل قانونی"
+      ],
+      "Bulk actions": [
+        "اقدامات گروهی"
+      ],
+      "Apply": [
+        "اعمال"
+      ],
+      "Delete": [
+        "حذف"
+      ],
+      "Search…": [
+        "جستجو…"
+      ],
+      "Please enter the old URL.": [
+        "لطفاً نشانی (URL) قدیمی را وارد کنید."
+      ],
+      "%d Item": [
+        "%d مورد"
+      ],
+      "%d Items": [
+        "%d مورد"
+      ],
+      "Showing %1$d to %2$d of %3$d results": [
+        "نمایش %1$d تا %2$d از %3$d نتیجه"
+      ],
+      "Please enter the regular expression.": [
+        "لطفاً عبارت منظم (Regex) را وارد کنید."
+      ],
+      "Please enter the URL.": [
+        "لطفاً نشانی (URL) را وارد کنید."
+      ],
+      "Successfully added!": [
+        "با موفقیت اضافه شد!"
+      ],
+      "Great! Your settings were saved succesfully!": [
+        "عالی! تنظیمات شما با موفقیت ذخیره شد!"
+      ],
+      "You are about to discard all unsaved changes. Are you sure?": [
+        "شما در حال لغو تمام تغییرات ذخیره‌نشده هستید. مطمئن هستید؟"
+      ],
+      "Yes, discard changes": [
+        "بله، تغییرات را لغو کن"
+      ],
+      "Save": [
+        "ذخیره"
+      ],
+      "No, continue editing": [
+        "خیر، ویرایش را ادامه بده"
+      ],
+      "Changes saved successfully!": [
+        "تغییرات با موفقیت ذخیره شد!"
+      ],
+      "Delete redirect": [
+        "حذف ریدایرکت"
+      ],
+      "This action cannot be undone. The redirect will be permanently deleted and users will no longer be forwarded to the destination URL.": [
+        "این عملیات قابل بازگشت نیست. این ریدایرکت به‌صورت دائمی حذف می‌شود و کاربران دیگر به نشانی مقصد هدایت نخواهند شد."
+      ],
+      "Successfully deleted!": [
+        "با موفقیت حذف شد!"
+      ],
+      "Delete redirects": [
+        "حذف ریدایرکت‌ها"
+      ],
+      "As you're on Apache, you should add the following include to the website httpd config file:": [
+        "از آن‌جایی که شما از Apache استفاده می‌کنید، باید عبارت زیر را به فایل پیکربندی httpd سایت اضافه کنید:"
+      ]
+    }
+  },
+  "comment": {
+    "reference": "js/dist/redirects.js"
+  }
+}

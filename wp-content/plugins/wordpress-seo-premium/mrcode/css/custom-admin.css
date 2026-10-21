@@ -1,0 +1,359 @@
+@font-face {
+    font-family: Vazirmatn;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/font.woff2') format('woff2');  /* All Major Browsers */
+}
+
+.yoastplus-wrap, .yoastplus-wrap h1, .yoastplus-wrap h2, .mrcode-addons-wrapper,
+.mrcode-addons-wrapper h1, body.toplevel_page_wpseo_dashboard .yoast-notice-migrated-header,
+.yst-root .yst-font-wp, .yst-text-lg, .yst-root, .yst-root .yst-title, #yoast-seo-settings *,
+.yoast a, .yoast p, .yoast h1, #wpseo-title, .admin_page_wpseo_installation_successful #wpbody *, .wpseo-metabox-content legend, .wpseo-metabox-content, .yst-replacevar__editor span {
+    font-family: "Vazirmatn", Arial, Helvetica, Verdana, sans-serif !important;
+    line-height: 26px;
+}
+.yst-root p {
+    line-height: 1.8;
+}
+.workflow > li::before {
+    right: -33px;
+    left: inherit;
+}
+.workflow > li::after {
+    right: -48px;
+    left: inherit;
+}
+.workflow {
+    margin-right: 48px;
+    margin-left: 2em;
+}
+.yoast-svg-icon-alert-info {
+    margin-left: 8px !important;
+    margin-right: 0 !important;
+}
+.yoast-button, .yoast-button-upsell, .yoast, .yst-replacevar__label, .yst-replacevar__button-insert, .yoast .h1, .yoast .h2, .yoast .h3, .yoast .h4, .yoast .h5, .yoast .h6, .yoast h1, .yoast h2, .yoast h3, .yoast h4, .yoast h5, .yoast h6 {
+    font-family: inherit !important;
+}
+.yoast .h3, .yoast h3 {
+    font-size: 18px !important;
+}
+.yoast-svg-icon-alert-warning {
+    margin-left: 8px;
+    margin-right: 0;
+}
+.yst-replacevar__button-insert{
+    margin-right: .5em !important;
+    margin-left: inherit !important;
+}
+.yoast-premium-badge, .yst-button--upsell, #yoast-update-premium-notification{
+    display: none !important;
+}
+.notice-yoast__header {
+    justify-content: right !important;
+}
+.yst-root .yst-toggle--checked .yst-toggle__handle {
+    --tw-translate-x: -1.25rem !important;
+}
+.yst-flex-grow .yst-mt-3 svg {
+    transform: rotate(180deg);
+}
+.yoast a::before {
+    font-family: dashicons;
+}
+.yst-mt-8 .yst-text-xs {
+    font-size: .85rem !important;
+}
+.yst-mt-8 .yst-font-\[650\] {
+    font-weight: 400 !important;
+}
+.yst-flex-grow .yst-text-base {
+    font-size: 0.85rem !important;
+}
+.yst-flex-grow .yst-leading-tight {
+    line-height: 1.65 !important;
+}
+#wpseo-workouts-container-free #workouts-page-description {
+    font-size: 14px !important;
+}
+#wpseo-workouts-container-free h3 {
+    font-size: 14px !important;
+}
+#wpseo-workouts-container-free h2 {
+    font-size: 15px !important;
+}
+.bDcAbh {
+    display: none !important;
+}
+.sc-kZLDfD {
+    display: none !important;
+}
+
+
+
+
+
+
+
+/* =========================================
+   MrCode Yoast Add-ons Manager - Admin CSS
+   Version: 1.5.0
+   ========================================= */
+
+/* --- Layout --- */
+.mrcode-addons-wrapper {
+    max-width: 1200px;
+    margin: 40px auto; /* Centered with breathing room */
+    /* Background is handled by PHP via #wpbody-content for full-screen effect */
+}
+
+/* --- Header Section --- */
+.mrcode-header {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border-right: 6px solid #a4286a; /* Yoast Purple */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mrcode-header h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d2327;
+    margin: 0;
+}
+
+.mrcode-header p {
+    font-size: 14px;
+    color: #646970;
+    margin: 5px 0 0;
+}
+
+/* --- Minimal Refresh Button --- */
+.btn-refresh-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border: 1px solid #dcdcdd;
+    border-radius: 50%;
+    color: #50575e;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.btn-refresh-icon:hover {
+    background: #fff;
+    border-color: #a4286a;
+    color: #a4286a;
+    box-shadow: 0 5px 12px rgba(164, 40, 106, 0.15);
+    transform: rotate(180deg);
+}
+
+.btn-refresh-icon .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* --- Grid System --- */
+.mrcode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- Card Component --- */
+.mrcode-card {
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.mrcode-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: #dcdcdd;
+}
+
+/* Special Style for VIP Addon */
+.mrcode-card.is-plus {
+    border: 2px solid #dba617; /* Gold */
+    box-shadow: 0 0 20px rgba(219, 166, 23, 0.1);
+}
+
+.mrcode-card.is-plus:hover {
+    box-shadow: 0 15px 35px rgba(219, 166, 23, 0.2);
+}
+
+.mrcode-card.is-plus .mrcode-card-title {
+    color: #a4286a;
+    font-weight: 800;
+}
+
+/* Card Image Area */
+.mrcode-card-img {
+    height: 160px;
+    background-color: #f6f7f7;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+/* --- Badges (VIP & FREE) --- */
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px; /* Adjusted for LTR/RTL compatibility */
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+    letter-spacing: 0.5px;
+    color: #fff;
+    line-height: 1;
+}
+
+.badge-vip {
+    background: linear-gradient(135deg, #dba617, #f4d03f);
+    color: #000;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.badge-free {
+    background: #b32596; /* Yoast Green */
+}
+
+/* --- Card Content --- */
+.mrcode-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mrcode-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #1d2327;
+}
+
+.mrcode-card-desc {
+    font-size: 13px;
+    color: #646970;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* --- Footer & Buttons --- */
+.mrcode-card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f1;
+}
+
+.mrcode-badge.installed {
+    font-size: 11px;
+    background: #f0f0f1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #50575e;
+    font-weight: 500;
+}
+
+/* Button Base Style */
+.mrcode-btn {
+    border: none;
+    cursor: pointer;
+    padding: 0 18px;
+    height: 36px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 100px;
+    outline: none;
+}
+
+/* Install Button (Standard Blue) */
+.btn-install {
+    background: #2271b1;
+    color: #fff;
+}
+.btn-install:hover {
+    background: #135e96;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(34, 113, 177, 0.2);
+}
+
+/* Activate Button (Outline Blue) */
+.btn-activate {
+    background: #fff;
+    border: 1px solid #2271b1;
+    color: #2271b1;
+}
+.btn-activate:hover {
+    background: #2271b1;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(34, 113, 177, 0.2);
+}
+
+/* Update Button (Red Pulse) */
+.btn-update {
+    background: #d63638;
+    color: #fff;
+    animation: pulse 2s infinite;
+}
+.btn-update:hover {
+    background: #b32d2e;
+}
+
+/* Active Static Button (Green) */
+.btn-active-static {
+    background: #00a32a;
+    color: #fff;
+    cursor: default;
+    opacity: 1;
+}
+
+/* Disabled Button */
+.btn-disabled {
+    background: #f0f0f1;
+    color: #a7aaad;
+    cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(214, 54, 56, 0.4); }
+    70% { box-shadow: 0 0 0 8px rgba(214, 54, 56, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(214, 54, 56, 0); }
+}
+
+
+

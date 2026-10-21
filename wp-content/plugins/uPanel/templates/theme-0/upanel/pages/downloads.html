@@ -1,0 +1,44 @@
+<div ng-controller="downloads" class="row">
+  <div class="col-12 col-md-12">
+    <div ng-if="downloads.length == 0" class="no-orders">
+      <img src="{{plugin_path}}upanel/assets/img/no-orders.svg" />
+      <p>هیچ محصول دانلودی یافت نشد</p>
+    </div>
+
+    <table ng-if="downloads.length > 0" class="desktop downloads">
+      <thead>
+        <tr>
+          <th>محصول</th>
+          <th>دانلود باقی مانده</th>
+          <th>انقضا</th>
+          <th>دانلود</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="download in downloads">
+          <td>{{download.product_name}}</td>
+          <td>{{download.downloads_remaining?download.downloads_remaining:'بدون محدودیت'}}</td>
+          <td>{{download.access_expires?download.access_expires:'بدون انقضا'}}</td>
+          <td><a href="{{download.download_url}}" target="_blank">{{download.file.name}}</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div ng-if="downloads.length > 0" class="downloads mobile">
+      <div ng-repeat="download in downloads" class="download">
+        <div class="row">
+          <p class="title">{{download.product_name}}</p>
+          <div class="col-6 right">
+            <p class="label">دانلود باقی مانده</p>
+            <p>{{download.downloads_remaining?download.downloads_remaining:'بدون محدودیت'}}</p>
+          </div>
+          <div class="col-6 left">
+            <p class="label">انقضا</p>
+            <p>{{download.access_expires?download.access_expires:'بدون انقضا'}}</p>
+          </div>
+        </div>
+        <a href="{{download.download_url}}" target="_blank">{{download.file.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>

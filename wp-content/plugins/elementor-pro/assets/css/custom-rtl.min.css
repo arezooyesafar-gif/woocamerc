@@ -1,0 +1,244 @@
+@import url('../fonts/iranyekan/iranyekan.css');
+
+#e-admin-top-bar-root .e-admin-top-bar__bar-button-title,
+#e-admin-top-bar-root .e-admin-top-bar__heading-title,
+#e-admin-top-bar-root > div > div.e-admin-top-bar__main-area > div.e-admin-top-bar__heading > h1,
+#e-admin-top-bar-root > div > div.e-admin-top-bar__secondary-area > a > h1,
+#e-admin-top-bar-root > div > div.e-admin-top-bar__secondary-area > div > a > h1,
+#e-admin-top-bar-root,
+#e-app,
+#elementor-add-new-section div.e-view.elementor-add-new-section > div.elementor-add-section-drag-title,
+#elementor-finder__search__input,
+#elementor-navigator__header__title,
+#elementor-new-template__form__submit,
+#elementor-panel-elements-navigation,
+#elementor-panel-elements-search-input,
+#elementor-panel-footer-saver-options .elementor-last-edited,
+#elementor-panel-footer-sub-menu-item-save-draft,
+#elementor-panel-footer-sub-menu-item-save-template,
+#elementor-panel-header-title,
+#elementor-panel-history .elementor-history-revisions-message,
+#elementor-panel-history-no-items .elementor-nerd-box-message,
+#elementor-panel-history-no-items .elementor-nerd-box-title,
+#elementor-panel-saver-button-publish-label,
+#elementor-panel__editor__help__link,
+#elementor-template-library-filter-text,
+#elementor-template-library-templates-empty,
+#elementor-template-library-toolbar,
+#elementor-toast,
+.dialog-widget-content,
+.e-admin-top-bar,
+.e-admin-top-bar__bar-button-title,
+.e-admin-top-bar__heading-title,
+.e-con-select-preset__title,
+.e-global-colors__color-value,
+.e-group-control-header span,
+.e-notice__content h3,
+.e-notice__content,
+.e-view .elementor-add-new-section,
+.elementor-add-section-drag-title,
+.elementor-app-iframe,
+.elementor-button,
+.elementor-button,
+.elementor-component-tab,
+.elementor-context-menu-list,
+.elementor-control,
+.elementor-control-field,
+.elementor-control-field > label,
+.elementor-control-input-wrapper input,
+.elementor-control-input-wrapper,
+.elementor-control-title,
+.elementor-icons-manager__search,
+.elementor-icons-manager__tab-link,
+.elementor-icons-manager__tab-links,
+.elementor-icons-manager__upload__title,
+.elementor-loading-title,
+.elementor-loading-title,
+.elementor-navigator__element__title,
+.elementor-navigator__element__title__text,
+.elementor-nerd-box-message,
+.elementor-nerd-box-title,
+.elementor-panel-category-title,
+.elementor-panel-header-title,
+.elementor-panel-menu-item-title,
+.elementor-repeater-row-item-title,
+.elementor-responsive-panel,
+.elementor-section-title,
+.elementor-settings-form-page h2,
+.elementor-templates-modal .dialog-widget-content,
+.elementor-templates-modal__header__logo__title,
+.eps-app,
+.eps-app__content,
+.eps-app__title,
+.eps-menu,
+.eps-menu__title,
+.media-modal-content,
+.tipsy-inner,
+.title,
+.toplevel_page_elementor #footer-left,
+.toplevel_page_elementor #wpcontent,
+.toplevel_page_elementor,
+.e-view,
+.wp-editor-tools,
+#tinymce,
+.quicktags-toolbar,
+#insert-media-button,
+.switch-tmce,
+.switch-html,
+.mce-container,
+.rtl .quicktags-toolbar input, .rtl .wp-switch-editor,
+iframe #tinymce.elementorwpeditor body.rtl,
+.mce-txt,
+.e-global__popover-title-text,
+.elementor-sortable-helper .title,
+.elementor-select-preset-title,
+.elementor-document-handle__title,
+.dialog-confirm-widget,
+.dialog-button,
+#elementor-editor-button:not(i),
+.elementor-panel-menu-group-title,
+.dialog-type-lightbox .dialog-buttons-wrapper>.dialog-button,
+.flatpickr-calendar,
+#e-form-submissions,
+#elementor-form-submissions,
+.post-type-elementor_font *,
+#elementor-role-manager *:not(.dashicons),
+#elementor-settings-tabs-wrapper,
+.elementor-settings-form-page,
+#elementor-settings-form > p,
+.elementor-button,
+#tab-import-export-kit  a,
+#elementor-system-info *:not(i),
+.e-getting-started,
+.e-getting-started__content *:not(i),
+.e-getting-started__content  h2,
+.post-type-elementor_library .wrap *:not(i),
+#menu-posts-elementor_library,
+.elementor_library_page_e-landing-page #wpbody-content *:not(i),
+.elementor-template_library-blank_state *:not(i) ,
+.elementor-template_library-blank_state > div > h3,
+#elementor-template-library-add-new,
+#post-body-content > div.e-form-submissions-main > div > div.postbox-header > div > h2,
+#post-body-content > div.postbox > div.postbox-header > h2,
+#postbox-container-1 > div > div.postbox-header > h2,
+#wpbody-content > div.wrap > h1,
+#elementor-font-custommetabox > div.postbox-header > h2,
+#submitdiv > div.postbox-header > h2,
+#font_face,
+#elementor-font-custommetabox > div.inside > div > div > input,
+.button.elementor-button.elementor-upload-clear-btn,
+.button.elementor-button.elementor-upload-btn,
+.post-type-elementor_icons .wp-list-table,
+.post-type-elementor_icons .subsubsub,
+.elementor-dropzone-field .box__dragndrop,
+.elementor-dropzone-field h5,
+.elementor-dropzone-field .elementor-button,
+.post-type-elementor_icons #title-prompt-text,
+.post-type-elementor_icons #title,
+.post-type-elementor_icons .tablenav,
+.post-type-elementor_icons .search-box,
+.post-type-elementor_icons .page-title-action,
+.post-type-elementor_icons .elementor-icon-set-header *,
+.post-type-elementor_icons #major-publishing-actions,
+#e-admin-top-bar-root:not(.e-admin-top-bar--active)~#wpbody .wrap h1,
+.post-type-elementor_snippet div.postbox-header > h2,
+#elementor-new-template__description,
+#elementor-new-template__form,
+.post-type-e-landing-page #posts-filter,
+.post-type-e-landing-page .subsubsub,
+.post-type-e-ladning-page .wrap,
+.post-type-e-landing-page .message,
+.post-teyp-e-landing-page .page-title-action,
+#e-admin-top-bar-root:not(.e-admin-top-bar--active)~#wpbody .wrap .page-title-action,
+#elementor-panel-history-content,
+#elementor-add-new-section > div > div.e-view.elementor-select-preset > div,
+#elementor-panel-revisions > div:nth-child(1) > div > div.elementor-panel-scheme-button-wrapper.elementor-panel-scheme-discard > button,
+#elementor-panel-revisions > div:nth-child(1) > div > div.elementor-panel-scheme-button-wrapper.elementor-panel-scheme-save > button,
+.-d8-a7-d9-84-d9-85-d9-86-d8-aa-d9-88-d8-b1_page_rtl-custom-options .wrap,
+.elementor-apps-page .e-a-apps .e-a-page-title h2,
+.elementor-apps-page .e-a-apps,
+.elementor-apps-page .e-a-apps .e-a-title,
+.elementor-panel-navigation .elementor-panel-navigation-tab span,
+#elementor-panel-notice-wrapper .elementor-panel-notice
+{
+    font-family: IRANYekan;
+}
+
+:root{
+    --e-a-font-family : IRANYekan
+}
+
+.post-type-elementor_snippet #wpbody-content:not(i)
+{
+    font-family: IRANYekan !important;
+}
+#elementor-custom-icons-metabox > div.elementor-icon-set-header > div:nth-child(2) > span.elementor-icon-set-header-meta-value{
+    float:left;
+    direction: ltr;
+}
+td.icons_prefix.column-icons_prefix > pre{
+    direction: ltr;
+    text-align: right;
+}
+li.row-font-actions > div > span.elementor-repeater-tool-btn.toggle-repeater-row,
+#elementor-font-custommetabox > div.inside div.repeater-content-top > div.elementor-field.toolbar.elementor-field-toolbar > span.elementor-repeater-tool-btn.toggle-repeater-row
+{
+    float: left;
+}
+
+#elementor-role-manager > h3{
+    line-height : 1.4;
+}
+.elementor-metabox-content .elementor-repeater-tool-btn i:not(
+li.row-font-actions > div > span.elementor-repeater-tool-btn.remove-repeater-row > i,
+#elementor-font-custommetabox > div.inside  div.repeater-content-top > div.elementor-field.toolbar.elementor-field-toolbar > span.elementor-repeater-tool-btn.remove-repeater-row > i,
+#elementor-font-custommetabox > div.inside div.repeater-block.block-visible > div > div.repeater-content-top > div.elementor-field.font_face.elementor-field-toolbar > span.elementor-repeater-tool-btn.remove-repeater-row > i
+){
+    padding-left: unset !important;
+    padding-right: 5px;
+}
+.elementor-metabox-content .elementor-repeater-tool-btn{
+    padding: 0 20px 0 0;
+}
+.elementor-metabox-content .elementor-repeater-tool-btn.remove-repeater-row{
+    padding: 0  0 0 20px;
+}
+.elementor-repeater-tool-btn.toggle-repeater-row > i.eicon-edit{
+    float: left;
+    margin-top: 2px;
+}
+
+.elementor-loading-title{
+    letter-spacing: 0;
+    font-style: unset;
+    font-size : 22px;
+}
+.eicon-help-o{
+    scale: -1 1;
+}
+
+.e-global-colors__color-value{
+    overflow: unset;
+}
+
+.elementor-icons-manager__tab-link i{
+    float: right;
+}
+.elementor-context-menu-list__item__shortcut{
+    direction: ltr;
+}
+
+#elementor-font-custommetabox > div.inside div.repeater-block.block-visible  div.repeater-content-top > div.elementor-field.font_face.elementor-field-toolbar > span.elementor-repeater-tool-btn.close-repeater-row{
+    float: left;
+}
+
+span.font-variations-count{
+    margin: 1px 5px 0 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__clear{
+    float: left;
+}
+
+#elementor-update > td > div{
+    display:none;
+}

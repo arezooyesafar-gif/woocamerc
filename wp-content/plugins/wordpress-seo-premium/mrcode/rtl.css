@@ -1,0 +1,79 @@
+@font-face {
+    font-family: IRANYekanXFaNum;
+    font-style: normal;
+    font-weight: normal;
+    src: url('font.woff2') format('woff2');  /* All Major Browsers */
+}
+body.toplevel_page_wpseo_dashboard .yoast-notice-migrated-header, .yst-root .yst-font-wp, .yst-text-lg, .yst-root, .yst-root .yst-title, .seo_page_wpseo_page_settings *, #yoast-seo-settings *, .yoast a, .yoast p, .yoast div, .yoast h1, #wpseo-title, .admin_page_wpseo_installation_successful *{
+    font-family: "IRANYekanXFaNum",Arial,Helvetica,Verdana,sans-serif !important;
+    line-height: 26px;
+}
+.yst-root p {
+    line-height: 1.8;
+}
+.workflow > li::before {
+    right: -33px;
+    left: inherit;
+}
+.workflow > li::after {
+    right: -48px;
+    left: inherit;
+}
+.workflow {
+    margin-right: 48px;
+    margin-left: 2em;
+}
+.yoast-svg-icon-alert-info {
+    margin-left: 8px !important;
+    margin-right: 0 !important;
+}
+.yoast-button, .yoast-button-upsell, .yoast, .yst-replacevar__label, .yst-replacevar__button-insert, .yoast .h1, .yoast .h2, .yoast .h3, .yoast .h4, .yoast .h5, .yoast .h6, .yoast h1, .yoast h2, .yoast h3, .yoast h4, .yoast h5, .yoast h6 {
+    font-family: inherit !important;
+}
+.yoast .h3, .yoast h3 {
+    font-size: 18px !important;
+}
+.yoast-svg-icon-alert-warning {
+    margin-left: 8px;
+    margin-right: 0;
+}
+.yst-replacevar__button-insert{
+    margin-right: .5em !important;
+    margin-left: inherit !important;
+}
+.yoast-premium-badge {
+    display: none !important;
+}
+.notice-yoast__header {
+    justify-content: right !important;
+}
+.yst-root .yst-toggle--checked .yst-toggle__handle {
+    --tw-translate-x: -1.25rem !important;
+}
+.yst-flex-grow .yst-mt-3 svg {
+    transform: rotate(180deg);
+}
+.yoast a::before {
+    font-family: dashicons;
+}
+.yst-mt-8 .yst-text-xs {
+    font-size: .85rem !important;
+}
+.yst-mt-8 .yst-font-\[650\] {
+    font-weight: 400 !important;
+}
+.yst-flex-grow .yst-text-base {
+    font-size: 0.85rem !important;
+}
+.yst-flex-grow .yst-leading-tight {
+    line-height: 1.65 !important;
+}
+#wpseo-workouts-container-free #workouts-page-description {
+    font-size: 14px !important;
+}
+#wpseo-workouts-container-free h3 {
+    font-size: 14px !important;
+}
+#wpseo-workouts-container-free h2 {
+    font-size: 15px !important;
+}

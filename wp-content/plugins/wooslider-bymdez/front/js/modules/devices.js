@@ -1,0 +1,1 @@
+woosbymdz_now_device=window.innerWidth>=woosbymdz_wide_breakpoint?"wide":window.innerWidth>=woosbymdz_tablet_breakpoint?"desk":window.innerWidth>=woosbymdz_mobile_breakpoint?"tab":window.innerWidth>=woosbymdz_mobile_breakpoint2?"mob":"mob2";

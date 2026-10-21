@@ -1,0 +1,242 @@
+<div ng-controller="dashboard" class="row">
+
+
+  <div class="col-12 col-md-5">
+    <div ng-if="dashboard_settings['welcome_card_active'] == 'on'" class="hd-upanel-card welcome">
+    {{dashboard_settings['welcome_label'].replace("name", user['first_name']+' '+user['last_name'])}}
+
+    
+    </div>
+    <div ng-if="dashboard_settings['calendar_card_active'] == 'on'" class="hd-upanel-card date">
+    
+
+      <img ng-if="!dashboard_settings['calendar_img']" src="{{plugin_path}}upanel/assets/img/flower.jpg">
+      <img ng-if="dashboard_settings['calendar_img']" src="{{dashboard_settings['calendar_img']}}">
+  
+      <div ng-if="dashboard_settings['jalali_card_active'] == 'on'" class="hd-upanel-right">
+        <p>امروز</p>
+        <p>{{dashboard_data.date.persian_date.day}} {{dashboard_data.date.persian_date.month}}</p>
+        <p>{{dashboard_data.date.persian_date.year}} </p>
+      </div>
+
+      <div ng-if="dashboard_settings['georgian_card_active'] == 'on'" class="hd-upanel-left">
+        <p>{{dashboard_data.date.gregorian_date.day}}</p>
+        <p> {{dashboard_data.date.gregorian_date.month}} </p>
+        <p>{{dashboard_data.date.gregorian_date.year}}</p>
+      </div>
+    </div>
+    <div ng-if="dashboard_settings['comments_card_active'] == 'on'" style="background-color:{{dashboard_settings['comments_background']}}" class="hd-upanel-card comment">
+      <svg width="105" height="105" class="ignore" viewBox="0 0 105 105" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#000" fill-rule="nonzero" opacity=".1">
+          <path
+            d="M52.605 0C22.102 0 0 24.922 0 52.579c0 8.833 2.572 17.93 7.087 26.237.84 1.367.945 3.102.368 4.732L3.937 95.325c-.787 2.84 1.628 4.943 4.305 4.102l10.605-3.155c2.888-.947 5.145.263 7.828 1.893C34.34 102.687 43.89 105 52.5 105c26.04 0 52.5-20.138 52.5-52.579C105 24.45 82.425 0 52.605 0"
+            opacity=".4" />
+          <path
+            d="M27.737 59C24.053 59 21 56.055 21 52.5c0-3.605 3-6.5 6.737-6.5s6.736 2.895 6.736 6.5c0 3.555-3 6.45-6.736 6.5m24.265 0c-3.737-.05-6.737-2.945-6.737-6.55 0-3.555 3.052-6.5 6.737-6.45 3.736 0 6.736 2.895 6.736 6.5 0 3.555-3 6.5-6.736 6.5m24.261 0c-3.737 0-6.736-2.945-6.736-6.5 0-3.605 3-6.5 6.736-6.5C80 46 83 48.896 83 52.5c0 3.555-3 6.5-6.737 6.5" />
+        </g>
+      </svg>
+      <p class="hd-upanel-title">نظرات شما</p>
+      <div class="row mx-0">
+        <div class="col-6">
+          <p class="hd-upanel-number">{{dashboard_data.user_comments.all.counts}}</p>
+          <p class="hd-upanel-text">تعداد کل نظرات</p>
+
+        </div>
+        <div class="col-6">
+          <p class="hd-upanel-number">{{dashboard_data.user_comments.not_accepted.counts}}</p>
+          <p class="hd-upanel-text"> نظر در انتظار تایید</p>
+        </div>
+      </div>
+</div>
+    <a  ng-if="dashboard_settings['settings_card_active'] == 'on'" href="settings" class="hd-upanel-card Settings desktop">
+      <svg width="40" height="43" viewBox="0 0 40 43" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#505050" fill-rule="nonzero">
+          <path
+            d="M20.025 27.01c-3.377 0-6.11-2.631-6.11-5.936 0-3.306 2.733-5.958 6.11-5.958 3.378 0 6.046 2.652 6.046 5.958 0 3.305-2.668 5.937-6.046 5.937" />
+          <path
+            d="M39.432 26.042c-.409-.631-.99-1.263-1.743-1.663-.602-.295-.99-.779-1.334-1.347-1.097-1.81-.452-4.19 1.377-5.264a4.268 4.268 0 0 0 1.592-5.957l-1.441-2.485a4.447 4.447 0 0 0-6.046-1.6c-1.893 1.01-4.324.337-5.422-1.452-.344-.59-.538-1.221-.494-1.853.064-.821-.194-1.6-.581-2.232C24.544.884 23.102 0 21.51 0h-3.034a4.62 4.62 0 0 0-3.808 2.19 3.757 3.757 0 0 0-.602 2.231c.043.632-.15 1.263-.495 1.853-1.097 1.79-3.528 2.463-5.4 1.452a4.473 4.473 0 0 0-6.067 1.6L.662 11.811a4.303 4.303 0 0 0 1.592 5.957c1.829 1.074 2.474 3.453 1.399 5.264-.366.568-.753 1.052-1.356 1.347-.731.4-1.377 1.032-1.721 1.663-.796 1.305-.753 2.947.043 4.316l1.485 2.526a4.492 4.492 0 0 0 3.83 2.19 4.55 4.55 0 0 0 2.28-.632c.538-.358 1.183-.484 1.893-.484 2.13 0 3.916 1.747 3.959 3.831 0 2.422 1.98 4.316 4.475 4.316h2.926c2.474 0 4.454-1.894 4.454-4.316.064-2.084 1.85-3.831 3.98-3.831.688 0 1.334.126 1.893.484a4.491 4.491 0 0 0 2.28.632c1.528 0 3.013-.842 3.809-2.19l1.506-2.526c.774-1.41.839-3.01.043-4.316"
+            opacity=".4" />
+        </g>
+      </svg>
+
+      <p class="hd-upanel-title"> تنظیمات</p>
+    </a>
+  </div>
+  <div ng-if="dashboard_settings['orders_card_active'] == 'on'" class="col-12 col-md-4">
+    <a  href="orders"  class="hd-upanel-card orders">
+
+    
+      <img ng-if="all_settings['basket_image_dashboard'] == 'on'" src="{{plugin_path}}upanel/assets/img/shopping.png">
+      <p class="hd-upanel-title"> اطلاعات سفارش‌ها</p>
+      <p class="hd-upanel-totall-number">
+ 
+        {{number_fa(dashboard_data.user_orders.pending.length+
+          dashboard_data.user_orders.processing.length+
+          dashboard_data.user_orders['on-hold'].length+
+          dashboard_data.user_orders.completed.length+
+          dashboard_data.user_orders.cancelled.length+
+          dashboard_data.user_orders.refunded.length+
+          dashboard_data.user_orders.failed.length)
+        }}</p>
+      <p class="hd-upanel-totall-text"> تعداد کل سفارش‌ها</p>
+
+      <p class="hd-upanel-totall-price">
+        <span>
+				 {{formatNumber(get_price(dashboard_data.user_orders.totall_sale)[0])}}
+
+        </span>
+        <span> {{get_price(dashboard_data.user_orders.totall_sale)[1]}} </span>
+         جمع مبلغ سفارشات 
+      </p>
+      <p class="hd-upanel-title"> جزییات سفارش‌ها</p>
+      <div class="hd-upanel-order-info">
+        <div class="hd-upanel-order green">
+          <span class="hd-upanel-icon">
+            <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.813 7.248a.872.872 0 0 1-.619-.256L.821 4.62a.874.874 0 1 1 1.237-1.238l1.755 1.755 4.128-4.128a.874.874 0 1 1 1.237 1.238L4.432 6.992a.872.872 0 0 1-.619.256"
+                fill="#FFF" fill-rule="nonzero" />
+            </svg>
+
+          </span>
+          <p class="hd-upanel-text">تکمیل شده</p>
+          <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders.completed.length)}}</p>
+        </div>
+        <div class="hd-upanel-order orange">
+          <span class="hd-upanel-icon">
+            <svg width="12" height="3" viewBox="0 0 12 3" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.198 0C.537 0 0 .537 0 1.196a1.2 1.2 0 0 0 1.198 1.198 1.2 1.2 0 0 0 1.198-1.198C2.396.537 1.859 0 1.198 0m4.48 0c-.662 0-1.199.537-1.199 1.196a1.2 1.2 0 0 0 1.198 1.198 1.2 1.2 0 0 0 1.198-1.198C6.875.537 6.338 0 5.677 0m4.48 0c-.662 0-1.198.537-1.198 1.196a1.2 1.2 0 0 0 1.197 1.198 1.2 1.2 0 0 0 1.198-1.198C11.354.537 10.819 0 10.157 0"
+                fill="#FFF" fill-rule="nonzero" />
+            </svg>
+
+          </span>
+          <p class="hd-upanel-text"> در انتظار بررسی</p>
+          <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders['on-hold'].length)}}</p>
+
+        </div>
+        <div class="hd-upanel-order red">
+          <span class="hd-upanel-icon">
+            <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.29 5.052 4.51 3.274 6.29 1.496a.874.874 0 0 0 0-1.237.872.872 0 0 0-1.237-.001l-1.78 1.778L1.495.256a.877.877 0 0 0-1.238 0 .877.877 0 0 0 0 1.238l1.78 1.78L.26 5.049a.874.874 0 1 0 1.237 1.238L3.273 4.51l1.78 1.779A.876.876 0 0 0 6.29 5.052"
+                fill="#FFF" fill-rule="nonzero" />
+            </svg>
+
+          </span>
+          <p class="hd-upanel-text"> لغو شده</p>
+          <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders.cancelled.length + dashboard_data.user_orders.failed.length)}}</p>
+
+        </div>
+        <div class="hd-upanel-order green">
+          <span class="hd-upanel-icon">
+            <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.188 6.483H.744a.744.744 0 1 1 0-1.489h5.444a.746.746 0 0 1 0 1.49M4.13 1.488H.744A.744.744 0 1 1 .744 0h3.385a.746.746 0 0 1 0 1.489"
+                fill="#FFF" fill-rule="nonzero" />
+            </svg>
+
+          </span>
+          <p class="hd-upanel-text"> منتظر پرداخت</p>
+          <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders.pending.length)}}</p>
+        </div>
+
+
+        <div class="hd-upanel-order orange">
+          <span class="hd-upanel-icon">
+            <svg width="6" height="9" viewBox="0 0 6 9" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.291 8.784.365 6.442A.754.754 0 0 1 0 5.797V.75a.75.75 0 0 1 1.5 0v4.621l3.56 2.123a.752.752 0 0 1-.769 1.29z"
+                fill="#FFF" fill-rule="nonzero" />
+            </svg>
+          </span>
+          <p class="hd-upanel-text"> در حال انجام</p>
+          <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders.processing.length)}}</p>
+
+        </div>
+        <div class="hd-upanel-order black">
+          <span class="hd-upanel-icon">
+            <svg width="2" height="8" viewBox="0 0 2 8" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M.875 6.244A.877.877 0 0 0 .875 8a.879.879 0 0 0 .875-.886.873.873 0 0 0-.875-.869M.875 0A.877.877 0 0 0 0 .875v2.828a.876.876 0 0 0 1.75 0V.875A.877.877 0 0 0 .875 0"
+                fill="#FFF" fill-rule="nonzero" />
+            </svg>
+
+          </span>
+          <p class="hd-upanel-text"> مرجوع شده</p>
+          <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders.refunded.length)}}</p>
+
+        </div>
+
+
+      </div>
+</a>
+
+  </div>
+  <div class="col-12 col-md-3">
+    <div ng-if="dashboard_settings['register_card_active'] == 'on'" style="background-color:{{dashboard_settings['register_background']}}" class="hd-upanel-card register-date">
+      <span class="hd-upanel-icon">
+        <svg width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#FFF" fill-rule="nonzero">
+            <path
+              d="M7.35 11.858c-3.964 0-7.35.612-7.35 3.06C0 17.366 3.364 18 7.35 18c3.963 0 7.349-.612 7.349-3.06 0-2.449-3.364-3.082-7.35-3.082" />
+            <path
+              d="M7.35 9.525c2.699 0 4.862-2.119 4.862-4.763C12.212 2.12 10.05 0 7.35 0 4.651 0 2.486 2.119 2.486 4.762c0 2.644 2.165 4.763 4.863 4.763M14.173 4.849a6.368 6.368 0 0 1-1.137 3.646c-.075.107-.008.252.123.275.182.03.369.048.56.052 1.898.048 3.601-1.148 4.072-2.95.697-2.675-1.35-5.077-3.957-5.077-.283 0-.554.03-.818.082-.036.008-.075.025-.095.055-.025.04-.007.09.019.124a6.414 6.414 0 0 1 1.233 3.793"
+              opacity=".4" />
+            <path
+              d="M19.78 12.17c-.348-.726-1.187-1.223-2.463-1.468-.601-.143-2.232-.348-3.747-.319-.023.003-.036.018-.037.028-.003.015.003.038.033.055.7.339 3.408 1.815 3.067 4.927a.207.207 0 0 0 .234.232c.667-.093 2.38-.454 2.912-1.578a2.107 2.107 0 0 0 0-1.878" />
+          </g>
+        </svg>
+
+      </span>
+      <p>عضو از </p>
+
+      <p ng-if="dashboard_settings['register_card_show'] == '1'"> {{dashboard_data.user.register_date}}</p>
+      <p ng-if="dashboard_settings['register_card_show'] == '2'"> {{dashboard_data.user.count_register_date}}</p>
+      <p ng-if="dashboard_settings['register_card_show'] == '2'">روز گذشته</p>
+    </div>
+    <a href="addresses" ng-if="dashboard_settings['address_card_active'] == 'on'" class="hd-upanel-card my-address">
+      <span class="hd-upanel-icon">
+        <svg width="14" height="20" viewBox="0 0 14 20" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#FFF" fill-rule="nonzero">
+            <path
+              d="M3.532.937a6.89 6.89 0 0 1 7.034.058C12.71 2.327 14.012 4.705 14 7.26c-.05 2.54-1.447 4.929-3.193 6.775a18.726 18.726 0 0 1-3.358 2.82A1.174 1.174 0 0 1 7.04 17a.82.82 0 0 1-.39-.119 18.515 18.515 0 0 1-4.839-4.547A9.28 9.28 0 0 1 0 7.134l.005-.273c.09-2.456 1.42-4.7 3.527-5.924zm4.375 4.098a2.346 2.346 0 0 0-2.594.52 2.455 2.455 0 0 0-.519 2.64 2.378 2.378 0 0 0 2.198 1.497 2.339 2.339 0 0 0 1.683-.702c.446-.453.696-1.07.694-1.712a2.423 2.423 0 0 0-1.462-2.243z" />
+            <ellipse opacity=".4" cx="7" cy="19" rx="5" ry="1" />
+          </g>
+        </svg>
+
+      </span>
+      آدرس های من
+</a>
+   
+    <a href="settings" ng-if="dashboard_settings['settings_card_active'] == 'on'" class="hd-upanel-card Settings mobile">
+      <svg width="40" height="43" viewBox="0 0 40 43" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#505050" fill-rule="nonzero">
+          <path
+            d="M20.025 27.01c-3.377 0-6.11-2.631-6.11-5.936 0-3.306 2.733-5.958 6.11-5.958 3.378 0 6.046 2.652 6.046 5.958 0 3.305-2.668 5.937-6.046 5.937" />
+          <path
+            d="M39.432 26.042c-.409-.631-.99-1.263-1.743-1.663-.602-.295-.99-.779-1.334-1.347-1.097-1.81-.452-4.19 1.377-5.264a4.268 4.268 0 0 0 1.592-5.957l-1.441-2.485a4.447 4.447 0 0 0-6.046-1.6c-1.893 1.01-4.324.337-5.422-1.452-.344-.59-.538-1.221-.494-1.853.064-.821-.194-1.6-.581-2.232C24.544.884 23.102 0 21.51 0h-3.034a4.62 4.62 0 0 0-3.808 2.19 3.757 3.757 0 0 0-.602 2.231c.043.632-.15 1.263-.495 1.853-1.097 1.79-3.528 2.463-5.4 1.452a4.473 4.473 0 0 0-6.067 1.6L.662 11.811a4.303 4.303 0 0 0 1.592 5.957c1.829 1.074 2.474 3.453 1.399 5.264-.366.568-.753 1.052-1.356 1.347-.731.4-1.377 1.032-1.721 1.663-.796 1.305-.753 2.947.043 4.316l1.485 2.526a4.492 4.492 0 0 0 3.83 2.19 4.55 4.55 0 0 0 2.28-.632c.538-.358 1.183-.484 1.893-.484 2.13 0 3.916 1.747 3.959 3.831 0 2.422 1.98 4.316 4.475 4.316h2.926c2.474 0 4.454-1.894 4.454-4.316.064-2.084 1.85-3.831 3.98-3.831.688 0 1.334.126 1.893.484a4.491 4.491 0 0 0 2.28.632c1.528 0 3.013-.842 3.809-2.19l1.506-2.526c.774-1.41.839-3.01.043-4.316"
+            opacity=".4" />
+        </g>
+      </svg>
+
+      <p class="hd-upanel-title"> تنظیمات</p>
+    </a>
+    <div ng-click="logout_popup_function();menu_mobile_close();" ng-if="dashboard_settings['log_out_card_active'] == 'on'" class="hd-upanel-card log-out">
+
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#505050" fill-rule="nonzero">
+    <path
+      d="M0 8.894C0 3.992 4.06 0 9.05 0h9.921C23.95 0 28 3.98 28 8.874v22.232C28 36.01 23.94 40 18.949 40H9.03C4.05 40 0 36.02 0 31.126V8.894z"
+      opacity=".4" />
+    <path
+      d="m39.558 18.91-5.692-5.818c-.588-.6-1.535-.6-2.12.004a1.57 1.57 0 0 0 .003 2.178l3.118 3.186H15.097c-.828 0-1.5.69-1.5 1.54 0 .852.672 1.54 1.5 1.54h19.77l-3.118 3.186a1.57 1.57 0 0 0-.004 2.178 1.48 1.48 0 0 0 1.064.454c.381 0 .765-.152 1.057-.45l5.692-5.816a1.565 1.565 0 0 0 0-2.182" />
+  </g>
+</svg>
+
+خروج از حساب
+</div>
+
+  </div>
+
+</div>

@@ -1,0 +1,374 @@
+.sidebar-dokan-dashboard{
+  .dokan-dash-sidebar{
+    width: 100%;
+  }
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li:hover, .dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links a:hover, .dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu,.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.active, .dokan-dashboard .dokan-dash-sidebar{
+  background: transparent;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li{
+  border-bottom: none;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li a{
+  padding: 0;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li a i{
+  margin-top: 0 !important;
+  padding-right: 0;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li a{
+  color: #666;
+}
+.dokan-dashboard-wrap{
+  .dokan-dash-sidebar{
+    display: none;
+  }
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links a{
+  padding: 0 !important;
+  width: auto;
+  border: none !important;
+  margin: 10px;
+}
+.dokan-dashboard .dokan-dash-sidebar ul.dokan-dashboard-menu li.dokan-common-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+
+  i{
+    font-weight: 300;
+  }
+}
+.dokan-table > thead > tr > th, .dokan-table > thead > tr > th, .dokan-table > tbody > tr > th, .dokan-table > tfoot > tr > th, .dokan-table > thead > tr > td, .dokan-table > tbody > tr > td, .dokan-table > tfoot > tr > td{
+  border-bottom: none;
+  border-top: none;
+}
+
+#dokan-comments-table{
+  .col-link{
+    white-space: nowrap;
+    text-align: center;
+  }
+}
+
+.dokan-alert{
+  border: none;
+  @extend %radius;
+}
+.dokan-panel{
+  border: none;
+  @extend %card;
+}
+.dokan-dashboard .dokan-dashboard-content{
+  padding: 10px !important;
+  overflow: visible;
+
+
+  .edit-account{
+    .form-row{
+      display: block;
+
+      .dokan-form-control, .form-control, .input-text, .dokan-form-group .datepicker{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+.dashboard-content-area {
+  .dashboard-widget {
+    @extend %card;
+  }
+}
+.dokan-dashboard, .show_if_seller{
+  .list-unstyled{
+    padding-right: 0;
+  }
+  .pull-right{
+    float: left;
+  }
+  .pull-left{
+    float: right;
+  }
+}
+.dokan-dashboard header.dokan-dashboard-header h1{
+  font-size: 18px;
+  border-bottom: none;
+}
+.dokan-progress{
+  @include boxshadow(none !important);
+  @extend %radius;
+}
+.dokan-dashboard .dokan-dashboard-content article.dashboard-content-area .dashboard-widget .widget-title{
+  border-bottom: none;
+}
+.woocommerce-form {
+  .form-row {
+    display: block;
+
+    &.user-role{
+      label{
+        display: block;
+      }
+    }
+  }
+  #seller-url{
+    &+small{
+      display: block;
+      text-align: left;
+      direction: ltr;
+    }
+  }
+}
+.pagination-wrap ul.pagination li{
+  display: inline-block;
+  .page-numbers{
+    background-color: #f5f5f5;
+    border: none;
+    @extend %radius;
+
+    &.current{
+      background-color: transparent;
+    }
+  }
+}
+.dokan-reports-content .dokan-reports-area ul.chart-legend li{
+  display: block;
+}
+.pagination-wrap {
+  text-align: center;
+  ul.pagination {
+    margin: 0;
+  }
+}
+.dokan-message, .dokan-info, .dokan-error{
+  border: none;
+  background-color: #f5f5f5;
+  @extend %radius;
+
+  &::before{
+    background-color: transparent;
+    color: #aaa;
+    font-size: 16px;
+  }
+}
+.dokan-settings-content .dokan-settings-area .dokan-banner{
+  margin-left: 0;
+  width: 100%;
+}
+.dokan-settings-content .dokan-settings-area .button-area{
+  margin-top: 100px;
+  i{
+    margin-bottom: 20px;
+  }
+}
+.dokan-product-search-form{
+  display: flex;
+  flex-wrap: wrap;
+  direction: ltr;
+
+  .dokan-form-group{
+    flex: 1;
+    direction: rtl;
+  }
+}
+.dokan-product-date-filter{
+  display: flex;
+  align-items: center;
+
+  .dokan-form-group{
+    margin-bottom: 0;
+
+    .dokan-form-control{
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+}
+#bulk-product-action-selector{
+  height: 45px;
+  line-height: 45px;
+}
+.dokan-dashboard{
+  .post-card .entry-body{
+    .pooshe-dokan-dash-sidebar{
+      display: none;
+    }
+    .container{
+      padding: 0 !important;
+      max-width: inherit !important
+    }
+  }
+}
+.product-listing-top{
+  display: flex;
+  .dokan-listing-filter{
+    flex: 1;
+    width: auto !important;
+  }
+  .dokan-add-product-link{
+    width: auto !important;
+    .dokan-btn{
+      margin-right: 10px;
+    }
+  }
+}
+ul.dokan-account-migration-lists li .left-content{
+  text-align: right !important;
+}
+ul.dokan-account-migration-lists li .right-content{
+  text-align: left !important;
+}
+ul.dokan-account-migration-lists {
+  border: none !important;
+  li {
+    border: none !important;
+    background-color: #f5f5f5;
+    @extend %radius;
+    margin: 5px 0;
+  }
+}
+.mfp-content{
+  text-align: right !important;
+}
+#dokan-form-contact-seller{
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    label.error{
+      margin-top: 10px;
+      &:empty{display: none !important;}
+    }
+  }
+}
+.alert{
+  border: none !important;
+  @extend %radius;
+}
+
+#cat-drop-stack ul{
+  padding: 0;
+  list-style: none;
+  li.parent-cat-wrap{
+    margin-bottom: 10px;
+    &>a{
+      display: block;
+      padding: 8px 15px;
+      background-color: #f5f5f5;
+      @extend %radius;
+
+      &:hover{
+        color: #555;
+        background-color: #f1f1f1;
+      }
+    }
+
+    ul{
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      line-height: 2rem;
+    }
+  }
+  .caret-icon{
+    float: left;
+    @extend %transition;
+    display: inline-block;
+  }
+  .show{
+    .caret-icon{
+      @include transform(rotate(90deg));
+    }
+  }
+}
+.dokan-popup-content .mfp-close{
+  right: auto;
+  left: 3px;
+}
+.dokan-pagination-container .dokan-pagination li {
+  &.active a{
+    background-color: transparent !important;
+  }
+  a {
+    border: none;
+    background-color: #F5F5F5;
+    color: #888;
+    @extend %transition, %radius;
+    padding: 8px 16px;
+
+    &:hover {
+      background-color: #f1f1f1;
+      color: #666;
+    }
+  }
+}
+.pooshe-dokan-dash-sidebar{
+  #mobile-menu-icon, #toggle-mobile-menu{
+    display: none;
+  }
+  .dokan-common-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    a{
+      margin: 10px;
+    }
+  }
+}
+.navigation-submenu{
+  &.settings{
+    transition: .3s;
+    display: none;
+  }
+}
+.dokan-dashboard-menu{
+  .settings{
+    &.has-submenu{
+      & > a{
+        .menu-dropdown{
+          margin: 0 45px;
+        }
+      }
+    }
+    &.active{
+      .navigation-submenu{
+        display: block;
+      }
+    }
+  }
+}
+.dokan-input-group .dokan-form-control:first-child, .dokan-input-group-addon:first-child, .dokan-input-group-btn:first-child > .btn, .dokan-input-group-btn:first-child > .btn-group > .btn, .dokan-input-group-btn:first-child > .dropdown-toggle, .dokan-input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .dokan-input-group-btn:last-child > .btn-group:not(:last-child) > .btn{
+  @include borderradius(0 $size-radius $size-radius 0);
+}
+.dokan-input-group .dokan-form-control:last-child, .dokan-input-group-addon:last-child, .dokan-input-group-btn:last-child > .btn, .dokan-input-group-btn:last-child > .btn-group > .btn, .dokan-input-group-btn:last-child > .dropdown-toggle, .dokan-input-group-btn:first-child > .btn:not(:first-child), .dokan-input-group-btn:first-child > .btn-group:not(:first-child) > .btn{
+  @include borderradius($size-radius 0 0 $size-radius);
+}
+.dokan-settings-content .dokan-settings-area .dokan-gravatar .dokan-remove-gravatar-image{
+  left: auto;
+  right: 0;
+}
+.fal, .far {
+  font-family: "Font Awesome 5 Pro" !important;
+}
+.ns-store-avatar{
+  flex-direction: column;
+  padding: 5px;
+  background: whitesmoke;
+  border-radius: 10px;
+  .info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    img{
+      border-radius: 10px;
+    }
+  }
+  .rate{
+    .text{
+      display: none;
+    }
+  }
+}

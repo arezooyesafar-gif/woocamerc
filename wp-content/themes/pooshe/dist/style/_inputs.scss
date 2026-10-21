@@ -1,0 +1,330 @@
+.dokan-form-control, .form-control, .input-text, .dokan-form-group .datepicker {
+  border: #eee 3px solid;
+  background-color: #fff;
+  @include borderradius($size-radius);
+  height: 45px;
+  @include transition($time-animation,null);
+  font-weight: normal;
+  @include placeholder-color(#aaa);
+  color: #888;
+  font-size: 14px;
+  padding: 0 .8rem;
+
+  &:hover{
+    background-color: #fff;
+    border-color: #ddd;
+    @include boxshadow(none);
+  }
+
+  &:focus{
+    background-color: #fff;
+    @include boxshadow(none);
+    @include placeholder-color(#999);
+    border-color: var(--pooshe-color-main);
+    color: #666;
+    outline: none;
+  }
+  &:active{
+    outline: none;
+  }
+  &[readonly]{
+    background-color: #fff;
+  }
+}
+textarea.form-control{
+  padding: .8rem;
+}
+input,button{
+  &:focus{
+    outline: none;
+  }
+}
+.proHidden{
+  @include transform(scale(0));
+  opacity: 0;
+  position: absolute;
+}
+.cb-select-container{
+  position: relative;
+
+  .mCS-dir-rtl > .mCSB_inside > .mCSB_container{
+    margin-left: 0;
+  }
+  .mCSB_scrollTools{
+    top: 5px;
+    bottom: 5px;
+  }
+  .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background: rgba(60,60,60,.1)
+  }
+  .mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,.mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+    background: rgba(60,60,60,.3)
+  }
+  .select-inner{
+    position: relative;
+    padding-left: 16px;
+    color: #AAAAAA;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    text-align: right;
+
+    .title{
+      white-space: nowrap;
+      overflow: hidden;;
+      text-overflow: ellipsis;
+      display: block;
+    }
+    .arrow{
+      display: inline-block;
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+      overflow: hidden;
+      text-align: center;
+      line-height: 16px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+      i{@include transition($time-animation, null);}
+    }
+  }
+  &.show .select-inner .arrow i{
+    @include transform(rotateX(180deg));
+  }
+  .select-list{
+    position: absolute;
+    background: #fff;
+    padding: 0;
+    margin: 10px 0 0 0;
+    list-style: none;
+    display: block;
+    z-index: 999;
+    min-width: 200px;
+    overflow: hidden;
+    max-height: 250px;
+    right: 0;
+    top: 100%;
+    @include borderradius($size-radius);
+    @include boxshadow(rgba(173,188,200,.22) 0 15px 50px);
+    @include transition($time-animation,null);
+
+    li{
+      padding: 0 23px;
+      height: 40px;
+      line-height: 40px;
+      color: #8E939B;
+      font-size: 15px;
+      cursor: pointer;
+      @include transition($time-animation,null);
+      text-align: right;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    li:hover{
+      background: #fafafa;
+      color: #888;
+    }
+    li.active{
+      background-color: var(--pooshe-color-main);
+      color: #ffffff;
+    }
+  }
+
+  &:not(.show) .select-list{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+%ns-checkbox {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  input[type="checkbox"], input[type="radio"] {
+    display: none;
+
+    &.disabled {
+      opacity: .5;
+      pointer-events: none;
+
+      & + label {
+        opacity: .5;
+        pointer-events: none;
+      }
+    }
+
+    &:checked {
+      & + label {
+        color: var(--pooshe-color-main) !important;
+
+        &::before {
+          background-color: var(--pooshe-color-main);
+          border-color: var(--pooshe-color-main);
+          color: #fff;
+          font-size: 13px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  label {
+    position: relative;
+    padding-right: 20px !important;
+    color: #777;
+    cursor: pointer;
+    @extend %transition;
+
+    &::before {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: #fff;
+      position: absolute;
+      right: 0;
+      top: 45%;
+      border: #ddd 2px solid;
+      @include icon("\f00c",r);
+      line-height: 10px;
+      font-size: 0;
+      text-align: right;
+      direction: ltr;
+      @extend %transition;
+      @extend %radius;
+      @include transform(translateY(-50%));
+    }
+  }
+}
+.ns-checkbox{
+  @extend %ns-checkbox;
+}
+%btn-primary{
+  background-color: var(--pooshe-color-main) !important;
+  border-color: var(--pooshe-color-main) !important;
+
+  &:hover,&:active{
+    background-color: var(--pooshe-color-btn-hover) !important;
+  }
+  &:focus,&:focus:active{
+    background-color: var(--pooshe-color-btn-hover) !important;
+    @include boxshadow(none !important);
+  }
+}
+input[type="submit"].dokan-btn-theme, a.dokan-btn-theme, .dokan-btn-theme{
+  @extend %btn-primary;
+}
+.btn, .button, input[type="submit"].dokan-btn-theme, a.dokan-btn-theme, .dokan-btn-theme{
+  border: none;
+  @extend %radius, %transition;
+  padding: 0 15px;
+  line-height: 45px;
+  background-color: #bbb;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+
+  &:active,&:focus{
+    outline: none;
+  }
+  &:hover,&:active,&:focus{
+    background-color: #aaa;
+    color: #fff;
+    border-color: transparent !important;
+    @include boxshadow(none);
+  }
+  &.btn-primary, &[class*="add_to_cart_"]{
+    @extend %btn-primary;
+  }
+
+  &.btn-transparent{
+    background: transparent !important;
+    color: #888;
+
+    &:hover{
+      color: #666;
+    }
+  }
+  &.btn-secondary{
+    background-color: #eee;
+    color: #888;  
+    &:hover, &:focus, &:active{
+      color: #666 !important;
+      background-color: #ddd !important;
+      @include boxshadow(none !important);
+    }
+  }
+  &.btn-green{
+    background-color: #55C23A;
+    color: #fff;
+    &:hover,&:active,&:focus {
+      background-color: #4c9f31;
+      color: #fff;
+    }
+  }
+}
+
+.multiselect.pooshe-select{
+  text-align: right;
+  .multiselect__tags {
+    border: none;
+    background-color: transparent;
+  }
+  &, .multiselect__input, .multiselect__single{
+    font-size: 14px;
+  }
+  .multiselect__input, .multiselect__single{
+    background-color: transparent;
+    text-align: left;
+    color: #888;
+  }
+  .multiselect__content-wrapper{
+    width: 200px;
+    border: none;
+    @extend %card;
+  }
+  .multiselect__option::after{
+    right: auto;
+    left: 0;
+  }
+  .multiselect__option--selected{
+    font-weight: 500;
+  }
+  .multiselect__option--highlight{
+    &,&:after {
+      background-color: var(--pooshe-color-main);
+    }
+  }
+
+  .multiselect__option--highlight{
+    &,&:after {
+      background-color: var(--pooshe-color-main);
+    }
+  }
+
+  .multiselect__option--selected.multiselect__option--highlight{
+    &,&:after {
+      background-color: var(--pooshe-color-main);
+    }
+  }
+
+}
+.select2-dropdown{
+  border: none;
+  @extend %card;
+  @include borderradius($size-radius !important);
+}
+.select2-container--default .select2-results__option[aria-selected="true"], .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-search--dropdown .select2-search__field{
+  @include borderradius($size-radius !important);
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+  background-color: #999 !important;
+  color: #fff !important;
+}
+.select2-container--default .select2-results__option[aria-selected="true"]{
+  background-color: var(--pooshe-color-main) !important;
+  color: #fff !important;
+}

@@ -1,0 +1,235 @@
+<div ng-controller="tickets" class="row">
+  <div class="col-12 mobile-header d-d-none sm-px-0">
+    <div class="header">
+        <a href="dashboard">
+            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12.707 19.707l-1.414-1.414L16.586 13H4v-2h12.586l-5.293-5.293 1.414-1.414 7 7a1 1 0 010 1.414l-7 7z" clip-rule="evenodd"></path>
+                </svg>
+        </a>
+        <p class="title"> پشتیبانی</p>
+    </div>
+</div>
+  <div class="col-12 sm-px-0">
+    <div class="route-content">
+      <div class="success-submit" ng-if="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+        </svg>
+        <p>تیکت شما با موفقیت ثبت شد</p>
+      </div>
+      <div ng-if="ticket_state == 'show'" class="show-ticket-modal">
+        <div class="row">
+          <div class="col-12 col-md-4" style="border-left: solid 1px #ccc;">
+            <div class="no-orders ticket-details" style="position: sticky; top: 10px">
+              <button style=" width: 100%; right: 0;margin: 0 0 10px;  padding: 10px; border-radius: 10px; border: 0; background-color: #dddddd; cursor: pointer" ng-click="tickets_change_state('list')" type="button">بازگشت به لیست تیکت ها</button>
+              <p>
+                <span class="title">عنوان: </span>
+                <span class="value">{{data.ticket.title}}</span>
+              </p>
+              <p>
+                <span class="title">شماره تیکت: </span>
+                <span class="value">{{ticket_number(data.ticket.id,data.ticket.ticket_id)}}</span>
+              </p>
+              <p>
+                <span class="title">تاریخ ارسال:</span>
+                <span class="value">{{data.ticket.created_at}}</span>
+              </p>
+              <p>
+                <span class="title">آخرین بروزرسانی:</span>
+                <span class="value">{{data.ticket.created_at}}</span>
+              </p>
+              <p>
+                <span class="title">وضعیت:</span>
+                <span class="value">
+                  <span ng-if="data.ticket.ticket_status == 0"> در انتظار پاسخ</span>
+                  <span ng-if="data.ticket.ticket_status == 1"> پاسخ داده شده</span>
+                  <span ng-if="data.ticket.ticket_status == 2"> در حال بررسی</span>
+                  <span ng-if="data.ticket.ticket_status == 3"> بسته شده</span>
+                </span>
+              </p>
+              
+            </div>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="no-orders">
+              <div class="col-12">
+                <div class="ticket-parent {{data.ticket.ticket_type}}">
+                  <div class="ticket  {{data.ticket.ticket_type}}">
+                    <p class="title">
+                      {{data.ticket.ticket_type=='user'?user.first_name+' '+user.last_name:'ادمین'}}
+                      <span class="date">{{data.ticket.created_at}}</span>
+                    </p>
+                    <div  class="ricket-text">{{lineConvert(data.ticket.ticket_text)}}</div>
+                  </div>
+                </div>
+
+                <div ng-repeat="ticket in data.ticket.childs" class="ticket-parent {{ticket.ticket_type}}">
+                  <div class="ticket  {{ticket.ticket_type}}">
+                    <p class="title">
+                      {{ticket.ticket_type=='user'?user.first_name+' '+user.last_name:'ادمین'}}
+
+                      <span class="date">{{ticket.created_at}}</span>
+                    </p>
+                    <div  class="ricket-text">{{lineConvert(ticket.ticket_text)}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div ng-if="data.ticket.ticket_status != 3" class="col-12" style="margin-top: 50px">
+                <div class="upanel-material-textfield">
+                  <textarea style="height: 200px" name="" ng-model="data.replay.ticket_text" id="" cols="30" rows="5"></textarea>
+                  <label> متن پاسخ</label>
+                </div>
+                <button ng-disabled="data.replay.ticket_text.length ==0 " type="submit" class="edit-profile new-ticket" ng-click="reply()">
+                  <svg ng-if="loading" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" stroke="#fff">
+                    <g fill="none" fill-rule="evenodd">
+                      <g transform="translate(1 1)" stroke-width="2">
+                        <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                        <path d="M36 18c0-9.94-8.06-18-18-18">
+                          <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" />
+                        </path>
+                      </g>
+                    </g>
+                  </svg>
+                  <span edit_user ng-if="!loading">ارسال</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-if="ticket_state == 'new'" class="no-orders new-ticket-modal">
+        <button ng-click="tickets_change_state('list')" class="close" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M175 175C184.4 165.7 199.6 165.7 208.1 175L255.1 222.1L303 175C312.4 165.7 327.6 165.7 336.1 175C346.3 184.4 346.3 199.6 336.1 208.1L289.9 255.1L336.1 303C346.3 312.4 346.3 327.6 336.1 336.1C327.6 346.3 312.4 346.3 303 336.1L255.1 289.9L208.1 336.1C199.6 346.3 184.4 346.3 175 336.1C165.7 327.6 165.7 312.4 175 303L222.1 255.1L175 208.1C165.7 199.6 165.7 184.4 175 175V175zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"
+            />
+          </svg>
+        </button>
+        <div class="profile-fields row">
+          <div class="col-12 col-md-12">
+            <h3 style="text-align: right; margin-bottom: 20px; font-weight: bold">تیکت جدید</h3>
+          </div>
+          <div class="col-12 col-md-3 col-sm-12">
+            <div class="upanel-material-textfield">
+              <input type="text" ng-model="new_ticket.title" placeholder=" " value="" />
+              <label>عنوان</label>
+            </div>
+          </div>
+          <div class="col-12 col-md-12"></div>
+          <div class="col-12 col-md-3 col-sm-12">
+            <div class="material-select">
+              <label> اولویت</label>
+              <select ng-model="new_ticket.ticket_priority" placeholder="اولویت">
+                <option value="0">عادی</option>
+                <option value="1">متوسط</option>
+                <option value="2">مهم</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 col-sm-12">
+            <div class="material-select">
+              <label> دپارتمان</label>
+              <select ng-model="new_ticket.department" placeholder="دپارتمان">
+                <option style="color: #ccc" value="" disabled selected hidden>لطفا دپارتمان را انتخاب کنید</option>
+                <option ng-repeat="order in all_settings.departments" value="{{order}}">{{order}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-7 col-sm-12">
+            <div class="upanel-material-textfield">
+              <textarea style="height: 200px" name="" ng-model="new_ticket.ticket_text" id="" cols="30" rows="5"></textarea>
+              <label> متن</label>
+            </div>
+          </div>
+          <div class="col-12 col-md-3"></div>
+          <div class="col-12 col-md-12">
+            <button ng-disabled="new_ticket.text.length ==0 || new_ticket.title.length ==0 || new_ticket.department == '' || new_ticket.department == null" type="submit" class="edit-profile new-ticket" ng-click="save_ticket()">
+              <svg ng-if="loading" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" stroke="#fff">
+                <g fill="none" fill-rule="evenodd">
+                  <g transform="translate(1 1)" stroke-width="2">
+                    <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                    <path d="M36 18c0-9.94-8.06-18-18-18">
+                      <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" />
+                    </path>
+                  </g>
+                </g>
+              </svg>
+              <span edit_user ng-if="!loading">ارسال</span>
+            </button>
+          </div>
+
+          <div class="col-12 col-md-3"></div>
+
+          <div class="col-12 col-md-3"></div>
+        </div>
+      </div>
+
+      <div ng-if="ticket_state == 'list'">
+        
+        <div ng-if="tickets.length == 0 " class="no-orders">
+          <img src="{{plugin_path}}upanel/assets/img/no-orders.svg" />
+          <p>هیچ تیکتی ثبت نشده است</p>
+          <button ng-click="tickets_change_state('new')" class="new-ticket" type="button">تیکت جدید</button>
+        </div>
+
+        <button ng-if="tickets.length > 0 " ng-click="tickets_change_state('new')" class="new-ticket" type="button">تیکت جدید</button>
+        <table ng-if="tickets.length > 0 " class="desktop notifications">
+          <thead>
+            <tr>
+              <th>شماره تیکت</th>
+              <th>عنوان</th>
+              <th>تاریخ ثبت</th>
+              <th>دپارتمان</th>
+              <th>وضعیت</th>
+              <th>مشاهده</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="ticket in tickets">
+              <td>{{ticket_number(ticket.id,ticket.ticket_id)}}</td>
+              <td>{{ticket.title}}</td>
+              <td>{{ticket.created_at}}</td>
+              <td>{{ticket.department}}</td>
+              <td>
+                <span ng-if="ticket.ticket_status == 0"> در انتظار پاسخ</span>
+                <span ng-if="ticket.ticket_status == 1"> پاسخ داده شده</span>
+                <span ng-if="ticket.ticket_status == 2"> در حال بررسی</span>
+                <span ng-if="ticket.ticket_status == 3"> بسته شده</span>
+              </td>
+              <!-- <td ng-class="notifications_readed.includes(notification.id)?'read':'unread'">{{notifications_readed.includes(notification.id)?'خوانده شده':'خوانده نشده'}}</td> -->
+              <td>
+                <button ng-click="tickets_change_state('show');data.ticket = ticket" type="button">مشاهده</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div ng-if="tickets.length > 0 " class="tickets mobile">
+          <div class="ticket" ng-repeat="ticket in tickets">
+            <p class="title">{{ticket.title}}</p>
+
+            <div class="row">
+              <div class="col-6 right">
+                <p style="margin: 0" class="label">وضعیت</p>
+                <p>
+                  <span ng-if="ticket.ticket_status == 0"> در انتظار پاسخ</span>
+                  <span ng-if="ticket.ticket_status == 1"> پاسخ داده شده</span>
+                  <span ng-if="ticket.ticket_status == 2"> در حال بررسی</span>
+                  <span ng-if="ticket.ticket_status == 3"> بسته شده</span>
+                </p>
+              </div>
+              <div class="col-6 left">
+                <button ng-click="tickets_change_state('show');data.ticket = ticket" type="button">مشاهده</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

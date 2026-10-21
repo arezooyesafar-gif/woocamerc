@@ -1,0 +1,37 @@
+:root {
+    --esh-primary: #10b981;
+    --esh-primary-dark: #059669;
+    --esh-primary-light: #d1fae5;
+    --esh-secondary: #2271b1;
+    --esh-secondary-dark: #135e96;
+    --esh-success: #10b981;
+    --esh-error: #ef4444;
+    --esh-warning: #f59e0b;
+    --esh-info: #06b6d4;
+    --esh-purple: #8b5cf6;
+    --esh-pink: #ec4899;
+    
+    --esh-gray-50: #f9fafb;
+    --esh-gray-100: #f3f4f6;
+    --esh-gray-200: #e5e7eb;
+    --esh-gray-300: #d1d5db;
+    --esh-gray-400: #9ca3af;
+    --esh-gray-500: #6b7280;
+    --esh-gray-600: #4b5563;
+    --esh-gray-700: #374151;
+    --esh-gray-800: #1f2937;
+    --esh-gray-900: #111827;
+    
+    --esh-white: #ffffff;
+    --esh-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --esh-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --esh-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --esh-radius-sm: 6px;
+    --esh-radius-md: 8px;
+    --esh-radius-lg: 12px;
+    --esh-radius-xl: 16px;
+    
+    --esh-transition: all 0.2s ease;
+    --esh-transition-slow: all 0.3s ease;
+}
+

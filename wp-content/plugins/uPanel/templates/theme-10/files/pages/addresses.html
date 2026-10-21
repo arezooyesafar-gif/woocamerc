@@ -1,0 +1,131 @@
+<div  class="row">
+
+
+
+  <div ng-if="data.edit == ''" class="col-12 col-md-6">
+    <div class="transport">
+        <p class="title">آدرس حمل و نقل</p>
+        <p class="info">
+        <div class="row">
+                <div class="col-12 col-md-6"><p class="label">نام</p>{{dashboard_data.user.shipping.first_name}}</div>
+                <div class="col-12 col-md-6"><p class="label">نام خانوادگی</p>{{dashboard_data.user.shipping.last_name}}</div>
+                <div class="col-12 col-md-6"><p class="label">شرکت</p>{{dashboard_data.user.shipping.company}}</div>
+                <div class="col-12 col-md-6"><p class="label">کشور</p>{{dashboard_data.user.shipping.country}}</div>
+                <div class="col-12 col-md-6"><p class="label">استان</p>{{dashboard_data.user.shipping.state}}</div>
+                <div class="col-12 col-md-6"><p class="label">شهر</p>{{dashboard_data.user.shipping.city}}</div>
+                <div class="col-12 col-md-6"><p class="label">آدرس 1</p>{{dashboard_data.user.shipping.address_1}}</div>
+                <div class="col-12 col-md-6"><p class="label">آدرس 2</p>{{dashboard_data.user.shipping.address_2}}</div>
+                <div class="col-12 col-md-6"><p class="label">کد پستی</p>{{dashboard_data.user.shipping.postcode}}</div>
+                <div class="col-12 col-md-6"><p class="label">تلفن</p>{{dashboard_data.user.shipping.phone}}</div>
+
+            </div>
+        </p>
+        <button ng-click="data.edit = dashboard_data.user.shipping;data.edit_title='ویرایش آدرس حمل و نقل';data.edit_type = 'shipping'" class="edit">
+        ویرایش
+        </button>
+    </div>
+  </div>
+  <div ng-if="data.edit == ''" class="col-12 col-md-6">
+  
+  <div class="transport">
+        <p class="title">آدرس صورتحساب</p>
+        <p class="info">
+            <div class="row">
+                <div class="col-12 col-md-6"><p class="label">نام</p>{{dashboard_data.user.billing.first_name}}</div>
+                <div class="col-12 col-md-6"><p class="label">نام خانوادگی</p>{{dashboard_data.user.billing.last_name}}</div>
+                <div class="col-12 col-md-6"><p class="label">شرکت</p>{{dashboard_data.user.billing.company}}</div>
+                <div class="col-12 col-md-6"><p class="label">کشور</p>{{dashboard_data.user.billing.country}}</div>
+                <div class="col-12 col-md-6"><p class="label">استان</p>{{dashboard_data.user.billing.state}}</div>
+                <div class="col-12 col-md-6"><p class="label">شهر</p>{{dashboard_data.user.billing.city}}</div>
+                <div class="col-12 col-md-6"><p class="label">آدرس 1</p>{{dashboard_data.user.billing.address_1}}</div>
+                <div class="col-12 col-md-6"><p class="label">آدرس 2</p>{{dashboard_data.user.billing.address_2}}</div>
+                <div class="col-12 col-md-6"><p class="label">کد پستی</p>{{dashboard_data.user.billing.postcode}}</div>
+                <div class="col-12 col-md-6"><p class="label">تلفن</p>{{dashboard_data.user.billing.phone}}</div>
+
+            </div>
+
+        </p>
+        <button ng-click="data.edit = dashboard_data.user.billing;data.edit_title='ویرایش آدرس صورتحساب';data.edit_type = 'billing'" class="edit">
+        ویرایش
+        </button>
+    </div>
+
+    </div>
+
+
+    <div ng-if="data.edit != ''" class="col-12 col-md-12">
+        <div>
+            <button ng-click="data.edit = ''" class="back">
+                بازگشت به  آدرس ها
+                <svg width="9" height="5" viewBox="0 0 9 5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.443.75a.747.747 0 0 1-.22.528l-3.47 3.487a.751.751 0 0 1-1.062 0L.219 1.278A.749.749 0 1 1 1.282.22l2.94 2.953L7.162.22a.75.75 0 0 1 1.28.53" fill="#000" fill-rule="nonzero"/>
+            </svg>
+            </button>
+        </div>
+<div class="edit-address">
+<p class="title">{{data.edit_title}}</p>
+<div class="row">
+    <div class="col-12 col-md-6">
+    <div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.first_name"  placeholder=" " value="">
+      <label>نام</label></div></div>
+      <div class="col-12 col-md-6">
+    <div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.last_name"  placeholder=" " value="">
+      <label>نام خانوادگی</label></div></div>
+    <div class="col-12 col-md-6"><div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.company"  placeholder=" " value="">
+      <label>شرکت</label></div></div>
+      <div class="col-12 col-md-6"><div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.country"  placeholder=" " value="">
+      <label>کشور</label></div></div>
+      <div class="col-12 col-md-6"><div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.state"  placeholder=" " value="">
+      <label>منطقه</label></div></div>
+      <div class="col-12 col-md-6"><div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.city"  placeholder=" " value="">
+      <label>شهر</label></div></div>
+      <div class="col-12 col-md-6"><div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.address_1"  placeholder=" " value="">
+      <label>آدرس 1</label></div></div>
+      <div class="col-12 col-md-6"><div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.address_2"  placeholder=" " value="">
+      <label>آدرس 2</label></div></div>
+      <div class="col-12 col-md-6"><div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.postcode"  placeholder=" " value="">
+      <label>کد پستی</label></div></div>
+      <div class="col-12 col-md-6"><div class="upanel-material-textfield">
+      <input type="text"  ng-model="data.edit.phone"  placeholder=" " value="">
+      <label>تلفن</label></div></div>
+      <div class="col-12 col-md-12">
+      <button ng-click="edit_billing()" class="edit">
+        
+<span ng-if="!data.loading">ویرایش</span>
+        <svg ng-if="data.loading" class="ignore"  xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" stroke="#fff">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 1)" stroke-width="2">
+            <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+            <path d="M36 18c0-9.94-8.06-18-18-18">
+                <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"/>
+            </path>
+        </g>
+    </g>
+</svg>
+
+        </button>
+
+        <p ng-if="data.success_massage" class="massage">
+بروزرسانی با موفقیت انجام شد
+    </p>
+
+      </div>
+
+
+    </div>
+
+</div>
+
+
+</div>
+    </div>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: transparent; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<g transform="translate(50 50)">
+  <g transform="scale(0.8)">
+    <g transform="translate(-50 -50)">
+      <path fill="#a200ff" d="M15.35898384862245 70 A40 40 0 0 1 70 15.358983848622458 L58.75 34.84455543377233 A17.5 17.5 0 0 0 34.84455543377232 58.75 Z" stroke="#a200ff" stroke-width="2"></path>
+      <path fill="#b4f460" d="M84.64101615137756 70 A40 40 0 0 0 70 15.358983848622458 L58.75 34.84455543377233 A17.5 17.5 0 0 1 65.15544456622767 58.75 Z" stroke="#b4f460" stroke-width="2"></path>
+      <circle cx="50" cy="50" r="10" fill="#ff004c"></circle>
+      <line x1="50" y1="50" x2="15" y2="50" stroke-linecap="round" stroke="#ff004c" stroke-width="5">
+        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" keyTimes="0;0.10;0.25;0.5;0.60;0.75;1" values="40 50 50; 50 50 50; 40 50 50; 140 50 50; 130 50 50; 140 50 50; 40 50 50"></animateTransform>
+      </line>
+    </g>
+  </g>
+</g>
+</svg>

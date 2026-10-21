@@ -1,0 +1,1528 @@
+
+.eshterakyar-featurebase-widget-frontend {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+#featurebase-widget-frontend {
+    margin-top: 20px;
+}
+
+#featurebase-widget-frontend iframe {
+    border-radius: 5px;
+}
+
+.eshterakyar-download-section {
+    margin: 20px 0 !important;
+    padding: 20px !important;
+    background: #f9f9f9 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    clear: both !important;
+}
+
+.eshterakyar-subscription-actions {
+    margin: 20px 0 !important;
+    padding: 20px !important;
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    clear: both !important;
+}
+
+.eshterakyar-action-buttons {
+    display: flex !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 15px !important;
+}
+
+.eshterakyar-buy-subscription-button {
+    background: #10b981 !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: background 0.3s ease !important;
+    line-height: 1.5 !important;
+}
+
+.eshterakyar-buy-subscription-button:hover {
+    background: #059669 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+
+.eshterakyar-subscription-note {
+    margin: 10px 0 0 0 !important;
+    color: #6b7280 !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+}
+
+.eshterakyar-subscription-status {
+    background: #fff !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+}
+
+.eshterakyar-subscription-title {
+    margin: 0 0 16px 0 !important;
+    padding: 0 0 12px 0 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #059669 !important;
+    line-height: 1.5 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+}
+
+.eshterakyar-subscription-details {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+.eshterakyar-subscription-detail-item {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) !important;
+    gap: 8px 14px !important;
+    align-items: start !important;
+    padding: 12px 14px !important;
+    margin: 0 0 8px 0 !important;
+    background: #f9fafb !important;
+    border: 1px solid #f3f4f6 !important;
+    border-radius: 8px !important;
+    border-bottom: 1px solid #f3f4f6 !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+.eshterakyar-subscription-detail-item:last-child {
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #f3f4f6 !important;
+}
+
+.eshterakyar-detail-label {
+    display: block !important;
+    font-size: 13px !important;
+    color: #6b7280 !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+}
+
+.eshterakyar-detail-value {
+    display: block !important;
+    font-size: 14px !important;
+    color: #111827 !important;
+    font-weight: 700 !important;
+    line-height: 1.6 !important;
+    text-align: start !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+}
+
+.eshterakyar-subscription-info-card.eshterakyar-style-wrapper,
+.eshterakyar-style-wrapper.eshterakyar-panel-context {
+    margin: 20px 0 !important;
+    padding: 22px 20px !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06) !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+.eshterakyar-subscription-info-card .eshterakyar-subscription-status,
+.eshterakyar-style-wrapper.eshterakyar-panel-context .eshterakyar-subscription-status {
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+@media (max-width: 640px) {
+    .eshterakyar-subscription-detail-item {
+        grid-template-columns: 1fr !important;
+        gap: 4px !important;
+    }
+
+    .eshterakyar-detail-value {
+        font-size: 15px !important;
+    }
+}
+
+.eshterakyar-download-button-wrapper {
+    margin-top: 15px !important;
+}
+
+.eshterakyar-download-button {
+    background: #10b981 !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: background 0.3s ease !important;
+    line-height: 1.5 !important;
+}
+
+.eshterakyar-download-button:hover {
+    background: #059669 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.eshterakyar-downloaded-badge {
+    background: #46b450 !important;
+    color: #fff !important;
+    padding: 10px 15px !important;
+    border-radius: 4px !important;
+    margin-bottom: 15px !important;
+    display: inline-block !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+.eshterakyar-downloaded-badge .dashicons {
+    vertical-align: middle !important;
+    margin-left: 5px !important;
+}
+
+.eshterakyar-subscription-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.eshterakyar-subscription-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .eshterakyar-action-buttons {
+        flex-direction: column;
+    }
+    
+    .eshterakyar-buy-subscription-button,
+    .eshterakyar-free-download-button,
+    .eshterakyar-download-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .eshterakyar-subscription-detail-item {
+        grid-template-columns: 1fr !important;
+        gap: 4px !important;
+    }
+}
+
+.eshterakyar-subscription-required,
+.eshterakyar-download-error {
+    padding: 15px !important;
+    background: #fff3cd !important;
+    border: 1px solid #ffc107 !important;
+    border-radius: 4px !important;
+    margin: 20px 0 !important;
+}
+
+.eshterakyar-alert {
+    color: #856404 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+.eshterakyar-renew-subscription-action {
+    margin-top: 15px !important;
+    padding-top: 15px !important;
+    border-top: 1px solid #ffc107 !important;
+}
+
+.eshterakyar-renew-subscription-button {
+    background: #10b981 !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: background 0.3s ease !important;
+    line-height: 1.5 !important;
+    margin-bottom: 10px !important;
+}
+
+.eshterakyar-renew-subscription-button:hover {
+    background: #059669 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.eshterakyar-renew-note {
+    margin: 10px 0 0 0 !important;
+    color: #856404 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+.eshterakyar-product-downloaded-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(70, 180, 80, 0.9);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.eshterakyar-product-downloaded-overlay[data-elementor-type="widget"] {
+    position: absolute !important;
+    z-index: 999 !important;
+}
+
+.woocommerce-product-gallery,
+.elementor-widget-woocommerce-product-images,
+.elementor-widget-image {
+    position: relative;
+}
+
+.eshterakyar-previous-subscription-note {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.eshterakyar-redownload-button {
+    margin-left: 10px;
+}
+
+.eshterakyar-user-subscriptions {
+    margin: 20px 0;
+}
+
+.eshterakyar-subscriptions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.eshterakyar-subscription-item {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.eshterakyar-subscription-item.status-active {
+    border-left: 4px solid #46b450;
+}
+
+.eshterakyar-subscription-item.status-expired {
+    border-left: 4px solid #dc3232;
+}
+
+.eshterakyar-subscription-item.status-cancelled {
+    border-left: 4px solid #999;
+}
+
+.eshterakyar-subscription-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.subscription-details p {
+    margin: 8px 0;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-badge.status-active {
+    background: #46b450;
+    color: #fff;
+}
+
+.status-badge.status-expired {
+    background: #dc3232;
+    color: #fff;
+}
+
+.status-badge.status-cancelled {
+    background: #999;
+    color: #fff;
+}
+
+.eshterakyar-user-downloads {
+    margin: 20px 0;
+}
+
+.eshterakyar-downloads-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.eshterakyar-subscription-downloads {
+    border-right: 4px solid #10b981;
+}
+
+.eshterakyar-other-downloads {
+    border-right: 4px solid #6b7280;
+}
+
+.eshterakyar-downloads-section-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.eshterakyar-downloads-section-header h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.eshterakyar-section-description {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.eshterakyar-downloads-list {
+    margin-top: 15px;
+}
+
+.eshterakyar-downloads-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.eshterakyar-downloads-table th,
+.eshterakyar-downloads-table td {
+    padding: 12px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+.eshterakyar-downloads-table th {
+    background: #f5f5f5;
+    font-weight: bold;
+}
+
+.eshterakyar-shortcode-subscriptions,
+.eshterakyar-shortcode-downloads {
+    margin: 24px 0;
+    padding: 24px 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+    clear: both;
+}
+
+.eshterakyar-shortcode-heading {
+    margin: 0 0 18px 0;
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.eshterakyar-style-wrapper.eshterakyar-panel-context {
+    margin: 24px 0;
+    padding: 24px 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+    clear: both;
+}
+
+.eshterakyar-style-wrapper.eshterakyar-panel-context .eshterakyar-subscription-status {
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.eshterakyar-subscriptions-shortcode-list,
+.eshterakyar-downloads-shortcode-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.eshterakyar-subscription-shortcode-item,
+.eshterakyar-download-shortcode-item {
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    border-right: 4px solid #10b981;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.eshterakyar-subscription-shortcode-item:last-child,
+.eshterakyar-download-shortcode-item:last-child {
+    margin-bottom: 0;
+}
+
+.eshterakyar-subscription-shortcode-item strong {
+    font-size: 1.05em;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.4;
+}
+
+.eshterakyar-subscription-shortcode-item .subscription-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.eshterakyar-subscription-shortcode-item.status-active .subscription-status {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.eshterakyar-subscription-shortcode-item.status-reserved .subscription-status {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.eshterakyar-subscription-shortcode-item.status-expired .subscription-status {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.eshterakyar-subscription-shortcode-item .days-left {
+    font-size: 14px;
+    color: #059669;
+    font-weight: 600;
+}
+
+.eshterakyar-download-shortcode-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+}
+
+.eshterakyar-download-shortcode-thumb {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+}
+
+.eshterakyar-download-shortcode-thumb a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.eshterakyar-download-shortcode-thumb img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.eshterakyar-download-shortcode-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.eshterakyar-download-shortcode-item .eshterakyar-download-shortcode-title {
+    display: block;
+    font-weight: 600;
+    color: #111827;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eshterakyar-download-shortcode-item .eshterakyar-download-shortcode-title:hover {
+    color: #10b981;
+}
+
+.eshterakyar-download-shortcode-actions {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.eshterakyar-download-shortcode-item .download-date {
+    font-size: 13px;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+.eshterakyar-download-shortcode-actions .eshterakyar-redownload-button {
+    background: #10b981;
+    border-color: #10b981;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.35);
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.eshterakyar-download-shortcode-actions .eshterakyar-redownload-button:hover {
+    background: #059669;
+    border-color: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.4);
+    color: #ffffff;
+}
+
+.eshterakyar-download-shortcode-actions .eshterakyar-download-disabled-note {
+    font-size: 13px;
+    color: #b45309;
+}
+
+.eshterakyar-download-shortcode-actions .eshterakyar-download-parts-summary {
+    padding: 6px 16px;
+    border-radius: 999px;
+}
+
+@media (max-width: 600px) {
+    .eshterakyar-download-shortcode-item {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .eshterakyar-download-shortcode-info {
+        flex-basis: calc(100% - 78px);
+    }
+
+    .eshterakyar-download-shortcode-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .eshterakyar-download-shortcode-item .eshterakyar-download-shortcode-title {
+        white-space: normal;
+    }
+}
+
+.woocommerce-MyAccount-content .eshterakyar-shortcode-subscriptions,
+.woocommerce-MyAccount-content .eshterakyar-shortcode-downloads,
+.woocommerce-MyAccount-content .eshterakyar-style-wrapper.eshterakyar-panel-context {
+    max-width: 100%;
+}
+
+.eshterakyar-days-left {
+    float: left;
+    color: #666;
+    font-size: 12px;
+}
+
+.eshterakyar-days-left {
+    color: #46b450;
+    font-weight: bold;
+}
+
+.eshterakyar-no-subscription {
+    color: #dc3232;
+}
+
+.eshterakyar-expired {
+    color: #dc3232;
+}
+
+.eshterakyar-expired-message {
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.eshterakyar-no-subscription-alert {
+    padding: 15px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    color: #721c24;
+}
+.eshterakyar-no-subscription-alert p{
+    margin-bottom: 15px;
+}
+.eshterakyar-subscription-info-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.eshterakyar-subscription-info-box .info-item {
+    margin: 10px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.eshterakyar-subscription-info-box .info-item:last-child {
+    border-bottom: none;
+}
+
+.eshterakyar-subscription-info-box .info-item strong {
+    color: #333;
+    margin-left: 10px;
+}
+
+.eshterakyar-retention-notice {
+    background: #e7f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.eshterakyar-retention-notice .description {
+    margin: 0;
+    color: #0066cc;
+    font-size: 13px;
+}
+
+.eshterakyar-auto-subscription-info {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+.eshterakyar-downloads-table .eshterakyar-redownload-button {
+    background: #10b981;
+    border-color: #10b981;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.35);
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.eshterakyar-downloads-table .eshterakyar-redownload-button:hover {
+    background: #059669;
+    border-color: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.4);
+    color: #ffffff;
+}
+
+.eshterakyar-downloads-table .eshterakyar-redownload-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(5, 150, 105, 0.3);
+}
+
+.eshterakyar-downloads-table .button:not(.eshterakyar-redownload-button) {
+    background: #ffffff;
+    color: #111827;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    padding: 8px 16px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.eshterakyar-downloads-table .button:not(.eshterakyar-redownload-button):hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+    color: #111827;
+    transform: translateY(-1px);
+}
+
+
+.eshterakyar-user-subscriptions,
+.eshterakyar-user-downloads {
+    margin: 24px 0;
+    padding: 24px 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+}
+
+.eshterakyar-user-subscriptions > h2,
+.eshterakyar-user-downloads > h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 10px;
+}
+
+.eshterakyar-subscription-item h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.eshterakyar-renew-subscription-inline {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .eshterakyar-user-subscriptions,
+    .eshterakyar-user-downloads {
+        padding: 16px 14px;
+        box-shadow: none;
+        border-radius: 8px;
+    }
+}
+
+/* استایل ۲: دکمه تاشو */
+.eshterakyar-style-2 .eshterakyar-subscription-toggle-button {
+    background: #10b981;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+    line-height: 1.5;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.eshterakyar-style-2 .eshterakyar-subscription-toggle-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.eshterakyar-style-2 .eshterakyar-subscription-toggle-button:hover {
+    background: #059669 !important;
+    color: #fff !important;
+}
+
+.eshterakyar-style-2 .eshterakyar-subscription-toggle-button:active {
+    background: #059669 !important;
+}
+
+.eshterakyar-style-2 .eshterakyar-subscription-toggle-button.active::before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* استایل ۲: فقط دکمه برای کاربران لاگین نشده یا بدون اشتراک */
+.eshterakyar-style-2 .eshterakyar-download-button-wrapper {
+    margin: 0 !important;
+}
+
+.eshterakyar-style-2 .eshterakyar-buy-subscription-button {
+    background: #10b981 !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: background 0.3s ease !important;
+    line-height: 1.5 !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.eshterakyar-style-2 .eshterakyar-buy-subscription-button:hover {
+    background: #059669 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+/* چندپارته: منوی جمع‌شونده تا صفحه با ده‌ها فایل به هم نریزد */
+.eshterakyar-download-parts {
+    margin: 12px 0 !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 6px !important;
+    background: #fff !important;
+    overflow: hidden !important;
+}
+
+.eshterakyar-download-parts-summary {
+    cursor: pointer !important;
+    padding: 12px 14px !important;
+    font-weight: 600 !important;
+    list-style: none !important;
+    background: #f3f4f6 !important;
+    user-select: none !important;
+}
+
+.eshterakyar-download-parts-summary::-webkit-details-marker {
+    display: none !important;
+}
+
+.eshterakyar-download-parts[open] .eshterakyar-download-parts-summary {
+    border-bottom: 1px solid #e5e7eb !important;
+}
+
+.eshterakyar-download-parts-inner {
+    max-height: min(320px, 55vh) !important;
+    overflow-y: auto !important;
+    padding: 8px 0 !important;
+}
+
+.eshterakyar-download-parts-list {
+    margin: 0 !important;
+    padding: 0 10px 10px !important;
+    list-style: none !important;
+}
+
+.eshterakyar-download-parts-list li {
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+}
+
+.eshterakyar-download-parts-list li:last-child {
+    margin-bottom: 0 !important;
+}
+
+.eshterakyar-download-part-link {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+}
+
+.eshterakyar-download-multipart-wrap {
+    margin-top: 10px !important;
+}
+
+/* Subscription badge shortcode */
+.eshterakyar-subscription-badge-wrap {
+    display: inline-block !important;
+    position: relative !important;
+    vertical-align: middle !important;
+    max-width: 100% !important;
+}
+
+.eshterakyar-badge-align-left {
+    display: block !important;
+    text-align: left !important;
+}
+
+.eshterakyar-badge-align-center {
+    display: block !important;
+    text-align: center !important;
+}
+
+.eshterakyar-badge-align-right {
+    display: block !important;
+    text-align: right !important;
+}
+
+.eshterakyar-subscription-badge {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    border: none !important;
+    outline: none !important;
+    font-family: inherit !important;
+    line-height: 1.4 !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+}
+
+.eshterakyar-badge-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.eshterakyar-badge-icon::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: currentColor !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35) !important;
+}
+
+.eshterakyar-badge-variant-default .eshterakyar-subscription-badge {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: #fff !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25) !important;
+}
+
+.eshterakyar-badge-variant-default .eshterakyar-subscription-badge:hover,
+.eshterakyar-badge-variant-default .eshterakyar-subscription-badge:focus-visible,
+.eshterakyar-badge-variant-default .eshterakyar-subscription-badge.is-tooltip-open {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35) !important;
+}
+
+.eshterakyar-badge-variant-pill .eshterakyar-subscription-badge {
+    background: #10b981 !important;
+    color: #fff !important;
+    padding: 8px 20px !important;
+    border-radius: 999px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.eshterakyar-badge-variant-outline .eshterakyar-subscription-badge {
+    background: #fff !important;
+    color: #059669 !important;
+    padding: 9px 18px !important;
+    border-radius: 8px !important;
+    border: 2px solid #10b981 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.eshterakyar-badge-variant-minimal .eshterakyar-subscription-badge {
+    background: #ecfdf5 !important;
+    color: #047857 !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.eshterakyar-badge-variant-dark .eshterakyar-subscription-badge {
+    background: #111827 !important;
+    color: #f9fafb !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.2) !important;
+}
+
+.eshterakyar-badge-state-inactive.eshterakyar-subscription-badge,
+.eshterakyar-badge-state-guest.eshterakyar-subscription-badge {
+    background: #f59e0b !important;
+    color: #fff !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25) !important;
+}
+
+.eshterakyar-badge-variant-outline .eshterakyar-badge-state-inactive.eshterakyar-subscription-badge,
+.eshterakyar-badge-variant-outline .eshterakyar-badge-state-guest.eshterakyar-subscription-badge {
+    background: #fff !important;
+    color: #d97706 !important;
+    border: 2px solid #f59e0b !important;
+    box-shadow: none !important;
+}
+
+.eshterakyar-badge-variant-pill .eshterakyar-badge-state-inactive.eshterakyar-subscription-badge,
+.eshterakyar-badge-variant-pill .eshterakyar-badge-state-guest.eshterakyar-subscription-badge {
+    border-radius: 999px !important;
+}
+
+.eshterakyar-badge-variant-minimal .eshterakyar-badge-state-inactive.eshterakyar-subscription-badge,
+.eshterakyar-badge-variant-minimal .eshterakyar-badge-state-guest.eshterakyar-subscription-badge {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    box-shadow: none !important;
+}
+
+.eshterakyar-badge-variant-dark .eshterakyar-badge-state-inactive.eshterakyar-subscription-badge,
+.eshterakyar-badge-variant-dark .eshterakyar-badge-state-guest.eshterakyar-subscription-badge {
+    background: #374151 !important;
+    color: #fff !important;
+}
+
+.eshterakyar-badge-state-inactive:hover,
+.eshterakyar-badge-state-guest:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+    opacity: 0.92 !important;
+}
+
+.eshterakyar-badge-tooltip {
+    position: absolute !important;
+    z-index: 9999 !important;
+    min-width: 220px !important;
+    max-width: min(320px, 90vw) !important;
+    padding: 14px 16px !important;
+    background: #fff !important;
+    color: #1f2937 !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 10px !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(6px) !important;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+    text-align: right !important;
+}
+
+.eshterakyar-badge-tooltip-title {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+    color: #111827 !important;
+}
+
+.eshterakyar-badge-tooltip-list {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.eshterakyar-badge-tooltip-list li {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    padding: 6px 0 !important;
+    border-bottom: 1px solid #f3f4f6 !important;
+    font-size: 13px !important;
+}
+
+.eshterakyar-badge-tooltip-list li:last-child {
+    border-bottom: none !important;
+}
+
+.eshterakyar-badge-tooltip-label {
+    color: #6b7280 !important;
+    white-space: nowrap !important;
+}
+
+.eshterakyar-badge-tooltip-value {
+    color: #111827 !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+}
+
+.eshterakyar-badge-tooltip-link {
+    display: inline-block !important;
+    margin-top: 10px !important;
+    font-size: 12px !important;
+    color: #059669 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+.eshterakyar-badge-tooltip-link:hover {
+    color: #047857 !important;
+    text-decoration: underline !important;
+}
+
+.eshterakyar-tooltip-pos-bottom {
+    top: calc(100% + 10px) !important;
+    left: 50% !important;
+    transform: translate(-50%, 6px) !important;
+}
+
+.eshterakyar-tooltip-pos-top {
+    bottom: calc(100% + 10px) !important;
+    left: 50% !important;
+    transform: translate(-50%, -6px) !important;
+}
+
+.eshterakyar-tooltip-pos-left {
+    top: 50% !important;
+    right: calc(100% + 10px) !important;
+    transform: translate(-6px, -50%) !important;
+}
+
+.eshterakyar-tooltip-pos-right {
+    top: 50% !important;
+    left: calc(100% + 10px) !important;
+    transform: translate(6px, -50%) !important;
+}
+
+.eshterakyar-subscription-badge:hover .eshterakyar-badge-tooltip,
+.eshterakyar-subscription-badge:focus-within .eshterakyar-badge-tooltip,
+.eshterakyar-subscription-badge.is-tooltip-open .eshterakyar-badge-tooltip {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.eshterakyar-subscription-badge:hover .eshterakyar-tooltip-pos-bottom,
+.eshterakyar-subscription-badge:focus-within .eshterakyar-tooltip-pos-bottom,
+.eshterakyar-subscription-badge.is-tooltip-open .eshterakyar-tooltip-pos-bottom {
+    transform: translate(-50%, 0) !important;
+}
+
+.eshterakyar-subscription-badge:hover .eshterakyar-tooltip-pos-top,
+.eshterakyar-subscription-badge:focus-within .eshterakyar-tooltip-pos-top,
+.eshterakyar-subscription-badge.is-tooltip-open .eshterakyar-tooltip-pos-top {
+    transform: translate(-50%, 0) !important;
+}
+
+.eshterakyar-subscription-badge:hover .eshterakyar-tooltip-pos-left,
+.eshterakyar-subscription-badge:focus-within .eshterakyar-tooltip-pos-left,
+.eshterakyar-subscription-badge.is-tooltip-open .eshterakyar-tooltip-pos-left {
+    transform: translate(0, -50%) !important;
+}
+
+.eshterakyar-subscription-badge:hover .eshterakyar-tooltip-pos-right,
+.eshterakyar-subscription-badge:focus-within .eshterakyar-tooltip-pos-right,
+.eshterakyar-subscription-badge.is-tooltip-open .eshterakyar-tooltip-pos-right {
+    transform: translate(0, -50%) !important;
+}
+
+@media (max-width: 782px) {
+    .eshterakyar-badge-tooltip {
+        min-width: 200px !important;
+    }
+
+    .eshterakyar-tooltip-pos-left,
+    .eshterakyar-tooltip-pos-right {
+        left: 50% !important;
+        right: auto !important;
+        top: calc(100% + 10px) !important;
+        transform: translate(-50%, 6px) !important;
+    }
+
+    .eshterakyar-subscription-badge.is-tooltip-open .eshterakyar-tooltip-pos-left,
+    .eshterakyar-subscription-badge.is-tooltip-open .eshterakyar-tooltip-pos-right {
+        transform: translate(-50%, 0) !important;
+    }
+}
+
+/* Product CTA shortcode [eshterakyar_product_cta] */
+.eshterakyar-product-cta {
+    margin: 16px 0 !important;
+    padding: 18px 20px !important;
+    background: #fff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 10px !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+}
+
+.eshterakyar-product-cta-align-center {
+    text-align: center !important;
+}
+
+.eshterakyar-product-cta-align-left {
+    text-align: left !important;
+}
+
+.eshterakyar-product-cta-align-right {
+    text-align: right !important;
+}
+
+.eshterakyar-cta-inactive {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+}
+
+.eshterakyar-cta-cart-block .eshterakyar-cta-price {
+    margin-bottom: 10px !important;
+}
+
+.eshterakyar-cta-cart-block .eshterakyar-cta-price .price {
+    font-size: 1.35em !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    margin: 0 !important;
+}
+
+.eshterakyar-cta-cart-block .eshterakyar-cta-add-to-cart form.cart {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 0 !important;
+}
+
+.eshterakyar-cta-cart-block .single_add_to_cart_button,
+.eshterakyar-cta-cart-block .button.alt {
+    background: #111827 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 12px 22px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    line-height: 1.4 !important;
+}
+
+.eshterakyar-cta-cart-block .single_add_to_cart_button:hover,
+.eshterakyar-cta-cart-block .button.alt:hover {
+    background: #374151 !important;
+    color: #fff !important;
+}
+
+.eshterakyar-cta-plans-action {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+}
+
+.eshterakyar-cta-mode-both .eshterakyar-cta-plans-action {
+    padding-top: 4px !important;
+    border-top: 1px dashed #e5e7eb !important;
+}
+
+.eshterakyar-cta-note {
+    margin: 0 !important;
+}
+
+.eshterakyar-cta-cart-unavailable {
+    margin: 0 !important;
+    color: #b45309 !important;
+    font-size: 14px !important;
+}
+
+.eshterakyar-cta-download-actions {
+    margin-bottom: 14px !important;
+}
+
+.eshterakyar-cta-download-button {
+    width: auto !important;
+    min-width: 220px !important;
+    text-align: center !important;
+}
+
+.eshterakyar-cta-download-link-wrap {
+    margin: 10px 0 0 !important;
+    font-size: 13px !important;
+    color: #6b7280 !important;
+    line-height: 1.5 !important;
+    word-break: break-all !important;
+}
+
+.eshterakyar-cta-download-link-label {
+    margin-left: 6px !important;
+    font-weight: 500 !important;
+}
+
+.eshterakyar-cta-download-url {
+    color: #059669 !important;
+    text-decoration: underline !important;
+}
+
+.eshterakyar-cta-download-url:hover {
+    color: #047857 !important;
+}
+
+.eshterakyar-cta-plan-name {
+    margin: 0 0 12px !important;
+    font-size: 14px !important;
+    color: #374151 !important;
+}
+
+.eshterakyar-cta-plan-label {
+    color: #6b7280 !important;
+    margin-left: 4px !important;
+}
+
+.eshterakyar-cta-plan-value {
+    font-weight: 600 !important;
+}
+
+.eshterakyar-cta-quota-bars {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-top: 4px !important;
+}
+
+.eshterakyar-cta-quota-bar {
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    padding: 12px 14px !important;
+}
+
+.eshterakyar-cta-quota-bar-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 8px !important;
+    flex-wrap: wrap !important;
+}
+
+.eshterakyar-cta-quota-bar-title {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    line-height: 1.4 !important;
+}
+
+.eshterakyar-cta-quota-bar-value {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+}
+
+.eshterakyar-cta-quota-bar-track {
+    height: 8px !important;
+    background: #e5e7eb !important;
+    border-radius: 999px !important;
+    overflow: hidden !important;
+}
+
+.eshterakyar-cta-quota-bar-fill {
+    height: 100% !important;
+    border-radius: 999px !important;
+    transition: width 0.35s ease !important;
+    min-width: 0 !important;
+}
+
+.eshterakyar-cta-quota-ok {
+    background: linear-gradient(90deg, #34d399 0%, #10b981 100%) !important;
+}
+
+.eshterakyar-cta-quota-low {
+    background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%) !important;
+}
+
+.eshterakyar-cta-quota-exhausted {
+    background: #ef4444 !important;
+    width: 100% !important;
+    opacity: 0.35 !important;
+}
+
+.eshterakyar-cta-blocked-cart {
+    margin-top: 16px !important;
+    padding-top: 14px !important;
+    border-top: 1px solid #fde68a !important;
+}
+
+.eshterakyar-style-2.eshterakyar-product-cta {
+    background: #fafafa !important;
+    border-color: #e5e7eb !important;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.06) !important;
+}
+
+@media (max-width: 768px) {
+    .eshterakyar-product-cta {
+        padding: 14px !important;
+    }
+
+    .eshterakyar-cta-download-button,
+    .eshterakyar-cta-plans-button,
+    .eshterakyar-cta-cart-block .single_add_to_cart_button {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .eshterakyar-cta-cart-block .eshterakyar-cta-add-to-cart form.cart {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+}

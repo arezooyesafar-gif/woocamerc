@@ -1,0 +1,49 @@
+<wpml-config>
+  <custom-types>
+    <custom-type translate="1">faq</custom-type>
+  </custom-types>
+  <taxonomies>
+    <taxonomy translate="1">faq_filter</taxonomy>
+  </taxonomies>
+  <custom-fields>
+    <custom-field action="copy-once">rooten_page_layout</custom-field>
+    <custom-field action="copy-once">rooten_custom_header</custom-field>
+    <custom-field action="copy-once">rooten_custom_footer</custom-field>
+    <custom-field action="copy-once">rooten_sidebar</custom-field>
+    <custom-field action="copy-once">rooten_show_rev_slider</custom-field>
+    <custom-field action="copy-once">rooten_titlebar</custom-field>
+    <custom-field action="copy-once">rooten_titlebar_layout</custom-field>
+    <custom-field action="copy-once">rooten_titlebar_txt_style</custom-field>
+    <custom-field action="copy-once">rooten_grid_columns</custom-field>
+    <custom-field action="copy-once">rooten_grid_columns_medium</custom-field>
+    <custom-field action="copy-once">rooten_grid_columns_small</custom-field>
+    <custom-field action="copy-once">rooten_blog_columns</custom-field>
+    <custom-field action="copy-once">rooten_blog_columns_medium</custom-field>
+    <custom-field action="copy-once">rooten_blog_columns_small</custom-field>
+    <custom-field action="copy-once">rooten_toolbar</custom-field>
+    <custom-field action="copy-once">rooten_footer_widgets</custom-field>
+    <custom-field action="copy-once">rooten_copyright</custom-field>
+    <custom-field action="copy-once">rooten_titlebar_bg_style</custom-field>
+    <custom-field action="copy-once">rooten_titlebar_bg_img</custom-field>
+    <custom-field action="copy-once">rooten_service_categories1</custom-field>
+    <custom-field action="copy-once">rooten_header_transparent</custom-field>
+    <custom-field action="copy-once">rooten_bgstyle</custom-field>
+    <custom-field action="copy-once">rooten_hideimage</custom-field>
+    <custom-field action="copy-once">rooten_blog_videosrc</custom-field>
+    <custom-field action="copy-once">rooten_blog_gallery</custom-field>
+    <custom-field action="copy-once">rooten_blog_quote</custom-field>
+    <custom-field action="copy-once">rooten_blog_video</custom-field>
+    <custom-field action="copy-once">rooten_blog_audio</custom-field>
+    <custom-field action="copy-once">rooten_blog_link</custom-field>
+    <custom-field action="copy-once">rooten_blog_limit</custom-field>
+    <custom-field action="copy-once">bdthemes_show_faq_icon</custom-field>
+    <custom-field action="copy-once">bdthemes_faq_icon</custom-field>
+  </custom-fields>
+  <admin-texts>
+    <key name="theme_mods_rooten">
+      <key name="rooten_logo_default"/>
+      <key name="rooten_toolbar_social"/>
+      <key name="rooten_cookie_message"/>
+    </key>
+  </admin-texts>
+</wpml-config>

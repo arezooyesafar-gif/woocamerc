@@ -1,0 +1,44 @@
+.archive-header{
+  margin-bottom: 30px;
+  .archive-title{
+    font-size: 18px;
+    color: #888;
+  }
+  .archive-subtitle{
+    font-size: 14px;
+    color: #ccc;
+  }
+}
+.pagination, .woocommerce-pagination, .elementor-pagination{
+  text-align: center;
+  .nav-links{
+    margin: auto;
+  }
+    .page-numbers:not(ul){
+      display: inline-block;
+      padding: 7.5px 15px;
+      font-size: 14px;
+      background-color: #eee;
+      color: #aaa;
+      @extend %radius;
+      @extend %transition;
+
+      &.current{
+        background-color: transparent;
+        color: #aaa;
+      }
+    }
+
+    a.page-numbers:hover{
+      background-color: var(--pooshe-color-main);
+      color: #fff;
+    }
+}
+.term-description{
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  margin-bottom: 30px;
+}

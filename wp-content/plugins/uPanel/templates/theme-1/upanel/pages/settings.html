@@ -1,0 +1,100 @@
+<div ng-controller="settings" class="row">
+  <div class="col-12 mobile-header d-d-none sm-px-0">
+    <div class="header">
+        <a href="dashboard">
+            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12.707 19.707l-1.414-1.414L16.586 13H4v-2h12.586l-5.293-5.293 1.414-1.414 7 7a1 1 0 010 1.414l-7 7z" clip-rule="evenodd"></path>
+                </svg>
+        </a>
+        <p class="title">تنظیمات </p>
+    </div>
+</div>
+  <div class="col-12 col-md-12 sm-px-0">
+
+    <div class="route-content">
+
+      <div class="settings-tabs">
+        <button ng-class="data.tab == 'user'?'active':''" ng-click="data.tab = 'user'" type="button">مشخصات حساب</button>
+        <button ng-class="data.tab == 'password'?'active':''" ng-click="data.tab = 'password'" type="button">رمز عبور</button>
+      </div>
+
+      <div ng-if="data.tab == 'password'" class="edit-password">
+        <p class="title">ویرایش رمز عبور</p>
+        <div class="upanel-material-textfield">
+          <input type="password" ng-model="data.old_password" placeholder=" " value="" />
+          <label>رمز عبور قدیمی</label>
+        </div>
+        <div class="upanel-material-textfield">
+          <input type="password" ng-model="data.password" placeholder=" " value="" />
+          <label>رمز عبور جدید</label>
+        </div>
+        <div class="upanel-material-textfield">
+          <input type="password" ng-model="data.repeat_password" placeholder=" " value="" />
+          <label>تکرار رمز عبور جدید</label>
+        </div>
+        <button type="button" ng-disabled="data.password != data.repeat_password || data.old_password.length == 0 || data.password.length == 0 || data.repeat_password.length == 0" ng-click="edit_password()">
+          <svg ng-if="data.loading" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" stroke="#fff">
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(1 1)" stroke-width="2">
+                <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                <path d="M36 18c0-9.94-8.06-18-18-18">
+                  <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" />
+                </path>
+              </g>
+            </g>
+          </svg>
+          <span ng-if="!data.loading">ذخیره</span>
+        </button>
+
+        <p ng-if="data.success_massage" style="text-align: center" class="massage">رمز عبور با موفقیت تغییر یافت</p>
+        <p ng-if="data.error_massage" style="text-align: center" class="massage error">خطا در تغییر رمز عبور</p>
+      </div>
+
+      <div ng-if="data.tab == 'user'" class="edit-profile">
+        <p class="title">ویرایش اطلاعات کاربری</p>
+
+        <input id="file-upload" name="file-upload" style="display: none" ng-model="data.picture" accept="image/*" type="file" />
+
+        <img ng-if="all_settings['avatar'] == 'on' && user['profile']" src="{{user['profile']}}" />
+        <img ng-if="all_settings['avatar'] == 'on' && !user['profile']" src="{{plugin_url}}upanel/assets/img/user_default.png" />
+
+        <p class="username">{{user['first_name']}} {{user['last_name']}}</p>
+        <button ng-click="open_image_selector()" class="change-profile">تغییر عکس پروفایل</button>
+
+        <div class="profile-fields">
+          <div class="upanel-material-textfield">
+            <input type="text" ng-model="data.first_name" placeholder=" " value="" />
+            <label>نام</label>
+          </div>
+          <div class="upanel-material-textfield">
+            <input type="text" ng-model="data.last_name" placeholder=" " value="" />
+            <label>نام خانوادگی</label>
+          </div>
+          <div class="upanel-material-textfield">
+            <input type="text" ng-model="data.nickname" placeholder=" " value="" />
+            <label>نام نمایشی</label>
+          </div>
+          <div class="upanel-material-textfield">
+            <input type="text" ng-model="data.email" placeholder=" " value="" />
+            <label> ایمیل</label>
+          </div>
+        </div>
+        <button type="submit" ng-click="edit_user()" value="Upload">
+          <svg ng-if="data.loading" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" stroke="#fff">
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(1 1)" stroke-width="2">
+                <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                <path d="M36 18c0-9.94-8.06-18-18-18">
+                  <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" />
+                </path>
+              </g>
+            </g>
+          </svg>
+          <span edit_user ng-if="!data.loading">ذخیره</span>
+        </button>
+
+        <p ng-if="data.success_massage" class="massage">بروزرسانی با موفقیت انجام شد</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.elementor-panel [class*=woosbymdz-cion-]:before,
+.elementor-widget-empty-icon[class*=woosbymdz-cion-]:before {
+  content: "";
+  line-height: 1;
+  display: block;
+  height: 45px;
+  width: 45px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: 0;
+  background-size: cover;
+}
+
+.woosbymdz-cion-slider:before {
+    background-image: url(../img/icons/woos-cion.svg);
+}
+.woosbymdz-cion-catslider:before {
+    background-image: url(../img/icons/woos-cats-cion.svg);
+}
+.woosbymdz-cion-loop:before {
+  background-image: url(../img/icons/woos-loop-cion.svg);
+}

@@ -1,0 +1,60 @@
+<div ng-controller="downloads" class="row">
+  <div class="col-12 mobile-header d-d-none sm-px-0">
+    <div class="header">
+        <a href="dashboard">
+            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12.707 19.707l-1.414-1.414L16.586 13H4v-2h12.586l-5.293-5.293 1.414-1.414 7 7a1 1 0 010 1.414l-7 7z" clip-rule="evenodd"></path>
+                </svg>
+        </a>
+        <p class="title">دانلود ها</p>
+    </div>
+</div>
+    <div class="col-12 sm-px-0">
+        <div class="route-content">
+    
+            <div ng-if="downloads.length == 0" class="no-orders">
+                <img src="{{plugin_path}}upanel/assets/img/no-orders.svg" />
+                <p>هیچ محصول دانلودی یافت نشد</p>
+              </div>
+            
+              <table ng-if="downloads.length > 0" class="desktop downloads">
+                <thead>
+                  <tr>
+                    <th>محصول</th>
+                    <th>دانلود باقی مانده</th>
+                    <th>انقضا</th>
+                    <th>دانلود</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="download in downloads">
+                    <td>{{download.product_name}}</td>
+                    <td>{{download.downloads_remaining?download.downloads_remaining:'بدون محدودیت'}}</td>
+                    <td>{{download.access_expires?download.access_expires:'بدون انقضا'}}</td>
+                    <td><a href="{{download.download_url}}" target="_blank">{{download.file.name}}</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            
+              <div ng-if="downloads.length > 0" class="downloads mobile">
+                <div ng-repeat="download in downloads" class="download">
+                  <div class="row">
+                    <p class="title">{{download.product_name}}</p>
+                    <div class="col-6 right">
+                      <p class="label">دانلود باقی مانده</p>
+                      <p>{{download.downloads_remaining?download.downloads_remaining:'بدون محدودیت'}}</p>
+                    </div>
+                    <div class="col-6 left">
+                      <p class="label">انقضا</p>
+                      <p>{{download.access_expires?download.access_expires:'بدون انقضا'}}</p>
+                    </div>
+                  </div>
+                  <a href="{{download.download_url}}" target="_blank">{{download.file.name}}</a>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,16 @@
+.cb-icon-tag{
+    width: 180px;
+}
+.at-repater-block{
+    border: none !important;
+    box-shadow: rgba(0,0,0,.3) 0 0 3px;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0 !important;
+}
+.re-control{
+    cursor: pointer;
+}
+.rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6,body.rtl, body.rtl .press-this a.wp-switch-editor{
+    font-family: IRANSans,Tahoma;
+}

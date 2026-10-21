@@ -1,0 +1,116 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: BdThemes Portfolio\n"
+"POT-Creation-Date: 2018-10-30 20:44+0600\n"
+"PO-Revision-Date: 2018-10-30 20:43+0600\n"
+"Last-Translator: Selim Rana <info@bdthemes.com>\n"
+"Language-Team: Selim Rana <info@bdthemes.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: bdthemes-portfolio.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bdthemes-portfolio.php:28
+msgid "Portfolio"
+msgstr ""
+
+#: bdthemes-portfolio.php:29
+msgid "Portfolio Item"
+msgstr ""
+
+#: bdthemes-portfolio.php:30
+msgid "Add New Item"
+msgstr ""
+
+#: bdthemes-portfolio.php:31 bdthemes-portfolio.php:33
+msgid "Add New Portfolio Item"
+msgstr ""
+
+#: bdthemes-portfolio.php:32
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: bdthemes-portfolio.php:34
+msgid "View Item"
+msgstr ""
+
+#: bdthemes-portfolio.php:35
+msgid "Search Portfolio"
+msgstr ""
+
+#: bdthemes-portfolio.php:36
+msgid "No portfolio items found"
+msgstr ""
+
+#: bdthemes-portfolio.php:37
+msgid "No portfolio items found in trash"
+msgstr ""
+
+#: bdthemes-portfolio.php:76
+msgid "Tags"
+msgstr ""
+
+#: bdthemes-portfolio.php:77
+msgid "Tag"
+msgstr ""
+
+#: bdthemes-portfolio.php:93
+msgid "Title"
+msgstr ""
+
+#: bdthemes-portfolio.php:94
+msgid "Thumbnail"
+msgstr ""
+
+#: bdthemes-portfolio.php:95
+msgid "Filter"
+msgstr ""
+
+#: bdthemes-portfolio.php:96
+msgid "Author"
+msgstr ""
+
+#: bdthemes-portfolio.php:97
+msgid "Comments"
+msgstr ""
+
+#: bdthemes-portfolio.php:98
+msgid "Date"
+msgstr ""
+
+#: bdthemes-portfolio.php:126 bdthemes-portfolio.php:136
+msgid "None"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "BdThemes Portfolio"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://themeforest.net/user/bdthemes"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This plugin will create a portfolio custom post type for bdthemes wordpress "
+"theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "BdThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://bdthemes.com/"
+msgstr ""

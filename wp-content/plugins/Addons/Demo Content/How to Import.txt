@@ -1,0 +1,15 @@
+Q: Where i see them in live preview?
+A: For ready page please look here: https://elementpack.pro/ready-pages/
+   For ready blocks please look here: https://elementpack.pro/ready-blocks/
+   Have any Idea? suggest us: https://elementpack.pro/make-a-suggestion/
+
+Q: How do I import the demo page?
+A: Install the demo content via Elementor's Library: 
+   Elementor > My Templates > Import Templates > Browse > 
+   Browse to Element Pack package DEMO CONTENT folder you extracted on your hard drive. 
+   Select the .JSON file you wish to upload, and click Import Now Button. 
+   Watch this detailed video tutorial: https://youtu.be/seQlYR2nrXY
+
+Q: How do I import the demo block?
+A: This also same procedure above page import:
+   Watch this detailed video tutorial: https://youtu.be/Qd_Kw4741p8

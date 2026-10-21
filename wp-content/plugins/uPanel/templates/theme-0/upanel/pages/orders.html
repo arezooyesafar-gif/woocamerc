@@ -1,0 +1,405 @@
+<div ng-controller="orders" class="row ">
+    <div class="col-12 col-md-12">
+
+        <div ng-if="(dashboard_data.user_orders.pending.length+
+          dashboard_data.user_orders.processing.length+
+          dashboard_data.user_orders['on-hold'].length+
+          dashboard_data.user_orders.completed.length+
+          dashboard_data.user_orders.cancelled.length+
+          dashboard_data.user_orders.refunded.length+
+          dashboard_data.user_orders.failed.length) == 0" class="no-orders">
+            <img src="{{plugin_path}}upanel/assets/img/no-orders.svg">
+            <p>تا کنون سفارشی نداشتید</p>
+        </div>
+
+        <div ng-if="(dashboard_data.user_orders.pending.length+
+          dashboard_data.user_orders.processing.length+
+          dashboard_data.user_orders['on-hold'].length+
+          dashboard_data.user_orders.completed.length+
+          dashboard_data.user_orders.cancelled.length+
+          dashboard_data.user_orders.refunded.length+
+          dashboard_data.user_orders.failed.length) > 0 && data.single_order == ''" class="upanel-orders-header">
+            <p class="hd-upanel-title"> اطلاعات سفارش‌ها</p>
+            <img src="{{plugin_path}}upanel/assets/img/shopping.png">
+            <div ng-click="data.filter = ['completed','pending','processing','on-hold','cancelled','refunded','failed']"
+                class="upanel-orders-header-info">
+                <p class="hd-upanel-totall-number">{{number_fa(dashboard_data.user_orders.pending.length+
+                    dashboard_data.user_orders.processing.length+
+                    dashboard_data.user_orders['on-hold'].length+
+                    dashboard_data.user_orders.completed.length+
+                    dashboard_data.user_orders.cancelled.length+
+                    dashboard_data.user_orders.refunded.length+
+                    dashboard_data.user_orders.failed.length)}}</p>
+                <p class="hd-upanel-totall-text"> تعداد کل سفارش‌ها</p>
+                <p class="hd-upanel-totall-price">
+
+                    <span>
+
+                        {{formatNumber(get_price(dashboard_data.user_orders.totall_sale)[0])}}
+
+
+                    </span>
+                    <span> {{get_price(dashboard_data.user_orders.totall_sale)[1]}} </span>
+
+                    جمع مبلغ سفارشات
+                </p>
+            </div>
+            <p class="orders-details">جزییات سفارش‌ها</p>
+
+            <div class="hd-upanel-order-info">
+                <div ng-class="data.filter[0]   == 'completed' && data.filter.length == 1?'active':''"
+                    ng-click="data.filter = ['completed']" class="hd-upanel-order green">
+                    <span class="hd-upanel-icon">
+                        <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.813 7.248a.872.872 0 0 1-.619-.256L.821 4.62a.874.874 0 1 1 1.237-1.238l1.755 1.755 4.128-4.128a.874.874 0 1 1 1.237 1.238L4.432 6.992a.872.872 0 0 1-.619.256"
+                                fill="#FFF" fill-rule="nonzero" />
+                        </svg>
+
+
+                    </span>
+                    <p class="hd-upanel-text">تکمیل شده</p>
+                    <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders.completed.length)}}</p>
+                </div>
+                <div ng-class="data.filter[0] == 'on-hold'?'active':''" ng-click="data.filter = ['on-hold']"
+                    class="hd-upanel-order orange">
+                    <span class="hd-upanel-icon">
+                        <svg width="12" height="3" viewBox="0 0 12 3" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.198 0C.537 0 0 .537 0 1.196a1.2 1.2 0 0 0 1.198 1.198 1.2 1.2 0 0 0 1.198-1.198C2.396.537 1.859 0 1.198 0m4.48 0c-.662 0-1.199.537-1.199 1.196a1.2 1.2 0 0 0 1.198 1.198 1.2 1.2 0 0 0 1.198-1.198C6.875.537 6.338 0 5.677 0m4.48 0c-.662 0-1.198.537-1.198 1.196a1.2 1.2 0 0 0 1.197 1.198 1.2 1.2 0 0 0 1.198-1.198C11.354.537 10.819 0 10.157 0"
+                                fill="#FFF" fill-rule="nonzero" />
+                        </svg>
+
+                    </span>
+                    <p class="hd-upanel-text"> در انتظار بررسی</p>
+                    <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders['on-hold'].length)}}</p>
+
+                </div>
+                <div ng-class="data.filter[0] == 'failed'?'active':''" ng-click="data.filter = ['failed','cancelled']"
+                    class="hd-upanel-order red">
+                    <span class="hd-upanel-icon">
+                        <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.29 5.052 4.51 3.274 6.29 1.496a.874.874 0 0 0 0-1.237.872.872 0 0 0-1.237-.001l-1.78 1.778L1.495.256a.877.877 0 0 0-1.238 0 .877.877 0 0 0 0 1.238l1.78 1.78L.26 5.049a.874.874 0 1 0 1.237 1.238L3.273 4.51l1.78 1.779A.876.876 0 0 0 6.29 5.052"
+                                fill="#FFF" fill-rule="nonzero" />
+                        </svg>
+
+                    </span>
+                    <p class="hd-upanel-text"> لغو شده</p>
+                    <p class="hd-upanel-number">
+                        {{number_fa(dashboard_data.user_orders.failed.length+dashboard_data.user_orders.cancelled.length)}}
+                    </p>
+
+                </div>
+                <div ng-class="data.filter[0] == 'pending'?'active':''" ng-click="data.filter = ['pending']"
+                    class="hd-upanel-order green">
+                    <span class="hd-upanel-icon">
+                        <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.188 6.483H.744a.744.744 0 1 1 0-1.489h5.444a.746.746 0 0 1 0 1.49M4.13 1.488H.744A.744.744 0 1 1 .744 0h3.385a.746.746 0 0 1 0 1.489"
+                                fill="#FFF" fill-rule="nonzero" />
+                        </svg>
+
+                    </span>
+                    <p class="hd-upanel-text"> منتظر پرداخت</p>
+                    <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders['pending'].length)}}</p>
+                </div>
+
+
+                <div ng-class="data.filter[0] == 'processing'?'active':''" ng-click="data.filter = ['processing']"
+                    class="hd-upanel-order orange">
+                    <span class="hd-upanel-icon">
+                        <svg width="6" height="9" viewBox="0 0 6 9" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.291 8.784.365 6.442A.754.754 0 0 1 0 5.797V.75a.75.75 0 0 1 1.5 0v4.621l3.56 2.123a.752.752 0 0 1-.769 1.29z"
+                                fill="#FFF" fill-rule="nonzero" />
+                        </svg>
+                    </span>
+                    <p class="hd-upanel-text"> در حال انجام</p>
+                    <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders.processing.length)}}</p>
+
+                </div>
+                <div ng-class="data.filter[0] == 'refunded'?'active':''" ng-click="data.filter = ['refunded']"
+                    class="hd-upanel-order black">
+                    <span class="hd-upanel-icon">
+                        <svg width="2" height="8" viewBox="0 0 2 8" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M.875 6.244A.877.877 0 0 0 .875 8a.879.879 0 0 0 .875-.886.873.873 0 0 0-.875-.869M.875 0A.877.877 0 0 0 0 .875v2.828a.876.876 0 0 0 1.75 0V.875A.877.877 0 0 0 .875 0"
+                                fill="#FFF" fill-rule="nonzero" />
+                        </svg>
+
+                    </span>
+                    <p class="hd-upanel-text"> مرجوع شده</p>
+                    <p class="hd-upanel-number">{{number_fa(dashboard_data.user_orders.refunded.length)}}</p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div ng-if="(dashboard_data.user_orders.pending.length+
+          dashboard_data.user_orders.processing.length+
+          dashboard_data.user_orders['on-hold'].length+
+          dashboard_data.user_orders.completed.length+
+          dashboard_data.user_orders.cancelled.length+
+          dashboard_data.user_orders.refunded.length+
+          dashboard_data.user_orders.failed.length) > 0 && data.single_order == ''" class="orders-mobile">
+
+
+            <div ng-repeat="order in dashboard_data.user_orders.all" ng-if="data.filter.includes(order.status)"
+                class="order">
+                <span class="status {{order.status}}">
+                    وضعیت
+
+                    <strong>
+                        {{order.status == 'completed'?'تکمیل شده':''}}
+                        {{order.status == 'pending'?'منتظر پرداخت':''}}
+                        {{order.status == 'processing'?'در حال پردازش':''}}
+                        {{order.status == 'on-hold'?'در انتظار بررسی':''}}
+                        {{order.status == 'cancelled'?'لغو شده':''}}
+                        {{order.status == 'refunded'?'مرجوع شده':''}}
+                        {{order.status == 'failed'?'لغو شده':''}}
+                    </strong>
+                </span>
+                <div class="row">
+                    <div class="col-6 right">
+                        <p class="label">شماره سفارش</p>
+                        <p>{{number_fa(order.ID) }}</p>
+                    </div>
+                    <div class="col-6 left">
+                        <p class="label"> تاریخ</p>
+                        <p>{{order.Date}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="btns">
+
+                            <a ng-if="order.status == 'pending'" target="_blank" href="{{order.payment_url}}">پرداخت</a>
+                            <button ng-click="data.single_order = order" type="button">مشاهده</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table ng-if="(dashboard_data.user_orders.pending.length+
+          dashboard_data.user_orders.processing.length+
+          dashboard_data.user_orders['on-hold'].length+
+          dashboard_data.user_orders.completed.length+
+          dashboard_data.user_orders.cancelled.length+
+          dashboard_data.user_orders.refunded.length+
+          dashboard_data.user_orders.failed.length) > 0 && data.single_order == ''" class="desktop orders">
+            <thead>
+                <tr>
+                    <th>وضعیت</th>
+                    <th>شماره سفارش</th>
+                    <th>تاریخ</th>
+                    <th>تعداد</th>
+                    <th>مبلغ</th>
+                    <th>مشاهده</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr ng-repeat="order in dashboard_data.user_orders.all" ng-if="data.filter.includes(order.status)">
+                    <td><span class="status {{order.status}}">
+                            {{order.status == 'completed'?'تکمیل شده':''}}
+                            {{order.status == 'pending'?'منتظر پرداخت':''}}
+                            {{order.status == 'processing'?'در حال پردازش':''}}
+                            {{order.status == 'on-hold'?'در انتظار بررسی':''}}
+                            {{order.status == 'cancelled'?'لغو شده':''}}
+                            {{order.status == 'refunded'?'مرجوع شده':''}}
+                            {{order.status == 'failed'?'لغو شده':''}}
+                        </span></td>
+                    <td>{{number_fa(order.ID)}}</td>
+                    <td>{{order.Date}}</td>
+                    <td>{{number_fa(order.items.length)}}</td>
+                    <td>
+
+                        <span>
+
+                            {{formatNumber(get_price(order.Value_html)[0])}}
+                        </span>
+                        <span> {{get_price(order.Value_html)[1]}} </span>
+                    </td>
+                    <td>
+                        <p class="btns">
+                            <a ng-if="order.status == 'pending'" target="_blank" href="{{order.payment_url}}">پرداخت</a>
+                            <button ng-click="data.single_order = order" type="button">مشاهده</button>
+                        </p>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div ng-if="data.single_order != ''" style="position:relative" class="col-12 col-md-12">
+        <ul class="order-status">
+            <li>
+                <p>شماره سفارش</p>
+                <strong>{{data.single_order.ID}}</strong>
+            </li>
+            <li>
+                <p> تاریخ ثبت</p>
+                <strong>{{data.single_order.Date}}</strong>
+            </li>
+            <li class="{{data.single_order.status}}">
+                <p> وضعیت</p>
+                <strong>
+                    {{data.single_order.status == 'completed'?'تکمیل شده':''}}
+                    {{data.single_order.status == 'pending'?'منتظر پرداخت':''}}
+                    {{data.single_order.status == 'processing'?'در حال پردازش':''}}
+                    {{data.single_order.status == 'on-hold'?'در انتظار بررسی':''}}
+                    {{data.single_order.status == 'cancelled'?'لغو شده':''}}
+                    {{data.single_order.status == 'refunded'?'مرجوع شده':''}}
+                    {{data.single_order.status == 'failed'?'لغو شده':''}}
+                </strong>
+            </li>
+        </ul>
+        <div>
+            <button ng-click="data.single_order = ''" class="back">
+                بازگشت به سفارش‌ها
+                <svg width="9" height="5" viewBox="0 0 9 5" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.443.75a.747.747 0 0 1-.22.528l-3.47 3.487a.751.751 0 0 1-1.062 0L.219 1.278A.749.749 0 1 1 1.282.22l2.94 2.953L7.162.22a.75.75 0 0 1 1.28.53"
+                        fill="#000" fill-rule="nonzero" />
+                </svg>
+            </button>
+        </div>
+        <div ng-if="data.single_order != ''" class="order-products">
+            <p class="title">مشخصات سفارش</p>
+            <div class="row">
+                <div class="col-12 col-md-8">
+
+                    <table class="products">
+                        <thead>
+                            <tr>
+                                <th>محصول</th>
+                                <th>تعداد</th>
+                                <th>مجموع</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr ng-repeat="product in data.single_order.items">
+                                <td>{{product.name}}</td>
+                                <td>{{number_fa(product.quantity)}}</td>
+
+                                <td>
+
+                                    <span>
+                                        {{formatNumber(product.totall)}}
+
+                                    </span>
+                                    <span> {{get_price(data.single_order.Value_html)[1]}} </span>
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="purchase">
+                        <p>
+                            روش پرداخت
+                            <strong>{{data.single_order.payment}}</strong>
+                        </p>
+                        <p>
+                            جمع کل
+                            <strong>
+                                <span>
+                                    {{formatNumber(get_price(data.single_order.Value_html)[0])}}
+                                </span>
+                                <span> {{get_price(data.single_order.Value_html)[1]}} </span>
+                            </strong>
+                        </p>
+                        <p>
+                            مبلغ نهایی
+                            <strong>
+
+                                <span>
+                                    {{formatNumber(get_price(data.single_order.Value_html)[0])}}
+
+                                </span>
+                                <span> {{get_price(data.single_order.Value_html)[1]}} </span>
+
+                            </strong>
+                        </p>
+                    </div>
+
+                    <a ng-if="data.single_order.status == 'completed' && data.single_order.factoria.length>0"
+                        target="_blank" href="{{data.single_order.factoria}}">صورتحساب</a>
+                    <a ng-if="data.single_order.status == 'pending'" target="_blank"
+                        href="{{data.single_order.payment_url}}">پرداخت</a>
+                </div>
+            </div>
+        </div>
+
+        <div ng-if="data.single_order != ''" class="address">
+            <p class="title"> آدرس صورتحساب</p>
+            <div class="address-box" ng-if="data.single_order.address.components">
+                <p
+                    ng-if="data.single_order.address.components.first_name || data.single_order.address.components.last_name">
+                    <strong>نام:</strong>
+                    {{ data.single_order.address.components.first_name }} {{
+                    data.single_order.address.components.last_name }}
+                </p>
+
+                <p ng-if="data.single_order.address.components.company">
+                    <strong>شرکت:</strong>
+                    {{ data.single_order.address.components.company }}
+                </p>
+
+                <p ng-if="data.single_order.address.components.address_1">
+                    <strong>آدرس ۱:</strong>
+                    {{ data.single_order.address.components.address_1 }}
+                </p>
+
+                <p ng-if="data.single_order.address.components.address_2">
+                    <strong>آدرس ۲:</strong>
+                    {{ data.single_order.address.components.address_2 }}
+                </p>
+
+                <p
+                    ng-if="data.single_order.address.components.city || data.single_order.address.components.state || data.single_order.address.components.postcode">
+                    <strong>شهر / استان / کدپستی:</strong>
+                    {{ data.single_order.address.components.city }}
+                    {{ data.single_order.address.components.state }}
+                    {{ data.single_order.address.components.postcode }}
+                </p>
+
+                <p ng-if="data.single_order.address.components.country">
+                    <strong>کشور:</strong>
+                    {{ data.single_order.address.components.country }}
+                </p>
+
+                <p ng-if="data.single_order.address.components.phone">
+                    <strong>موبایل:</strong>
+                    {{ data.single_order.address.components.phone }}
+                </p>
+
+                <p ng-if="data.single_order.address.components.email">
+                    <strong>ایمیل:</strong>
+                    {{ data.single_order.address.components.email }}
+                </p>
+            </div>
+
+        </div>
+
+        <div ng-if="data.single_order.notes.length > 0" class="notes">
+            <p class="title"> بروزرسانی های سفارش</p>
+
+            <div ng-repeat="note in data.single_order.notes" class="note">
+                <span class="date">{{note.date_created}}</span>
+                <p>{{note.content}}</p>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

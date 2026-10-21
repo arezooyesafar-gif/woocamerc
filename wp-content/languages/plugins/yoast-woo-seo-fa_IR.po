@@ -1,0 +1,158 @@
+# Translation of Yoast - WooCommerce SEO in Persian
+# This file is distributed under the same license as the Yoast - WooCommerce SEO package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-02 21:54:55+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.0-rc.1\n"
+"Language: fa\n"
+"Project-Id-Version: Yoast - WooCommerce SEO\n"
+
+#: classes/woocommerce-seo.php:549
+msgid "Size"
+msgstr "اندازه"
+
+#: classes/woocommerce-seo.php:548
+msgid "Material"
+msgstr "جنس"
+
+#: classes/woocommerce-seo.php:547
+msgid "Pattern"
+msgstr "الگو"
+
+#: classes/woocommerce-yoast-ids.php:45
+msgid "If this product variation has unique identifiers, you can enter them here"
+msgstr "اگر این تنوع محصول دارای شناسه‌های منحصر به فرد است، می‌توانید آنها را در اینجا وارد کنید"
+
+#: classes/woocommerce-yoast-ids.php:44
+msgid "Yoast SEO options"
+msgstr "گزینه‌های Yoast SEO"
+
+#. Plugin URI of the plugin
+#: wpseo-woocommerce.php
+msgid "https://yoa.st/4fu"
+msgstr "https://yoa.st/4fu"
+
+#: classes/woocommerce-seo.php:541
+msgid "Schema & OpenGraph additions"
+msgstr "ضمیمه‌های Schema و OpenGraph"
+
+#: classes/woocommerce-seo.php:542
+msgid "If you have product attributes for the following types, select them here, the plugin will make sure they're used for the appropriate Schema.org and OpenGraph markup."
+msgstr "اگر ویژگی‌های محصول برای انواع زیر دارید، آنها را در اینجا انتخاب کنید، افزونه مطمئن می‌شود که نشانه گذاری Schema.org و OpenGraph مناسب استفاده خوهد شد."
+
+#: classes/woocommerce-seo.php:545
+msgid "Brand"
+msgstr "نام تجاری"
+
+#: classes/woocommerce-seo.php:544
+msgid "Manufacturer"
+msgstr "تولید کننده"
+
+#: classes/woocommerce-seo.php:567
+msgid "Breadcrumbs"
+msgstr "مسیریاب"
+
+#. translators: %1$s resolves to internal links options page, %2$s resolves to
+#. closing link tag, %3$s resolves to Yoast SEO, %4$s resolves to WooCommerce
+#: classes/woocommerce-seo.php:571
+msgid "Both %4$s and %3$s have breadcrumbs functionality. The %3$s breadcrumbs have a slightly higher chance of being picked up by search engines and you can configure them a bit more, on the %1$sBreadcrumbs settings page%2$s. To enable them, check the box below and the WooCommerce breadcrumbs will be replaced."
+msgstr "هر دو %4$s و %3$s دارای عملکرد مسیریاب هستند. مسیریاب %3$s کمی شانس بالاتری برای انتخاب توسط موتورهای جستجو دارند و می‌توانید آنها را کمی بیشتر در %1$sصفحه تنظیمات مسیریاب%2$s پیکربندی کنید. برای فعال کردن آنها، کادر زیر را علامت بزنید و مسیریاب ووکامرس جایگزین خواهد شد."
+
+#: classes/woocommerce-seo.php:595
+msgid "Admin"
+msgstr "مدیر"
+
+#: classes/woocommerce-slack.php:46
+msgid "In stock"
+msgstr "موجود"
+
+#: classes/woocommerce-slack.php:63
+msgid "Price"
+msgstr "قیمت"
+
+#. translators: %1$s resolves to Yoast WooCommerce SEO
+#: classes/woocommerce-dependencies.php:154
+msgid "Please upgrade WordPress to the latest version to allow WordPress and the %1$s module to work properly."
+msgstr "لطفاً وردپرس را به آخرین نسخه ارتقا دهید تا وردپرس و ماژول %1$s به درستی کار کنند."
+
+#. translators: %1$s resolves to Yoast SEO, %2$s resolves to Yoast WooCommerce
+#. SEO
+#: classes/woocommerce-dependencies.php:182
+msgid "Please upgrade the %1$s plugin to the latest version to allow the %2$s module to work."
+msgstr "لطفاً افزونه %1$s را به آخرین نسخه ارتقا دهید تا ماژول %2$s کار کند."
+
+#. Description of the plugin
+#: wpseo-woocommerce.php
+msgid "This extension to WooCommerce and Yoast SEO makes sure there's perfect communication between the two plugins."
+msgstr "این افزونه برای اطمینان از ارتباط کامل دو افزونه ووکامرس و سئو یوست است."
+
+#. Author of the plugin
+#: wpseo-woocommerce.php
+msgid "Team Yoast"
+msgstr "تیم یوست"
+
+#. translators: %1$s resolves to Yoast SEO, %2$s resolves to WooCommerce
+#: classes/woocommerce-seo.php:599
+msgid "Both %2$s and %1$s add metaboxes to the edit product page, if you want %2$s to be above %1$s, check the box."
+msgstr "هر دو %2$s و %1$s متاباکس‌هایی را به صفحه ویرایش محصول اضافه می‌کنند، اگر می‌خواهید %2$s بالاتر از %1$s باشد، کادر را علامت بزنید."
+
+#. Plugin Name of the plugin
+#: wpseo-woocommerce.php
+msgid "Yoast SEO: WooCommerce"
+msgstr "سئو یوست : ووکامرس"
+
+#. translators: %1$s resolves to WooCommerce
+#: classes/woocommerce-seo.php:589
+msgid "Replace %1$s Breadcrumbs"
+msgstr "جایگزینی مسیریاب‌های %1$s"
+
+#. translators: %1$s resolves to WooCommerce
+#: classes/woocommerce-seo.php:609
+msgid "Move %1$s up"
+msgstr "بالا بردن %1$s"
+
+#. translators: %1$s resolves to WooCommerce SEO
+#: classes/woocommerce-seo.php:483
+msgid "%1$s Settings"
+msgstr "تنظیمات %1$s"
+
+#. translators: %1$s resolves to the plugin search for Yoast SEO, %2$s resolves
+#. to the closing tag, %3$s resolves to WooCommerce, %4$s resolves to Yoast
+#. WooCommerce SEO
+#. translators: %1$s resolves to the plugin search for Yoast SEO, %2$s resolves
+#. to the closing tag, %3$s resolves to Yoast SEO, %4$s resolves to Yoast
+#. WooCommerce SEO
+#: classes/woocommerce-dependencies.php:92
+#: classes/woocommerce-dependencies.php:123
+msgid "Please %1$sinstall &amp; activate %3$s%2$s to allow the %4$s module to work."
+msgstr "لطفاً %1$s%3$s را نصب و فعال کنید%2$s تا به ماژول %4$s اجازه کار دهید."
+
+#: classes/woocommerce-yoast-tab.php:63
+#: js/src/initializers/registerAssessments.js:280
+msgid "Product identifiers"
+msgstr "شناسه‌های محصول"
+
+#. translators: %1$s resolves to Yoast SEO
+#: classes/woocommerce-yoast-tab.php:66
+msgid "If you have any of these unique identifiers for your products, please add them here. %1$s will use them in your Schema and OpenGraph output."
+msgstr "اگر هر یک از این شناسه‌های یکتا را برای محصولات خود دارید، لطفاً آنها را اینجا اضافه کنید. %1$s از آنها در خروجی Schema و OpenGraph شما استفاده خواهد کرد."
+
+#: classes/woocommerce-seo.php:546
+msgid "Color"
+msgstr "رنگ"
+
+#: classes/woocommerce-slack.php:42
+msgid "Out of stock"
+msgstr "ناموجود"
+
+#: classes/woocommerce-slack.php:50
+msgid "On backorder"
+msgstr "در پیش‌خرید"
+
+#: classes/woocommerce-slack.php:65
+msgid "Availability"
+msgstr "دسترسی"
