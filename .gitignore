@@ -15,3 +15,5 @@ wp-content/object-cache.php
 *.zip
 *.gz
 wp-content/wflogs/
+!db-audit.sql
+!db-cleanup.sql
