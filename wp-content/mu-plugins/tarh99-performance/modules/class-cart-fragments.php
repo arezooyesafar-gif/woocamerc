@@ -20,17 +20,35 @@ class Tarh99_Perf_Module_Cart_Fragments extends Tarh99_Perf_Module {
 
 	public function fields() {
 		return array(
-			'allow' => array(
+			'allow'       => array(
 				'type'    => 'text',
 				'label'   => 'محدوده‌هایی که cart-fragments مجاز است (با کاما)',
 				'default' => 'cart,checkout',
+			),
+			'enqueue_all' => array(
+				'type'    => 'checkbox',
+				'label'   => 'بارگذاری cart-fragments در همه صفحات (فقط اگر کوکی‌های سبد را از «Never Cache Cookies» راکت حذف کرده‌اید و می‌خواهید شمارنده سبد روی صفحات کش‌شده درست باشد)',
+				'default' => 0,
 			),
 		);
 	}
 
 	public function boot() {
+		if ( $this->opt( 'enqueue_all' ) ) {
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ), 1000 );
+			return;
+		}
 		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue' ), 999 );
 		add_action( 'wp_print_footer_scripts', array( $this, 'dequeue' ), 1 );
+	}
+
+	public function enqueue() {
+		if ( ! Tarh99_Perf_Env::front_ok() || ! Tarh99_Perf_Env::wc() ) {
+			return;
+		}
+		if ( wp_script_is( 'wc-cart-fragments', 'registered' ) ) {
+			wp_enqueue_script( 'wc-cart-fragments' );
+		}
 	}
 
 	public function dequeue() {

@@ -15,7 +15,7 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 	}
 
 	public function description() {
-		return 'انتقال قابلیت‌های امتحان‌شده افزونه قبلی (TPS) به این افزونه: نمایش محصولات مرتبط قبل از اجرای Swiper (برای Delay JS راکت)، اندازه واکنش‌گرای تصاویر کارت محصول و حذف Font Awesome تکراری. وقتی TPS فعال است، هر بخش که TPS انجام می‌دهد اینجا اجرا نمی‌شود.';
+		return 'انتقال قابلیت‌های امتحان‌شده افزونه قبلی (TPS) به این افزونه: نمایش محصولات مرتبط قبل از اجرای Swiper (برای Delay JS راکت)، اندازه واکنش‌گرای تصاویر کارت محصول، اندازه تصویر ۴۲۰ پیکسلی کارت‌ها و حذف Font Awesome تکراری. وقتی TPS فعال است، هر بخش که TPS انجام می‌دهد اینجا اجرا نمی‌شود.';
 	}
 
 	public function fields() {
@@ -35,6 +35,11 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 				'label'   => 'مقدار sizes',
 				'default' => '(max-width: 480px) 48vw, (max-width: 768px) 33vw, (max-width: 1200px) 24vw, 300px',
 			),
+			'card_420'         => array(
+				'type'    => 'checkbox',
+				'label'   => 'ادامه ساخت اندازه تصویر tps_card_420 برای آپلودهای جدید (همان اندازه‌ای که افزونه قبلی ثبت کرده بود)',
+				'default' => 1,
+			),
 			'fa_dedupe'        => array(
 				'type'    => 'checkbox',
 				'label'   => 'حذف فایل‌های Font Awesome که دقیقاً تکراری enqueue شده‌اند',
@@ -52,6 +57,15 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 		}
 		if ( $this->opt( 'fa_dedupe' ) ) {
 			add_action( 'wp_print_styles', array( $this, 'fa_dedupe' ), 999 );
+		}
+		if ( $this->opt( 'card_420' ) ) {
+			add_action( 'after_setup_theme', array( $this, 'card_size' ), 31 );
+		}
+	}
+
+	public function card_size() {
+		if ( ! has_image_size( 'tps_card_420' ) ) {
+			add_image_size( 'tps_card_420', 420, 420, false );
 		}
 	}
 
