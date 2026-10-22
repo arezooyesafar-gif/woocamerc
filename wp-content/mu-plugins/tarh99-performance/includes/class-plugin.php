@@ -35,6 +35,7 @@ final class Tarh99_Perf_Plugin {
 			'class-lcp.php'            => 'Tarh99_Perf_Module_Lcp',
 			'class-pooshe-compat.php'  => 'Tarh99_Perf_Module_Pooshe_Compat',
 			'class-css-usage.php'      => 'Tarh99_Perf_Module_Css_Usage',
+			'class-icon-fonts.php'     => 'Tarh99_Perf_Module_Icon_Fonts',
 			'class-elementor.php'      => 'Tarh99_Perf_Module_Elementor',
 			'class-cart-fragments.php' => 'Tarh99_Perf_Module_Cart_Fragments',
 			'class-asset-rules.php'    => 'Tarh99_Perf_Module_Asset_Rules',

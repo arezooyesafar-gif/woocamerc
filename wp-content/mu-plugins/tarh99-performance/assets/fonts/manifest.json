@@ -1,0 +1,60 @@
+{
+ "version": 1,
+ "faces": [
+  {
+   "handle": "pooshe-main",
+   "family": "Font Awesome 5 Pro",
+   "weight": "300",
+   "style": "normal",
+   "file": "fa-light-300.t99.woff2",
+   "root": "theme",
+   "original": "dist/font/fontawesome/fa-light-300.woff2",
+   "md5": "5ff1542dcc475555920015f954d56ecd",
+   "range": "U+F002,U+F007,U+F00C,U+F013,U+F017,U+F02E,U+F02F,U+F057,U+F058,U+F059,U+F05A,U+F060,U+F06E,U+F073,U+F077,U+F0C9,U+F0D7,U+F0D9,U+F0E0,U+F107,U+F110,U+F140,U+F14A,U+F151,U+F15B,U+F15C,U+F217,U+F26C,U+F290,U+F3A5,U+F458,U+F467,U+F53F"
+  },
+  {
+   "handle": "pooshe-main",
+   "family": "Font Awesome 5 Pro",
+   "weight": "400",
+   "style": "normal",
+   "file": "fa-regular-400.t99.woff2",
+   "root": "theme",
+   "original": "dist/font/fontawesome/fa-regular-400.woff2",
+   "md5": "2e82488238926404a9d7eec1022cf609",
+   "range": "U+F002,U+F007,U+F00C,U+F013,U+F017,U+F02E,U+F02F,U+F057,U+F058,U+F059,U+F05A,U+F060,U+F06E,U+F073,U+F077,U+F0C9,U+F0D7,U+F0D9,U+F0E0,U+F107,U+F110,U+F140,U+F14A,U+F151,U+F15B,U+F15C,U+F217,U+F26C,U+F290,U+F3A5,U+F458,U+F467,U+F53F"
+  },
+  {
+   "handle": "pooshe-main",
+   "family": "Font Awesome 5 Pro",
+   "weight": "900",
+   "style": "normal",
+   "file": "fa-solid-900.t99.woff2",
+   "root": "theme",
+   "original": "dist/font/fontawesome/fa-solid-900.woff2",
+   "md5": "3b944a15735413ab9c3c2bc0afb6fb46",
+   "range": "U+F002,U+F007,U+F00C,U+F013,U+F017,U+F02E,U+F02F,U+F057,U+F058,U+F059,U+F05A,U+F060,U+F06E,U+F073,U+F077,U+F0C9,U+F0D7,U+F0D9,U+F0E0,U+F107,U+F110,U+F140,U+F14A,U+F151,U+F15B,U+F15C,U+F217,U+F26C,U+F290,U+F3A5,U+F458,U+F467,U+F53F"
+  },
+  {
+   "handle": "pooshe-main",
+   "family": "Font Awesome 5 Brands",
+   "weight": "400",
+   "style": "normal",
+   "file": "fa-brands-400.t99.woff2",
+   "root": "theme",
+   "original": "dist/font/fontawesome/fa-brands-400.woff2",
+   "md5": "3443cc888af3c04b49389a466cf74f0f",
+   "range": "U+F1F2"
+  },
+  {
+   "handle": "elementor-icons",
+   "family": "eicons",
+   "weight": "400",
+   "style": "normal",
+   "file": "eicons.t99.woff2",
+   "root": "plugins",
+   "original": "elementor/assets/lib/eicons/fonts/eicons.woff2",
+   "md5": "ebea18870b1603bcb7de454c24ffb732",
+   "range": "U+E87D,U+E87E"
+  }
+ ]
+}

@@ -9,8 +9,9 @@ wp-content/mu-plugins/
     ├── tarh99-performance.php
     ├── index.php
     ├── assets/index.php
+    ├── assets/fonts/ (۵ فونت آیکن سبک + manifest.json)
     ├── includes/  (۹ فایل)
-    └── modules/   (۲۰ ماژول)
+    └── modules/   (۲۱ ماژول)
 ```
 فایل `elementor-safe-mode.php` که الان در `mu-plugins` هست دست نمی‌خورد.
 
@@ -73,6 +74,7 @@ wp-content/mu-plugins/
 | `lcp` | فرانت | روشن | eager/high تصویر اصلی محصول و ۲ تصویر اول آرشیو، حذف lazy اجباری قالب، استثنای راکت، قوانین LCP دلخواه (تصویر یا پس‌زمینه کاروسل المنتور با preload خودکار) |
 | `pooshe_compat` | فرانت | روشن | محصولات مرتبط قبل از Swiper، sizes کارت‌ها، Font Awesome تکراری |
 | `css_usage` | فرانت | **خاموش** (اول پیش‌نمایش) | CSS استفاده‌شده هر صفحه داخل هد + فایل کامل بدون مسدود کردن؛ جایگزین محلی Remove Unused CSS راکت — راهنما: `docs/css-usage.md` |
+| `icon_fonts` | فرانت | **خاموش** | نسخه چندکیلوبایتی Font Awesome و eicons برای آیکن‌های صفحه اصلی با unicode-range؛ آیکن‌های دیگر از فایل کامل — راهنما: `docs/icon-fonts.md` |
 | `elementor` | فرانت | روشن | font-display: swap (Google Fonts دست‌نخورده) |
 | `cart_fragments` | فرانت | روشن | فقط سبد/تسویه (مثل رفتار فعلی قالب) |
 | `asset_rules` | فرانت | روشن (بدون قانون) | لود شرطی CSS/JS + اسکنر |
