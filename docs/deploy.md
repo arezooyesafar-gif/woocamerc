@@ -70,7 +70,7 @@ wp-content/mu-plugins/
 |---|---|---|---|
 | `head_cleanup` | فرانت | روشن | ایموجی، oEmbed، generator، RSD، shortlink، dashicons مهمان |
 | `fonts` | فرانت | روشن | ۲ preload به‌جای ۳ |
-| `lcp` | فرانت | روشن | eager/high تصویر اصلی محصول و ۲ تصویر اول آرشیو، حذف lazy اجباری قالب، استثنای راکت، قوانین LCP دلخواه |
+| `lcp` | فرانت | روشن | eager/high تصویر اصلی محصول و ۲ تصویر اول آرشیو، حذف lazy اجباری قالب، استثنای راکت، قوانین LCP دلخواه (تصویر یا پس‌زمینه کاروسل المنتور با preload خودکار) |
 | `pooshe_compat` | فرانت | روشن | محصولات مرتبط قبل از Swiper، sizes کارت‌ها، Font Awesome تکراری |
 | `css_usage` | فرانت | **خاموش** (اول پیش‌نمایش) | CSS استفاده‌شده هر صفحه داخل هد + فایل کامل بدون مسدود کردن؛ جایگزین محلی Remove Unused CSS راکت — راهنما: `docs/css-usage.md` |
 | `elementor` | فرانت | روشن | font-display: swap (Google Fonts دست‌نخورده) |

@@ -9,6 +9,7 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 	private $product_done = false;
 	private $archive_count = 0;
 	private $rules = null;
+	private $bg_preloaded = false;
 
 	public function id() {
 		return 'lcp';
@@ -55,11 +56,16 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 				'type'    => 'textarea',
 				'label'   => 'تصاویر LCP دلخواه — هر خط: محدوده | بخشی از آدرس تصویر. مثال: front | banner-mobile.webp',
 				'default' => '',
-				'help'    => 'محدوده‌ها: all, front, shop, product, product_cat, product_archive, page, post, page:ID, url:/path. اگر آدرس کامل (https://...) بنویسید، در هد هم preload می‌شود.',
+				'help'    => 'محدوده‌ها: all, front, shop, product, product_cat, product_archive, page, post, page:ID, url:/path. اگر آدرس کامل (https://...) بنویسید، در هد هم preload می‌شود. برای تصویر پس‌زمینه (مثل اسلاید کاروسل المنتور) می‌توانید بخشی از نام فایل یا متن aria-label همان المان را که PageSpeed نشان می‌دهد بنویسید؛ آدرس تصویر خودکار پیدا و در ابتدای هد preload می‌شود.',
 			),
 			'preload_custom'  => array(
 				'type'    => 'checkbox',
-				'label'   => 'برای قوانین دلخواه با آدرس کامل، تگ preload در هد اضافه شود',
+				'label'   => 'برای قوانین دلخواه با آدرس کامل و تصاویر پس‌زمینه، تگ preload در هد اضافه شود',
+				'default' => 1,
+			),
+			'rocket_atf_off'  => array(
+				'type'    => 'checkbox',
+				'label'   => 'وقتی تصویر پس‌زمینه دلخواه preload شد، preload خودکار LCP راکت (data-rocket-preload) در همان صفحه حذف شود تا با تصویر اشتباه رقابت نکند',
 				'default' => 1,
 			),
 		);
@@ -77,6 +83,7 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		add_filter( 'rocket_lazyload_excluded_attributes', array( $this, 'rocket_excluded_attributes' ) );
 		add_action( 'template_redirect', array( $this, 'maybe_buffer' ), 2 );
 		add_action( 'wp_head', array( $this, 'print_preload' ), 1 );
+		add_filter( 'rocket_above_the_fold_optimization', array( $this, 'rocket_atf' ), 20 );
 	}
 
 	public function unhook_pooshe_lazy() {
@@ -224,8 +231,19 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		ob_start( array( $this, 'filter_html' ) );
 	}
 
+	public function rocket_atf( $allowed ) {
+		if ( $this->bg_preloaded && $this->opt( 'rocket_atf_off' ) ) {
+			return false;
+		}
+		return $allowed;
+	}
+
 	public function filter_html( $html ) {
-		if ( ! is_string( $html ) || false === stripos( $html, '<img' ) ) {
+		if ( ! is_string( $html ) ) {
+			return $html;
+		}
+		$html = $this->preload_background( $html );
+		if ( false === stripos( $html, '<img' ) ) {
 			return $html;
 		}
 		$fragments = array();
@@ -259,6 +277,52 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 			}
 		}
 		return $changed ? $processor->get_updated_html() : $html;
+	}
+
+	private function preload_background( $html ) {
+		if ( ! $this->opt( 'preload_custom' ) || false !== strpos( $html, 'data-tarh99-lcp-bg' ) || false === stripos( $html, 'background' ) ) {
+			return $html;
+		}
+		$fragments = array();
+		foreach ( $this->active_rules() as $rule ) {
+			$fragment = trim( html_entity_decode( (string) $rule['fragment'], ENT_QUOTES, 'UTF-8' ) );
+			if ( '' !== $fragment && 0 !== strpos( $fragment, 'http' ) ) {
+				$fragments[] = $fragment;
+			}
+		}
+		if ( empty( $fragments ) || ! preg_match_all( '#<[a-zA-Z][a-zA-Z0-9-]*\s[^>]*(?:background|data-bg)[^>]*>#i', $html, $tags ) ) {
+			return $html;
+		}
+		foreach ( $tags[0] as $tag ) {
+			$decoded = html_entity_decode( $tag, ENT_QUOTES, 'UTF-8' );
+			$url     = '';
+			if ( preg_match( '/background(?:-image)?\s*:[^;>]*?url\(\s*["\']?([^"\')]+)["\']?\s*\)/i', $decoded, $m ) ) {
+				$url = trim( $m[1] );
+			} elseif ( preg_match( '/\sdata-(?:background|bg)\s*=\s*["\']([^"\']+)["\']/i', $decoded, $m ) ) {
+				$url = trim( $m[1] );
+				if ( preg_match( '/url\(\s*["\']?([^"\')]+)/i', $url, $inner ) ) {
+					$url = trim( $inner[1] );
+				}
+			}
+			if ( '' === $url || 0 === strpos( $url, 'data:' ) ) {
+				continue;
+			}
+			$haystack = $decoded . ' ' . rawurldecode( $url );
+			foreach ( $fragments as $fragment ) {
+				if ( false === stripos( $haystack, $fragment ) && false === stripos( $haystack, rawurldecode( $fragment ) ) ) {
+					continue;
+				}
+				$link = '<link rel="preload" as="image" href="' . esc_attr( $url ) . '" fetchpriority="high" data-tarh99-lcp-bg>';
+				$anchor = preg_match( '#<meta\s+charset\s*=[^>]*>#i', $html ) ? '#<meta\s+charset\s*=[^>]*>#i' : '#<head\b[^>]*>#i';
+				$out    = preg_replace( $anchor, '$0' . "\n" . str_replace( '$', '\\$', $link ), $html, 1, $count );
+				if ( ! is_string( $out ) || 1 !== $count ) {
+					return $html;
+				}
+				$this->bg_preloaded = true;
+				return $out;
+			}
+		}
+		return $html;
 	}
 
 	public function print_preload() {
