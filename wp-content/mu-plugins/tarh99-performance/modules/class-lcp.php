@@ -67,6 +67,11 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 				'label'   => 'وقتی تصویر پس‌زمینه دلخواه preload شد، preload خودکار LCP راکت (data-rocket-preload) در همان صفحه حذف شود تا با تصویر اشتباه رقابت نکند',
 				'default' => 1,
 			),
+			'rocket_stale_off' => array(
+				'type'    => 'checkbox',
+				'label'   => 'در فروشگاه، دسته‌ها و صفحه محصول، preload تصویری که راکت قبلاً ذخیره کرده ولی دیگر در صفحه وجود ندارد (مثلاً بعد از اضافه شدن محصول جدید به دسته) حذف شود تا با تصویر واقعی رقابت نکند',
+				'default' => 1,
+			),
 		);
 	}
 
@@ -235,11 +240,42 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 			return $html;
 		}
 		$html = $this->preload_background( $html );
+		if ( $this->opt( 'rocket_stale_off' ) ) {
+			$html = $this->strip_stale_rocket_preload( $html );
+		}
 		if ( ! $this->opt( 'rocket_atf_off' ) || false === strpos( $html, 'data-tarh99-lcp-bg' ) || false === strpos( $html, 'data-rocket-preload' ) ) {
 			return $html;
 		}
 		$out = preg_replace( '#<link\b(?=[^>]*\sdata-rocket-preload\b)(?=[^>]*\sas\s*=\s*["\']?image\b)[^>]*>\s*#i', '', $html );
 		return is_string( $out ) ? $out : $html;
+	}
+
+	private function strip_stale_rocket_preload( $html ) {
+		if ( false === strpos( $html, 'data-rocket-preload' ) || ! function_exists( 'is_product' ) ) {
+			return $html;
+		}
+		if ( ! ( is_shop() || is_product_taxonomy() || is_product() ) ) {
+			return $html;
+		}
+		if ( ! preg_match_all( '#<link\b(?=[^>]*\sdata-rocket-preload\b)(?=[^>]*\sas\s*=\s*["\']?image\b)[^>]*>\s*#i', $html, $links ) ) {
+			return $html;
+		}
+		foreach ( array_unique( $links[0] ) as $tag ) {
+			if ( ! preg_match( '#\shref\s*=\s*(["\'])([^"\']+)\1#i', $tag, $href ) ) {
+				continue;
+			}
+			$file = rawurldecode( basename( (string) wp_parse_url( html_entity_decode( $href[2], ENT_QUOTES ), PHP_URL_PATH ) ) );
+			$stem = preg_replace( '/(-\d+x\d+)?(-scaled)?\.[a-z0-9]+$/i', '', $file );
+			if ( ! is_string( $stem ) || strlen( $stem ) < 4 ) {
+				continue;
+			}
+			$rest = str_replace( $tag, '', $html );
+			if ( false !== strpos( $rest, $stem ) || false !== stripos( $rest, rawurlencode( $stem ) ) ) {
+				continue;
+			}
+			$html = $rest;
+		}
+		return $html;
 	}
 
 	public function filter_html( $html ) {
