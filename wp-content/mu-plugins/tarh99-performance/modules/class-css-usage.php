@@ -52,6 +52,11 @@ class Tarh99_Perf_Module_Css_Usage extends Tarh99_Perf_Module {
 				'label'   => 'فایل‌های CSS کامل بعد از نمایش صفحه هم بارگذاری شوند (برای حفظ کامل ظاهر؛ خاموش نکنید)',
 				'default' => 1,
 			),
+			'full_after_load' => array(
+				'type'    => 'checkbox',
+				'label'   => 'فایل‌های CSS کامل بعد از رویداد load صفحه دانلود شوند (در رقابت با تصویر LCP نباشند)',
+				'default' => 1,
+			),
 			'js_tokens'  => array(
 				'type'    => 'checkbox',
 				'label'   => 'کلاس‌هایی که جاوااسکریپت‌های همان صفحه اضافه می‌کنند هم نگه داشته شوند',
@@ -73,6 +78,42 @@ class Tarh99_Perf_Module_Css_Usage extends Tarh99_Perf_Module {
 
 	public function boot() {
 		add_action( 'template_redirect', array( $this, 'maybe_buffer' ), 3 );
+		add_filter( 'rocket_buffer', array( $this, 'defer_full_css' ), 200000 );
+		add_filter( 'rocket_delay_js_exclusions', array( $this, 'delay_js_exclusions' ) );
+	}
+
+	public function delay_js_exclusions( $exclusions ) {
+		$exclusions   = is_array( $exclusions ) ? $exclusions : array();
+		$exclusions[] = 'tarh99-full-css';
+		return $exclusions;
+	}
+
+	public function defer_full_css( $html ) {
+		if ( ! is_string( $html ) || ! $this->opt( 'full_css' ) || ! $this->opt( 'full_after_load' ) || false === strpos( $html, 'data-tarh99-full' ) || false !== strpos( $html, 'tarh99-full-css' ) ) {
+			return $html;
+		}
+		$changed = 0;
+		$out     = preg_replace_callback(
+			'#<link\b[^>]*\sdata-tarh99-full\b[^>]*>#i',
+			function ( $m ) use ( &$changed ) {
+				$tag = preg_replace( '#\shref\s*=\s*(["\'])#i', ' data-tarh99-href=$1', $m[0], 1, $count );
+				if ( ! is_string( $tag ) || 1 !== $count ) {
+					return $m[0];
+				}
+				++$changed;
+				return $tag;
+			},
+			$html
+		);
+		if ( ! is_string( $out ) || 0 === $changed ) {
+			return $html;
+		}
+		$script = '<script id="tarh99-full-css">(function(){var d=document;function f(){var l=d.querySelectorAll("link[data-tarh99-href]");for(var i=0;i<l.length;i++){l[i].setAttribute("href",l[i].getAttribute("data-tarh99-href"));l[i].removeAttribute("data-tarh99-href");}}function s(){setTimeout(f,0);}if(d.readyState==="complete"){s();}else{window.addEventListener("load",s);}})();</script>';
+		$pos    = strripos( $out, '</body>' );
+		if ( false === $pos ) {
+			return $html;
+		}
+		return substr( $out, 0, $pos ) . $script . substr( $out, $pos );
 	}
 
 	public function preview_boot() {
