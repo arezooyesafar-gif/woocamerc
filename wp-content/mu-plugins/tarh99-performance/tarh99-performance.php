@@ -16,6 +16,7 @@ require_once TARH99_PERF_DIR . 'includes/class-env.php';
 require_once TARH99_PERF_DIR . 'includes/class-settings.php';
 require_once TARH99_PERF_DIR . 'includes/class-cache-store.php';
 require_once TARH99_PERF_DIR . 'includes/class-assets.php';
+require_once TARH99_PERF_DIR . 'includes/class-css-tree.php';
 require_once TARH99_PERF_DIR . 'includes/class-module.php';
 require_once TARH99_PERF_DIR . 'includes/class-plugin.php';
 

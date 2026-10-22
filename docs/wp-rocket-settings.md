@@ -16,7 +16,7 @@
 | گزینه | مقدار | توضیح |
 |---|---|---|
 | Minify CSS files | ✅ | — |
-| Optimize CSS delivery (بهینه‌سازی تحویل CSS) | ❌ **خاموش** | Remove Unused CSS سرویس ابری است و نسخه نصب‌شده آن را به `wpsaas.gpltimes.com` می‌فرستد. روی سایت هیچ صفحه‌ای `completed` نشد (خطای 400 و «We could not authenticate»)، صف آن بیش از ۸۰۰۰ ردیف شد و صفحات در انتظار از پیش‌بارگذاری قفل می‌شدند. Load CSS asynchronously هم به سرویس رسمی Critical CSS و لایسنس اصلی وابسته است و بدون آن صفحه لحظه‌ای بدون استایل دیده می‌شود. وضعیت صف: `SELECT status, COUNT(*) FROM wp_wpr_rucss_used_css GROUP BY status;` |
+| Optimize CSS delivery (بهینه‌سازی تحویل CSS) | ❌ **خاموش** | Remove Unused CSS سرویس ابری است و نسخه نصب‌شده آن را به `wpsaas.gpltimes.com` می‌فرستد. روی سایت هیچ صفحه‌ای `completed` نشد (خطای 400 و «We could not authenticate»)، صف آن بیش از ۸۰۰۰ ردیف شد و صفحات در انتظار از پیش‌بارگذاری قفل می‌شدند. Load CSS asynchronously هم به سرویس رسمی Critical CSS و لایسنس اصلی وابسته است و بدون آن صفحه لحظه‌ای بدون استایل دیده می‌شود. جایگزین: ماژول `css_usage` افزونه tarh99-performance (`docs/css-usage.md`). وضعیت صف: `SELECT status, COUNT(*) FROM wp_wpr_rucss_used_css GROUP BY status;` |
 | CSS Safelist (برای RUCSS) | مقادیر زیر | کلاس‌هایی که با جاوااسکریپت اضافه می‌شوند و نباید حذف شوند |
 | Minify JavaScript files | ✅ | — |
 | Combine JavaScript files | ❌ | با HTTP/2 مفید نیست و ریسک خرابی دارد |

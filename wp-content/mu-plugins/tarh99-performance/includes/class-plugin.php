@@ -34,6 +34,7 @@ final class Tarh99_Perf_Plugin {
 			'class-fonts.php'          => 'Tarh99_Perf_Module_Fonts',
 			'class-lcp.php'            => 'Tarh99_Perf_Module_Lcp',
 			'class-pooshe-compat.php'  => 'Tarh99_Perf_Module_Pooshe_Compat',
+			'class-css-usage.php'      => 'Tarh99_Perf_Module_Css_Usage',
 			'class-elementor.php'      => 'Tarh99_Perf_Module_Elementor',
 			'class-cart-fragments.php' => 'Tarh99_Perf_Module_Cart_Fragments',
 			'class-asset-rules.php'    => 'Tarh99_Perf_Module_Asset_Rules',
@@ -77,7 +78,17 @@ final class Tarh99_Perf_Plugin {
 
 	public function boot_modules() {
 		foreach ( $this->modules as $id => $module ) {
-			if ( isset( $this->booted[ $id ] ) || ! $module->enabled() ) {
+			if ( isset( $this->booted[ $id ] ) ) {
+				continue;
+			}
+			if ( ! $module->enabled() ) {
+				if ( method_exists( $module, 'preview_boot' ) && ! Tarh99_Perf_Settings::safe_mode() ) {
+					try {
+						$module->preview_boot();
+					} catch ( Throwable $e ) {
+						continue;
+					}
+				}
 				continue;
 			}
 			try {

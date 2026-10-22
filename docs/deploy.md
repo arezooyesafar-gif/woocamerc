@@ -9,8 +9,8 @@ wp-content/mu-plugins/
     ├── tarh99-performance.php
     ├── index.php
     ├── assets/index.php
-    ├── includes/  (۸ فایل)
-    └── modules/   (۱۹ ماژول)
+    ├── includes/  (۹ فایل)
+    └── modules/   (۲۰ ماژول)
 ```
 فایل `elementor-safe-mode.php` که الان در `mu-plugins` هست دست نمی‌خورد.
 
@@ -72,6 +72,7 @@ wp-content/mu-plugins/
 | `fonts` | فرانت | روشن | ۲ preload به‌جای ۳ |
 | `lcp` | فرانت | روشن | eager/high تصویر اصلی محصول و ۲ تصویر اول آرشیو، حذف lazy اجباری قالب، استثنای راکت، قوانین LCP دلخواه |
 | `pooshe_compat` | فرانت | روشن | محصولات مرتبط قبل از Swiper، sizes کارت‌ها، Font Awesome تکراری |
+| `css_usage` | فرانت | **خاموش** (اول پیش‌نمایش) | CSS استفاده‌شده هر صفحه داخل هد + فایل کامل بدون مسدود کردن؛ جایگزین محلی Remove Unused CSS راکت — راهنما: `docs/css-usage.md` |
 | `elementor` | فرانت | روشن | font-display: swap (Google Fonts دست‌نخورده) |
 | `cart_fragments` | فرانت | روشن | فقط سبد/تسویه (مثل رفتار فعلی قالب) |
 | `asset_rules` | فرانت | روشن (بدون قانون) | لود شرطی CSS/JS + اسکنر |
