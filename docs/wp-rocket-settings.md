@@ -8,7 +8,7 @@
 | گزینه | مقدار | دلیل |
 |---|---|---|
 | Enable caching for mobile devices | ✅ روشن | — |
-| Separate cache files for mobile devices | ❌ خاموش | قالب واکنش‌گراست و HTML موبایل و دسکتاپ یکی است؛ روشن بودنش تعداد کش‌ها را دو برابر و پیش‌بارگذاری را نصف می‌کند |
+| Separate cache files for mobile devices | (در نسخه نصب‌شده گزینه‌ای در تنظیمات ندارد) | WP Rocket این گزینه را مخفی و همیشه روشن نگه می‌دارد؛ تغییرش لازم نیست |
 | Enable caching for logged-in WordPress users | ❌ خاموش | هدر، سبد، نام کاربر و پنل کاربری uPanel شخصی‌اند |
 | Cache Lifespan | **10 ساعت** (پیش‌فرض) | صفحات کش‌شده نانس‌های ووکامرس، Wooslider و اشتراک‌یار دارند که بعد از ۱۲–۲۴ ساعت منقضی می‌شوند؛ عمر بیشتر = خطای اسلایدرها و افزودن به سبد روی صفحات قدیمی |
 
@@ -16,14 +16,14 @@
 | گزینه | مقدار | توضیح |
 |---|---|---|
 | Minify CSS files | ✅ | — |
-| Optimize CSS delivery → **Remove Unused CSS** | ✅ (اولویت اول برای FCP/LCP) | `main.css` قالب ۵۷۳KB است و بخش زیادی از آن در هر صفحه استفاده نمی‌شود. این قابلیت سرویس ابری راکت است و به لایسنس معتبر نیاز دارد؛ اگر وضعیت «Pending/Failed» ماند، به‌جای آن «Load CSS asynchronously» را امتحان کنید. |
+| Optimize CSS delivery (بهینه‌سازی تحویل CSS) | ❌ **خاموش** | Remove Unused CSS سرویس ابری است و نسخه نصب‌شده آن را به `wpsaas.gpltimes.com` می‌فرستد. روی سایت هیچ صفحه‌ای `completed` نشد (خطای 400 و «We could not authenticate»)، صف آن بیش از ۸۰۰۰ ردیف شد و صفحات در انتظار از پیش‌بارگذاری قفل می‌شدند. Load CSS asynchronously هم به سرویس رسمی Critical CSS و لایسنس اصلی وابسته است و بدون آن صفحه لحظه‌ای بدون استایل دیده می‌شود. وضعیت صف: `SELECT status, COUNT(*) FROM wp_wpr_rucss_used_css GROUP BY status;` |
 | CSS Safelist (برای RUCSS) | مقادیر زیر | کلاس‌هایی که با جاوااسکریپت اضافه می‌شوند و نباید حذف شوند |
 | Minify JavaScript files | ✅ | — |
 | Combine JavaScript files | ❌ | با HTTP/2 مفید نیست و ریسک خرابی دارد |
 | Load JavaScript deferred | ✅ | قالب اسکریپت‌های خودش را از قبل defer کرده است. jQuery را در «Excluded JavaScript Files» نگذارید مگر خطا دیدید؛ اگر اسکریپت inline خطای `jQuery is not defined` داد، گزینه **Safe Mode for jQuery** را روشن کنید. |
 | **Delay JavaScript execution** | ✅ فقط با استثناهای زیر | TBT سایت سبز است؛ هدف Delay فقط اسکریپت‌های جانبی است. بدون این استثناها اسلایدرهای Swiper بالای صفحه تا اولین حرکت کاربر مخفی می‌مانند (قالب Swiper راه‌اندازی‌نشده را `display:none` می‌کند)، جستجوی زنده و منوها تا اولین لمس کار نمی‌کنند و اسلایدرهای Wooslider خالی می‌مانند. |
 
-**CSS Safelist (Remove Unused CSS):**
+**CSS Safelist (فقط اگر روزی Remove Unused CSS با لایسنس معتبر روشن شد):**
 ```
 .swiper(.*)
 .modal(.*)
