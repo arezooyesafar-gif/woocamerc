@@ -9,7 +9,6 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 	private $product_done = false;
 	private $archive_count = 0;
 	private $rules = null;
-	private $bg_preloaded = false;
 
 	public function id() {
 		return 'lcp';
@@ -83,7 +82,7 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		add_filter( 'rocket_lazyload_excluded_attributes', array( $this, 'rocket_excluded_attributes' ) );
 		add_action( 'template_redirect', array( $this, 'maybe_buffer' ), 2 );
 		add_action( 'wp_head', array( $this, 'print_preload' ), 1 );
-		add_filter( 'rocket_above_the_fold_optimization', array( $this, 'rocket_atf' ), 20 );
+		add_filter( 'rocket_buffer', array( $this, 'strip_rocket_preload' ), 30 );
 	}
 
 	public function unhook_pooshe_lazy() {
@@ -231,11 +230,12 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		ob_start( array( $this, 'filter_html' ) );
 	}
 
-	public function rocket_atf( $allowed ) {
-		if ( $this->bg_preloaded && $this->opt( 'rocket_atf_off' ) ) {
-			return false;
+	public function strip_rocket_preload( $html ) {
+		if ( ! is_string( $html ) || ! $this->opt( 'rocket_atf_off' ) || false === strpos( $html, 'data-tarh99-lcp-bg' ) || false === strpos( $html, 'data-rocket-preload' ) ) {
+			return $html;
 		}
-		return $allowed;
+		$out = preg_replace( '#<link\b[^>]*\sdata-rocket-preload\b[^>]*>\s*#i', '', $html );
+		return is_string( $out ) ? $out : $html;
 	}
 
 	public function filter_html( $html ) {
@@ -318,7 +318,6 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 				if ( ! is_string( $out ) || 1 !== $count ) {
 					return $html;
 				}
-				$this->bg_preloaded = true;
 				return $out;
 			}
 		}
