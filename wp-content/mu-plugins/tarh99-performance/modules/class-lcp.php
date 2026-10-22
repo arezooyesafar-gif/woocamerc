@@ -231,7 +231,11 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 	}
 
 	public function strip_rocket_preload( $html ) {
-		if ( ! is_string( $html ) || ! $this->opt( 'rocket_atf_off' ) || false === strpos( $html, 'data-tarh99-lcp-bg' ) || false === strpos( $html, 'data-rocket-preload' ) ) {
+		if ( ! is_string( $html ) || ! Tarh99_Perf_Env::front_ok() ) {
+			return $html;
+		}
+		$html = $this->preload_background( $html );
+		if ( ! $this->opt( 'rocket_atf_off' ) || false === strpos( $html, 'data-tarh99-lcp-bg' ) || false === strpos( $html, 'data-rocket-preload' ) ) {
 			return $html;
 		}
 		$out = preg_replace( '#<link\b(?=[^>]*\sdata-rocket-preload\b)(?=[^>]*\sas\s*=\s*["\']?image\b)[^>]*>\s*#i', '', $html );
