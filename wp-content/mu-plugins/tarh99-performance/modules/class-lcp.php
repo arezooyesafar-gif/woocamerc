@@ -82,7 +82,7 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		add_filter( 'rocket_lazyload_excluded_attributes', array( $this, 'rocket_excluded_attributes' ) );
 		add_action( 'template_redirect', array( $this, 'maybe_buffer' ), 2 );
 		add_action( 'wp_head', array( $this, 'print_preload' ), 1 );
-		add_filter( 'rocket_buffer', array( $this, 'strip_rocket_preload' ), 30 );
+		add_filter( 'rocket_buffer', array( $this, 'strip_rocket_preload' ), 100010 );
 	}
 
 	public function unhook_pooshe_lazy() {
@@ -234,7 +234,7 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		if ( ! is_string( $html ) || ! $this->opt( 'rocket_atf_off' ) || false === strpos( $html, 'data-tarh99-lcp-bg' ) || false === strpos( $html, 'data-rocket-preload' ) ) {
 			return $html;
 		}
-		$out = preg_replace( '#<link\b[^>]*\sdata-rocket-preload\b[^>]*>\s*#i', '', $html );
+		$out = preg_replace( '#<link\b(?=[^>]*\sdata-rocket-preload\b)(?=[^>]*\sas\s*=\s*["\']?image\b)[^>]*>\s*#i', '', $html );
 		return is_string( $out ) ? $out : $html;
 	}
 
