@@ -47,7 +47,6 @@ final class Tarh99_Perf_Plugin {
 			'class-queries.php'        => 'Tarh99_Perf_Module_Queries',
 			'class-wc-admin.php'       => 'Tarh99_Perf_Module_Wc_Admin',
 			'class-admin-http.php'     => 'Tarh99_Perf_Module_Admin_Http',
-			'class-rtl-skip.php'       => 'Tarh99_Perf_Module_Rtl_Skip',
 			'class-cleanup.php'        => 'Tarh99_Perf_Module_Cleanup',
 			'class-image-compress.php' => 'Tarh99_Perf_Module_Image_Compress',
 			'class-revisions.php'      => 'Tarh99_Perf_Module_Revisions',
@@ -69,14 +68,6 @@ final class Tarh99_Perf_Plugin {
 	}
 
 	private function early() {
-		$rtl = $this->module( 'rtl_skip' );
-		if ( $rtl && $rtl->enabled() && method_exists( $rtl, 'early' ) ) {
-			try {
-				$rtl->early();
-			} catch ( Throwable $e ) {
-				unset( $e );
-			}
-		}
 		$profiler = $this->module( 'profiler' );
 		if ( $profiler && $profiler->enabled() && method_exists( $profiler, 'early' ) ) {
 			try {
