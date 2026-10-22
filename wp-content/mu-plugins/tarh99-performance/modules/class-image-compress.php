@@ -82,6 +82,11 @@ class Tarh99_Perf_Module_Image_Compress extends Tarh99_Perf_Module {
 				'min'     => 5,
 				'max'     => 40,
 			),
+			'night_only' => array(
+				'type'    => 'checkbox',
+				'label'   => 'فقط بین ساعت ۱ تا ۷ صبح اجرا شود (در ساعات بازدید، پردازنده هاست آزاد بماند)',
+				'default' => 1,
+			),
 			'backup'     => array(
 				'type'    => 'checkbox',
 				'label'   => 'از هر فایل قبل از جایگزینی نسخه پشتیبان نگه داشته شود',
@@ -172,9 +177,15 @@ class Tarh99_Perf_Module_Image_Compress extends Tarh99_Perf_Module {
 		return trailingslashit( $uploads['basedir'] );
 	}
 
-	public function run() {
+	public function run( $manual = false ) {
 		if ( get_transient( 'tarh99_perf_ic_lock' ) || ! $this->editor_supported() ) {
 			return;
+		}
+		if ( true !== $manual && $this->opt( 'night_only' ) ) {
+			$hour = (int) wp_date( 'G' );
+			if ( $hour < 1 || $hour >= 7 ) {
+				return;
+			}
 		}
 		set_transient( 'tarh99_perf_ic_lock', 1, 5 * MINUTE_IN_SECONDS );
 		$this->deadline = microtime( true ) + (int) $this->opt( 'time_limit' );

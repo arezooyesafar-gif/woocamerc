@@ -51,6 +51,7 @@ final class Tarh99_Perf_Plugin {
 			'class-image-compress.php' => 'Tarh99_Perf_Module_Image_Compress',
 			'class-revisions.php'      => 'Tarh99_Perf_Module_Revisions',
 			'class-monitor.php'        => 'Tarh99_Perf_Module_Monitor',
+			'class-profiler.php'       => 'Tarh99_Perf_Module_Profiler',
 			'class-theme-guard.php'    => 'Tarh99_Perf_Module_Theme_Guard',
 		);
 		foreach ( $files as $file => $class ) {
@@ -67,6 +68,14 @@ final class Tarh99_Perf_Plugin {
 	}
 
 	private function early() {
+		$profiler = $this->module( 'profiler' );
+		if ( $profiler && $profiler->enabled() && method_exists( $profiler, 'early' ) ) {
+			try {
+				$profiler->early();
+			} catch ( Throwable $e ) {
+				unset( $e );
+			}
+		}
 		$ajax = $this->module( 'ajax_cache' );
 		if ( ! $ajax || ! $ajax->enabled() || ! method_exists( $ajax, 'early_serve' ) ) {
 			return;

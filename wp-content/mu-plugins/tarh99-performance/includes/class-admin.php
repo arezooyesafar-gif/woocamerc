@@ -87,7 +87,7 @@ final class Tarh99_Perf_Admin {
 				$ic = $this->plugin->module( 'image_compress' );
 				if ( $ic && $ic->enabled() ) {
 					delete_transient( 'tarh99_perf_ic_lock' );
-					$ic->run();
+					$ic->run( true );
 				} else {
 					$msg = 'ic_off';
 				}
@@ -98,6 +98,9 @@ final class Tarh99_Perf_Admin {
 					$result = $ic->restore( 20 );
 					$msg    = $result[1] > 0 ? 'ic_restore_more' : 'ic_restored';
 				}
+				break;
+			case 'clear_profile':
+				delete_option( 'tarh99_perf_profile_log' );
 				break;
 			case 'flush_cache':
 				Tarh99_Perf_Cache_Store::bump();
@@ -424,6 +427,11 @@ final class Tarh99_Perf_Admin {
 	}
 
 	private function render_tools() {
+		$profiler = $this->plugin->module( 'profiler' );
+		if ( $profiler ) {
+			$profiler->render_log();
+			$this->tool_button( 'clear_profile', 'پاک‌کردن لاگ صفحات کند', 'tools' );
+		}
 		echo '<div class="t99-box"><h2>عملیات</h2>';
 		$this->tool_button( 'run_cleanup', 'اجرای پاکسازی همین حالا', 'tools', 'button button-primary', 'پاکسازی دیتابیس اجرا شود؟ (قبل از اولین اجرا بکاپ بگیرید)' );
 		$this->tool_button( 'flush_cache', 'پاک‌کردن کش ایجکس این افزونه', 'tools' );
