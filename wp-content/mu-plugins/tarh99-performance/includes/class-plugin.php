@@ -48,6 +48,7 @@ final class Tarh99_Perf_Plugin {
 			'class-wc-admin.php'       => 'Tarh99_Perf_Module_Wc_Admin',
 			'class-admin-http.php'     => 'Tarh99_Perf_Module_Admin_Http',
 			'class-cleanup.php'        => 'Tarh99_Perf_Module_Cleanup',
+			'class-image-compress.php' => 'Tarh99_Perf_Module_Image_Compress',
 			'class-revisions.php'      => 'Tarh99_Perf_Module_Revisions',
 			'class-monitor.php'        => 'Tarh99_Perf_Module_Monitor',
 			'class-theme-guard.php'    => 'Tarh99_Perf_Module_Theme_Guard',

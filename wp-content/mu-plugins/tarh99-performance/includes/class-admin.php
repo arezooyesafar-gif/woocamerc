@@ -83,6 +83,22 @@ final class Tarh99_Perf_Admin {
 					$msg = 'cleanup_off';
 				}
 				break;
+			case 'ic_run':
+				$ic = $this->plugin->module( 'image_compress' );
+				if ( $ic && $ic->enabled() ) {
+					delete_transient( 'tarh99_perf_ic_lock' );
+					$ic->run();
+				} else {
+					$msg = 'ic_off';
+				}
+				break;
+			case 'ic_restore':
+				$ic = $this->plugin->module( 'image_compress' );
+				if ( $ic ) {
+					$result = $ic->restore( 20 );
+					$msg    = $result[1] > 0 ? 'ic_restore_more' : 'ic_restored';
+				}
+				break;
 			case 'flush_cache':
 				Tarh99_Perf_Cache_Store::bump();
 				Tarh99_Perf_Cache_Store::purge_files( 0 );
@@ -190,6 +206,9 @@ final class Tarh99_Perf_Admin {
 			'saved'       => array( 'success', 'تنظیمات ذخیره شد. کش WP Rocket و کش ایجکس این افزونه پاک شد؛ سایت را در حالت مهمان بررسی کنید.' ),
 			'done'        => array( 'success', 'انجام شد.' ),
 			'cleanup_off' => array( 'warning', 'ماژول پاکسازی خاموش است.' ),
+			'ic_off'      => array( 'warning', 'ماژول فشرده‌سازی تصاویر خاموش است.' ),
+			'ic_restored' => array( 'success', 'همه تصاویر اصلی برگردانده شدند.' ),
+			'ic_restore_more' => array( 'warning', 'بخشی از تصاویر برگردانده شد؛ دوباره روی دکمه بازگردانی بزنید تا تمام شود.' ),
 		);
 		if ( isset( $map[ $msg ] ) ) {
 			echo '<div class="notice notice-' . esc_attr( $map[ $msg ][0] ) . ' is-dismissible"><p>' . esc_html( $map[ $msg ][1] ) . '</p></div>';
@@ -410,6 +429,8 @@ final class Tarh99_Perf_Admin {
 		$this->tool_button( 'flush_cache', 'پاک‌کردن کش ایجکس این افزونه', 'tools' );
 		$this->tool_button( 'clear_http_log', 'پاک‌کردن لاگ درخواست‌های کند', 'tools' );
 		$this->tool_button( 'reset_settings', 'بازگشت همه تنظیمات به پیش‌فرض', 'tools', 'button', 'همه تنظیمات این افزونه به پیش‌فرض برگردد؟' );
+		$this->tool_button( 'ic_run', 'فشرده‌سازی یک نوبت تصاویر همین حالا', 'tools' );
+		$this->tool_button( 'ic_restore', 'بازگردانی تصاویر اصلی (قبل از فشرده‌سازی)', 'tools', 'button', 'همه تصاویر فشرده‌شده به نسخه اصلی برگردند؟' );
 		$next = wp_next_scheduled( 'tarh99_perf_daily_cleanup' );
 		echo '<p>اجرای بعدی پاکسازی خودکار: ' . esc_html( $next ? wp_date( 'Y-m-d H:i', $next ) : 'زمان‌بندی نشده' ) . '</p>';
 		echo '</div>';
