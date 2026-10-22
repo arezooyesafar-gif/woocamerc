@@ -99,6 +99,9 @@ final class Tarh99_Perf_Admin {
 					$msg    = $result[1] > 0 ? 'ic_restore_more' : 'ic_restored';
 				}
 				break;
+			case 'rtl_diag':
+				set_transient( 'tarh99_perf_rtl_diag', $this->rtl_diag(), DAY_IN_SECONDS );
+				break;
 			case 'clear_profile':
 				delete_option( 'tarh99_perf_profile_log' );
 				break;
@@ -426,7 +429,80 @@ final class Tarh99_Perf_Admin {
 		);
 	}
 
+	private function rtl_diag() {
+		$out = array(
+			'time' => time(),
+			'php'  => PHP_VERSION,
+			'ion'  => function_exists( 'ioncube_loader_version' ) ? ioncube_loader_version() : '-',
+		);
+		$op = function_exists( 'opcache_get_status' ) ? @opcache_get_status( false ) : false;
+		$out['opcache'] = is_array( $op ) ? ( ! empty( $op['opcache_enabled'] ) ? 'on' : 'off' ) . ( isset( $op['opcache_statistics']['opcache_hit_rate'] ) ? ' hit ' . round( $op['opcache_statistics']['opcache_hit_rate'], 1 ) . '%' : '' ) : 'n/a';
+		$start = microtime( true );
+		hash_pbkdf2( 'sha256', 'tarh99', 'tarh99-salt-0123456789abcdef', 100000, 32, true );
+		$out['pbkdf2'] = (int) round( ( microtime( true ) - $start ) * 1000 );
+		$start = microtime( true );
+		$x     = 0;
+		for ( $i = 0; $i < 2000000; $i++ ) {
+			$x += $i % 7;
+		}
+		$out['cpu_loop'] = (int) round( ( microtime( true ) - $start ) * 1000 );
+		$hosts = array( 'www.rtl-theme.com', 'rtl-theme.com', 'files.rtl-theme.com', 'api.rtl-theme.com' );
+		$out['hosts'] = array();
+		foreach ( $hosts as $host ) {
+			$row   = array( 'host' => $host );
+			$start = microtime( true );
+			$ips   = @gethostbynamel( $host );
+			$row['dns']  = (int) round( ( microtime( true ) - $start ) * 1000 );
+			$row['ip']   = is_array( $ips ) ? implode( ',', array_slice( $ips, 0, 2 ) ) : 'fail';
+			if ( function_exists( 'curl_init' ) && is_array( $ips ) ) {
+				$ch = curl_init( 'https://' . $host . '/' );
+				curl_setopt_array(
+					$ch,
+					array(
+						CURLOPT_NOBODY         => true,
+						CURLOPT_RETURNTRANSFER => true,
+						CURLOPT_TIMEOUT        => 6,
+						CURLOPT_CONNECTTIMEOUT => 5,
+						CURLOPT_FOLLOWLOCATION => false,
+					)
+				);
+				curl_exec( $ch );
+				$row['code']    = (int) curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+				$row['connect'] = (int) round( curl_getinfo( $ch, CURLINFO_CONNECT_TIME ) * 1000 );
+				$row['tls']     = (int) round( curl_getinfo( $ch, CURLINFO_APPCONNECT_TIME ) * 1000 );
+				$row['total']   = (int) round( curl_getinfo( $ch, CURLINFO_TOTAL_TIME ) * 1000 );
+				$row['err']     = curl_error( $ch );
+				curl_close( $ch );
+			}
+			$out['hosts'][] = $row;
+		}
+		return $out;
+	}
+
+	private function render_rtl_diag() {
+		echo '<div class="t99-box"><h2>عیب‌یابی کندی RTL-CareUnit (فقط اندازه‌گیری، بدون تغییر)</h2>';
+		$this->tool_button( 'rtl_diag', 'اجرای تست (حدود ۱۰ ثانیه)', 'tools', 'button button-primary' );
+		$d = get_transient( 'tarh99_perf_rtl_diag' );
+		if ( is_array( $d ) ) {
+			echo '<table class="widefat striped" style="direction:ltr;text-align:left;max-width:900px">';
+			echo '<tr><td>tested</td><td>' . esc_html( wp_date( 'Y-m-d H:i:s', (int) $d['time'] ) ) . '</td></tr>';
+			echo '<tr><td>PHP / ionCube / OPcache</td><td>' . esc_html( $d['php'] . ' / ' . $d['ion'] . ' / ' . $d['opcache'] ) . '</td></tr>';
+			echo '<tr><td>PBKDF2-SHA256 100k (one license decryption)</td><td><b>' . (int) $d['pbkdf2'] . ' ms</b></td></tr>';
+			echo '<tr><td>CPU loop 2M</td><td>' . (int) $d['cpu_loop'] . ' ms</td></tr>';
+			foreach ( (array) $d['hosts'] as $h ) {
+				$line = 'dns ' . (int) $h['dns'] . 'ms, ip ' . $h['ip'];
+				if ( isset( $h['total'] ) ) {
+					$line .= ', connect ' . (int) $h['connect'] . 'ms, tls ' . (int) $h['tls'] . 'ms, total ' . (int) $h['total'] . 'ms, http ' . (int) $h['code'] . ( '' !== $h['err'] ? ', err ' . $h['err'] : '' );
+				}
+				echo '<tr><td>' . esc_html( $h['host'] ) . '</td><td>' . esc_html( $line ) . '</td></tr>';
+			}
+			echo '</table>';
+		}
+		echo '</div>';
+	}
+
 	private function render_tools() {
+		$this->render_rtl_diag();
 		$profiler = $this->plugin->module( 'profiler' );
 		if ( $profiler ) {
 			$profiler->render_log();
