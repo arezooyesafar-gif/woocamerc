@@ -46,6 +46,11 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 				'max'     => 20,
 				'step'    => 0.1,
 			),
+			'skip_background' => array(
+				'type'    => 'checkbox',
+				'label'   => 'درخواست‌های پس‌زمینه (پیش‌بارگذاری راکت، کران و Action Scheduler) ثبت نشوند تا لاگ با درخواست‌های واقعی بازدیدکننده‌ها و مدیر (ورود، سبد، پرداخت، صفحات لاگین) پر بماند',
+				'default' => 1,
+			),
 			'sample'    => array(
 				'type'    => 'number',
 				'label'   => 'ثبت جزئیات کوئری‌ها در ۱ از هر چند درخواست (۰ = فقط با ?tarh99_profile=1)',
@@ -116,7 +121,7 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 	}
 
 	public function finish() {
-		if ( Tarh99_Perf_Env::is_cli() || wp_doing_cron() ) {
+		if ( Tarh99_Perf_Env::is_cli() || wp_doing_cron() || ( $this->opt( 'skip_background' ) && $this->background() ) ) {
 			return;
 		}
 		$start = $this->request_start();
@@ -151,7 +156,16 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 		$log = get_option( self::LOG, array() );
 		$log = is_array( $log ) ? $log : array();
 		array_unshift( $log, $entry );
-		update_option( self::LOG, array_slice( $log, 0, 80 ), false );
+		update_option( self::LOG, array_slice( $log, 0, 150 ), false );
+	}
+
+	private function background() {
+		$agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? (string) $_SERVER['HTTP_USER_AGENT'] : '';
+		if ( 0 === strpos( $agent, 'WP Rocket/' ) ) {
+			return true;
+		}
+		$action = isset( $_REQUEST['action'] ) ? (string) $_REQUEST['action'] : '';
+		return wp_doing_ajax() && 0 === strpos( $action, 'as_async_request' );
 	}
 
 	private function slow_queries() {

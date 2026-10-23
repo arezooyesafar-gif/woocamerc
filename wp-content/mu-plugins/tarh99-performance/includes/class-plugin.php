@@ -49,6 +49,7 @@ final class Tarh99_Perf_Plugin {
 			'class-admin-http.php'     => 'Tarh99_Perf_Module_Admin_Http',
 			'class-cleanup.php'        => 'Tarh99_Perf_Module_Cleanup',
 			'class-image-compress.php' => 'Tarh99_Perf_Module_Image_Compress',
+			'class-cache-stability.php' => 'Tarh99_Perf_Module_Cache_Stability',
 			'class-revisions.php'      => 'Tarh99_Perf_Module_Revisions',
 			'class-monitor.php'        => 'Tarh99_Perf_Module_Monitor',
 			'class-profiler.php'       => 'Tarh99_Perf_Module_Profiler',
