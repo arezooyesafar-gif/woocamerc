@@ -67,6 +67,11 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 				'label'   => 'وقتی تصویر پس‌زمینه دلخواه preload شد، preload خودکار LCP راکت (data-rocket-preload) در همان صفحه حذف شود تا با تصویر اشتباه رقابت نکند',
 				'default' => 1,
 			),
+			'gallery_visible' => array(
+				'type'    => 'checkbox',
+				'label'   => 'گالری تصاویر صفحه محصول از اول دیده شود: قالب پوشه کل گالری را با display:none و ووکامرس با opacity:0 تا اجرای جاوااسکریپت (آخر بارگذاری صفحه) مخفی می‌کنند و تصویر اصلی محصول در موبایل ۵ تا ۷ ثانیه دیر ظاهر می‌شود. با این گزینه تصویر اول همان لحظه نمایش داده می‌شود و بقیه تصاویر و بندانگشتی‌ها مثل قبل بعد از اجرای اسکریپت می‌آیند؛ ظاهر نهایی تغییر نمی‌کند.',
+				'default' => 1,
+			),
 			'rocket_stale_off' => array(
 				'type'    => 'checkbox',
 				'label'   => 'در فروشگاه، دسته‌ها و صفحه محصول، preload تصویری که راکت قبلاً ذخیره کرده ولی دیگر در صفحه وجود ندارد (مثلاً بعد از اضافه شدن محصول جدید به دسته) حذف شود تا با تصویر واقعی رقابت نکند',
@@ -87,6 +92,9 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		add_filter( 'rocket_lazyload_excluded_attributes', array( $this, 'rocket_excluded_attributes' ) );
 		add_action( 'template_redirect', array( $this, 'maybe_buffer' ), 2 );
 		add_action( 'wp_head', array( $this, 'print_preload' ), 1 );
+		if ( $this->opt( 'gallery_visible' ) ) {
+			add_action( 'wp_head', array( $this, 'print_gallery_style' ), 8 );
+		}
 		add_filter( 'rocket_buffer', array( $this, 'strip_rocket_preload' ), 100010 );
 	}
 
@@ -276,6 +284,13 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 			$html = $rest;
 		}
 		return $html;
+	}
+
+	public function print_gallery_style() {
+		if ( Tarh99_Perf_Env::bypass() || ! function_exists( 'is_product' ) || ! is_product() ) {
+			return;
+		}
+		echo '<style id="tarh99-product-gallery">div.woocommerce-product-gallery--with-images{display:block}.woocommerce-product-gallery{opacity:1!important}.woocommerce-product-gallery>.woocommerce-product-gallery__wrapper>.woocommerce-product-gallery__image:nth-child(n+2){display:none}</style>' . "\n";
 	}
 
 	public function filter_html( $html ) {

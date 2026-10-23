@@ -8,7 +8,7 @@ if ( defined( 'TARH99_PERF_VERSION' ) ) {
 	return;
 }
 
-define( 'TARH99_PERF_VERSION', '1.9.0' );
+define( 'TARH99_PERF_VERSION', '1.9.1' );
 define( 'TARH99_PERF_DIR', __DIR__ . '/' );
 define( 'TARH99_PERF_URL', trailingslashit( WPMU_PLUGIN_URL ) . 'tarh99-performance/' );
 
