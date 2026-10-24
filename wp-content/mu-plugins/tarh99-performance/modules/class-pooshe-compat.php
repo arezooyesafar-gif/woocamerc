@@ -33,11 +33,16 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 			'sizes_value'      => array(
 				'type'    => 'text',
 				'label'   => 'مقدار sizes',
-				'default' => '(max-width: 480px) 48vw, (max-width: 768px) 33vw, (max-width: 1200px) 24vw, 300px',
+				'default' => '(max-width: 480px) 48vw, (max-width: 768px) 33vw, 340px',
 			),
 			'card_420'         => array(
 				'type'    => 'checkbox',
 				'label'   => 'ادامه ساخت اندازه تصویر tps_card_420 برای آپلودهای جدید (همان اندازه‌ای که افزونه قبلی ثبت کرده بود)',
+				'default' => 1,
+			),
+			'account_link'     => array(
+				'type'    => 'checkbox',
+				'label'   => 'اصلاح لینک آیکون حساب کاربری هدر: ابزارک قالب آدرس را با دو اسلش (/my-account//) می‌سازد و وردپرس اول یک ریدایرکت کامل (۴ تا ۵ ثانیه روی این هاست) به /my-account/ انجام می‌دهد؛ با این گزینه لینک مستقیم همان آدرس نهایی است',
 				'default' => 1,
 			),
 			'fa_dedupe'        => array(
@@ -61,6 +66,16 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 		if ( $this->opt( 'card_420' ) ) {
 			add_action( 'after_setup_theme', array( $this, 'card_size' ), 31 );
 		}
+		if ( $this->opt( 'account_link' ) ) {
+			add_filter( 'woocommerce_get_endpoint_url', array( $this, 'account_link' ), 20, 4 );
+		}
+	}
+
+	public function account_link( $url, $endpoint = '', $value = '', $permalink = '' ) {
+		if ( '' !== (string) $endpoint || '' !== (string) $value || ! is_string( $url ) || '' === (string) $permalink || false !== strpos( (string) $permalink, '?' ) ) {
+			return $url;
+		}
+		return untrailingslashit( $url ) === untrailingslashit( (string) $permalink ) ? trailingslashit( (string) $permalink ) : $url;
 	}
 
 	public function card_size() {
