@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Tarh99 Performance
  * Description: بهینه‌سازی ماژولار سرعت فروشگاه طرح۹۹ (فرانت‌اند، سرور، پیشخوان و پایداری).
- * Version: 1.9.5
+ * Version: 1.9.6
  * Requires PHP: 7.4
  * Author: Tarh99
  * License: GPL-2.0-or-later

@@ -33,6 +33,7 @@ final class Tarh99_Perf_Plugin {
 			'class-head-cleanup.php'   => 'Tarh99_Perf_Module_Head_Cleanup',
 			'class-fonts.php'          => 'Tarh99_Perf_Module_Fonts',
 			'class-lcp.php'            => 'Tarh99_Perf_Module_Lcp',
+			'class-slider-autoplay.php' => 'Tarh99_Perf_Module_Slider_Autoplay',
 			'class-pooshe-compat.php'  => 'Tarh99_Perf_Module_Pooshe_Compat',
 			'class-css-usage.php'      => 'Tarh99_Perf_Module_Css_Usage',
 			'class-icon-fonts.php'     => 'Tarh99_Perf_Module_Icon_Fonts',
