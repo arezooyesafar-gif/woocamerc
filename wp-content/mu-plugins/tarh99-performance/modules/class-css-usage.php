@@ -401,7 +401,7 @@ class Tarh99_Perf_Module_Css_Usage extends Tarh99_Perf_Module {
 
 	private function safelist() {
 		if ( null === $this->safelist ) {
-			$this->safelist = $this->opt_lines( 'safelist' );
+			$this->safelist = array_values( array_unique( array_merge( $this->opt_lines( 'safelist' ), array( 'flexslider', 'flex-viewport', 'flex-direction-nav', 'flex-control', 'flex-active', 'flex-nav-', 'flex-prev', 'flex-next', 'flex-disabled', 'flex-pauseplay' ) ) ) );
 		}
 		return $this->safelist;
 	}

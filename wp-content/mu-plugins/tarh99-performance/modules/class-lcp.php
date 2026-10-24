@@ -69,7 +69,7 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 			),
 			'gallery_visible' => array(
 				'type'    => 'checkbox',
-				'label'   => 'گالری تصاویر صفحه محصول از اول دیده شود: قالب پوشه کل گالری را با display:none و ووکامرس با opacity:0 تا اجرای جاوااسکریپت (آخر بارگذاری صفحه) مخفی می‌کنند و تصویر اصلی محصول در موبایل ۵ تا ۷ ثانیه دیر ظاهر می‌شود. با این گزینه تصویر اول همان لحظه نمایش داده می‌شود و بقیه تصاویر و بندانگشتی‌ها مثل قبل بعد از اجرای اسکریپت می‌آیند؛ ظاهر نهایی تغییر نمی‌کند.',
+				'label'   => 'گالری تصاویر صفحه محصول از اول دیده شود: قالب پوشه کل گالری را با display:none و ووکامرس با opacity:0 تا اجرای جاوااسکریپت (آخر بارگذاری صفحه) مخفی می‌کنند و تصویر اصلی محصول در موبایل ۵ تا ۷ ثانیه دیر ظاهر می‌شود. با این گزینه تصویر اول همان لحظه نمایش داده می‌شود و بقیه تصاویر و بندانگشتی‌ها مثل قبل بعد از اجرای اسکریپت می‌آیند. همچنین در ۱۰۰ میلی‌ثانیه‌ای که اسلایدر ووکامرس بین دو مرحله راه‌اندازی است، تصاویر گالری زیر هم نمی‌افتند (علت پرش شدید صفحه محصول، CLS تا ۰٫۷). ظاهر نهایی تغییر نمی‌کند.',
 				'default' => 1,
 			),
 			'rocket_stale_off' => array(
@@ -290,7 +290,13 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		if ( Tarh99_Perf_Env::bypass() || ! function_exists( 'is_product' ) || ! is_product() ) {
 			return;
 		}
-		echo '<style id="tarh99-product-gallery">div.woocommerce-product-gallery--with-images{display:block}.woocommerce-product-gallery{opacity:1!important}.woocommerce-product-gallery>.woocommerce-product-gallery__wrapper>.woocommerce-product-gallery__image:nth-child(n+2){display:none}</style>' . "\n";
+		$base = '.woocommerce-product-gallery .flex-viewport>.woocommerce-product-gallery__wrapper';
+		$css  = 'div.woocommerce-product-gallery--with-images{display:block}.woocommerce-product-gallery{opacity:1!important}.woocommerce-product-gallery>.woocommerce-product-gallery__wrapper>.woocommerce-product-gallery__image:nth-child(n+2){display:none}';
+		for ( $count = 2; $count <= 20; $count++ ) {
+			$css .= $base . ':has(>.woocommerce-product-gallery__image:nth-child(' . $count . '):last-child)>.woocommerce-product-gallery__image:not([style*="width"]){width:' . round( 100 / ( 2 * $count ), 4 ) . '%}';
+		}
+		$css .= 'body.rtl ' . $base . '>.woocommerce-product-gallery__image:not([style*="width"]){float:right}body:not(.rtl) ' . $base . '>.woocommerce-product-gallery__image:not([style*="width"]){float:left}';
+		echo '<style id="tarh99-product-gallery">' . $css . '</style>' . "\n";
 	}
 
 	public function filter_html( $html ) {

@@ -45,6 +45,11 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 				'label'   => 'اصلاح لینک آیکون حساب کاربری هدر: ابزارک قالب آدرس را با دو اسلش (/my-account//) می‌سازد و وردپرس اول یک ریدایرکت کامل (۴ تا ۵ ثانیه روی این هاست) به /my-account/ انجام می‌دهد؛ با این گزینه لینک مستقیم همان آدرس نهایی است',
 				'default' => 1,
 			),
+			'ordering_select'  => array(
+				'type'    => 'checkbox',
+				'label'   => 'منوی کشویی مرتب‌سازی فروشگاه و دسته‌ها از اول مخفی باشد: قالب بعد از بارگذاری آن را مخفی می‌کند و دکمه‌های مرتب‌سازی را کنار عنوان می‌گذارد، و همین مخفی شدن کل لیست محصولات را ۲۶ پیکسل بالا می‌پراند (CLS دسکتاپ دسته‌ها ۰٫۲۵ تا ۰٫۳). ظاهر نهایی همان است.',
+				'default' => 1,
+			),
 			'fa_dedupe'        => array(
 				'type'    => 'checkbox',
 				'label'   => 'حذف فایل‌های Font Awesome که دقیقاً تکراری enqueue شده‌اند',
@@ -66,9 +71,19 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 		if ( $this->opt( 'card_420' ) ) {
 			add_action( 'after_setup_theme', array( $this, 'card_size' ), 31 );
 		}
+		if ( $this->opt( 'ordering_select' ) ) {
+			add_action( 'wp_head', array( $this, 'ordering_style' ), 8 );
+		}
 		if ( $this->opt( 'account_link' ) ) {
 			add_filter( 'woocommerce_get_endpoint_url', array( $this, 'account_link' ), 20, 4 );
 		}
+	}
+
+	public function ordering_style() {
+		if ( Tarh99_Perf_Env::bypass() || 'pooshe' !== get_template() ) {
+			return;
+		}
+		echo '<style id="tarh99-ordering">.woocommerce-ordering select.orderby{display:none}</style>' . "\n";
 	}
 
 	public function account_link( $url, $endpoint = '', $value = '', $permalink = '' ) {
