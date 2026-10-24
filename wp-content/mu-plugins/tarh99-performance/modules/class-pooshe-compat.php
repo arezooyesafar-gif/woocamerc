@@ -50,6 +50,11 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 				'label'   => 'منوی کشویی مرتب‌سازی فروشگاه و دسته‌ها از اول مخفی باشد: قالب بعد از بارگذاری آن را مخفی می‌کند و دکمه‌های مرتب‌سازی را کنار عنوان می‌گذارد، و همین مخفی شدن کل لیست محصولات را ۲۶ پیکسل بالا می‌پراند (CLS دسکتاپ دسته‌ها ۰٫۲۵ تا ۰٫۳). ظاهر نهایی همان است.',
 				'default' => 1,
 			),
+			'wooslider_grid'   => array(
+				'type'    => 'checkbox',
+				'label'   => 'شبکه محصولات Wooslider که اسلاید نمی‌شود (dont-swipe) در دسکتاپ و تبلت از اول نمایش داده شود: افزونه آن را ۱٫۷ ثانیه بعد از بارگذاری با محو شدن نشان می‌دهد و قسمت‌های زیرش پایین می‌پرند. چیدمان نهایی در این عرض‌ها فقط با CSS است و تغییر نمی‌کند؛ موبایل دست نمی‌خورد.',
+				'default' => 1,
+			),
 			'fa_dedupe'        => array(
 				'type'    => 'checkbox',
 				'label'   => 'حذف فایل‌های Font Awesome که دقیقاً تکراری enqueue شده‌اند',
@@ -74,6 +79,9 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 		if ( $this->opt( 'ordering_select' ) ) {
 			add_action( 'wp_head', array( $this, 'ordering_style' ), 8 );
 		}
+		if ( $this->opt( 'wooslider_grid' ) ) {
+			add_action( 'wp_head', array( $this, 'wooslider_style' ), 8 );
+		}
 		if ( $this->opt( 'account_link' ) ) {
 			add_filter( 'woocommerce_get_endpoint_url', array( $this, 'account_link' ), 20, 4 );
 		}
@@ -84,6 +92,13 @@ class Tarh99_Perf_Module_Pooshe_Compat extends Tarh99_Perf_Module {
 			return;
 		}
 		echo '<style id="tarh99-ordering">.woocommerce-ordering select.orderby{display:none}</style>' . "\n";
+	}
+
+	public function wooslider_style() {
+		if ( Tarh99_Perf_Env::bypass() || ! defined( 'WOOSBYMDZ_VER' ) ) {
+			return;
+		}
+		echo '<style id="tarh99-wooslider">@media (min-width:768px){.woosbymdz-carousel-con .woosbymdz-swiper[dont-swipe="yes"].woosbymdz-hidden{display:block!important;width:100%!important;height:100%!important;opacity:1!important;pointer-events:auto!important}}</style>' . "\n";
 	}
 
 	public function account_link( $url, $endpoint = '', $value = '', $permalink = '' ) {
