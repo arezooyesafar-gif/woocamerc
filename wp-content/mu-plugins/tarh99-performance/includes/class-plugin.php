@@ -43,6 +43,7 @@ final class Tarh99_Perf_Plugin {
 			'class-elementor-delay.php' => 'Tarh99_Perf_Module_Elementor_Delay',
 			'class-lazy-menus.php'     => 'Tarh99_Perf_Module_Lazy_Menus',
 			'class-nav-menu.php'       => 'Tarh99_Perf_Module_Nav_Menu',
+			'class-menu-memo.php'      => 'Tarh99_Perf_Module_Menu_Memo',
 			'class-jquery-ready.php'   => 'Tarh99_Perf_Module_Jquery_Ready',
 			'class-cart-fragments.php' => 'Tarh99_Perf_Module_Cart_Fragments',
 			'class-asset-rules.php'    => 'Tarh99_Perf_Module_Asset_Rules',
@@ -53,6 +54,7 @@ final class Tarh99_Perf_Plugin {
 			'class-wc-session.php'     => 'Tarh99_Perf_Module_Wc_Session',
 			'class-gateway-redirect.php' => 'Tarh99_Perf_Module_Gateway_Redirect',
 			'class-plugin-trim.php'    => 'Tarh99_Perf_Module_Plugin_Trim',
+			'class-static-404.php'     => 'Tarh99_Perf_Module_Static_404',
 			'class-queries.php'        => 'Tarh99_Perf_Module_Queries',
 			'class-wc-admin.php'       => 'Tarh99_Perf_Module_Wc_Admin',
 			'class-admin-http.php'     => 'Tarh99_Perf_Module_Admin_Http',
@@ -83,6 +85,14 @@ final class Tarh99_Perf_Plugin {
 		if ( $profiler && $profiler->enabled() && method_exists( $profiler, 'early' ) ) {
 			try {
 				$profiler->early();
+			} catch ( Throwable $e ) {
+				unset( $e );
+			}
+		}
+		$missing = $this->module( 'static_404' );
+		if ( $missing && method_exists( $missing, 'early' ) && $missing->enabled() ) {
+			try {
+				$missing->early();
 			} catch ( Throwable $e ) {
 				unset( $e );
 			}
