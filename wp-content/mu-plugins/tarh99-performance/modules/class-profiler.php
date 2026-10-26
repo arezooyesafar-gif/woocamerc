@@ -15,6 +15,12 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 	private $http_count = 0;
 	private $http_start = array();
 	private $detailed = false;
+	private $stack = array();
+	private $widgets = array();
+	private $docs = array();
+	private $menus = array();
+	private $menu_ms = 0.0;
+	private $menu_n = 0;
 
 	public function id() {
 		return 'profiler';
@@ -84,7 +90,99 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 		}
 		add_filter( 'pre_http_request', array( $this, 'http_before' ), 0, 3 );
 		add_action( 'http_api_debug', array( $this, 'http_after' ), 10, 5 );
+		add_action( 'elementor/frontend/widget/before_render', array( $this, 'widget_before' ), PHP_INT_MIN );
+		add_action( 'elementor/frontend/widget/after_render', array( $this, 'widget_after' ), PHP_INT_MAX );
+		add_action( 'elementor/frontend/before_get_builder_content', array( $this, 'doc_before' ), PHP_INT_MIN );
+		add_action( 'elementor/frontend/get_builder_content', array( $this, 'doc_after' ), PHP_INT_MAX );
+		add_filter( 'pre_wp_nav_menu', array( $this, 'menu_before' ), PHP_INT_MIN, 2 );
+		add_filter( 'wp_nav_menu', array( $this, 'menu_after' ), PHP_INT_MAX, 2 );
 		add_action( 'shutdown', array( $this, 'finish' ), PHP_INT_MAX );
+	}
+
+	public function widget_before( $widget ) {
+		$this->stack[] = array( is_object( $widget ) && method_exists( $widget, 'get_name' ) ? (string) $widget->get_name() : '?', microtime( true ) );
+	}
+
+	public function widget_after( $widget ) {
+		$item = array_pop( $this->stack );
+		if ( ! $item ) {
+			return;
+		}
+		if ( ! isset( $this->widgets[ $item[0] ] ) ) {
+			$this->widgets[ $item[0] ] = array( 0.0, 0 );
+		}
+		$this->widgets[ $item[0] ][0] += microtime( true ) - $item[1];
+		++$this->widgets[ $item[0] ][1];
+	}
+
+	public function doc_before( $document ) {
+		$this->docs[] = array( $this->doc_label( $document ), microtime( true ), null );
+	}
+
+	public function doc_after( $document ) {
+		$label = $this->doc_label( $document );
+		for ( $i = count( $this->docs ) - 1; $i >= 0; $i-- ) {
+			if ( null === $this->docs[ $i ][2] && $label === $this->docs[ $i ][0] ) {
+				$this->docs[ $i ][2] = microtime( true ) - $this->docs[ $i ][1];
+				return;
+			}
+		}
+	}
+
+	private function doc_label( $document ) {
+		if ( ! is_object( $document ) || ! method_exists( $document, 'get_main_id' ) ) {
+			return '?';
+		}
+		return ( method_exists( $document, 'get_name' ) ? $document->get_name() : 'doc' ) . '#' . (int) $document->get_main_id();
+	}
+
+	public function menu_before( $pre, $args ) {
+		if ( is_object( $args ) ) {
+			$this->menus[ spl_object_id( $args ) ] = microtime( true );
+		}
+		return $pre;
+	}
+
+	public function menu_after( $html, $args ) {
+		$key = is_object( $args ) ? spl_object_id( $args ) : 0;
+		if ( isset( $this->menus[ $key ] ) ) {
+			$this->menu_ms += microtime( true ) - $this->menus[ $key ];
+			++$this->menu_n;
+			unset( $this->menus[ $key ] );
+		}
+		return $html;
+	}
+
+	private function elementor_summary() {
+		$widgets = array();
+		foreach ( $this->widgets as $name => $row ) {
+			$widgets[ $name ] = array( (int) round( $row[0] * 1000 ), $row[1] );
+		}
+		uasort(
+			$widgets,
+			function ( $a, $b ) {
+				return $b[0] - $a[0];
+			}
+		);
+		$docs = array();
+		foreach ( $this->docs as $doc ) {
+			if ( null !== $doc[2] ) {
+				$docs[] = array( $doc[0], (int) round( $doc[2] * 1000 ) );
+			}
+		}
+		return array(
+			'widgets' => array_slice( $widgets, 0, 8, true ),
+			'docs'    => array_slice( $docs, 0, 6 ),
+			'menus'   => array( (int) round( $this->menu_ms * 1000 ), $this->menu_n ),
+		);
+	}
+
+	private function role() {
+		if ( ! is_user_logged_in() ) {
+			return '';
+		}
+		$user = wp_get_current_user();
+		return ( $user && ! empty( $user->roles ) ) ? (string) reset( $user->roles ) : 'user';
 	}
 
 	private function mark( $name ) {
@@ -144,6 +242,8 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 			'method'  => isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_key( $_SERVER['REQUEST_METHOD'] ) : '',
 			'ctx'     => Tarh99_Perf_Env::current_context() . ( wp_doing_ajax() && isset( $_REQUEST['action'] ) ? ':' . sanitize_key( wp_unslash( $_REQUEST['action'] ) ) : '' ),
 			'user'    => is_user_logged_in() ? 1 : 0,
+			'role'    => $this->role(),
+			'el'      => $this->elementor_summary(),
 			'total'   => (int) round( $total * 1000 ),
 			'phases'  => $phases,
 			'plugins' => array_slice( $this->plugins, 0, 6, true ),
@@ -206,7 +306,7 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 			echo '<p>هنوز درخواست کندی ثبت نشده است.</p></div>';
 			return;
 		}
-		echo '<table class="widefat striped" style="direction:ltr;text-align:left;font-size:12px"><thead><tr><th>time</th><th>url / context</th><th>total ms</th><th>phases ms</th><th>slowest plugins (load ms)</th><th>queries</th><th>http</th><th>mem MB</th></tr></thead><tbody>';
+		echo '<table class="widefat striped" style="direction:ltr;text-align:left;font-size:12px"><thead><tr><th>time</th><th>url / context</th><th>total ms</th><th>phases ms</th><th>slowest plugins (load ms)</th><th>elementor / menus (ms)</th><th>queries</th><th>http</th><th>mem MB</th></tr></thead><tbody>';
 		foreach ( array_slice( $log, 0, 40 ) as $e ) {
 			$phases  = array();
 			foreach ( (array) $e['phases'] as $k => $v ) {
@@ -223,7 +323,18 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 					$queries .= '<br><small>' . (int) $q['ms'] . 'ms ' . esc_html( $q['sql'] ) . ' — ' . esc_html( $q['by'] ) . '</small>';
 				}
 			}
-			echo '<tr><td>' . esc_html( wp_date( 'm/d H:i:s', (int) $e['t'] ) ) . '</td><td>' . esc_html( $e['url'] ) . '<br><small>' . esc_html( $e['method'] . ' ' . $e['ctx'] . ( $e['user'] ? ' logged-in' : ' guest' ) ) . '</small></td><td><b>' . (int) $e['total'] . '</b></td><td><small>' . esc_html( implode( ' ', $phases ) ) . '</small></td><td><small>' . esc_html( implode( ' ', $plugins ) ) . '</small></td><td>' . $queries . '</td><td>' . (int) $e['http'] . 'ms/' . (int) $e['http_n'] . '</td><td>' . (int) $e['mem'] . '</td></tr>';
+			$el = array();
+			if ( ! empty( $e['el'] ) && is_array( $e['el'] ) ) {
+				foreach ( (array) $e['el']['docs'] as $d ) {
+					$el[] = $d[0] . ':' . (int) $d[1];
+				}
+				foreach ( (array) $e['el']['widgets'] as $k => $v ) {
+					$el[] = $k . ':' . (int) $v[0] . 'x' . (int) $v[1];
+				}
+				$el[] = 'wp_nav_menu:' . (int) $e['el']['menus'][0] . 'x' . (int) $e['el']['menus'][1];
+			}
+			$who = $e['user'] ? ' logged-in' . ( ! empty( $e['role'] ) ? ' (' . $e['role'] . ')' : '' ) : ' guest';
+			echo '<tr><td>' . esc_html( wp_date( 'm/d H:i:s', (int) $e['t'] ) ) . '</td><td>' . esc_html( $e['url'] ) . '<br><small>' . esc_html( $e['method'] . ' ' . $e['ctx'] . $who ) . '</small></td><td><b>' . (int) $e['total'] . '</b></td><td><small>' . esc_html( implode( ' ', $phases ) ) . '</small></td><td><small>' . esc_html( implode( ' ', $plugins ) ) . '</small></td><td><small>' . esc_html( implode( ' ', $el ) ) . '</small></td><td>' . $queries . '</td><td>' . (int) $e['http'] . 'ms/' . (int) $e['http_n'] . '</td><td>' . (int) $e['mem'] . '</td></tr>';
 		}
 		echo '</tbody></table></div>';
 	}

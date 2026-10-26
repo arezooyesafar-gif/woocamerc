@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Tarh99_Perf_Module_Nav_Menu extends Tarh99_Perf_Module {
 
 	private $used = false;
+	private $hidden_dropdown = false;
 
 	public function id() {
 		return 'nav_menu';
@@ -42,6 +43,11 @@ class Tarh99_Perf_Module_Nav_Menu extends Tarh99_Perf_Module {
 				'label'   => 'پیش‌بارگذاری فایل اسکریپت منوی المنتور در نسخه دسکتاپ',
 				'default' => 1,
 			),
+			'skip_dropdown' => array(
+				'type'    => 'checkbox',
+				'label'   => 'نسخه کشویی منو که در تنظیمات ابزارک روی «هیچ» است و در هیچ دستگاهی دیده نمی‌شود، ساخته نشود (یک بار کمتر ساخته شدن کل منو در هر صفحه بدون کش)',
+				'default' => 1,
+			),
 		);
 	}
 
@@ -49,6 +55,31 @@ class Tarh99_Perf_Module_Nav_Menu extends Tarh99_Perf_Module {
 		add_filter( 'elementor/frontend/the_content', array( $this, 'filter_content' ), 21 );
 		add_action( 'wp_head', array( $this, 'print_head' ), 8 );
 		add_action( 'wp_footer', array( $this, 'print_footer' ), 1 );
+		if ( $this->opt( 'skip_dropdown' ) ) {
+			add_action( 'elementor/frontend/widget/before_render', array( $this, 'widget_start' ) );
+			add_action( 'elementor/frontend/widget/after_render', array( $this, 'widget_end' ) );
+			add_filter( 'pre_wp_nav_menu', array( $this, 'skip_dropdown' ), 10, 2 );
+		}
+	}
+
+	public function widget_start( $widget ) {
+		$this->hidden_dropdown = false;
+		if ( ! is_object( $widget ) || ! method_exists( $widget, 'get_name' ) || 'nav-menu' !== $widget->get_name() ) {
+			return;
+		}
+		$settings              = $widget->get_settings_for_display();
+		$this->hidden_dropdown = is_array( $settings ) && isset( $settings['dropdown'], $settings['layout'] ) && 'none' === $settings['dropdown'] && 'dropdown' !== $settings['layout'] && $this->active();
+	}
+
+	public function widget_end() {
+		$this->hidden_dropdown = false;
+	}
+
+	public function skip_dropdown( $pre, $args ) {
+		if ( null !== $pre || ! $this->hidden_dropdown || ! is_object( $args ) || ! isset( $args->menu_type ) || 'dropdown' !== $args->menu_type ) {
+			return $pre;
+		}
+		return '';
 	}
 
 	private function active() {
