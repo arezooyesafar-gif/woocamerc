@@ -37,7 +37,7 @@ class Tarh99_Perf_Module_Elementor extends Tarh99_Perf_Module {
 			),
 			'carousel_preinit' => array(
 				'type'    => 'checkbox',
-				'label'   => 'اسلایدر Media Carousel قبل از اجرای جاوااسکریپت هم با همان تعداد اسلاید و فاصله نهایی (مثلاً ۴ تایی در دسکتاپ) نمایش داده شود، نه یک اسلاید تمام‌عرض که بعد ناگهان چند تایی می‌شود',
+				'label'   => 'اسلایدر Media Carousel قبل از اجرای جاوااسکریپت هم با همان تعداد اسلاید و فاصله نهایی (مثلاً ۴ تایی در دسکتاپ) و همان نقطه‌های پایین اسلایدر نمایش داده شود، نه یک اسلاید تمام‌عرض که بعد ناگهان چند تایی می‌شود',
 				'default' => 1,
 			),
 			'google_fonts' => array(
@@ -110,26 +110,58 @@ class Tarh99_Perf_Module_Elementor extends Tarh99_Perf_Module {
 			return $content;
 		}
 		$breakpoints = $this->carousel_breakpoints();
-		if ( null === $breakpoints || ! preg_match_all( '#<div\b[^>]*\sdata-widget_type\s*=\s*"media-carousel\.default"[^>]*>#i', $content, $tags, PREG_OFFSET_CAPTURE ) ) {
+		return null === $breakpoints ? $content : $this->carousel_apply( $content, $breakpoints, is_rtl() ? 'left' : 'right' );
+	}
+
+	private function carousel_apply( $content, $breakpoints, $side ) {
+		if ( ! preg_match_all( '#<div\b[^>]*\sdata-widget_type\s*=\s*"media-carousel\.default"[^>]*>#i', $content, $tags, PREG_OFFSET_CAPTURE ) ) {
 			return $content;
 		}
-		$side   = is_rtl() ? 'left' : 'right';
-		$insert = array();
+		$empty  = '<div class="swiper-pagination"></div>';
+		$edits  = array();
 		$count  = count( $tags[0] );
 		for ( $i = 0; $i < $count; $i++ ) {
-			$tag   = $tags[0][ $i ][0];
-			$start = $tags[0][ $i ][1];
-			$end   = $i + 1 < $count ? $tags[0][ $i + 1 ][1] : strlen( $content );
-			$css   = $this->carousel_css( $tag, substr_count( substr( $content, $start, $end - $start ), 'class="swiper-slide"' ), $breakpoints, $side );
-			if ( '' !== $css ) {
-				$insert[ $start ] = '<style class="tarh99-carousel-preinit">' . $css . '</style>';
+			$tag    = $tags[0][ $i ][0];
+			$start  = $tags[0][ $i ][1];
+			$end    = $i + 1 < $count ? $tags[0][ $i + 1 ][1] : strlen( $content );
+			$pager  = strpos( $content, $empty, $start );
+			$slides = substr_count( substr( $content, $start, ( false !== $pager && $pager < $end ? $pager : $end ) - $start ), 'class="swiper-slide"' );
+			$css    = $this->carousel_css( $tag, $slides, $breakpoints, $side );
+			if ( '' === $css ) {
+				continue;
 			}
+			$bullets = false !== $pager && $pager < $end ? $this->carousel_bullets( $tag, $slides ) : '';
+			if ( '' !== $bullets ) {
+				$edits[] = array( $pager, strlen( $empty ), $bullets );
+			}
+			$edits[] = array( $start, 0, '<style class="tarh99-carousel-preinit">' . $css . '</style>' );
 		}
-		krsort( $insert );
-		foreach ( $insert as $pos => $style ) {
-			$content = substr_replace( $content, $style, $pos, 0 );
+		usort(
+			$edits,
+			function ( $a, $b ) {
+				return $b[0] - $a[0];
+			}
+		);
+		foreach ( $edits as $edit ) {
+			$content = substr_replace( $content, $edit[2], $edit[0], $edit[1] );
 		}
 		return $content;
+	}
+
+	private function carousel_bullets( $tag, $slides ) {
+		if ( $slides < 2 || ! preg_match( '#\sdata-settings\s*=\s*"([^"]*)"#i', $tag, $attr ) ) {
+			return '';
+		}
+		$settings = json_decode( html_entity_decode( $attr[1], ENT_QUOTES, 'UTF-8' ), true );
+		if ( ! is_array( $settings ) || ! isset( $settings['pagination'], $settings['loop'] ) || 'bullets' !== $settings['pagination'] || 'yes' !== $settings['loop'] ) {
+			return '';
+		}
+		foreach ( array( '', '_tablet', '_mobile' ) as $suffix ) {
+			if ( isset( $settings[ 'slides_to_scroll' . $suffix ] ) && '' !== $settings[ 'slides_to_scroll' . $suffix ] && 1 !== (int) $settings[ 'slides_to_scroll' . $suffix ] ) {
+				return '';
+			}
+		}
+		return '<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>' . str_repeat( '<span class="swiper-pagination-bullet"></span>', $slides - 1 ) . '</div>';
 	}
 
 	private function carousel_breakpoints() {

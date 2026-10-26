@@ -40,6 +40,8 @@ final class Tarh99_Perf_Plugin {
 			'class-css-usage.php'      => 'Tarh99_Perf_Module_Css_Usage',
 			'class-icon-fonts.php'     => 'Tarh99_Perf_Module_Icon_Fonts',
 			'class-elementor.php'      => 'Tarh99_Perf_Module_Elementor',
+			'class-elementor-delay.php' => 'Tarh99_Perf_Module_Elementor_Delay',
+			'class-lazy-menus.php'     => 'Tarh99_Perf_Module_Lazy_Menus',
 			'class-cart-fragments.php' => 'Tarh99_Perf_Module_Cart_Fragments',
 			'class-asset-rules.php'    => 'Tarh99_Perf_Module_Asset_Rules',
 			'class-defer-js.php'       => 'Tarh99_Perf_Module_Defer_Js',
