@@ -42,6 +42,8 @@ final class Tarh99_Perf_Plugin {
 			'class-elementor.php'      => 'Tarh99_Perf_Module_Elementor',
 			'class-elementor-delay.php' => 'Tarh99_Perf_Module_Elementor_Delay',
 			'class-lazy-menus.php'     => 'Tarh99_Perf_Module_Lazy_Menus',
+			'class-nav-menu.php'       => 'Tarh99_Perf_Module_Nav_Menu',
+			'class-jquery-ready.php'   => 'Tarh99_Perf_Module_Jquery_Ready',
 			'class-cart-fragments.php' => 'Tarh99_Perf_Module_Cart_Fragments',
 			'class-asset-rules.php'    => 'Tarh99_Perf_Module_Asset_Rules',
 			'class-defer-js.php'       => 'Tarh99_Perf_Module_Defer_Js',
@@ -49,12 +51,15 @@ final class Tarh99_Perf_Plugin {
 			'class-ajax-cache.php'     => 'Tarh99_Perf_Module_Ajax_Cache',
 			'class-search.php'         => 'Tarh99_Perf_Module_Search',
 			'class-wc-session.php'     => 'Tarh99_Perf_Module_Wc_Session',
+			'class-gateway-redirect.php' => 'Tarh99_Perf_Module_Gateway_Redirect',
+			'class-plugin-trim.php'    => 'Tarh99_Perf_Module_Plugin_Trim',
 			'class-queries.php'        => 'Tarh99_Perf_Module_Queries',
 			'class-wc-admin.php'       => 'Tarh99_Perf_Module_Wc_Admin',
 			'class-admin-http.php'     => 'Tarh99_Perf_Module_Admin_Http',
 			'class-cleanup.php'        => 'Tarh99_Perf_Module_Cleanup',
 			'class-image-compress.php' => 'Tarh99_Perf_Module_Image_Compress',
 			'class-cache-stability.php' => 'Tarh99_Perf_Module_Cache_Stability',
+			'class-preload-order.php'  => 'Tarh99_Perf_Module_Preload_Order',
 			'class-revisions.php'      => 'Tarh99_Perf_Module_Revisions',
 			'class-monitor.php'        => 'Tarh99_Perf_Module_Monitor',
 			'class-profiler.php'       => 'Tarh99_Perf_Module_Profiler',
@@ -78,6 +83,14 @@ final class Tarh99_Perf_Plugin {
 		if ( $profiler && $profiler->enabled() && method_exists( $profiler, 'early' ) ) {
 			try {
 				$profiler->early();
+			} catch ( Throwable $e ) {
+				unset( $e );
+			}
+		}
+		$trim = $this->module( 'plugin_trim' );
+		if ( $trim && method_exists( $trim, 'early' ) ) {
+			try {
+				$trim->early( $trim->enabled() );
 			} catch ( Throwable $e ) {
 				unset( $e );
 			}

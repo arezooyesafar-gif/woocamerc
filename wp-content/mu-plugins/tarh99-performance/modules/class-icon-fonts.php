@@ -39,6 +39,11 @@ class Tarh99_Perf_Module_Icon_Fonts extends Tarh99_Perf_Module {
 				'label'   => 'پیش‌بارگذاری فایل کامل همین فونت‌ها (مثلاً از تنظیمات Preload fonts راکت) به نسخه سبک تبدیل شود',
 				'default' => 1,
 			),
+			'restrict_theme'  => array(
+				'type'    => 'checkbox',
+				'label'   => 'تعریف فونت کامل قالب (در CSS داخل صفحه) فقط برای آیکن‌های دیگر باشد تا فایرفاکس هم فایل کامل را بی‌دلیل دانلود نکند',
+				'default' => 1,
+			),
 		);
 	}
 
@@ -117,6 +122,7 @@ class Tarh99_Perf_Module_Icon_Fonts extends Tarh99_Perf_Module {
 		}
 		try {
 			$html = $this->insert_faces( $html );
+			$html = $this->restrict_theme_faces( $html );
 			return $this->rewrite_preloads( $html );
 		} catch ( Throwable $e ) {
 			return $html;
@@ -128,6 +134,7 @@ class Tarh99_Perf_Module_Icon_Fonts extends Tarh99_Perf_Module {
 			return $html;
 		}
 		try {
+			$html = $this->restrict_theme_faces( $html );
 			return $this->rewrite_preloads( $html );
 		} catch ( Throwable $e ) {
 			return $html;
@@ -156,6 +163,114 @@ class Tarh99_Perf_Module_Icon_Fonts extends Tarh99_Perf_Module {
 			$html  = substr( $html, 0, $end ) . $style . substr( $html, $end );
 		}
 		return $html;
+	}
+
+	private function restrict_theme_faces( $html ) {
+		if ( ! $this->opt( 'restrict_theme' ) || false === stripos( $html, '@font-face' ) ) {
+			return $html;
+		}
+		$faces = array();
+		foreach ( $this->faces() as $face ) {
+			if ( ! $face['valid'] || false === strpos( $html, 'tarh99-icon-fonts-' . $face['handle'] ) ) {
+				continue;
+			}
+			$complement = $this->complement( (string) $face['range'] );
+			if ( '' === $complement ) {
+				continue;
+			}
+			$faces[] = array(
+				'family'     => $this->norm_family( (string) $face['family'] ),
+				'weight'     => $this->norm_weight( (string) $face['weight'] ),
+				'style'      => strtolower( (string) $face['style'] ),
+				'stem'       => strtolower( (string) preg_replace( '/\.[a-z0-9]+$/i', '', $face['original_name'] ) ) . '.',
+				'complement' => $complement,
+			);
+		}
+		if ( ! $faces ) {
+			return $html;
+		}
+		$self = $this;
+		$out  = preg_replace_callback(
+			'#@font-face\s*\{([^{}]*)\}#i',
+			function ( $m ) use ( $faces, $self ) {
+				$body = $m[1];
+				if ( false !== stripos( $body, 'unicode-range' ) || ! preg_match( '#(?:^|;)\s*font-family\s*:\s*([^;]+)#i', $body, $family ) || ! preg_match( '#(?:^|;)\s*src\s*:[^;]*#i', $body ) ) {
+					return $m[0];
+				}
+				$weight = preg_match( '#(?:^|;)\s*font-weight\s*:\s*([^;]+)#i', $body, $w ) ? $self->norm_weight( $w[1] ) : '400';
+				$style  = preg_match( '#(?:^|;)\s*font-style\s*:\s*([^;]+)#i', $body, $st ) ? strtolower( trim( $st[1] ) ) : 'normal';
+				$name   = $self->norm_family( $family[1] );
+				$src    = strtolower( $body );
+				foreach ( $faces as $face ) {
+					if ( $face['family'] === $name && $face['weight'] === $weight && $face['style'] === $style && false !== strpos( $src, $face['stem'] ) ) {
+						return '@font-face{' . rtrim( rtrim( $body ), ';' ) . ';unicode-range:' . $face['complement'] . '}';
+					}
+				}
+				return $m[0];
+			},
+			$html
+		);
+		return is_string( $out ) ? $out : $html;
+	}
+
+	public function norm_family( $family ) {
+		$family = trim( str_replace( '\\', '', $family ) );
+		return strtolower( trim( $family, " \t\"'" ) );
+	}
+
+	public function norm_weight( $weight ) {
+		$weight = strtolower( trim( $weight ) );
+		if ( 'normal' === $weight ) {
+			return '400';
+		}
+		if ( 'bold' === $weight ) {
+			return '700';
+		}
+		return (string) (int) $weight;
+	}
+
+	private function complement( $range ) {
+		$spans = array();
+		foreach ( explode( ',', $range ) as $token ) {
+			$token = strtoupper( trim( $token ) );
+			if ( '' === $token ) {
+				continue;
+			}
+			if ( ! preg_match( '/^U\+([0-9A-F]{1,6})(?:-([0-9A-F]{1,6}))?$/', $token, $m ) ) {
+				return '';
+			}
+			$from = hexdec( $m[1] );
+			$to   = isset( $m[2] ) ? hexdec( $m[2] ) : $from;
+			if ( $to < $from || $to > 0x10FFFF ) {
+				return '';
+			}
+			$spans[] = array( $from, $to );
+		}
+		if ( ! $spans ) {
+			return '';
+		}
+		usort(
+			$spans,
+			function ( $a, $b ) {
+				return $a[0] - $b[0];
+			}
+		);
+		$out  = array();
+		$next = 0;
+		foreach ( $spans as $span ) {
+			if ( $span[0] > $next ) {
+				$out[] = $this->span( $next, $span[0] - 1 );
+			}
+			$next = max( $next, $span[1] + 1 );
+		}
+		if ( $next <= 0x10FFFF ) {
+			$out[] = $this->span( $next, 0x10FFFF );
+		}
+		return implode( ',', $out );
+	}
+
+	private function span( $from, $to ) {
+		return $from === $to ? sprintf( 'U+%X', $from ) : sprintf( 'U+%X-%X', $from, $to );
 	}
 
 	private function rewrite_preloads( $html ) {

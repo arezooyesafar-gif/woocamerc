@@ -42,6 +42,11 @@ class Tarh99_Perf_Module_Upanel_Login extends Tarh99_Perf_Module {
 				'label'   => 'پیش‌بارگذار صفحه ورود بدون انتظار اضافه ۱ ثانیه‌ای محو شود',
 				'default' => 1,
 			),
+			'fast_redirect' => array(
+				'type'    => 'checkbox',
+				'label'   => 'بعد از ورود یا ثبت‌نام موفق، بارگذاری دوباره صفحه بدون انتظار ۲ ثانیه‌ای شروع شود (پیام موفقیت تا رسیدن صفحه بعد دیده می‌شود)',
+				'default' => 1,
+			),
 		);
 	}
 
@@ -53,7 +58,7 @@ class Tarh99_Perf_Module_Upanel_Login extends Tarh99_Perf_Module {
 		if ( Tarh99_Perf_Env::bypass() || is_admin() || ! Tarh99_Perf_Env::is_get() || ! defined( 'HD_UPANEL_VERSION' ) ) {
 			return;
 		}
-		if ( ! $this->opt( 'minified' ) && ! $this->opt( 'fast_loader' ) ) {
+		if ( ! $this->opt( 'minified' ) && ! $this->opt( 'fast_loader' ) && ! $this->opt( 'fast_redirect' ) ) {
 			return;
 		}
 		if ( ! $this->matches_request() ) {
@@ -90,6 +95,9 @@ class Tarh99_Perf_Module_Upanel_Login extends Tarh99_Perf_Module {
 		}
 		if ( $this->opt( 'fast_loader' ) && false !== strpos( $html, 'id="hd-upanel-loading"' ) && false !== strpos( $html, 'hd-upanel-login' ) ) {
 			$html = $this->add_loader_script( $html );
+		}
+		if ( $this->opt( 'fast_redirect' ) && false !== strpos( $html, 'hd-upanel-login' ) && false === strpos( $html, 'id="tarh99-upanel-redirect"' ) ) {
+			$html = $this->add_redirect_script( $html );
 		}
 		return $html;
 	}
@@ -135,6 +143,12 @@ class Tarh99_Perf_Module_Upanel_Login extends Tarh99_Perf_Module {
 			return $out;
 		}
 		$pos = strripos( $html, '</body>' );
+		return false === $pos ? $html : substr_replace( $html, $script, $pos, 0 );
+	}
+
+	private function add_redirect_script( $html ) {
+		$script = '<script id="tarh99-upanel-redirect">(function(w,d){var st=w.setTimeout,re=/^function\\s*\\(\\)\\s*\\{\\s*location\\.reload\\(\\);?\\s*\\}$/;w.setTimeout=function(f,t){var a=Array.prototype.slice.call(arguments);if(t===2000&&typeof f==="function"&&re.test(String(f))&&d.querySelector(".hd-upanel-login")){a[1]=0;}return st.apply(w,a);};})(window,document);</script>';
+		$pos    = strripos( $html, '</body>' );
 		return false === $pos ? $html : substr_replace( $html, $script, $pos, 0 );
 	}
 }

@@ -102,6 +102,12 @@ final class Tarh99_Perf_Admin {
 			case 'rtl_diag':
 				set_transient( 'tarh99_perf_rtl_diag', $this->rtl_diag(), DAY_IN_SECONDS );
 				break;
+			case 'trim_diag':
+				$trim = $this->plugin->module( 'plugin_trim' );
+				if ( $trim ) {
+					set_transient( Tarh99_Perf_Module_Plugin_Trim::DIAG, $trim->run_diag(), DAY_IN_SECONDS );
+				}
+				break;
 			case 'clear_profile':
 				delete_option( 'tarh99_perf_profile_log' );
 				break;
@@ -501,8 +507,21 @@ final class Tarh99_Perf_Admin {
 		echo '</div>';
 	}
 
+	private function render_trim_diag() {
+		$trim = $this->plugin->module( 'plugin_trim' );
+		if ( ! $trim ) {
+			return;
+		}
+		echo '<div class="t99-box"><h2>تست زمان راه‌اندازی وردپرس با و بدون افزونه‌های غیرلازم سبد و پرداخت</h2>';
+		echo '<p>سرور چند بار به خودش درخواست می‌دهد: یک بار با همه افزونه‌ها و یک بار بدون افزونه‌های فهرست ماژول «بارگذاری نکردن افزونه‌های غیرلازم در ایجکس سبد خرید…» (فقط برای همان درخواست آزمایشی). هیچ تنظیمی تغییر نمی‌کند. اگر ستون صرفه‌جویی قابل توجه بود، آن ماژول را روشن کنید.</p>';
+		$this->tool_button( 'trim_diag', 'اجرای تست (حدود ۲۰ ثانیه)', 'tools', 'button button-primary' );
+		$trim->render_diag();
+		echo '</div>';
+	}
+
 	private function render_tools() {
 		$this->render_rtl_diag();
+		$this->render_trim_diag();
 		$profiler = $this->plugin->module( 'profiler' );
 		if ( $profiler ) {
 			$profiler->render_log();
