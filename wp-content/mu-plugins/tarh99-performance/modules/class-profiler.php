@@ -261,7 +261,7 @@ class Tarh99_Perf_Module_Profiler extends Tarh99_Perf_Module {
 
 	private function background() {
 		$agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? (string) $_SERVER['HTTP_USER_AGENT'] : '';
-		if ( 0 === strpos( $agent, 'WP Rocket/' ) ) {
+		if ( 0 === strpos( $agent, 'WP Rocket/' ) || isset( $_SERVER['HTTP_X_TARH99_WARMUP'] ) ) {
 			return true;
 		}
 		$action = isset( $_REQUEST['action'] ) ? (string) $_REQUEST['action'] : '';

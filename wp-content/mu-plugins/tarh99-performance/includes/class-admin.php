@@ -55,6 +55,9 @@ final class Tarh99_Perf_Admin {
 		if ( ! Tarh99_Perf_Settings::module_enabled( 'cleanup', true ) && class_exists( 'Tarh99_Perf_Module_Cleanup' ) ) {
 			Tarh99_Perf_Module_Cleanup::unschedule();
 		}
+		if ( ! Tarh99_Perf_Settings::module_enabled( 'cache_refresh', true ) && class_exists( 'Tarh99_Perf_Module_Cache_Refresh' ) ) {
+			Tarh99_Perf_Module_Cache_Refresh::unschedule();
+		}
 		Tarh99_Perf_Cache_Store::bump();
 		$this->purge_page_cache();
 		wp_safe_redirect( $this->url( 'modules', array( 'tarh99_msg' => 'saved' ) ) );
