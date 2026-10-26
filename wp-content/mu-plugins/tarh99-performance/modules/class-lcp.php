@@ -72,6 +72,11 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 				'label'   => 'گالری تصاویر صفحه محصول از اول دیده شود: قالب پوشه کل گالری را با display:none و ووکامرس با opacity:0 تا اجرای جاوااسکریپت (آخر بارگذاری صفحه) مخفی می‌کنند و تصویر اصلی محصول در موبایل ۵ تا ۷ ثانیه دیر ظاهر می‌شود. با این گزینه تصویر اول همان لحظه نمایش داده می‌شود و بقیه تصاویر و بندانگشتی‌ها مثل قبل بعد از اجرای اسکریپت می‌آیند. همچنین در ۱۰۰ میلی‌ثانیه‌ای که اسلایدر ووکامرس بین دو مرحله راه‌اندازی است، تصاویر گالری زیر هم نمی‌افتند (علت پرش شدید صفحه محصول، CLS تا ۰٫۷). ظاهر نهایی تغییر نمی‌کند.',
 				'default' => 1,
 			),
+			'product_preload' => array(
+				'type'    => 'checkbox',
+				'label'   => 'در صفحه محصول، تصویر اصلی محصول در هد preload شود و preload تصویر دیگری که راکت به اشتباه LCP تشخیص داده (مثلاً تصویر دوم گالری) حذف شود',
+				'default' => 1,
+			),
 			'rocket_stale_off' => array(
 				'type'    => 'checkbox',
 				'label'   => 'در فروشگاه، دسته‌ها و صفحه محصول، preload تصویری که راکت قبلاً ذخیره کرده ولی دیگر در صفحه وجود ندارد (مثلاً بعد از اضافه شدن محصول جدید به دسته) حذف شود تا با تصویر واقعی رقابت نکند',
@@ -251,6 +256,9 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		if ( $this->opt( 'rocket_stale_off' ) ) {
 			$html = $this->strip_stale_rocket_preload( $html );
 		}
+		if ( $this->opt( 'product_preload' ) ) {
+			$html = $this->product_preload( $html );
+		}
 		if ( ! $this->opt( 'rocket_atf_off' ) || false === strpos( $html, 'data-tarh99-lcp-bg' ) || false === strpos( $html, 'data-rocket-preload' ) ) {
 			return $html;
 		}
@@ -286,6 +294,57 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		return $html;
 	}
 
+	private function file_stem( $url ) {
+		$file = rawurldecode( basename( (string) wp_parse_url( html_entity_decode( (string) $url, ENT_QUOTES ), PHP_URL_PATH ) ) );
+		$stem = preg_replace( '/(-\d+x\d+)?(-scaled)?\.[a-z0-9]+$/i', '', $file );
+		return is_string( $stem ) ? $stem : '';
+	}
+
+	private function product_preload( $html ) {
+		if ( ! function_exists( 'is_product' ) || ! is_product() || $this->product_handled_by_tps() ) {
+			return $html;
+		}
+		if ( ! preg_match( '#<img\b(?=[^>]*\sfetchpriority\s*=\s*["\']high["\'])(?=[^>]*\sclass\s*=\s*["\'][^"\']*\bwp-post-image\b)[^>]*>#i', $html, $img ) ) {
+			return $html;
+		}
+		if ( ! preg_match( '#\ssrc\s*=\s*(["\'])([^"\']+)\1#i', $img[0], $src ) || 0 === strpos( $src[2], 'data:' ) ) {
+			return $html;
+		}
+		$main = $this->file_stem( $src[2] );
+		if ( strlen( $main ) < 4 ) {
+			return $html;
+		}
+		$has = false;
+		if ( preg_match_all( '#<link\b(?=[^>]*\srel\s*=\s*["\']?preload\b)(?=[^>]*\sas\s*=\s*["\']?image\b)[^>]*>\s*#i', $html, $links ) ) {
+			foreach ( array_unique( $links[0] ) as $tag ) {
+				if ( ! preg_match( '#\shref\s*=\s*(["\'])([^"\']+)\1#i', $tag, $href ) ) {
+					continue;
+				}
+				if ( $this->file_stem( $href[2] ) === $main ) {
+					$has = true;
+					continue;
+				}
+				if ( false !== stripos( $tag, 'data-rocket-preload' ) ) {
+					$html = str_replace( $tag, '', $html );
+				}
+			}
+		}
+		if ( $has ) {
+			return $html;
+		}
+		$link = '<link rel="preload" as="image" href="' . esc_attr( html_entity_decode( $src[2], ENT_QUOTES ) ) . '"';
+		if ( preg_match( '#\ssrcset\s*=\s*(["\'])([^"\']+)\1#i', $img[0], $set ) ) {
+			$link .= ' imagesrcset="' . esc_attr( html_entity_decode( $set[2], ENT_QUOTES ) ) . '"';
+		}
+		if ( preg_match( '#\ssizes\s*=\s*(["\'])([^"\']+)\1#i', $img[0], $sizes ) ) {
+			$link .= ' imagesizes="' . esc_attr( html_entity_decode( $sizes[2], ENT_QUOTES ) ) . '"';
+		}
+		$link  .= ' fetchpriority="high" data-tarh99-lcp-product>';
+		$anchor = preg_match( '#<meta\s+charset\s*=[^>]*>#i', $html ) ? '#<meta\s+charset\s*=[^>]*>#i' : '#<head\b[^>]*>#i';
+		$out    = preg_replace( $anchor, '$0' . "\n" . str_replace( array( '\\', '$' ), array( '\\\\', '\\$' ), $link ), $html, 1, $count );
+		return ( is_string( $out ) && 1 === $count ) ? $out : $html;
+	}
+
 	public function print_gallery_style() {
 		if ( Tarh99_Perf_Env::bypass() || ! function_exists( 'is_product' ) || ! is_product() ) {
 			return;
@@ -296,6 +355,7 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 			$css .= $base . ':has(>.woocommerce-product-gallery__image:nth-child(' . $count . '):last-child)>.woocommerce-product-gallery__image:not([style*="width"]){width:' . round( 100 / ( 2 * $count ), 4 ) . '%}';
 		}
 		$css .= 'body.rtl ' . $base . '>.woocommerce-product-gallery__image:not([style*="width"]){float:right}body:not(.rtl) ' . $base . '>.woocommerce-product-gallery__image:not([style*="width"]){float:left}';
+		$css .= $base . '>.woocommerce-product-gallery__image:not([style*="width"]):not(:first-child){height:0;overflow:hidden}';
 		echo '<style id="tarh99-product-gallery">' . $css . '</style>' . "\n";
 	}
 

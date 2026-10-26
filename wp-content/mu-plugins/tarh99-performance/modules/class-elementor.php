@@ -30,6 +30,11 @@ class Tarh99_Perf_Module_Elementor extends Tarh99_Perf_Module {
 				'label'   => 'المنتور کل متن توضیحات دسته یا محصول را (تا ۱۳۰ کیلوبایت در دسته‌های دارای مقاله سئو) یک بار دیگر داخل کد جاوااسکریپت صفحه تکرار می‌کند که فقط برای متن دکمه‌های اشتراک‌گذاری است؛ این نسخه تکراری به خلاصه ۱۶۰ کاراکتری تبدیل شود. متن نمایش‌داده‌شده در صفحه دست نمی‌خورد.',
 				'default' => 1,
 			),
+			'motion_hidden' => array(
+				'type'    => 'checkbox',
+				'label'   => 'افکت‌های حرکتی (Motion Effects) بخش‌هایی که در یک دستگاه مخفی هستند، در همان دستگاه اجرا نشوند (مثلاً بخش «حرکت پس‌زمینه با موس» صفحه اصلی که در موبایل مخفی است ولی محاسباتش در موبایل هم اجرا می‌شد). در دستگاه‌هایی که بخش دیده می‌شود هیچ چیز عوض نمی‌شود.',
+				'default' => 1,
+			),
 			'google_fonts' => array(
 				'type'    => 'checkbox',
 				'label'   => 'توقف لود Google Fonts توسط المنتور (فقط اگر در سورس صفحه fonts.googleapis.com دیده می‌شود و فونت سایت از قالب است)',
@@ -45,10 +50,61 @@ class Tarh99_Perf_Module_Elementor extends Tarh99_Perf_Module {
 		if ( $this->opt( 'google_fonts' ) ) {
 			add_filter( 'elementor/frontend/print_google_fonts', array( $this, 'google_fonts' ) );
 		}
+		if ( $this->opt( 'motion_hidden' ) ) {
+			add_filter( 'elementor/frontend/the_content', array( $this, 'motion_hidden' ), 20 );
+		}
 		if ( $this->opt( 'trim_excerpt' ) ) {
 			add_action( 'wp_print_scripts', array( $this, 'trim_excerpt' ), 1 );
 			add_action( 'wp_print_footer_scripts', array( $this, 'trim_excerpt' ), 1 );
 		}
+	}
+
+	public function motion_hidden( $content ) {
+		if ( ! is_string( $content ) || false === strpos( $content, 'motion_fx' ) || false === strpos( $content, 'elementor-hidden-' ) || ! Tarh99_Perf_Env::front_ok() ) {
+			return $content;
+		}
+		$out = preg_replace_callback( '#<[a-z][a-z0-9]*\b[^>]*\sdata-settings\s*=\s*"[^"]*motion_fx[^"]*"[^>]*>#i', array( $this, 'motion_tag' ), $content );
+		return is_string( $out ) ? $out : $content;
+	}
+
+	public function motion_tag( $m ) {
+		$tag = $m[0];
+		if ( ! preg_match( '#\sclass\s*=\s*"([^"]*)"#i', $tag, $class ) || ! preg_match_all( '#(?:^|\s)elementor-hidden-([a-z_]+)(?=\s|$)#', $class[1], $hidden ) ) {
+			return $tag;
+		}
+		if ( ! preg_match( '#\sdata-settings\s*=\s*"([^"]*)"#i', $tag, $attr ) ) {
+			return $tag;
+		}
+		$settings = json_decode( html_entity_decode( $attr[1], ENT_QUOTES, 'UTF-8' ), true );
+		if ( ! is_array( $settings ) ) {
+			return $tag;
+		}
+		$devices = array_values( array_diff( $this->devices(), $hidden[1] ) );
+		$changed = false;
+		foreach ( array( 'motion_fx', 'background_motion_fx' ) as $prefix ) {
+			$mouse  = isset( $settings[ $prefix . '_motion_fx_mouse' ] ) && 'yes' === $settings[ $prefix . '_motion_fx_mouse' ];
+			$scroll = isset( $settings[ $prefix . '_motion_fx_scrolling' ] ) && 'yes' === $settings[ $prefix . '_motion_fx_scrolling' ];
+			if ( ( ! $mouse && ! $scroll ) || isset( $settings[ $prefix . '_devices' ] ) ) {
+				continue;
+			}
+			$settings[ $prefix . '_devices' ] = $devices;
+			$changed                          = true;
+		}
+		if ( ! $changed ) {
+			return $tag;
+		}
+		$json = wp_json_encode( $settings );
+		return is_string( $json ) ? str_replace( $attr[0], ' data-settings="' . esc_attr( $json ) . '"', $tag ) : $tag;
+	}
+
+	private function devices() {
+		$devices = array( 'desktop' );
+		if ( class_exists( '\Elementor\Plugin' ) && isset( \Elementor\Plugin::$instance->breakpoints ) && is_object( \Elementor\Plugin::$instance->breakpoints ) && method_exists( \Elementor\Plugin::$instance->breakpoints, 'get_active_breakpoints' ) ) {
+			$devices = array_merge( $devices, array_keys( (array) \Elementor\Plugin::$instance->breakpoints->get_active_breakpoints() ) );
+		} else {
+			$devices = array_merge( $devices, array( 'tablet', 'mobile' ) );
+		}
+		return array_values( array_unique( $devices ) );
 	}
 
 	public function trim_excerpt() {
