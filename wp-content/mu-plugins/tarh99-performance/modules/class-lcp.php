@@ -9,6 +9,7 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 	private $product_done = false;
 	private $archive_count = 0;
 	private $rules = null;
+	private $desktop_eager = null;
 
 	public function id() {
 		return 'lcp';
@@ -50,6 +51,12 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 				'type'    => 'text',
 				'label'   => 'بخشی از نام فایل لوگوی هدر (eager و استثنا از lazy راکت)',
 				'default' => 'Tarh99.com-logo-original',
+			),
+			'desktop_eager'   => array(
+				'type'    => 'textarea',
+				'label'   => 'تصاویر بالای صفحه در دسکتاپ که lazy نشوند (بدون fetchpriority) — هر خط: محدوده | بخشی از نام فایل',
+				'default' => "front | Tarh99.com_طرح-99\nfront | طرح-های-VIP\nfront | طراحی-اختصاصی\nfront | خرید-اشتراک",
+				'help'    => 'فقط برای نسخه دسکتاپ کش راکت اعمال می‌شود (Separate cache files for mobile devices روشن است). این تصاویر در دسکتاپ بالای صفحه‌اند و با LazyLoad راکت تا اجرای جاوااسکریپت خالی می‌ماندند.',
 			),
 			'custom_rules'    => array(
 				'type'    => 'textarea',
@@ -112,6 +119,26 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		remove_filter( 'the_content', 'pooshe_lazy_loading_content_images', 100 );
 	}
 
+	private function desktop_eager_fragments() {
+		if ( null !== $this->desktop_eager ) {
+			return $this->desktop_eager;
+		}
+		if ( ! did_action( 'wp' ) ) {
+			return array();
+		}
+		$this->desktop_eager = array();
+		if ( wp_is_mobile() ) {
+			return $this->desktop_eager;
+		}
+		foreach ( $this->opt_lines( 'desktop_eager' ) as $line ) {
+			$parts = array_map( 'trim', explode( '|', $line, 2 ) );
+			if ( 2 === count( $parts ) && '' !== $parts[1] && Tarh99_Perf_Env::scope_matches( $parts[0] ) ) {
+				$this->desktop_eager[] = $parts[1];
+			}
+		}
+		return $this->desktop_eager;
+	}
+
 	private function custom_rules() {
 		if ( null !== $this->rules ) {
 			return $this->rules;
@@ -157,6 +184,16 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		if ( '' !== $logo && '' !== $src && false !== stripos( $src, $logo ) ) {
 			$attr['loading'] = 'eager';
 			return $attr;
+		}
+
+		if ( '' !== $src ) {
+			$decoded = rawurldecode( $src );
+			foreach ( $this->desktop_eager_fragments() as $fragment ) {
+				if ( false !== stripos( $src, $fragment ) || false !== stripos( $decoded, $fragment ) ) {
+					$attr['loading'] = 'eager';
+					return $attr;
+				}
+			}
 		}
 
 		if ( $this->opt( 'product_main' ) && ! $this->product_done && ! $this->product_handled_by_tps() && $wc && is_product() && ! $thumb && false !== strpos( $classes, ' wp-post-image ' ) ) {
@@ -213,6 +250,9 @@ class Tarh99_Perf_Module_Lcp extends Tarh99_Perf_Module {
 		}
 		foreach ( $this->custom_rules() as $rule ) {
 			$excluded[] = $this->fragment_key( $rule['fragment'] );
+		}
+		foreach ( $this->desktop_eager_fragments() as $fragment ) {
+			$excluded[] = $fragment;
 		}
 		return array_values( array_unique( array_filter( $excluded ) ) );
 	}
